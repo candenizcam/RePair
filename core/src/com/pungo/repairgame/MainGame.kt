@@ -14,8 +14,10 @@ class MainGame : ApplicationAdapter() {
     private lateinit var beep: Sound
     private lateinit var bgm: Music
     private var play: Boolean = false
+    private var loadingScreen = LoadingScreen()
 
     override fun create() {
+        loadingScreen.lateInitializer()
         batch = SpriteBatch()
         img = Texture("badlogic.jpg")
       //  beep = Gdx.audio.newSound(Gdx.files.internal("C:\\Users\\mifu3\\Desktop\\PunGo\\RePair\\443026_71257-lq.mp3"))
@@ -25,13 +27,15 @@ class MainGame : ApplicationAdapter() {
         MidiPlayer.setLooping(true)
         MidiPlayer.play()
         play = true
+        loadingScreen.timerGo()
     }
 
     override fun render() {
-        Gdx.gl.glClearColor(1f, 0f, 0f, 1f)
+        Gdx.gl.glClearColor(0f, 0f, 0.05f, 1f)
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
+        loadingScreen.loopAction()
         batch.begin()
-        batch.draw(img, 0f, 0f)
+        loadingScreen.draw(batch)
         batch.end()
     }
 
