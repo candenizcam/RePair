@@ -1,12 +1,13 @@
-package com.pungo.repairgame.desktop;
+package com.pungo.repairgame.desktop
 
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
-import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.pungo.repairgame.MainGame;
+import com.badlogic.gdx.backends.lwjgl.LwjglApplication
+import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration
+import com.pungo.repairgame.MainGame
 
-public class DesktopLauncher {
-	public static void main (String[] arg) {
-		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		new LwjglApplication(new MainGame(), config);
-	}
+object DesktopLauncher {
+    @JvmStatic
+    fun main(arg: Array<String>) {
+        val config = LwjglApplicationConfiguration()
+        LwjglApplication(MainGame(), config)
+    }
 }
