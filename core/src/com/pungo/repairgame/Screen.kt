@@ -6,4 +6,5 @@ abstract class Screen {
     abstract fun draw(batch: SpriteBatch)
 
     abstract fun loopAction()
+    abstract fun lateInitializer()
 }
