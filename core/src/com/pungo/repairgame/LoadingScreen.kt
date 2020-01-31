@@ -19,7 +19,17 @@ class LoadingScreen(): Screen() {
         loadImage()
     }
 
+    override fun firstPress() {
 
+    }
+
+    override fun pressing() {
+
+    }
+
+    override fun released() {
+
+    }
 
     private fun loadImage(){
         var pixmap = Pixmap(Gdx.files.internal(SharedVariables.companyLogoPath))

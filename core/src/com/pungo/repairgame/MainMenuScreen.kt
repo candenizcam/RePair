@@ -10,7 +10,17 @@ class MainMenuScreen: Screen() {
     private lateinit var mainSprite: Sprite
     private lateinit var bgPixmap: Pixmap
 
+    override fun firstPress() {
 
+    }
+
+    override fun pressing() {
+
+    }
+
+    override fun released() {
+
+    }
 
     private fun loadImage(){
         val pixmap = Pixmap(Gdx.files.internal(SharedVariables.mainMenuBackgroundPath))
