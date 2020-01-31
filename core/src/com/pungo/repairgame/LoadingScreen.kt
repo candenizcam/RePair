@@ -6,12 +6,11 @@ import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 
-class LoadingScreen(){
+class LoadingScreen(): Screen() {
     private lateinit var mainSprite: Sprite
     private lateinit var bgPixmap: Pixmap
     private var visible = true
     private var startTime = 0L
-
 
     fun lateInitializer(){
         loadImage()
@@ -33,7 +32,7 @@ class LoadingScreen(){
         startTime = System.currentTimeMillis()
     }
 
-    fun loopAction(){
+    override fun loopAction(){
         val nowTime = System.currentTimeMillis()-startTime
         when {
             nowTime<1000 -> {
@@ -53,13 +52,19 @@ class LoadingScreen(){
 
     }
 
-    fun draw(batch: SpriteBatch){
+    override fun draw(batch: SpriteBatch){
         if (visible){
             mainSprite.draw(batch)
         }
 
     }
 
+    fun isLoading() : Boolean {
+        if(System.currentTimeMillis()-startTime < 3000){
+            return true
+        }
+        return false
+    }
 
 
 
