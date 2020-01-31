@@ -21,6 +21,8 @@ class LoadingScreen(): Screen() {
 
 
 
+
+
     private fun loadImage(){
         var pixmap = Pixmap(Gdx.files.internal(SharedVariables.companyLogoPath))
         bgPixmap = Pixmap((pixmap.width*SharedVariables.companyLogoRatio).toInt(),(pixmap.height*SharedVariables.companyLogoRatio).toInt(),pixmap.format)

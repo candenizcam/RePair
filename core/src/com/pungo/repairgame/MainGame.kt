@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 
+
 class MainGame : ApplicationAdapter() {
     private lateinit var batch: SpriteBatch
     private lateinit var img: Texture
@@ -15,6 +16,7 @@ class MainGame : ApplicationAdapter() {
     private val mouse = MouseManager(loadingScreen)
     private var mainMenuScreen = MainMenuScreen()
     private var activeScreen : Screen = loadingScreen
+
 
     override fun create() {
         loadingScreen.lateInitializer()
@@ -40,11 +42,19 @@ class MainGame : ApplicationAdapter() {
         activeScreen.loopAction()
         if (loadingScreen.loadingDone()) {
             activeScreen = mainMenuScreen
+
         }
+        clickManager()
         batch.begin()
         activeScreen.draw(batch)
         batch.end()
     }
+
+    fun clickManager(){
+        //mouse.getClick()
+        //activeScreen.clickHandler()
+    }
+
 
     override fun dispose() {
         batch.dispose()

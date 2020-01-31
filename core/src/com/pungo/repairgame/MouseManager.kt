@@ -14,5 +14,7 @@ class MouseManager(var activeScreen: Screen){
         // draw tentacle at (Gdx.input.x, Gdx.input.y)
     }
 
-
+    fun getClick() : Coordinates {
+        return Coordinates(Gdx.input.x, Gdx.input.y)
+    }
 }

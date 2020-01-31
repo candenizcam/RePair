@@ -1,5 +1,7 @@
 package com.pungo.repairgame
 
+
+
 object SharedVariables{
     val mainWidth = 1920
     val mainHeight = 1080
