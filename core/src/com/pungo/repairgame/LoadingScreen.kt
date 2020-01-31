@@ -7,25 +7,43 @@ import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 
 class LoadingScreen(): Screen() {
-    private lateinit var mainSprite: Sprite
+    private lateinit var bgSprite: Sprite
     private lateinit var bgPixmap: Pixmap
-    private var visible = true
+    private lateinit var menuSprite: Sprite
+    private lateinit var menuPixmap: Pixmap
+    private var menuVisible = false
     private var startTime = 0L
+    private var doneSignalSent = false //this is so that end of loading switches to menu only once
 
-    fun lateInitializer(){
+    override fun lateInitializer(){
         loadImage()
     }
 
+
+
     private fun loadImage(){
-        val pixmap = Pixmap(Gdx.files.internal("graphics/pungotitle.png"))
+        var pixmap = Pixmap(Gdx.files.internal(SharedVariables.companyLogoPath))
         bgPixmap = Pixmap((pixmap.width*SharedVariables.companyLogoRatio).toInt(),(pixmap.height*SharedVariables.companyLogoRatio).toInt(),pixmap.format)
         bgPixmap.filter = Pixmap.Filter.NearestNeighbour
         bgPixmap.blending = Pixmap.Blending.None
         bgPixmap.drawPixmap(pixmap, 0,0, pixmap.width,pixmap.height,0,0,bgPixmap.width,bgPixmap.height)
         pixmap.dispose()
-        mainSprite = Sprite(Texture(bgPixmap))
-        mainSprite.setCenterX(SharedVariables.mainWidth.toFloat()/2)
-        mainSprite.setCenterY(SharedVariables.mainHeight.toFloat()/2)
+        bgSprite = Sprite(Texture(bgPixmap))
+        bgSprite.setCenterX(SharedVariables.mainWidth.toFloat()/2)
+        bgSprite.setCenterY(SharedVariables.mainHeight.toFloat()/2)
+
+
+        pixmap = Pixmap(Gdx.files.internal(SharedVariables.mainMenuBackgroundPath))
+        bgPixmap = Pixmap(SharedVariables.mainWidth,SharedVariables.mainHeight,pixmap.format)
+        bgPixmap.filter = Pixmap.Filter.NearestNeighbour
+        bgPixmap.blending = Pixmap.Blending.None
+        bgPixmap.drawPixmap(pixmap, 0,0, pixmap.width,pixmap.height,0,0,bgPixmap.width,bgPixmap.height)
+        pixmap.dispose()
+        menuSprite = Sprite(Texture(bgPixmap))
+        menuSprite.setCenterX(SharedVariables.mainWidth.toFloat()/2)
+        menuSprite.setCenterY(SharedVariables.mainHeight.toFloat()/2)
+
+
     }
 
     fun timerGo(){
@@ -36,16 +54,18 @@ class LoadingScreen(): Screen() {
         val nowTime = System.currentTimeMillis()-startTime
         when {
             nowTime<1000 -> {
-                mainSprite.setAlpha(nowTime.toFloat()/1000)
+                menuVisible = false
+                bgSprite.setAlpha(nowTime.toFloat()/1000)
+
             }
             nowTime<2000 -> {
-                mainSprite.setAlpha(1f)
+                bgSprite.setAlpha(1f)
             }
             nowTime<3000 -> {
-                mainSprite.setAlpha(3f-nowTime.toFloat()/1000)
+                menuVisible = true
+                bgSprite.setAlpha(3f-nowTime.toFloat()/1000)
             }
             else -> {
-                visible = false
             }
         }
 
@@ -53,10 +73,10 @@ class LoadingScreen(): Screen() {
     }
 
     override fun draw(batch: SpriteBatch){
-        if (visible){
-            mainSprite.draw(batch)
+        if (menuVisible){
+            menuSprite.draw(batch)
         }
-
+        bgSprite.draw(batch)
     }
 
     fun isLoading() : Boolean {
@@ -66,7 +86,11 @@ class LoadingScreen(): Screen() {
         return false
     }
 
-
-
-
+    fun loadingDone(): Boolean{
+        if (!doneSignalSent and !isLoading()){
+            doneSignalSent = true
+            return true
+        }
+        return false
+    }
 }

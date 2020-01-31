@@ -11,14 +11,17 @@ class MainGame : ApplicationAdapter() {
     private lateinit var img: Texture
     private var play: Boolean = false
     private var loadingScreen = LoadingScreen()
+    private var mainMenuScreen = MainMenuScreen()
     private var playing = false
+    private var activeScreen : Screen = loadingScreen
 
     override fun create() {
         loadingScreen.lateInitializer()
+        mainMenuScreen.lateInitializer()
         batch = SpriteBatch()
         img = Texture("badlogic.jpg")
 
-        MidiPlayer.open("C:\\Users\\mifu3\\Desktop\\PunGo\\RePair\\OST1.mid")
+        MidiPlayer.open("sound/OST1.mid")
         MidiPlayer.setLooping(true)
 
         loadingScreen.timerGo()
@@ -31,9 +34,12 @@ class MainGame : ApplicationAdapter() {
         if(!playing && !loadingScreen.isLoading()){
             MidiPlayer.play()
         }
-        loadingScreen.loopAction()
+        activeScreen.loopAction()
+        if (loadingScreen.loadingDone()) {
+            activeScreen = mainMenuScreen
+        }
         batch.begin()
-        loadingScreen.draw(batch)
+        activeScreen.draw(batch)
         batch.end()
     }
 
