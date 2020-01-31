@@ -9,16 +9,20 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch
 class MainGame : ApplicationAdapter() {
     lateinit var batch: SpriteBatch
     lateinit var img: Texture
+    private var loadingScreen = LoadingScreen()
     override fun create() {
+        loadingScreen.lateInitializer()
         batch = SpriteBatch()
         img = Texture("badlogic.jpg")
+        loadingScreen.timerGo()
     }
 
     override fun render() {
-        Gdx.gl.glClearColor(1f, 0f, 0f, 1f)
+        Gdx.gl.glClearColor(0f, 0f, 0.05f, 1f)
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
+        loadingScreen.loopAction()
         batch.begin()
-        batch.draw(img, 0f, 0f)
+        loadingScreen.draw(batch)
         batch.end()
     }
 
