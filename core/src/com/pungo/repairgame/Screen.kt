@@ -3,11 +3,7 @@ package com.pungo.repairgame
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 
 abstract class Screen {
-    open fun draw(batch: SpriteBatch) {
+    abstract fun draw(batch: SpriteBatch)
 
-    }
-
-    open fun loopAction() {
-
-    }
+    abstract fun loopAction()
 }

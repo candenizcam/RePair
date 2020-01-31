@@ -11,7 +11,8 @@ class MainGame : ApplicationAdapter() {
     private lateinit var img: Texture
     private var play: Boolean = false
     private var loadingScreen = LoadingScreen()
-    private var playing = false
+    private var musicPlaying = false
+    private val mouse = MouseManager(loadingScreen)
 
     override fun create() {
         loadingScreen.lateInitializer()
@@ -28,9 +29,11 @@ class MainGame : ApplicationAdapter() {
         Gdx.gl.glClearColor(0f, 0f, 0.05f, 1f)
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
 
-        if(!playing && !loadingScreen.isLoading()){
+        if(!musicPlaying && !loadingScreen.isLoading()){
             MidiPlayer.play()
+            musicPlaying = true
         }
+
         loadingScreen.loopAction()
         batch.begin()
         loadingScreen.draw(batch)
