@@ -4,11 +4,13 @@ import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.*
+import org.w3c.dom.Text
 
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite
     private lateinit var leftestDevice: SimpleDevice
     private lateinit var iceTool: SimpleTool
+    private lateinit var phText: TextIsland
     private val timer = Timer(10000)
 
     override fun draw(batch: SpriteBatch) {
@@ -63,6 +65,7 @@ class GameScreen: Screen() {
         leftestDevice.relocateCentre(240f,410f)
         iceTool = SimpleTool("graphics/placeholder_tool", ratio = 0.25f)
         iceTool.relocateCentre(200f,900f)
+        phText = TextIsland("planet_0/placeholder_island.txt")
         timer.go()
     }
 
