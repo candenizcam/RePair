@@ -17,11 +17,11 @@ class MainMenuScreen: Screen() {
         mainSprite = SharedVariables.loadSprite(SharedVariables.mainMenuBackgroundPath, SharedVariables.menuBackgroundRatio)
         mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
-        startButton = SimpleButton("graphics/placeholder_button", ratio = 0.5f)
+        startButton = SimpleButton("graphics/menu_buttons/start", ratio = 0.5f)
         startButton.relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 500f)
-        continueButton = SimpleButton("graphics/placeholder_button", ratio = 0.5f)
+        continueButton = SimpleButton("graphics/menu_buttons/continue", ratio = 0.5f)
         continueButton.relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 300f)
-        optionsButton = SimpleButton("graphics/placeholder_button", ratio = 0.5f)
+        optionsButton = SimpleButton("graphics/menu_buttons/options", ratio = 0.5f)
         optionsButton.relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 100f)
     }
 
