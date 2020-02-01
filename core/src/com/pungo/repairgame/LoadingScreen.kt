@@ -10,7 +10,6 @@ class LoadingScreen(): Screen() {
     private lateinit var bgSprite: Sprite
     private lateinit var bgPixmap: Pixmap
     private lateinit var menuSprite: Sprite
-    private lateinit var menuPixmap: Pixmap
     private var menuVisible = false
     private var startTime = 0L
     private var doneSignalSent = false //this is so that end of loading switches to menu only once
@@ -79,6 +78,15 @@ class LoadingScreen(): Screen() {
             menuSprite.draw(batch)
         }
         bgSprite.draw(batch)
+    }
+
+    override fun firstPress() {
+    }
+
+    override fun pressing() {
+    }
+
+    override fun released() {
     }
 
     fun isLoading() : Boolean {
