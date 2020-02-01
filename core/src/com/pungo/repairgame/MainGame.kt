@@ -22,14 +22,14 @@ class MainGame : ApplicationAdapter() {
         MidiPlayer.open("sound/OST1.mid")
         MidiPlayer.setLooping(true)
 
-        SharedVariables.loadingScreen.timerGo()
+        SharedVariables.loadingScreen.timer.go()
     }
 
     override fun render() {
         Gdx.gl.glClearColor(0f, 0f, 0.05f, 1f)
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
 
-        if(!musicPlaying && !SharedVariables.loadingScreen.isLoading()){
+        if (!musicPlaying && !SharedVariables.loadingScreen.isLoading()) {
             MidiPlayer.play()
             musicPlaying = true
         }
