@@ -40,7 +40,9 @@ class TextIsland(path: FileHandle, private var currentPid: Int) {
 
     fun nextPassage(choice: Int) {   // if a choice is made, we will use this to load the chosen passage
         if (choice > 0) {               // else, currently nothing happens, but i can add stuff if we need it
-            currentPid = currentPassage.get("links")[choice].get("pid").asInt()
+            val links = currentPassage.get("links")
+            currentPid = links[choice - 1].get("pid").asInt()
+            currentPassage = passages[currentPid - 1]
         }
         setStatus()
     }
@@ -58,5 +60,14 @@ class TextIsland(path: FileHandle, private var currentPid: Int) {
         }
 
         return choices
+    }
+
+    fun sceneNotOver(): Boolean {
+        try {
+            currentPassage.get("tags")[0]
+        } catch (ex: Exception) {
+            return true
+        }
+        return false
     }
 }

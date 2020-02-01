@@ -26,7 +26,7 @@ class GameScreen: Screen() {
         leftestDevice.draw(batch)
         iceTool.draw(batch)
         incomingText.draw(batch, true)
-        if (incomingText.revealed) {
+        if (incomingText.revealed && phText.sceneNotOver()) {
             phText.getCurrentChoices().let {
                 aText.draw(batch)
                 bText.draw(batch)
@@ -91,13 +91,18 @@ class GameScreen: Screen() {
 
     }
 
-    fun updateIslandText(){
+    private fun updateIslandText() {
         incomingText.setStuff(phText.getCurrentLine())
         incomingText.letterRevealReset()
-        phText.getCurrentChoices().let{
-            aText.setStuff(it[0])
-            bText.setStuff(it[1])
-            cText.setStuff(it[2])
+
+        try {
+            phText.getCurrentChoices().let {
+                aText.setStuff(it[0])
+                bText.setStuff(it[1])
+                cText.setStuff(it[2])
+            }
+        } catch (ex: Exception) {
+
         }
     }
 
