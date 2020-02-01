@@ -10,26 +10,15 @@ class LoadingScreen(): Screen() {
     private lateinit var bgSprite: Sprite
     private lateinit var bgPixmap: Pixmap
     private lateinit var menuSprite: Sprite
-    private lateinit var menuPixmap: Pixmap
     private var menuVisible = false
     private var startTime = 0L
-    private var doneSignalSent = false //this is so that end of loading switches to menu only once
 
     override fun lateInitializer(){
         loadImage()
     }
 
-    override fun firstPress() {
 
-    }
 
-    override fun pressing() {
-
-    }
-
-    override fun released() {
-
-    }
 
     private fun loadImage(){
         var pixmap = Pixmap(Gdx.files.internal(SharedVariables.companyLogoPath))
@@ -89,16 +78,17 @@ class LoadingScreen(): Screen() {
         bgSprite.draw(batch)
     }
 
-    fun isLoading() : Boolean {
-        if(System.currentTimeMillis()-startTime < 3000){
-            return true
-        }
-        return false
+    override fun firstPress() {
     }
 
-    fun loadingDone(): Boolean{
-        if (!doneSignalSent and !isLoading()){
-            doneSignalSent = true
+    override fun pressing() {
+    }
+
+    override fun released() {
+    }
+
+    fun isLoading() : Boolean {
+        if(System.currentTimeMillis()-startTime < 3000){
             return true
         }
         return false

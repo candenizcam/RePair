@@ -11,5 +11,4 @@ abstract class Screen {
 
     abstract fun loopAction()
     abstract fun lateInitializer()
-
 }
