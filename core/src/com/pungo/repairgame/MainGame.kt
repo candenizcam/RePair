@@ -28,7 +28,7 @@ class MainGame : ApplicationAdapter() {
         Gdx.gl.glClearColor(0f, 0f, 0.05f, 1f)
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
 
-        if(!musicPlaying && !SharedVariables.loadingScreen.isLoading()){
+        if (!musicPlaying && !SharedVariables.loadingScreen.isLoading()) {
             MidiPlayer.play()
             musicPlaying = true
         }
@@ -36,7 +36,6 @@ class MainGame : ApplicationAdapter() {
         SharedVariables.mouse.clickListener()
         SharedVariables.activeScreen.loopAction()
         if (!SharedVariables.loadingScreen.isLoading() && (SharedVariables.activeScreen == SharedVariables.loadingScreen)) {
-            println("kesinlikleçağırılıyor")
             SharedVariables.activeScreen = SharedVariables.mainMenuScreen
         }
         batch.begin()

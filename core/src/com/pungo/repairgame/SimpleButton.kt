@@ -6,32 +6,33 @@ import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 
-class SimpleButton(private val path: String, private val ratio: Float){
+class SimpleButton(private val path: String, private val ratio: Float) {
     private lateinit var upSprite: Sprite
     private lateinit var downSprite: Sprite
     var pressed = false
-    init{
+
+    init {
         loadImage()
     }
 
-    private fun loadImage(){
-        var pixmap = Pixmap(Gdx.files.internal(path + "/up.png"))
-        var varPixmap = Pixmap((pixmap.width*ratio).toInt(),(pixmap.height*ratio).toInt(),pixmap.format)
+    private fun loadImage() {
+        var pixmap = Pixmap(Gdx.files.internal("$path/up.png"))
+        var varPixmap = Pixmap((pixmap.width * ratio).toInt(), (pixmap.height * ratio).toInt(), pixmap.format)
         varPixmap.filter = Pixmap.Filter.NearestNeighbour
         varPixmap.blending = Pixmap.Blending.None
-        varPixmap.drawPixmap(pixmap, 0,0, pixmap.width,pixmap.height,0,0,varPixmap.width,varPixmap.height)
+        varPixmap.drawPixmap(pixmap, 0, 0, pixmap.width, pixmap.height, 0, 0, varPixmap.width, varPixmap.height)
         pixmap.dispose()
         upSprite = Sprite(Texture(varPixmap))
-        pixmap = Pixmap(Gdx.files.internal(path + "/down.png"))
-        varPixmap = Pixmap((pixmap.width*ratio).toInt(),(pixmap.height*ratio).toInt(),pixmap.format)
+        pixmap = Pixmap(Gdx.files.internal("$path/down.png"))
+        varPixmap = Pixmap((pixmap.width * ratio).toInt(), (pixmap.height * ratio).toInt(), pixmap.format)
         varPixmap.filter = Pixmap.Filter.NearestNeighbour
         varPixmap.blending = Pixmap.Blending.None
-        varPixmap.drawPixmap(pixmap, 0,0, pixmap.width,pixmap.height,0,0,varPixmap.width,varPixmap.height)
+        varPixmap.drawPixmap(pixmap, 0, 0, pixmap.width, pixmap.height, 0, 0, varPixmap.width, varPixmap.height)
         pixmap.dispose()
         downSprite = Sprite(Texture(varPixmap))
     }
 
-    fun relocateCentre(x: Float, y: Float){
+    fun relocateCentre(x: Float, y: Float) {
         upSprite.setCenterX(x)
         upSprite.setCenterY(y)
         downSprite.setCenterX(x)
@@ -39,8 +40,8 @@ class SimpleButton(private val path: String, private val ratio: Float){
 
     }
 
-    fun draw(batch: SpriteBatch){
-        if (pressed){
+    fun draw(batch: SpriteBatch) {
+        if (pressed) {
             downSprite.draw(batch)
         } else {
             upSprite.draw(batch)
@@ -49,11 +50,10 @@ class SimpleButton(private val path: String, private val ratio: Float){
 
     fun contains(x: Float, y: Float): Boolean {
         val y_corr = SharedVariables.mainHeight - y
-        val xContains = (x>upSprite.x) && (x< (upSprite.x + upSprite.width))
-        val yContains = (y_corr>upSprite.y) && (y_corr< (upSprite.y + upSprite.height))
+        val xContains = (x > upSprite.x) && (x < (upSprite.x + upSprite.width))
+        val yContains = (y_corr > upSprite.y) && (y_corr < (upSprite.y + upSprite.height))
         return xContains && yContains
     }
-
 
 
 }
