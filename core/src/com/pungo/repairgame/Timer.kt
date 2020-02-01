@@ -2,6 +2,7 @@ package com.pungo.repairgame
 
 class Timer(private val time: Long) {
     private var startTime = 0L
+    var running = false
 
     fun go(){
         startTime = System.currentTimeMillis()

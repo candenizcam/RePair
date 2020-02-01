@@ -14,10 +14,10 @@ class GameScreen: Screen() {
     private lateinit var aText: TextIslandTexts
     private lateinit var bText: TextIslandTexts
     private lateinit var cText: TextIslandTexts
-    private lateinit var bigMonitor : BigMonitor
+    private lateinit var bigMonitor: BigMonitor
 
-
-    private val timer = Timer(10000)
+    private val travelTimer = Timer(200)
+    private val timer = Timer(5000)
 
     override fun draw(batch: SpriteBatch) {
 
@@ -26,8 +26,8 @@ class GameScreen: Screen() {
         leftestDevice.draw(batch)
         iceTool.draw(batch)
         incomingText.draw(batch, true)
-        if (incomingText.revealed){
-            phText.getCurrentChoices().let{
+        if (incomingText.revealed) {
+            phText.getCurrentChoices().let {
                 aText.draw(batch)
                 bText.draw(batch)
                 cText.draw(batch)
@@ -39,6 +39,7 @@ class GameScreen: Screen() {
         if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
             iceTool.flying = true
         }
+
         when {
             aText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) -> {
                 aText.pressing = true
@@ -100,6 +101,11 @@ class GameScreen: Screen() {
         }
     }
 
+    fun redButton() {
+        travelTimer.go()
+        travelTimer.running = true
+    }
+
     private fun zar(): Boolean {
         val rng = (0..10).random()
         if (rng < 5) return true
@@ -124,15 +130,20 @@ class GameScreen: Screen() {
     }
 
     override fun loopAction() {
-        if (timer.done()) {
-            if (zar()) {
-                breakShip()
-            }
-            println("Mouse : ${Gdx.input.x} ${Gdx.input.y} ")
-            println("Text top left : ${aText.top} ${aText.left} ")
-            println("Text sizes : ${aText.modifiedHeight} ${aText.modifiedWidth} ")
+        if (travelTimer.running) {
+            if (travelTimer.now() < 20000 && timer.done()) {
+                if (zar()) {
+                    breakShip()
+                }
+                println("Mouse : ${Gdx.input.x} ${Gdx.input.y} ")
+                println("Text top left : ${aText.top} ${aText.left} ")
+                println("Text sizes : ${aText.modifiedHeight} ${aText.modifiedWidth} ")
 
-            timer.go()
+                timer.go()
+            } else if (travelTimer.done()) {
+                travelTimer.running = false
+                changePlanet()
+            }
         }
 
         if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
@@ -147,17 +158,25 @@ class GameScreen: Screen() {
 
     }
 
-    override fun lateInitializer(){
+    private fun changePlanet() {
+        if (SharedVariables.planetIndex < 2)
+            SharedVariables.planetIndex++
+        phText.getPlanetPassage(SharedVariables.planets[SharedVariables.planetIndex].second)
+        incomingText.letterRevealReset()
+        incomingText.setStuff(phText.getCurrentLine())
+    }
+
+    override fun lateInitializer() {
         mainSprite = SharedVariables.loadSprite(SharedVariables.gameBackgroundPath, SharedVariables.gameBackgroundRatio)
-        mainSprite.setCenterX(SharedVariables.mainWidth.toFloat()/2)
-        mainSprite.setCenterY(SharedVariables.mainHeight.toFloat()/2)
+        mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
+        mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
         leftestDevice = SimpleDevice("graphics/placeholder_leftest", 0.25f)
-        leftestDevice.relocateCentre(240f,410f)
+        leftestDevice.relocateCentre(240f, 410f)
         iceTool = SimpleTool("graphics/placeholder_tool", ratio = 0.25f)
-        iceTool.relocateCentre(200f,900f)
-        phText = TextIsland(Gdx.files.internal("planet_0/story.json"))
-        incomingText = TextIslandTexts().apply{
-            setStuff(phText.getCurrentLine(),517f,453f,865f,180f)
+        iceTool.relocateCentre(200f, 900f)
+        phText = TextIsland(Gdx.files.internal("planet_0/story.json"), SharedVariables.planets[0].second)
+        incomingText = TextIslandTexts().apply {
+            setStuff(phText.getCurrentLine(), 517f, 453f, 865f, 180f)
         }
         phText.getCurrentChoices().let{
             aText = TextIslandTexts().apply {

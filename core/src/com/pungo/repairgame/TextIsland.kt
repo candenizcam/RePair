@@ -4,19 +4,17 @@ import com.badlogic.gdx.files.FileHandle
 import com.badlogic.gdx.utils.JsonReader
 import com.badlogic.gdx.utils.JsonValue
 
-class TextIsland(path: FileHandle) {
+class TextIsland(path: FileHandle, private var currentPid: Int) {
     private val jsonReader = JsonReader()
     private var status = TextStatus.NO_DIALOGUE         // TextStatus.CHOICES = A passage and 3 choices will be visible
     private var passages: JsonValue            // TextStatus.NO_CHOICES = Only a passage will be visible
     private var currentPassage: JsonValue      // TextStatus.NO_DIALOGUE = No text visible
-    private var currentPid: Int
 
     init {
         val text = path.readString()
         val story = jsonReader.parse(text)
         passages = story.get("passages")
-        currentPid = 0
-        currentPassage = passages[currentPid]
+        currentPassage = passages[currentPid - 1]
         setStatus()
     }
 
@@ -36,7 +34,7 @@ class TextIsland(path: FileHandle) {
 
     fun getPlanetPassage(planetID: Int) { // for each planet, we will hold a starting id, and when we get to this planet,
         currentPid = planetID               // we will use this id to load the related passage
-        currentPassage = passages[currentPid]
+        currentPassage = passages[currentPid - 1]
         setStatus()
     }
 
