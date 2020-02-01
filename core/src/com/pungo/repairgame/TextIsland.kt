@@ -55,8 +55,8 @@ class TextIsland(path: FileHandle) {
         val choices: MutableList<String> = mutableListOf()
         val links = currentPassage.get("links")
 
-        for (i in 0..links.size) {
-            choices[i] = links[i].get("name").asString()
+        for (i in 0 until links.size) {
+            choices.add(links[i].get("name").asString())
         }
 
         return choices

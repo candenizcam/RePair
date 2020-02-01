@@ -15,6 +15,7 @@ object SharedVariables{
     const val companyLogoRatio = 0.9 //1 is fullsize, 2 is double size 0.5 is half size... MATH...
     const val menuBackgroundRatio = 0.5
     const val gameBackgroundRatio = 0.25
+    const val letterRevealSpeed = 0.2f //letter per render
     const val companyLogoPath = "graphics/pungotitle.png"
     const val mainMenuBackgroundPath = "graphics/main_menu_placeholder.png"
     const val gameBackgroundPath = "graphics/game_placeholder.png"
