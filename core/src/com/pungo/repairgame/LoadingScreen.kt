@@ -11,12 +11,12 @@ class LoadingScreen() : Screen() {
     private lateinit var bgPixmap: Pixmap
     private lateinit var menuSprite: Sprite
     private var menuVisible = false
-    private var startTime = 0L
+    lateinit var timer: Timer
 
     override fun lateInitializer() {
         loadImage()
+        timer = Timer(3000)
     }
-
 
     private fun loadImage() {
         var pixmap = Pixmap(Gdx.files.internal(SharedVariables.companyLogoPath))
@@ -39,34 +39,24 @@ class LoadingScreen() : Screen() {
         menuSprite = Sprite(Texture(bgPixmap))
         menuSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         menuSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
-
-
     }
 
-    fun timerGo() {
-        startTime = System.currentTimeMillis()
-    }
+
 
     override fun loopAction() {
-        val nowTime = System.currentTimeMillis() - startTime
         when {
-            nowTime < 1000 -> {
+            timer.now() < 1000 -> {
                 menuVisible = false
-                bgSprite.setAlpha(nowTime.toFloat() / 1000)
-
+                bgSprite.setAlpha(timer.now().toFloat() / 1000)
             }
-            nowTime < 2000 -> {
+            timer.now() < 2000 -> {
                 bgSprite.setAlpha(1f)
             }
-            nowTime < 3000 -> {
+            timer.now() < 3000 -> {
                 menuVisible = true
-                bgSprite.setAlpha(3f - nowTime.toFloat() / 1000)
-            }
-            else -> {
+                bgSprite.setAlpha(3f - timer.now().toFloat() / 1000)
             }
         }
-
-
     }
 
     override fun draw(batch: SpriteBatch) {
@@ -86,9 +76,9 @@ class LoadingScreen() : Screen() {
     }
 
     fun isLoading(): Boolean {
-        if (System.currentTimeMillis() - startTime < 3000) {
-            return true
+        if (timer.done()) {
+            return false
         }
-        return false
+        return true
     }
 }

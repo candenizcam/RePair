@@ -21,7 +21,7 @@ class MainGame : ApplicationAdapter() {
         MidiPlayer.open("sound/OST1.mid")
         MidiPlayer.setLooping(true)
 
-        SharedVariables.loadingScreen.timerGo()
+        SharedVariables.loadingScreen.timer.go()
     }
 
     override fun render() {
