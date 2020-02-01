@@ -8,7 +8,7 @@ class SimpleTool(private val path: String, private val ratio: Float)  {
     private lateinit var idleSprite: Sprite
     private lateinit var glowSprite: Sprite
     private lateinit var flyingSprite: Sprite
-    private lateinit var chosenSprite: Sprite
+    lateinit var chosenSprite: Sprite
     private var centreX = 0f
     private var centreY = 0f
     private var flyingCentreX = 0f
@@ -18,13 +18,6 @@ class SimpleTool(private val path: String, private val ratio: Float)  {
 
     init{
         loadImage()
-    }
-
-    fun contains(x: Float, y: Float): Boolean {
-        val y_corr = SharedVariables.mainHeight - y
-        val xContains = (x > chosenSprite.x) && (x < (chosenSprite.x + chosenSprite.width))
-        val yContains = (y_corr > chosenSprite.y) && (y_corr < (chosenSprite.y + chosenSprite.height))
-        return xContains && yContains
     }
 
     fun relocateCentre(x: Float, y: Float){

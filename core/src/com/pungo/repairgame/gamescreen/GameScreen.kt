@@ -4,7 +4,7 @@ import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.*
-import org.w3c.dom.Text
+import com.pungo.repairgame.SharedVariables.contains
 
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite
@@ -22,7 +22,7 @@ class GameScreen: Screen() {
     }
 
     override fun firstPress() {
-        if (iceTool.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())){
+        if (contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
             iceTool.flying = true
         }
     }
@@ -36,7 +36,7 @@ class GameScreen: Screen() {
     override fun released() {
         if (iceTool.flying){
             iceTool.flying = false
-            if (leftestDevice.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())){
+            if (contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), leftestDevice.chosenSprite)) {
                 leftestDevice.status = DeviceStatus.NORMAL
             }
 
@@ -45,18 +45,16 @@ class GameScreen: Screen() {
     }
 
     override fun loopAction() {
-        if(timer.done()){
+        if (timer.done()) {
             leftestDevice.status = DeviceStatus.HOT
             timer.go()
         }
 
-        if (iceTool.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())){
+        if (contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
             iceTool.status = ToolStatus.GLOW
         } else {
             iceTool.status = ToolStatus.IDLE
         }
-
-
     }
 
     override fun lateInitializer(){
@@ -67,9 +65,8 @@ class GameScreen: Screen() {
         leftestDevice.relocateCentre(240f,410f)
         iceTool = SimpleTool("graphics/placeholder_tool", ratio = 0.25f)
         iceTool.relocateCentre(200f,900f)
-        phText = TextIsland("planet_0/placeholder_island.txt")
+        phText = TextIsland(Gdx.files.internal("planet_0/story.json"))
         incomingText = IncomingText()
         timer.go()
     }
-
 }

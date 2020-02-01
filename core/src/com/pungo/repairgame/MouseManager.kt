@@ -3,7 +3,7 @@ package com.pungo.repairgame
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input
 
-class MouseManager() {
+class MouseManager {
     private var pressed = false
 
     fun clickListener() {

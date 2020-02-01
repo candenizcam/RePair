@@ -7,7 +7,6 @@ import javax.sound.midi.Sequencer
 
 
 object MidiPlayer {
-    private var isLooping: Boolean = false
     private lateinit var sequence: Sequence
     private var sequencer: Sequencer = MidiSystem.getSequencer()
 
@@ -35,10 +34,6 @@ object MidiPlayer {
         sequencer.start()
     }
 
-    fun pause() {
-        stop()
-    }
-
     fun stop() {
         sequencer.stop()
     }
@@ -49,8 +44,5 @@ object MidiPlayer {
 
     fun isPlaying(): Boolean {
         return sequencer.isRunning
-    }
-
-    fun setVolume(volume: Float) { //Not implemented
     }
 }

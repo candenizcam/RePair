@@ -2,13 +2,12 @@ package com.pungo.repairgame.mainmenu
 
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
-import com.pungo.repairgame.SharedVariables
 import com.pungo.repairgame.SharedVariables.loadSprite
 
 class SimpleButton(private val path: String, private val ratio: Float) {
     private lateinit var upSprite: Sprite
     private lateinit var downSprite: Sprite
-    private lateinit var activeSprite: Sprite
+    lateinit var activeSprite: Sprite
     var status = MenuButtonStatus.UP
     private var centreX = 0f
     private var centreY = 0f
@@ -54,13 +53,4 @@ class SimpleButton(private val path: String, private val ratio: Float) {
 
          */
     }
-
-    fun contains(x: Float, y: Float): Boolean {
-        val y_corr = SharedVariables.mainHeight - y
-        val xContains = (x > activeSprite.x) && (x < (activeSprite.x + activeSprite.width))
-        val yContains = (y_corr > activeSprite.y) && (y_corr < (activeSprite.y + activeSprite.height))
-        return xContains && yContains
-    }
-
-
 }
