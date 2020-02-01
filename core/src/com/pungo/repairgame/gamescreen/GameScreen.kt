@@ -3,8 +3,10 @@ package com.pungo.repairgame.gamescreen
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
-import com.pungo.repairgame.*
-import org.w3c.dom.Text
+import com.pungo.repairgame.Screen
+import com.pungo.repairgame.SharedVariables
+import com.pungo.repairgame.TextIsland
+import com.pungo.repairgame.Timer
 
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite
@@ -12,6 +14,7 @@ class GameScreen: Screen() {
     private lateinit var iceTool: SimpleTool
     private lateinit var phText: TextIsland
     private val timer = Timer(10000)
+    private val textTimer = Timer(3000)
 
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
@@ -43,15 +46,22 @@ class GameScreen: Screen() {
     }
 
     override fun loopAction() {
-        if(timer.done()){
+        if (timer.done()) {
             leftestDevice.status = DeviceStatus.HOT
             timer.go()
         }
 
-        if (iceTool.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())){
+        if (iceTool.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())) {
             iceTool.status = ToolStatus.GLOW
         } else {
             iceTool.status = ToolStatus.IDLE
+        }
+        phText = TextIsland(Gdx.files.internal("planet_0/story.3json"))
+
+        if (textTimer.done()) {
+            println(phText.getCurrentLine())
+            phText.nextPassage(1)
+            textTimer.go()
         }
 
 
@@ -65,8 +75,9 @@ class GameScreen: Screen() {
         leftestDevice.relocateCentre(240f,410f)
         iceTool = SimpleTool("graphics/placeholder_tool", ratio = 0.25f)
         iceTool.relocateCentre(200f,900f)
-        phText = TextIsland("planet_0/placeholder_island.txt")
+        phText = TextIsland(Gdx.files.internal("planet_0/story.json"))
         timer.go()
+        textTimer.go()
     }
 
 }

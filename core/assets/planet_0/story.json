@@ -1,0 +1,1624 @@
+{
+  "passages": [
+    {
+      "text": "Hello fellow citizen, May I have your reason to leave our beautiful planet?\n\n[[Gotta buy those flowers and cakes to get back my partner!]]\n[[Just got off of a relationship, I am gonna win it back!]]\n[[Well . . . Mmm . . .  Just touristic visits . . . ]]",
+      "links": [
+        {
+          "name": "Gotta buy those flowers and cakes to get back my partner!",
+          "link": "Gotta buy those flowers and cakes to get back my partner!",
+          "pid": "2"
+        },
+        {
+          "name": "Just got off of a relationship, I am gonna win it back!",
+          "link": "Just got off of a relationship, I am gonna win it back!",
+          "pid": "37"
+        },
+        {
+          "name": "Well . . . Mmm . . .  Just touristic visits . . . ",
+          "link": "Well . . . Mmm . . .  Just touristic visits . . . ",
+          "pid": "38"
+        }
+      ],
+      "name": "Passport Guy",
+      "pid": "1",
+      "position": {
+        "x": "4179",
+        "y": "305.5"
+      }
+    },
+    {
+      "text": "[[Gotta buy those flowers and cakes to get back my partner!->Passport Answer]]",
+      "links": [
+        {
+          "name": "Gotta buy those flowers and cakes to get back my partner!",
+          "link": "Passport Answer",
+          "pid": "3"
+        }
+      ],
+      "name": "Gotta buy those flowers and cakes to get back my partner!",
+      "pid": "2",
+      "position": {
+        "x": "4044.3333333333335",
+        "y": "513.1666666666667"
+      }
+    },
+    {
+      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nYou don't want those in your way, right?\nGet to that Mechanic Planet first they'll help.\nNow you can prepare for take off.\n...\n...\n...\nJust press that red button.",
+      "name": "Passport Answer",
+      "pid": "3",
+      "position": {
+        "x": "4226",
+        "y": "652.5"
+      }
+    },
+    {
+      "text": "Glogilog goruo on, fotygo gilugona fokronago so to pligirio?\n[[Sure, dear alien friend just like you said chocolate it is.]]\n[[What was that glogilog means mmm red fruit right?]]\n[[Wow wow wow stop right there, no you cannot put gilugona fokronago nuts in a cake.]]",
+      "links": [
+        {
+          "name": "Sure, dear alien friend just like you said chocolate it is.",
+          "link": "Sure, dear alien friend just like you said chocolate it is.",
+          "pid": "25"
+        },
+        {
+          "name": "What was that glogilog means mmm red fruit right?",
+          "link": "What was that glogilog means mmm red fruit right?",
+          "pid": "26"
+        },
+        {
+          "name": "Wow wow wow stop right there, no you cannot put gilugona fokronago nuts in a cake.",
+          "link": "Wow wow wow stop right there, no you cannot put gilugona fokronago nuts in a cake.",
+          "pid": "27"
+        }
+      ],
+      "name": "TranslatorProblem",
+      "pid": "4",
+      "position": {
+        "x": "5943",
+        "y": "2343.5000000000005"
+      }
+    },
+    {
+      "text": "[[Trasfilag kiho golobo hobo to koro on to Dergo so Bologo so Bakaro]]",
+      "links": [
+        {
+          "name": "Trasfilag kiho golobo hobo to koro on to Dergo so Bologo so Bakaro",
+          "link": "Trasfilag kiho golobo hobo to koro on to Dergo so Bologo so Bakaro",
+          "pid": "31"
+        }
+      ],
+      "name": "Definitely, Trasfilag",
+      "pid": "5",
+      "position": {
+        "x": "5739",
+        "y": "2870.1666666666674"
+      },
+      "tags": [
+        "Bad-Choice"
+      ]
+    },
+    {
+      "text": "[[Gololo gololololo ... Roboto hobo to koro on to Dergo so Bologo so Bakaro]]",
+      "links": [
+        {
+          "name": "Gololo gololololo ... Roboto hobo to koro on to Dergo so Bologo so Bakaro",
+          "link": "Gololo gololololo ... Roboto hobo to koro on to Dergo so Bologo so Bakaro",
+          "pid": "33"
+        }
+      ],
+      "name": "Domo arigato Mr. Roboto au hi made!!!",
+      "pid": "6",
+      "position": {
+        "x": "6064.666666666667",
+        "y": "2867.833333333334"
+      },
+      "tags": [
+        "Good-Choice"
+      ]
+    },
+    {
+      "text": "[[Frougo hogolo frogogo gololol gololo hobo to koro on to Dergo so Bologo so Bakaro]]",
+      "links": [
+        {
+          "name": "Frougo hogolo frogogo gololol gololo hobo to koro on to Dergo so Bologo so Bakaro",
+          "link": "Frougo hogolo frogogo gololol gololo hobo to koro on to Dergo so Bologo so Bakaro",
+          "pid": "34"
+        }
+      ],
+      "name": "Gololo gololo Frougo frogo toads and stuff",
+      "pid": "7",
+      "position": {
+        "x": "6231.666666666667",
+        "y": "2892.833333333334"
+      },
+      "tags": [
+        "Good-Choice"
+      ]
+    },
+    {
+      "text": "Well, well, well, let me guess, you want me to fix that mess of a ship, right? \n[[Yeah they said it wouldn't go far without you and I need it to get back my baby]]\n[[After you do that, can you take a look at this com panel too, my future generations depend on it]]\n[[Just quickly fix stuff, gotta catch my date after this!!]]",
+      "links": [
+        {
+          "name": "Yeah they said it wouldn't go far without you and I need it to get back my baby",
+          "link": "Yeah they said it wouldn't go far without you and I need it to get back my baby",
+          "pid": "13"
+        },
+        {
+          "name": "After you do that, can you take a look at this com panel too, my future generations depend on it",
+          "link": "After you do that, can you take a look at this com panel too, my future generations depend on it",
+          "pid": "14"
+        },
+        {
+          "name": "Just quickly fix stuff, gotta catch my date after this!!",
+          "link": "Just quickly fix stuff, gotta catch my date after this!!",
+          "pid": "15"
+        }
+      ],
+      "name": "MechanicNormal",
+      "pid": "8",
+      "position": {
+        "x": "3420",
+        "y": "1002.1666666666667"
+      }
+    },
+    {
+      "text": "[[Sure, some free stuff to use why not?]]\n[[Ohh, thank you it is so nice of you to give away those]]\n[[They said you could fix it! What a shame. SHAME!]]",
+      "links": [
+        {
+          "name": "Sure, some free stuff to use why not?",
+          "link": "Sure, some free stuff to use why not?",
+          "pid": "10"
+        },
+        {
+          "name": "Ohh, thank you it is so nice of you to give away those",
+          "link": "Ohh, thank you it is so nice of you to give away those",
+          "pid": "11"
+        },
+        {
+          "name": "They said you could fix it! What a shame. SHAME!",
+          "link": "They said you could fix it! What a shame. SHAME!",
+          "pid": "12"
+        }
+      ],
+      "name": "Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.",
+      "pid": "9",
+      "position": {
+        "x": "3412",
+        "y": "1471.5"
+      }
+    },
+    {
+      "text": "[[Don't get too excited. Here's some Ice-Packs and a Multimeter]]",
+      "links": [
+        {
+          "name": "Don't get too excited. Here's some Ice-Packs and a Multimeter",
+          "link": "Don't get too excited. Here's some Ice-Packs and a Multimeter",
+          "pid": "16"
+        }
+      ],
+      "name": "Sure, some free stuff to use why not?",
+      "pid": "10",
+      "position": {
+        "x": "3262",
+        "y": "1620.5"
+      }
+    },
+    {
+      "text": "[[Don't get too excited. Here's some Ice-Packs and a Multimeter]]",
+      "links": [
+        {
+          "name": "Don't get too excited. Here's some Ice-Packs and a Multimeter",
+          "link": "Don't get too excited. Here's some Ice-Packs and a Multimeter",
+          "pid": "16"
+        }
+      ],
+      "name": "Ohh, thank you it is so nice of you to give away those",
+      "pid": "11",
+      "position": {
+        "x": "3412",
+        "y": "1621.5"
+      }
+    },
+    {
+      "text": "[[Don't get too excited. Here's some Ice-Packs and a Multimeter]]",
+      "links": [
+        {
+          "name": "Don't get too excited. Here's some Ice-Packs and a Multimeter",
+          "link": "Don't get too excited. Here's some Ice-Packs and a Multimeter",
+          "pid": "16"
+        }
+      ],
+      "name": "They said you could fix it! What a shame. SHAME!",
+      "pid": "12",
+      "position": {
+        "x": "3562",
+        "y": "1621.5"
+      }
+    },
+    {
+      "text": "[[Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.]]",
+      "links": [
+        {
+          "name": "Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.",
+          "link": "Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.",
+          "pid": "9"
+        }
+      ],
+      "name": "Yeah they said it wouldn't go far without you and I need it to get back my baby",
+      "pid": "13",
+      "position": {
+        "x": "3170",
+        "y": "1284.5"
+      }
+    },
+    {
+      "text": "[[Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.]]",
+      "links": [
+        {
+          "name": "Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.",
+          "link": "Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.",
+          "pid": "9"
+        }
+      ],
+      "name": "After you do that, can you take a look at this com panel too, my future generations depend on it",
+      "pid": "14",
+      "position": {
+        "x": "3407",
+        "y": "1273.1666666666667"
+      }
+    },
+    {
+      "text": "[[Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.]]",
+      "links": [
+        {
+          "name": "Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.",
+          "link": "Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.",
+          "pid": "9"
+        }
+      ],
+      "name": "Just quickly fix stuff, gotta catch my date after this!!",
+      "pid": "15",
+      "position": {
+        "x": "3650",
+        "y": "1285.5"
+      }
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Don't get too excited. Here's some Ice-Packs and a Multimeter",
+      "pid": "16",
+      "position": {
+        "x": "3408",
+        "y": "1830.5"
+      }
+    },
+    {
+      "text": "[[Gilifotso, kiho golobo hobo to koro on to Dergo so Bologo so Bakaro]]",
+      "links": [
+        {
+          "name": "Gilifotso, kiho golobo hobo to koro on to Dergo so Bologo so Bakaro",
+          "link": "Gilifotso, kiho golobo hobo to koro on to Dergo so Bologo so Bakaro",
+          "pid": "32"
+        }
+      ],
+      "name": "Seems like starting with gs works, Gilifotso",
+      "pid": "17",
+      "position": {
+        "x": "5890",
+        "y": "2869.166666666667"
+      },
+      "tags": [
+        "Bad-Choice"
+      ]
+    },
+    {
+      "text": "Karato, karato, karato xakato ot rothoso, hos xakiro ko koto fosho axeto hoso heaxto?\n[[You probably already know what to do with a broken ship.]]\n[[Just overall maintenance and fix this com panel too, please.]]\n[[Yeah not understanding you, just quickly fix stuff!]]",
+      "links": [
+        {
+          "name": "You probably already know what to do with a broken ship.",
+          "link": "You probably already know what to do with a broken ship.",
+          "pid": "19"
+        },
+        {
+          "name": "Just overall maintenance and fix this com panel too, please.",
+          "link": "Just overall maintenance and fix this com panel too, please.",
+          "pid": "20"
+        },
+        {
+          "name": "Yeah not understanding you, just quickly fix stuff!",
+          "link": "Yeah not understanding you, just quickly fix stuff!",
+          "pid": "21"
+        }
+      ],
+      "name": "MechanicTranslatorProblem",
+      "pid": "18",
+      "position": {
+        "x": "4112",
+        "y": "1019.5"
+      }
+    },
+    {
+      "text": "[[Takkora oka footomo aktaxao kobo com paknel bot chako poto boompako to. Uo koko kikto scurobo qikiroko fakato.]]",
+      "links": [
+        {
+          "name": "Takkora oka footomo aktaxao kobo com paknel bot chako poto boompako to. Uo koko kikto scurobo qikiroko fakato.",
+          "link": "Takkora oka footomo aktaxao kobo com paknel bot chako poto boompako to. Uo koko kikto scurobo qikiroko fakato.",
+          "pid": "22"
+        }
+      ],
+      "name": "You probably already know what to do with a broken ship.",
+      "pid": "19",
+      "position": {
+        "x": "3962",
+        "y": "1168.5"
+      }
+    },
+    {
+      "text": "[[Takkora oka footomo aktaxao kobo com paknel bot chako poto boompako to. Uo koko kikto scurobo qikiroko fakato.]]",
+      "links": [
+        {
+          "name": "Takkora oka footomo aktaxao kobo com paknel bot chako poto boompako to. Uo koko kikto scurobo qikiroko fakato.",
+          "link": "Takkora oka footomo aktaxao kobo com paknel bot chako poto boompako to. Uo koko kikto scurobo qikiroko fakato.",
+          "pid": "22"
+        }
+      ],
+      "name": "Just overall maintenance and fix this com panel too, please.",
+      "pid": "20",
+      "position": {
+        "x": "4112",
+        "y": "1169.5"
+      }
+    },
+    {
+      "text": "[[Takkora oka footomo aktaxao kobo com paknel bot chako poto boompako to. Uo koko kikto scurobo qikiroko fakato.]]",
+      "links": [
+        {
+          "name": "Takkora oka footomo aktaxao kobo com paknel bot chako poto boompako to. Uo koko kikto scurobo qikiroko fakato.",
+          "link": "Takkora oka footomo aktaxao kobo com paknel bot chako poto boompako to. Uo koko kikto scurobo qikiroko fakato.",
+          "pid": "22"
+        }
+      ],
+      "name": "Yeah not understanding you, just quickly fix stuff!",
+      "pid": "21",
+      "position": {
+        "x": "4262",
+        "y": "1168.5"
+      }
+    },
+    {
+      "text": "[[Okey, you are trying to send something to me]]\n[[Sure, some free stuff is coming this way, why not accept a gift?]] \n[[Well what about this com panel. Why don't you fix it.]]",
+      "links": [
+        {
+          "name": "Okey, you are trying to send something to me",
+          "link": "Okey, you are trying to send something to me",
+          "pid": "44"
+        },
+        {
+          "name": "Sure, some free stuff is coming this way, why not accept a gift?",
+          "link": "Sure, some free stuff is coming this way, why not accept a gift?",
+          "pid": "24"
+        },
+        {
+          "name": "Well what about this com panel. Why don't you fix it.",
+          "link": "Well what about this com panel. Why don't you fix it.",
+          "pid": "45"
+        }
+      ],
+      "name": "Takkora oka footomo aktaxao kobo com paknel bot chako poto boompako to. Uo koko kikto scurobo qikiroko fakato.",
+      "pid": "22",
+      "position": {
+        "x": "4122",
+        "y": "1388.5"
+      }
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto Maltoplo-Mekkoro",
+      "pid": "23",
+      "position": {
+        "x": "4122",
+        "y": "1687.5"
+      }
+    },
+    {
+      "text": "[[Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto Maltoplo-Mekkoro]]",
+      "links": [
+        {
+          "name": "Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto Maltoplo-Mekkoro",
+          "link": "Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto Maltoplo-Mekkoro",
+          "pid": "23"
+        }
+      ],
+      "name": "Sure, some free stuff is coming this way, why not accept a gift?",
+      "pid": "24",
+      "position": {
+        "x": "4118.333333333333",
+        "y": "1540.8333333333333"
+      }
+    },
+    {
+      "text": "Aralienfri!!! GLOG Aralienfri. Forogoragas sobo torogosabo. HAORAGO os ROBOTO os DANOLOGOTO\n[[Yelling stuff does not make me understand more what is Danologoto?]]\n[[Domo arigato Mr. Roboto au hi made!!!]]\n[[YELLING STUFF TO EACH OTHER SEEMS LIKE A GOOD WAY TO COMMUNICATE I CHOOSE THE FIRST THING, HAORAGO]]",
+      "links": [
+        {
+          "name": "Yelling stuff does not make me understand more what is Danologoto?",
+          "link": "Yelling stuff does not make me understand more what is Danologoto?",
+          "pid": "28"
+        },
+        {
+          "name": "Domo arigato Mr. Roboto au hi made!!!",
+          "link": "Domo arigato Mr. Roboto au hi made!!!",
+          "pid": "6"
+        },
+        {
+          "name": "YELLING STUFF TO EACH OTHER SEEMS LIKE A GOOD WAY TO COMMUNICATE I CHOOSE THE FIRST THING, HAORAGO",
+          "link": "YELLING STUFF TO EACH OTHER SEEMS LIKE A GOOD WAY TO COMMUNICATE I CHOOSE THE FIRST THING, HAORAGO",
+          "pid": "29"
+        }
+      ],
+      "name": "Sure, dear alien friend just like you said chocolate it is.",
+      "pid": "25",
+      "position": {
+        "x": "5606.333333333333",
+        "y": "2585.166666666667"
+      }
+    },
+    {
+      "text": "Horo horo glogilog. Frio goruo on glogilog sorono co Frougo, Trasfilag os Gilifotso?\n[[Gololo gololo Frougo frogo toads and stuff]]\n[[Definitely, Trasfilag]]\n[[Seems like starting with gs works, Gilifotso]]",
+      "links": [
+        {
+          "name": "Gololo gololo Frougo frogo toads and stuff",
+          "link": "Gololo gololo Frougo frogo toads and stuff",
+          "pid": "7"
+        },
+        {
+          "name": "Definitely, Trasfilag",
+          "link": "Definitely, Trasfilag",
+          "pid": "5"
+        },
+        {
+          "name": "Seems like starting with gs works, Gilifotso",
+          "link": "Seems like starting with gs works, Gilifotso",
+          "pid": "17"
+        }
+      ],
+      "name": "What was that glogilog means mmm red fruit right?",
+      "pid": "26",
+      "position": {
+        "x": "5908",
+        "y": "2591.5000000000005"
+      }
+    },
+    {
+      "text": "Peedgilugona gololo gololo gololooo . . . Frio goruo on glogilog sorono co filigalo Roboto, Gilifotso os Frougo\n[[Seems like starting with gs works, Gilifotso]]\n[[Domo arigato Mr. Roboto au hi made!!!]]\n[[Gololo gololo Frougo frogo toads and stuff]]",
+      "links": [
+        {
+          "name": "Seems like starting with gs works, Gilifotso",
+          "link": "Seems like starting with gs works, Gilifotso",
+          "pid": "17"
+        },
+        {
+          "name": "Domo arigato Mr. Roboto au hi made!!!",
+          "link": "Domo arigato Mr. Roboto au hi made!!!",
+          "pid": "6"
+        },
+        {
+          "name": "Gololo gololo Frougo frogo toads and stuff",
+          "link": "Gololo gololo Frougo frogo toads and stuff",
+          "pid": "7"
+        }
+      ],
+      "name": "Wow wow wow stop right there, no you cannot put gilugona fokronago nuts in a cake.",
+      "pid": "27",
+      "position": {
+        "x": "6271.333333333334",
+        "y": "2593.5"
+      }
+    },
+    {
+      "text": "[[ELLINGSTU hobo to ko foboro ELLINGSTU, forogoragas sobo torogosabo. TO RO GO SA BO]]",
+      "links": [
+        {
+          "name": "ELLINGSTU hobo to ko foboro ELLINGSTU, forogoragas sobo torogosabo. TO RO GO SA BO",
+          "link": "ELLINGSTU hobo to ko foboro ELLINGSTU, forogoragas sobo torogosabo. TO RO GO SA BO",
+          "pid": "30"
+        }
+      ],
+      "name": "Yelling stuff does not make me understand more what is Danologoto?",
+      "pid": "28",
+      "position": {
+        "x": "5384.666666666667",
+        "y": "2863.5"
+      },
+      "tags": [
+        "Bad-Choice"
+      ]
+    },
+    {
+      "text": "[[ELLINGSTU hobo to ko foboro ELLINGSTU, forogoragas sobo torogosabo. TO RO GO SA BO]]",
+      "links": [
+        {
+          "name": "ELLINGSTU hobo to ko foboro ELLINGSTU, forogoragas sobo torogosabo. TO RO GO SA BO",
+          "link": "ELLINGSTU hobo to ko foboro ELLINGSTU, forogoragas sobo torogosabo. TO RO GO SA BO",
+          "pid": "30"
+        }
+      ],
+      "name": "YELLING STUFF TO EACH OTHER SEEMS LIKE A GOOD WAY TO COMMUNICATE I CHOOSE THE FIRST THING, HAORAGO",
+      "pid": "29",
+      "position": {
+        "x": "5553",
+        "y": "2860.166666666667"
+      },
+      "tags": [
+        "Bad-Choice"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "ELLINGSTU hobo to ko foboro ELLINGSTU, forogoragas sobo torogosabo. TO RO GO SA BO",
+      "pid": "30",
+      "position": {
+        "x": "5328",
+        "y": "3061.8333333333335"
+      }
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Trasfilag kiho golobo hobo to koro on to Dergo so Bologo so Bakaro",
+      "pid": "31",
+      "position": {
+        "x": "5725.666666666667",
+        "y": "3075.1666666666674"
+      }
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Gilifotso, kiho golobo hobo to koro on to Dergo so Bologo so Bakaro",
+      "pid": "32",
+      "position": {
+        "x": "5878.333333333333",
+        "y": "3070.833333333334"
+      }
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Gololo gololololo ... Roboto hobo to koro on to Dergo so Bologo so Bakaro",
+      "pid": "33",
+      "position": {
+        "x": "6016.333333333333",
+        "y": "3074.500000000001"
+      }
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Frougo hogolo frogogo gololol gololo hobo to koro on to Dergo so Bologo so Bakaro",
+      "pid": "34",
+      "position": {
+        "x": "6178.333333333333",
+        "y": "3076.166666666667"
+      }
+    },
+    {
+      "text": "Well, wzzt ... ... ... bzzt, you ... ... ... to fix ... ... wzzzt trrzzzt ... ... ... right? \n[[Yeah, bees buzzing, you fixing so, I can get back to my baby]]\n[[YES YES FIX. FIX THE SHIP. And the relationship.]]\n[[Fix.Fix.Fix. Ship.Ship.Ship. Com Panel. Com Panel. Com Panel.]]",
+      "links": [
+        {
+          "name": "Yeah, bees buzzing, you fixing so, I can get back to my baby",
+          "link": "Yeah, bees buzzing, you fixing so, I can get back to my baby",
+          "pid": "36"
+        },
+        {
+          "name": "YES YES FIX. FIX THE SHIP. And the relationship.",
+          "link": "YES YES FIX. FIX THE SHIP. And the relationship.",
+          "pid": "39"
+        },
+        {
+          "name": "Fix.Fix.Fix. Ship.Ship.Ship. Com Panel. Com Panel. Com Panel.",
+          "link": "Fix.Fix.Fix. Ship.Ship.Ship. Com Panel. Com Panel. Com Panel.",
+          "pid": "40"
+        }
+      ],
+      "name": "MechanicSpeaker",
+      "pid": "35",
+      "position": {
+        "x": "4801",
+        "y": "1023.5"
+      }
+    },
+    {
+      "text": "[[Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...]]",
+      "links": [
+        {
+          "name": "Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...",
+          "link": "Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...",
+          "pid": "41"
+        }
+      ],
+      "name": "Yeah, bees buzzing, you fixing so, I can get back to my baby",
+      "pid": "36",
+      "position": {
+        "x": "4801",
+        "y": "1173.5"
+      }
+    },
+    {
+      "text": "[[Just got off of a relationship, I am gonna win it back!->Passport Answer]]",
+      "links": [
+        {
+          "name": "Just got off of a relationship, I am gonna win it back!",
+          "link": "Passport Answer",
+          "pid": "3"
+        }
+      ],
+      "name": "Just got off of a relationship, I am gonna win it back!",
+      "pid": "37",
+      "position": {
+        "x": "4251",
+        "y": "492.16666666666663"
+      }
+    },
+    {
+      "text": "[[Well . . . Mmm . . .  Just touristic visits . . . ->Passport Answer]]",
+      "links": [
+        {
+          "name": "Well . . . Mmm . . .  Just touristic visits . . . ",
+          "link": "Passport Answer",
+          "pid": "3"
+        }
+      ],
+      "name": "Well . . . Mmm . . .  Just touristic visits . . . ",
+      "pid": "38",
+      "position": {
+        "x": "4433.333333333333",
+        "y": "468.83333333333337"
+      }
+    },
+    {
+      "text": "[[Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...]]",
+      "links": [
+        {
+          "name": "Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...",
+          "link": "Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...",
+          "pid": "41"
+        }
+      ],
+      "name": "YES YES FIX. FIX THE SHIP. And the relationship.",
+      "pid": "39",
+      "position": {
+        "x": "4681",
+        "y": "1171.8333333333333"
+      }
+    },
+    {
+      "text": "[[Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...]]",
+      "links": [
+        {
+          "name": "Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...",
+          "link": "Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...",
+          "pid": "41"
+        }
+      ],
+      "name": "Fix.Fix.Fix. Ship.Ship.Ship. Com Panel. Com Panel. Com Panel.",
+      "pid": "40",
+      "position": {
+        "x": "4921",
+        "y": "1173.5"
+      }
+    },
+    {
+      "text": "[[Thanks, but what about the com panel?]]\n[[Ohh, thank you it is so nice of you to give free samples to customers.]]\n[[Ice-packs and a multimeter. Every spaceship needs those I guess.]]",
+      "links": [
+        {
+          "name": "Thanks, but what about the com panel?",
+          "link": "Thanks, but what about the com panel?",
+          "pid": "42"
+        },
+        {
+          "name": "Ohh, thank you it is so nice of you to give free samples to customers.",
+          "link": "Ohh, thank you it is so nice of you to give free samples to customers.",
+          "pid": "43"
+        },
+        {
+          "name": "Ice-packs and a multimeter. Every spaceship needs those I guess.",
+          "link": "Ice-packs and a multimeter. Every spaceship needs those I guess.",
+          "pid": "46"
+        }
+      ],
+      "name": "Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...",
+      "pid": "41",
+      "position": {
+        "x": "4809.333333333333",
+        "y": "1411.8333333333333"
+      }
+    },
+    {
+      "text": "[[Try ... ... ... ... fixxxtz wrrtz ... ... ... Multimeter.]]",
+      "links": [
+        {
+          "name": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Multimeter.",
+          "link": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Multimeter.",
+          "pid": "47"
+        }
+      ],
+      "name": "Thanks, but what about the com panel?",
+      "pid": "42",
+      "position": {
+        "x": "4734.333333333333",
+        "y": "1565.1666666666667"
+      }
+    },
+    {
+      "text": "[[Try ... ... ... ... fixxxtz wrrtz ... ... ... Multimeter.]]",
+      "links": [
+        {
+          "name": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Multimeter.",
+          "link": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Multimeter.",
+          "pid": "47"
+        }
+      ],
+      "name": "Ohh, thank you it is so nice of you to give free samples to customers.",
+      "pid": "43",
+      "position": {
+        "x": "4884.333333333333",
+        "y": "1565.1666666666667"
+      }
+    },
+    {
+      "text": "[[Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto Maltoplo-Mekkoro]]",
+      "links": [
+        {
+          "name": "Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto Maltoplo-Mekkoro",
+          "link": "Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto Maltoplo-Mekkoro",
+          "pid": "23"
+        }
+      ],
+      "name": "Okey, you are trying to send something to me",
+      "pid": "44",
+      "position": {
+        "x": "3931.6666666666665",
+        "y": "1553.5"
+      }
+    },
+    {
+      "text": "[[Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto Maltoplo-Mekkoro]]",
+      "links": [
+        {
+          "name": "Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto Maltoplo-Mekkoro",
+          "link": "Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto Maltoplo-Mekkoro",
+          "pid": "23"
+        }
+      ],
+      "name": "Well what about this com panel. Why don't you fix it.",
+      "pid": "45",
+      "position": {
+        "x": "4362",
+        "y": "1538.5"
+      }
+    },
+    {
+      "text": "[[Try ... ... ... ... fixxxtz wrrtz ... ... ... Multimeter.]]",
+      "links": [
+        {
+          "name": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Multimeter.",
+          "link": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Multimeter.",
+          "pid": "47"
+        }
+      ],
+      "name": "Ice-packs and a multimeter. Every spaceship needs those I guess.",
+      "pid": "46",
+      "position": {
+        "x": "5014.333333333333",
+        "y": "1560.1666666666667"
+      }
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Multimeter.",
+      "pid": "47",
+      "position": {
+        "x": "4852.666666666666",
+        "y": "1776.8333333333335"
+      }
+    },
+    {
+      "text": "Welcome to the sweetest planet of them all. We have infinite dessert choices cookies, cakes, ice-creams, all of them with all the flavors. Take your pick, you will love them all.\n[[It seems three means infinite here. I want cookies. More than an infinite number of them if you please.]]\n[[I love your confidence. I hope your cakes are as sweet as you. ]]\n[[As the ancestors said: Yo VIP let's kick it, ice ice cream!!]]",
+      "links": [
+        {
+          "name": "It seems three means infinite here. I want cookies. More than an infinite number of them if you please.",
+          "link": "It seems three means infinite here. I want cookies. More than an infinite number of them if you please.",
+          "pid": "49"
+        },
+        {
+          "name": "I love your confidence. I hope your cakes are as sweet as you. ",
+          "link": "I love your confidence. I hope your cakes are as sweet as you. ",
+          "pid": "51"
+        },
+        {
+          "name": "As the ancestors said: Yo VIP let's kick it, ice ice cream!!",
+          "link": "As the ancestors said: Yo VIP let's kick it, ice ice cream!!",
+          "pid": "50"
+        }
+      ],
+      "name": "DessertNormal",
+      "pid": "48",
+      "position": {
+        "x": "2084.666666666666",
+        "y": "2172.5"
+      }
+    },
+    {
+      "text": "Hmm, FOUR cookies with extra spit it is. I can suggest minty flavor with that it will take the edge off.\n[[If you think that's a burn, please burn the cookies too.]]\n[[Minty cookies actually that does not sound bad.]]\n[[Stick with chocolate, you cannot botch that.]]",
+      "links": [
+        {
+          "name": "If you think that's a burn, please burn the cookies too.",
+          "link": "If you think that's a burn, please burn the cookies too.",
+          "pid": "52"
+        },
+        {
+          "name": "Minty cookies actually that does not sound bad.",
+          "link": "Minty cookies actually that does not sound bad.",
+          "pid": "53"
+        },
+        {
+          "name": "Stick with chocolate, you cannot botch that.",
+          "link": "Stick with chocolate, you cannot botch that.",
+          "pid": "54"
+        }
+      ],
+      "name": "It seems three means infinite here. I want cookies. More than an infinite number of them if you please.",
+      "pid": "49",
+      "position": {
+        "x": "1601.333333333333",
+        "y": "2396.4999999999995"
+      }
+    },
+    {
+      "text": "Ancient sayings. Not my thing. We are more progressive here. Try some of the new flavors. Bone marrow and bourbon smoked cherries, pizza, garlic ... Anything you can think of we can make it.\n[[Garlic ... As an ice cream flavor. Please don't. Vanilla is progressive enough.]]\n[[Bone marrow and bourbon what what now. Blew my mind. I wanna try it so bad.]]\n[[Pizza. YES. Nothing can go wrong with pizza in it. Sprinkle some of it on top.]]",
+      "links": [
+        {
+          "name": "Garlic ... As an ice cream flavor. Please don't. Vanilla is progressive enough.",
+          "link": "Garlic ... As an ice cream flavor. Please don't. Vanilla is progressive enough.",
+          "pid": "57"
+        },
+        {
+          "name": "Bone marrow and bourbon what what now. Blew my mind. I wanna try it so bad.",
+          "link": "Bone marrow and bourbon what what now. Blew my mind. I wanna try it so bad.",
+          "pid": "58"
+        },
+        {
+          "name": "Pizza. YES. Nothing can go wrong with pizza in it. Sprinkle some of it on top.",
+          "link": "Pizza. YES. Nothing can go wrong with pizza in it. Sprinkle some of it on top.",
+          "pid": "59"
+        }
+      ],
+      "name": "As the ancestors said: Yo VIP let's kick it, ice ice cream!!",
+      "pid": "50",
+      "position": {
+        "x": "2446.333333333333",
+        "y": "2398.1666666666665"
+      }
+    },
+    {
+      "text": "I never had an unsatisfied customer, dear. For your lovely words, I will suggest my secret cool mint cake. Or maybe you are more of a traditionalist and would like a Red Velvet.\n[[More of a traditionalist than you think a Vanilla Cake please.]]\n[[If you say it is your specialty, cool mint definitely sounds ... interesting.]]\n[[A red velvet. Reminds me of my lover's skin. Mmmhh.]]",
+      "links": [
+        {
+          "name": "More of a traditionalist than you think a Vanilla Cake please.",
+          "link": "More of a traditionalist than you think a Vanilla Cake please.",
+          "pid": "55"
+        },
+        {
+          "name": "If you say it is your specialty, cool mint definitely sounds ... interesting.",
+          "link": "If you say it is your specialty, cool mint definitely sounds ... interesting.",
+          "pid": "63"
+        },
+        {
+          "name": "A red velvet. Reminds me of my lover's skin. Mmmhh.",
+          "link": "A red velvet. Reminds me of my lover's skin. Mmmhh.",
+          "pid": "56"
+        }
+      ],
+      "name": "I love your confidence. I hope your cakes are as sweet as you. ",
+      "pid": "51",
+      "position": {
+        "x": "2042.9999999999998",
+        "y": "2413.1666666666665"
+      }
+    },
+    {
+      "text": "That is it. Get out. I didn't move to the sweetest stop on the universe to hear these. Leave and never come back. You, you, youuu SOUR person.",
+      "name": "If you think that's a burn, please burn the cookies too.",
+      "pid": "52",
+      "position": {
+        "x": "1451.333333333333",
+        "y": "2548.166666666666"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Not many people know but mint goes great with most desserts, yeah. Anything to put on top, maybe I can draw something?\n[[A spiral. Our favourite shape. I want it on.]]\n[[Make it plain and simple. Mint is enough of a surprise.]]\n[[Do not draw the shape. Make it the shape. Make the dessert as a Spiral.]]",
+      "links": [
+        {
+          "name": "A spiral. Our favourite shape. I want it on.",
+          "link": "A spiral. Our favourite shape. I want it on.",
+          "pid": "64"
+        },
+        {
+          "name": "Make it plain and simple. Mint is enough of a surprise.",
+          "link": "Make it plain and simple. Mint is enough of a surprise.",
+          "pid": "65"
+        },
+        {
+          "name": "Do not draw the shape. Make it the shape. Make the dessert as a Spiral.",
+          "link": "Do not draw the shape. Make it the shape. Make the dessert as a Spiral.",
+          "pid": "66"
+        }
+      ],
+      "name": "Minty cookies actually that does not sound bad.",
+      "pid": "53",
+      "position": {
+        "x": "1601.333333333333",
+        "y": "2548.166666666666"
+      }
+    },
+    {
+      "text": "A chocolatechip cookie. A waste of my talents. Here, take them. They are good. But, know that you are missing on life.",
+      "name": "Stick with chocolate, you cannot botch that.",
+      "pid": "54",
+      "position": {
+        "x": "1751.333333333333",
+        "y": "2546.4999999999995"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Vanilla... Only vanilla ha... Someone's gonna be happy... Anything to add, at least a fancy napkin, please?\n[[Two spoons. It will be more romantic to share it.]]\n[[Actually, a fancy napkin makes a great contrast with this simple gift, I am taking it.]]\n[[A napkin, what for? Licking the tentacles is the best part.]]",
+      "links": [
+        {
+          "name": "Two spoons. It will be more romantic to share it.",
+          "link": "Two spoons. It will be more romantic to share it.",
+          "pid": "60"
+        },
+        {
+          "name": "Actually, a fancy napkin makes a great contrast with this simple gift, I am taking it.",
+          "link": "Actually, a fancy napkin makes a great contrast with this simple gift, I am taking it.",
+          "pid": "61"
+        },
+        {
+          "name": "A napkin, what for? Licking the tentacles is the best part.",
+          "link": "A napkin, what for? Licking the tentacles is the best part.",
+          "pid": "62"
+        }
+      ],
+      "name": "More of a traditionalist than you think a Vanilla Cake please.",
+      "pid": "55",
+      "position": {
+        "x": "1887.9999999999998",
+        "y": "2551.4999999999995"
+      }
+    },
+    {
+      "text": "I didn't make those in a while. Surely, I missed making them. You will not be disappointed. I can make the cake's skin feel like velvets too if you want?\n[[Nope. I love that about my partner. It feels insecure about this. Can you make it tentacley instead.]]\n[[No, need to overdo it. Let's not go overboard.]]\n[[Why not? A more velvety red velvet.]]",
+      "links": [
+        {
+          "name": "Nope. I love that about my partner. It feels insecure about this. Can you make it tentacley instead.",
+          "link": "Nope. I love that about my partner. It feels insecure about this. Can you make it tentacley instead.",
+          "pid": "67"
+        },
+        {
+          "name": "No, need to overdo it. Let's not go overboard.",
+          "link": "No, need to overdo it. Let's not go overboard.",
+          "pid": "68"
+        },
+        {
+          "name": "Why not? A more velvety red velvet.",
+          "link": "Why not? A more velvety red velvet.",
+          "pid": "69"
+        }
+      ],
+      "name": "A red velvet. Reminds me of my lover's skin. Mmmhh.",
+      "pid": "56",
+      "position": {
+        "x": "2178",
+        "y": "2549.833333333333"
+      }
+    },
+    {
+      "text": "Vanilla... Only vanilla ha... Someone's gonna be happy. Anything to add, at least a fancy napkin, please?\n[[Two spoons. It will be more romantic to share it.]]\n[[Actually, a fancy napkin makes a great contrast with this simple gift, I am taking it.]]\n[[A napkin, what for? Licking the tentacles is the best part.]]",
+      "links": [
+        {
+          "name": "Two spoons. It will be more romantic to share it.",
+          "link": "Two spoons. It will be more romantic to share it.",
+          "pid": "60"
+        },
+        {
+          "name": "Actually, a fancy napkin makes a great contrast with this simple gift, I am taking it.",
+          "link": "Actually, a fancy napkin makes a great contrast with this simple gift, I am taking it.",
+          "pid": "61"
+        },
+        {
+          "name": "A napkin, what for? Licking the tentacles is the best part.",
+          "link": "A napkin, what for? Licking the tentacles is the best part.",
+          "pid": "62"
+        }
+      ],
+      "name": "Garlic ... As an ice cream flavor. Please don't. Vanilla is progressive enough.",
+      "pid": "57",
+      "position": {
+        "x": "2309.666666666666",
+        "y": "2566.5"
+      }
+    },
+    {
+      "text": "YES. I want to make it for ages. Everyone is always so afraid of it. I never understood it. The taste will be great, but its color may need some adjusting. Anything in your mind?\n[[Use my skin as a sample, it will represent our eternal bond.]]\n[[Red, of course. Everyone knows red is the color of love. It is also the color of our love.]]\n[[Leave them as they are. Sticking with just one color does not feel right.]]",
+      "links": [
+        {
+          "name": "Use my skin as a sample, it will represent our eternal bond.",
+          "link": "Use my skin as a sample, it will represent our eternal bond.",
+          "pid": "70"
+        },
+        {
+          "name": "Red, of course. Everyone knows red is the color of love. It is also the color of our love.",
+          "link": "Red, of course. Everyone knows red is the color of love. It is also the color of our love.",
+          "pid": "71"
+        },
+        {
+          "name": "Leave them as they are. Sticking with just one color does not feel right.",
+          "link": "Leave them as they are. Sticking with just one color does not feel right.",
+          "pid": "72"
+        }
+      ],
+      "name": "Bone marrow and bourbon what what now. Blew my mind. I wanna try it so bad.",
+      "pid": "58",
+      "position": {
+        "x": "2446.333333333333",
+        "y": "2548.1666666666665"
+      }
+    },
+    {
+      "text": "YES. I want to make it for ages. Everyone is always so afraid of it. I never understood it. The taste will be great, but its color may need some adjusting. Anything in your mind?\n[[Use my skin as a sample, it will represent our eternal bond.]]\n[[Red, of course. Everyone knows red is the color of love. It is also the color of our love.]]\n[[Leave them as they are. Sticking with just one color does not feel right.]]",
+      "links": [
+        {
+          "name": "Use my skin as a sample, it will represent our eternal bond.",
+          "link": "Use my skin as a sample, it will represent our eternal bond.",
+          "pid": "70"
+        },
+        {
+          "name": "Red, of course. Everyone knows red is the color of love. It is also the color of our love.",
+          "link": "Red, of course. Everyone knows red is the color of love. It is also the color of our love.",
+          "pid": "71"
+        },
+        {
+          "name": "Leave them as they are. Sticking with just one color does not feel right.",
+          "link": "Leave them as they are. Sticking with just one color does not feel right.",
+          "pid": "72"
+        }
+      ],
+      "name": "Pizza. YES. Nothing can go wrong with pizza in it. Sprinkle some of it on top.",
+      "pid": "59",
+      "position": {
+        "x": "2596.333333333333",
+        "y": "2548.1666666666665"
+      }
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Two spoons. It will be more romantic to share it.",
+      "pid": "60",
+      "position": {
+        "x": "1819.6666666666665",
+        "y": "3258.166666666666"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Actually, a fancy napkin makes a great contrast with this simple gift, I am taking it.",
+      "pid": "61",
+      "position": {
+        "x": "1981.333333333333",
+        "y": "3234.8333333333326"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "A napkin, what for? Licking the tentacles is the best part.",
+      "pid": "62",
+      "position": {
+        "x": "2106.333333333333",
+        "y": "3249.8333333333326"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Not many people know but mint goes great with most desserts, yeah. Anything to put on top, maybe I can draw something?\n[[A spiral. Our favourite shape. I want it on.]]\n[[Make it plain and simple. Mint is enough of a surprise.]]\n[[Do not draw the shape. Make it the shape. Make the dessert as a Spiral.]]",
+      "links": [
+        {
+          "name": "A spiral. Our favourite shape. I want it on.",
+          "link": "A spiral. Our favourite shape. I want it on.",
+          "pid": "64"
+        },
+        {
+          "name": "Make it plain and simple. Mint is enough of a surprise.",
+          "link": "Make it plain and simple. Mint is enough of a surprise.",
+          "pid": "65"
+        },
+        {
+          "name": "Do not draw the shape. Make it the shape. Make the dessert as a Spiral.",
+          "link": "Do not draw the shape. Make it the shape. Make the dessert as a Spiral.",
+          "pid": "66"
+        }
+      ],
+      "name": "If you say it is your specialty, cool mint definitely sounds ... interesting.",
+      "pid": "63",
+      "position": {
+        "x": "2029.6666666666665",
+        "y": "2554.833333333333"
+      }
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "A spiral. Our favourite shape. I want it on.",
+      "pid": "64",
+      "position": {
+        "x": "1434.6666666666663",
+        "y": "3133.166666666666"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Make it plain and simple. Mint is enough of a surprise.",
+      "pid": "65",
+      "position": {
+        "x": "1584.6666666666663",
+        "y": "3133.166666666666"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Do not draw the shape. Make it the shape. Make the dessert as a Spiral.",
+      "pid": "66",
+      "position": {
+        "x": "1734.6666666666663",
+        "y": "3133.166666666666"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Nope. I love that about my partner. It feels insecure about this. Can you make it tentacley instead.",
+      "pid": "67",
+      "position": {
+        "x": "2189.6666666666665",
+        "y": "3109.833333333333"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "No, need to overdo it. Let's not go overboard.",
+      "pid": "68",
+      "position": {
+        "x": "2339.6666666666665",
+        "y": "3124.833333333333"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Why not? A more velvety red velvet.",
+      "pid": "69",
+      "position": {
+        "x": "2476.333333333333",
+        "y": "3118.1666666666665"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Use my skin as a sample, it will represent our eternal bond.",
+      "pid": "70",
+      "position": {
+        "x": "2613",
+        "y": "3109.833333333333"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Red, of course. Everyone knows red is the color of love. It is also the color of our love.",
+      "pid": "71",
+      "position": {
+        "x": "2751.333333333333",
+        "y": "3113.1666666666665"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Leave them as they are. Sticking with just one color does not feel right.",
+      "pid": "72",
+      "position": {
+        "x": "2913",
+        "y": "3109.833333333333"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Warrtzz ... ... ... sweetest ... of them all. ... ... infinite desss sss sss ... ... choices coookk k k k ... ... ... ... flavorsssszzzztszzz. ... ... ... loveydayyooo ....\n[[Yes I'd like some sweets for my lovey dovey doo. This is the right place. Do you have candy canes?]]\n[[Infinitely lasting ice-creams, also works as coolers. Sweet!]]\n[[Salted Caramel Space Chicken Wings. Sounds like a sweet, right? Have to be good.]]",
+      "links": [
+        {
+          "name": "Yes I'd like some sweets for my lovey dovey doo. This is the right place. Do you have candy canes?",
+          "link": "Yes I'd like some sweets for my lovey dovey doo. This is the right place. Do you have candy canes?",
+          "pid": "74"
+        },
+        {
+          "name": "Infinitely lasting ice-creams, also works as coolers. Sweet!",
+          "link": "Infinitely lasting ice-creams, also works as coolers. Sweet!",
+          "pid": "75"
+        },
+        {
+          "name": "Salted Caramel Space Chicken Wings. Sounds like a sweet, right? Have to be good.",
+          "link": "Salted Caramel Space Chicken Wings. Sounds like a sweet, right? Have to be good.",
+          "pid": "87"
+        }
+      ],
+      "name": "dessertSpeaker",
+      "pid": "73",
+      "position": {
+        "x": "3992",
+        "y": "2215.3333333333335"
+      }
+    },
+    {
+      "text": "CANDY ... .... ... TALENTS ... mmmhph ... ... greatest chef ... ... ... ... disttrrssss ... ...\n[[Okey, relax. Make some cake then. A red velvet maybe?]]\n[[Greatest cheff yelling over some candy canes. Yeah, sure.->If you think that's a burn, please burn the cookies too.]]\n[[It might not be the dessert for your talents, but customer is always right as they say. You can make the greatest candy cane in the whole universe, I believe in you.]]",
+      "links": [
+        {
+          "name": "Okey, relax. Make some cake then. A red velvet maybe?",
+          "link": "Okey, relax. Make some cake then. A red velvet maybe?",
+          "pid": "88"
+        },
+        {
+          "name": "Greatest cheff yelling over some candy canes. Yeah, sure.",
+          "link": "If you think that's a burn, please burn the cookies too.",
+          "pid": "52"
+        },
+        {
+          "name": "It might not be the dessert for your talents, but customer is always right as they say. You can make the greatest candy cane in the whole universe, I believe in you.",
+          "link": "It might not be the dessert for your talents, but customer is always right as they say. You can make the greatest candy cane in the whole universe, I believe in you.",
+          "pid": "89"
+        }
+      ],
+      "name": "Yes I'd like some sweets for my lovey dovey doo. This is the right place. Do you have candy canes?",
+      "pid": "74",
+      "position": {
+        "x": "4237",
+        "y": "2385.333333333333"
+      }
+    },
+    {
+      "text": "... ... ... Not ... ... ttiiing thinggg ... ... fffsss bone marrow ... bourbon sss sss sssrt cherry pizza ... ... ... ... ...\n[[Pizza. Pizza. YES. Nothing can go wrong with pizza in it. Sprinkle some of it on top.]]\n[[Bourbon, no, no leave it at least PG-13, please. Just pour some whilst I am not looking.]]\n[[Bone marrow?? Okey, okey, never loose trust. You must know your stuff. You do right? Please know your stuff.]]",
+      "links": [
+        {
+          "name": "Pizza. Pizza. YES. Nothing can go wrong with pizza in it. Sprinkle some of it on top.",
+          "link": "Pizza. Pizza. YES. Nothing can go wrong with pizza in it. Sprinkle some of it on top.",
+          "pid": "77"
+        },
+        {
+          "name": "Bourbon, no, no leave it at least PG-13, please. Just pour some whilst I am not looking.",
+          "link": "Bourbon, no, no leave it at least PG-13, please. Just pour some whilst I am not looking.",
+          "pid": "76"
+        },
+        {
+          "name": "Bone marrow?? Okey, okey, never loose trust. You must know your stuff. You do right? Please know your stuff.",
+          "link": "Bone marrow?? Okey, okey, never loose trust. You must know your stuff. You do right? Please know your stuff.",
+          "pid": "79"
+        }
+      ],
+      "name": "Infinitely lasting ice-creams, also works as coolers. Sweet!",
+      "pid": "75",
+      "position": {
+        "x": "3757",
+        "y": "2360.3333333333335"
+      }
+    },
+    {
+      "text": "YES. ... ... ... aaggeiist ... ... ... afraid of it. ... ... never uuuummmsst ... ... taste ... ... ... but sssttt ... ... adjusting ... ... minds?\n\n[[Since we are going at it this way, make it smokey as well.]]\n[[Not too much ... Just a smidge of it.]]\n[[You know what? Make it an old fashioned.]]",
+      "links": [
+        {
+          "name": "Since we are going at it this way, make it smokey as well.",
+          "link": "Since we are going at it this way, make it smokey as well.",
+          "pid": "78"
+        },
+        {
+          "name": "Not too much ... Just a smidge of it.",
+          "link": "Not too much ... Just a smidge of it.",
+          "pid": "86"
+        },
+        {
+          "name": "You know what? Make it an old fashioned.",
+          "link": "You know what? Make it an old fashioned.",
+          "pid": "85"
+        }
+      ],
+      "name": "Bourbon, no, no leave it at least PG-13, please. Just pour some whilst I am not looking.",
+      "pid": "76",
+      "position": {
+        "x": "3878.666666666667",
+        "y": "2617"
+      }
+    },
+    {
+      "text": "YES. ... ... ... aaggeiist ... ... ... afraid of it. ... ... never uuuummmsst ... ... taste ... ... ... but sssttt ... ... adjusting ... ... minds?\n[[I heard of some chocolate pizzaz, it may be more in the theme.]]\n[[Pineapples. On. Pizza. I am on a roll today.]]\n[[Mind, afraid, emotions it should represent our love: Heart Shaped Pizza-Ice-Creams]]",
+      "links": [
+        {
+          "name": "I heard of some chocolate pizzaz, it may be more in the theme.",
+          "link": "I heard of some chocolate pizzaz, it may be more in the theme.",
+          "pid": "82"
+        },
+        {
+          "name": "Pineapples. On. Pizza. I am on a roll today.",
+          "link": "Pineapples. On. Pizza. I am on a roll today.",
+          "pid": "83"
+        },
+        {
+          "name": "Mind, afraid, emotions it should represent our love: Heart Shaped Pizza-Ice-Creams",
+          "link": "Mind, afraid, emotions it should represent our love: Heart Shaped Pizza-Ice-Creams",
+          "pid": "84"
+        }
+      ],
+      "name": "Pizza. Pizza. YES. Nothing can go wrong with pizza in it. Sprinkle some of it on top.",
+      "pid": "77",
+      "position": {
+        "x": "3542",
+        "y": "2582"
+      }
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Since we are going at it this way, make it smokey as well.",
+      "pid": "78",
+      "position": {
+        "x": "3965.333333333334",
+        "y": "3113.6666666666674"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "YES. ... ... ... aaggeiist ... ... ... afraid of it. ... ... never uuuummmsst ... ... taste ... ... ... but sssttt ... ... adjusting ... ... minds?\n[[A bit more gore than I am comfortable with, but okay why not also put some brains in it?]]\n[[Use my skin as a sample, it will represent our eternal bond.]]\n[[Nope. Nope. Nope. No more trust. That's it, STOP. No bones, no minds, no nothing. I want some regular ice-cream. Give me cherry or something.]]",
+      "links": [
+        {
+          "name": "A bit more gore than I am comfortable with, but okay why not also put some brains in it?",
+          "link": "A bit more gore than I am comfortable with, but okay why not also put some brains in it?",
+          "pid": "80"
+        },
+        {
+          "name": "Use my skin as a sample, it will represent our eternal bond.",
+          "link": "Use my skin as a sample, it will represent our eternal bond.",
+          "pid": "70"
+        },
+        {
+          "name": "Nope. Nope. Nope. No more trust. That's it, STOP. No bones, no minds, no nothing. I want some regular ice-cream. Give me cherry or something.",
+          "link": "Nope. Nope. Nope. No more trust. That's it, STOP. No bones, no minds, no nothing. I want some regular ice-cream. Give me cherry or something.",
+          "pid": "81"
+        }
+      ],
+      "name": "Bone marrow?? Okey, okey, never loose trust. You must know your stuff. You do right? Please know your stuff.",
+      "pid": "79",
+      "position": {
+        "x": "3270.3333333333335",
+        "y": "2593.6666666666665"
+      }
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "A bit more gore than I am comfortable with, but okay why not also put some brains in it?",
+      "pid": "80",
+      "position": {
+        "x": "3172",
+        "y": "3115.3333333333335"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Nope. Nope. Nope. No more trust. That's it, STOP. No bones, no minds, no nothing. I want some regular ice-cream. Give me cherry or something.",
+      "pid": "81",
+      "position": {
+        "x": "3357",
+        "y": "3097"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "I heard of some chocolate pizzaz, it may be more in the theme.",
+      "pid": "82",
+      "position": {
+        "x": "3500.3333333333335",
+        "y": "3113.6666666666665"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Pineapples. On. Pizza. I am on a roll today.",
+      "pid": "83",
+      "position": {
+        "x": "3637",
+        "y": "3122"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Mind, afraid, emotions it should represent our love: Heart Shaped Pizza-Ice-Creams",
+      "pid": "84",
+      "position": {
+        "x": "3802",
+        "y": "3110.333333333333"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "You know what? Make it an old fashioned.",
+      "pid": "85",
+      "position": {
+        "x": "4117",
+        "y": "3108.666666666667"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Not too much ... Just a smidge of it.",
+      "pid": "86",
+      "position": {
+        "x": "4273.666666666667",
+        "y": "3107"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Salted Caramel Space Chicken Wings. Sounds like a sweet, right? Have to be good.",
+      "pid": "87",
+      "position": {
+        "x": "4930.333333333334",
+        "y": "2368.6666666666665"
+      }
+    },
+    {
+      "text": "Velvet ... ... vvv ... tttvvv ... velvet ... ... ... didn't ... ... ssuuhhh ... ... missed ... ... wnnnt disappointed. ... ... ... skin feel llkkkk tttrrrzzz ... velvets ... ...\n[[No, need to overdo it. Let's not go overboard.]]\n[[Why not? A more velvety red velvet.]]",
+      "links": [
+        {
+          "name": "No, need to overdo it. Let's not go overboard.",
+          "link": "No, need to overdo it. Let's not go overboard.",
+          "pid": "68"
+        },
+        {
+          "name": "Why not? A more velvety red velvet.",
+          "link": "Why not? A more velvety red velvet.",
+          "pid": "69"
+        }
+      ],
+      "name": "Okey, relax. Make some cake then. A red velvet maybe?",
+      "pid": "88",
+      "position": {
+        "x": "4275.666666666666",
+        "y": "2749.999999999999"
+      }
+    },
+    {
+      "text": "... ... GREATEST ... ... definitely ... ... ... noooooaaassssoo ... ... doubt ... ... flooo uuur ... ...\n[[Flower shaped ones. Now you are thinking!]]\n[[I don't think flour is used in those. Meh, what do I know put some in.]]\n[[GREATEST YES. Both in size and in flavor. Make it as big AND as tasty as me.]]",
+      "links": [
+        {
+          "name": "Flower shaped ones. Now you are thinking!",
+          "link": "Flower shaped ones. Now you are thinking!",
+          "pid": "90"
+        },
+        {
+          "name": "I don't think flour is used in those. Meh, what do I know put some in.",
+          "link": "I don't think flour is used in those. Meh, what do I know put some in.",
+          "pid": "91"
+        },
+        {
+          "name": "GREATEST YES. Both in size and in flavor. Make it as big AND as tasty as me.",
+          "link": "GREATEST YES. Both in size and in flavor. Make it as big AND as tasty as me.",
+          "pid": "92"
+        }
+      ],
+      "name": "It might not be the dessert for your talents, but customer is always right as they say. You can make the greatest candy cane in the whole universe, I believe in you.",
+      "pid": "89",
+      "position": {
+        "x": "4458.666666666666",
+        "y": "2666.9999999999995"
+      }
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "Flower shaped ones. Now you are thinking!",
+      "pid": "90",
+      "position": {
+        "x": "4417",
+        "y": "3098.666666666666"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "I don't think flour is used in those. Meh, what do I know put some in.",
+      "pid": "91",
+      "position": {
+        "x": "4558.666666666666",
+        "y": "3113.666666666666"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Double-click this passage to edit it.",
+      "name": "GREATEST YES. Both in size and in flavor. Make it as big AND as tasty as me.",
+      "pid": "92",
+      "position": {
+        "x": "4702",
+        "y": "3111.9999999999995"
+      },
+      "tags": [
+        "Bad"
+      ]
+    }
+  ],
+  "name": "Intro",
+  "startnode": "1",
+  "creator": "Twine",
+  "creator-version": "2.3.5",
+  "ifid": "7917E51D-0D6D-4702-99B2-488CA13D326A"
+}

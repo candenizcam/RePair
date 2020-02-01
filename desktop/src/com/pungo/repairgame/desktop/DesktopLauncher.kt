@@ -1,9 +1,12 @@
 package com.pungo.repairgame.desktop
 
+import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration
 import com.pungo.repairgame.MainGame
+import com.pungo.repairgame.MidiPlayer
 import com.pungo.repairgame.SharedVariables
+import kotlin.system.exitProcess
 
 object DesktopLauncher {
     @JvmStatic
@@ -11,10 +14,17 @@ object DesktopLauncher {
         val config = LwjglApplicationConfiguration()
 
 
-        config.title = "yourGame";
+        config.title = "yourGame"
         config.width = SharedVariables.mainWidth
         config.height = SharedVariables.mainHeight
         //config.fullscreen = true;
-        LwjglApplication(MainGame(), config)
+        config.forceExit = true
+        try {
+            LwjglApplication(MainGame(), config)
+        } catch (ex: Exception) {
+            MidiPlayer.release()
+            Gdx.app.exit()
+            exitProcess(0)
+        }
     }
 }
