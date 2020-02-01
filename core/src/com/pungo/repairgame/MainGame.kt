@@ -15,6 +15,7 @@ class MainGame : ApplicationAdapter() {
     override fun create() {
         SharedVariables.loadingScreen.lateInitializer()
         SharedVariables.mainMenuScreen.lateInitializer()
+        SharedVariables.gameScreen.lateInitializer()
         batch = SpriteBatch()
         img = Texture("badlogic.jpg")
 
@@ -36,7 +37,6 @@ class MainGame : ApplicationAdapter() {
         SharedVariables.mouse.clickListener()
         SharedVariables.activeScreen.loopAction()
         if (!SharedVariables.loadingScreen.isLoading() && (SharedVariables.activeScreen == SharedVariables.loadingScreen)) {
-            println("kesinlikleçağırılıyor")
             SharedVariables.activeScreen = SharedVariables.mainMenuScreen
         }
         batch.begin()

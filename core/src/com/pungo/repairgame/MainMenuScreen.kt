@@ -83,6 +83,7 @@ class MainMenuScreen: Screen() {
         when {
             StartButton.pressed -> {
                 StartButton.pressed = false
+                SharedVariables.activeScreen = SharedVariables.gameScreen
                 println("Start go")
 
             }

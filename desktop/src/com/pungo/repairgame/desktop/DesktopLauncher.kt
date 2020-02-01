@@ -14,7 +14,7 @@ object DesktopLauncher {
         config.title = "yourGame";
         config.width = SharedVariables.mainWidth
         config.height = SharedVariables.mainHeight
-        config.fullscreen = true;
+        //config.fullscreen = true;
         LwjglApplication(MainGame(), config)
     }
 }
