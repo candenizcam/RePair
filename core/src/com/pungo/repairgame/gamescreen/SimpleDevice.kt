@@ -11,6 +11,7 @@ class SimpleDevice(private val path: String, private val ratio: Float) {
     private lateinit var normalSprite: Sprite
     private lateinit var brokenSprite: Sprite
     private lateinit var hotSprite: Sprite
+    private lateinit var stuckSprite: Sprite
     lateinit var chosenSprite: Sprite
     private var centreX = 0f
     private var centreY = 0f
@@ -24,6 +25,7 @@ class SimpleDevice(private val path: String, private val ratio: Float) {
         normalSprite = loadSprite("$path/normal.png", ratio.toDouble())
         brokenSprite = loadSprite("$path/broken.png", ratio.toDouble())
         hotSprite = loadSprite("$path/hot.png", ratio.toDouble())
+        stuckSprite = loadSprite("$path/stuck.png", ratio.toDouble())
         chosenSprite = normalSprite
     }
 
@@ -39,6 +41,7 @@ class SimpleDevice(private val path: String, private val ratio: Float) {
             DeviceStatus.NORMAL -> normalSprite
             DeviceStatus.BROKEN -> brokenSprite
             DeviceStatus.HOT -> hotSprite
+            DeviceStatus.STUCK -> stuckSprite
         }
         chosenSprite.setCenter(centreX,centreY)
         chosenSprite.draw(batch)

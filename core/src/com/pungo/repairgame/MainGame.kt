@@ -15,11 +15,8 @@ class MainGame : ApplicationAdapter() {
         SharedVariables.mainMenuScreen.lateInitializer()
         SharedVariables.gameScreen.lateInitializer()
         batch = SpriteBatch()
-
-
         MidiPlayer.open("sound/OST1.mid")
         MidiPlayer.setLooping(true)
-
         SharedVariables.loadingScreen.timer.go()
     }
 

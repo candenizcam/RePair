@@ -8,18 +8,15 @@ import com.pungo.repairgame.*
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite
     private lateinit var redButton: SimpleDevice
-    private var devices = mutableListOf<SimpleDevice>()
     private lateinit var iceTool: SimpleTool
     private lateinit var phText: TextIsland
-    private lateinit var incomingText: TextIslandTexts
-    private lateinit var aText: TextIslandTexts
-    private lateinit var bText: TextIslandTexts
-    private lateinit var cText: TextIslandTexts
     private lateinit var bigMonitor: BigMonitor
     private val items: MutableList<String> = mutableListOf()
-
-    private val travelTimer = Timer(20000)
-    private val timer = Timer(5000)
+    private var devices = listOf<SimpleDevice>()
+    private var tools = listOf<SimpleTool>()
+    private var texts = mutableListOf<TextIslandTexts>()
+    private val travelTimer = Timer(60000)
+    private val timer = Timer(500)
 
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
@@ -34,32 +31,33 @@ class GameScreen: Screen() {
             aText.draw(batch)
             bText.draw(batch)
             cText.draw(batch)
+        tools.forEach {
+            it.draw(batch)
+        }
+        texts[0].draw(batch, true)
+        if (texts[0].revealed && phText.sceneNotOver()) {
+            for (k in 1..3) {texts[k].draw(batch)}
         }
     }
 
     override fun firstPress() {
-        if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
-            iceTool.flying = true
+        tools.forEach {
+            if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.chosenSprite)) {
+                it.flying = true
+            }
         }
-
-        when {
-            aText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) -> {
-                aText.pressing = true
-            }
-            bText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) -> {
-                bText.pressing = true
-            }
-            cText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) -> {
-                cText.pressing = true
-            }
+        for (k in 1..3) {
+            texts[k].pressing = texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())
         }
     }
 
     override fun pressing() {
-        if(iceTool.flying){
-            val flyingX = Gdx.input.x.toFloat()/Gdx.graphics.width*SharedVariables.mainWidth
-            val flyingY = Gdx.input.y.toFloat()/Gdx.graphics.height*SharedVariables.mainHeight
-            iceTool.flyingCentre(flyingX,flyingY)
+        tools.forEach {
+            if(it.flying){
+                val flyingX = Gdx.input.x.toFloat()/Gdx.graphics.width*SharedVariables.mainWidth
+                val flyingY = Gdx.input.y.toFloat()/Gdx.graphics.height*SharedVariables.mainHeight
+                it.flyingCentre(flyingX,flyingY)
+            }
         }
     }
 
@@ -76,13 +74,22 @@ class GameScreen: Screen() {
             (aText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (aText.pressing)) -> {
                 phText.nextPassage(1)
                 updateIslandText()
+        tools.forEachIndexed {index,it ->
+            if (it.flying) {
+                it.flying = false
+                devices.forEach {it2->
+                    if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it2.chosenSprite)) {
+                        if ((it2.status == DeviceStatus.HOT) && (index==1) ) it2.status = DeviceStatus.NORMAL
+                        else if ((it2.status == DeviceStatus.BROKEN) && (index==2) ) it2.status = DeviceStatus.NORMAL
+                        else if ((it2.status == DeviceStatus.STUCK) && (index==3) ) it2.status = DeviceStatus.NORMAL
+                    }
+                }
             }
-            (bText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (bText.pressing)) -> {
-                phText.nextPassage(2)
-                updateIslandText()
-            }
-            (cText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (cText.pressing)) -> {
-                phText.nextPassage(3)
+        }
+
+        for (k in 1..3) {
+            if (texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (texts[k].pressing)){
+                phText.nextPassage(k)
                 updateIslandText()
             }
         }
@@ -91,6 +98,7 @@ class GameScreen: Screen() {
             if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), redButton.chosenSprite)) {
                 redButton()
             }
+            texts[k].pressing = false
         }
         aText.pressing = false
         bText.pressing = false
@@ -98,14 +106,14 @@ class GameScreen: Screen() {
     }
 
     private fun updateIslandText() {
-        incomingText.setStuff(phText.getCurrentLine())
-        incomingText.letterRevealReset()
+        texts[0].setStuff(phText.getCurrentLine())
+        texts[0].letterRevealReset()
 
         if (phText.sceneNotOver()) {
             phText.getCurrentChoices().let {
-                aText.setStuff(it[0])
-                bText.setStuff(it[1])
-                cText.setStuff(it[2])
+                texts[1].setStuff(it[0])
+                texts[2].setStuff(it[1])
+                texts[3].setStuff(it[2])
             }
         }
     }
@@ -153,15 +161,17 @@ class GameScreen: Screen() {
             }
         }
 
-        if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
-            iceTool.status = ToolStatus.GLOW
-        } else {
-            iceTool.status = ToolStatus.IDLE
+        tools.forEach {
+            if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.chosenSprite)) {
+                it.status = ToolStatus.GLOW
+            } else {
+                it.status = ToolStatus.IDLE
+            }
         }
 
-        aText.hovered = aText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())
-        bText.hovered = bText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())
-        cText.hovered = cText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())
+        for (k in 1..3) {
+            texts[k].hovered = texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())
+        }
 
     }
 
@@ -213,6 +223,16 @@ class GameScreen: Screen() {
         mainSprite = SharedVariables.loadSprite(SharedVariables.gameBackgroundPath, SharedVariables.gameBackgroundRatio)
         mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
+        devices = DevicesData.getDevices()
+        tools = ToolsData.getTools()
+
+
+
+
+        phText = TextIsland(Gdx.files.internal("planet_0/story.json"), SharedVariables.planets[0].second)
+        TextIslandTexts().also {
+            it.setStuff(phText.getCurrentLine(), 517f, 453f, 865f, 180f)
+            texts.add(it)
         redButton = SimpleDevice(DevicesData.redPath, DevicesData.redRatio)
         redButton.relocateCentre(DevicesData.redX, DevicesData.redY)
         SimpleDevice(DevicesData.micPath, DevicesData.micRatio).also {
@@ -238,14 +258,17 @@ class GameScreen: Screen() {
             setStuff(phText.getCurrentLine(), 517f, 453f, 865f, 180f)
         }
         phText.getCurrentChoices().let{
-            aText = TextIslandTexts().apply {
+            TextIslandTexts().apply {
                 setStuff(it[0],250f,250f,1250f,65f)
+                texts.add(this)
             }
-            bText = TextIslandTexts().apply {
+            TextIslandTexts().apply {
                 setStuff(it[1],250f,185f,1250f,65f)
+                texts.add(this)
             }
-            cText = TextIslandTexts().apply {
+            TextIslandTexts().apply {
                 setStuff(it[2],250f,120f,1250f,65f)
+                texts.add(this)
             }
         }
         bigMonitor = BigMonitor()
