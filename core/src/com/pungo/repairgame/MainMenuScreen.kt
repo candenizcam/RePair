@@ -14,7 +14,17 @@ class MainMenuScreen: Screen() {
     private lateinit var ContinueButton : SimpleButton
     private lateinit var OptionsButton : SimpleButton
 
+    override fun firstPress() {
 
+    }
+
+    override fun pressing() {
+
+    }
+
+    override fun released() {
+
+    }
 
     private fun loadImage(){
         val pixmap = Pixmap(Gdx.files.internal(SharedVariables.mainMenuBackgroundPath))

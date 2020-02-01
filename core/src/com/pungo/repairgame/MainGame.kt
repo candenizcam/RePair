@@ -9,7 +9,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch
 class MainGame : ApplicationAdapter() {
     private lateinit var batch: SpriteBatch
     private lateinit var img: Texture
-    private var play: Boolean = false
     private var musicPlaying = false
 
 
@@ -34,6 +33,7 @@ class MainGame : ApplicationAdapter() {
             musicPlaying = true
         }
 
+        SharedVariables.mouse.clickListener()
         SharedVariables.activeScreen.loopAction()
         if (SharedVariables.loadingScreen.loadingDone()) {
             SharedVariables.activeScreen = SharedVariables.mainMenuScreen

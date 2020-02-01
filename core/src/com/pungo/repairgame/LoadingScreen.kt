@@ -18,7 +18,17 @@ class LoadingScreen(): Screen() {
         loadImage()
     }
 
+    override fun firstPress() {
 
+    }
+
+    override fun pressing() {
+
+    }
+
+    override fun released() {
+
+    }
 
 
 
