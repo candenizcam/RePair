@@ -16,7 +16,7 @@ object SharedVariables{
     const val menuBackgroundRatio = 0.5
     const val gameBackgroundRatio = 0.25
     const val monitorRatio = 0.25
-    const val letterRevealSpeed = 0.2f //letter per render
+    const val letterRevealSpeed = 0.8f //letter per render
     const val companyLogoPath = "graphics/pungotitle.png"
     const val mainMenuBackgroundPath = "graphics/menu_background.png"
     const val gameBackgroundPath = "graphics/game_placeholder.png"

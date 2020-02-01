@@ -24,7 +24,7 @@ object DevicesData {
 
 
     fun getDevices(): List<SimpleDevice>{
-        var theList = mutableListOf<SimpleDevice>()
+        val theList = mutableListOf<SimpleDevice>()
         SimpleDevice(micPath, micRatio).also{
             it.relocateCentre(micX,micY)
             theList.add(it)
