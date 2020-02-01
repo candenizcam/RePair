@@ -25,14 +25,7 @@ object SharedVariables{
 
     const val monitorCentreX = 960f
     const val monitorCentreY = 786f
-    var planets = MutableList(3) { Pair("x", 0) }
     var planetIndex: Int = 0
-
-    init {
-        planets[0] = Pair("home", 1)
-        planets[1] = Pair("repair", 8)
-        planets[2] = Pair("dessert", 43)
-    }
 
     var loadingScreen = LoadingScreen()
     var mainMenuScreen = MainMenuScreen()

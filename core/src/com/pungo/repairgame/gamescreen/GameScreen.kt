@@ -7,8 +7,7 @@ import com.pungo.repairgame.*
 
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite
-    private lateinit var leftestDevice: SimpleDevice
-    private lateinit var micDevice: SimpleDevice
+    private lateinit var redButton: SimpleDevice
     private var devices = mutableListOf<SimpleDevice>()
     private lateinit var iceTool: SimpleTool
     private lateinit var phText: TextIsland
@@ -17,26 +16,24 @@ class GameScreen: Screen() {
     private lateinit var bText: TextIslandTexts
     private lateinit var cText: TextIslandTexts
     private lateinit var bigMonitor: BigMonitor
+    private val items: MutableList<String> = mutableListOf()
 
     private val travelTimer = Timer(20000)
     private val timer = Timer(5000)
 
     override fun draw(batch: SpriteBatch) {
-
         mainSprite.draw(batch)
         bigMonitor.draw(batch)
-        //leftestDevice.draw(batch)
         devices.forEach {
             it.draw(batch)
         }
         iceTool.draw(batch)
+        redButton.draw(batch)
         incomingText.draw(batch, true)
         if (incomingText.revealed && phText.sceneNotOver()) {
-            phText.getCurrentChoices().let {
-                aText.draw(batch)
-                bText.draw(batch)
-                cText.draw(batch)
-            }
+            aText.draw(batch)
+            bText.draw(batch)
+            cText.draw(batch)
         }
     }
 
@@ -74,7 +71,6 @@ class GameScreen: Screen() {
                     it.status = DeviceStatus.NORMAL
                 }
             }
-
         }
         when {
             (aText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (aText.pressing)) -> {
@@ -89,34 +85,36 @@ class GameScreen: Screen() {
                 phText.nextPassage(3)
                 updateIslandText()
             }
+        }
 
+        if (!travelTimer.running && !phText.sceneNotOver()) {
+            if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), redButton.chosenSprite)) {
+                redButton()
+            }
         }
         aText.pressing = false
         bText.pressing = false
         cText.pressing = false
-
-
-
     }
 
     private fun updateIslandText() {
         incomingText.setStuff(phText.getCurrentLine())
         incomingText.letterRevealReset()
 
-        try {
+        if (phText.sceneNotOver()) {
             phText.getCurrentChoices().let {
                 aText.setStuff(it[0])
                 bText.setStuff(it[1])
                 cText.setStuff(it[2])
             }
-        } catch (ex: Exception) {
-
         }
     }
 
-    fun redButton() {
+    private fun redButton() {
         travelTimer.go()
         travelTimer.running = true
+        incomingText.setStuff("")
+        incomingText.letterRevealReset()
     }
 
     private fun zar(): Boolean {
@@ -147,9 +145,6 @@ class GameScreen: Screen() {
                 if (zar()) {
                     breakShip()
                 }
-                println("Mouse : ${Gdx.input.x} ${Gdx.input.y} ")
-                println("Text top left : ${aText.top} ${aText.left} ")
-                println("Text sizes : ${aText.modifiedHeight} ${aText.modifiedWidth} ")
 
                 timer.go()
             } else if (travelTimer.done()) {
@@ -171,29 +166,65 @@ class GameScreen: Screen() {
     }
 
     private fun changePlanet() {
-        if (SharedVariables.planetIndex < 2)
-            SharedVariables.planetIndex++
-        phText.getPlanetPassage(SharedVariables.planets[SharedVariables.planetIndex].second)
-        incomingText.letterRevealReset()
-        incomingText.setStuff(phText.getCurrentLine())
+        when (SharedVariables.planetIndex) {
+            0 -> {
+                if (devices[1].status != DeviceStatus.NORMAL) { // speaker
+                    phText.getPlanetPassage(27)
+                } else if (devices[3].status != DeviceStatus.NORMAL) { //translator
+                    phText.getPlanetPassage(16)
+                } else {
+                    phText.getPlanetPassage(7)
+                }
+            }
+            1 -> {
+                if (devices[1].status != DeviceStatus.NORMAL) {
+                    phText.getPlanetPassage(115)
+                } else {
+                    phText.getPlanetPassage(96)
+                }
+            }
+            2 -> {
+                if (devices[1].status != DeviceStatus.NORMAL) { // speaker
+                    phText.getPlanetPassage(64)
+                } else if (devices[3].status != DeviceStatus.NORMAL) { //translator
+                    phText.getPlanetPassage(3)
+                } else {
+                    phText.getPlanetPassage(39)
+                }
+            }
+            3 -> {
+                if (items.isEmpty()) {
+                    phText.getPlanetPassage(136)
+                } else if ("stacey" in items && "dessert" !in items) {
+                    phText.getPlanetPassage(137)
+                } else if ("stacey" !in items && "dessert" in items) {
+                    phText.getPlanetPassage(138)
+                } else if ("stacey" in items && "dessert" in items) {
+                    phText.getPlanetPassage(139)
+                }
+            }
+        }
+
+        SharedVariables.planetIndex++
+        updateIslandText()
     }
 
     override fun lateInitializer() {
         mainSprite = SharedVariables.loadSprite(SharedVariables.gameBackgroundPath, SharedVariables.gameBackgroundRatio)
         mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
-        leftestDevice = SimpleDevice("graphics/placeholder_leftest", 0.25f)
-        leftestDevice.relocateCentre(240f, 410f)
-        SimpleDevice(DevicesData.micPath, DevicesData.micRatio).also{
-            it.relocateCentre(DevicesData.micX,DevicesData.micY)
+        redButton = SimpleDevice(DevicesData.redPath, DevicesData.redRatio)
+        redButton.relocateCentre(DevicesData.redX, DevicesData.redY)
+        SimpleDevice(DevicesData.micPath, DevicesData.micRatio).also {
+            it.relocateCentre(DevicesData.micX, DevicesData.micY)
             devices.add(it)
         }
-        SimpleDevice(DevicesData.spePath, DevicesData.speRatio).also{
-            it.relocateCentre(DevicesData.speX,DevicesData.speY)
+        SimpleDevice(DevicesData.spePath, DevicesData.speRatio).also {
+            it.relocateCentre(DevicesData.speX, DevicesData.speY)
             devices.add(it)
         }
-        SimpleDevice(DevicesData.disPath, DevicesData.disRatio).also{
-            it.relocateCentre(DevicesData.disX,DevicesData.disY)
+        SimpleDevice(DevicesData.disPath, DevicesData.disRatio).also {
+            it.relocateCentre(DevicesData.disX, DevicesData.disY)
             devices.add(it)
         }
         SimpleDevice(DevicesData.traPath, DevicesData.traRatio).also{
@@ -202,7 +233,7 @@ class GameScreen: Screen() {
         }
         iceTool = SimpleTool("graphics/placeholder_tool", ratio = 0.25f)
         iceTool.relocateCentre(200f, 900f)
-        phText = TextIsland(Gdx.files.internal("planet_0/story.json"), SharedVariables.planets[0].second)
+        phText = TextIsland(Gdx.files.internal("planet_0/story.json"), 1)
         incomingText = TextIslandTexts().apply {
             setStuff(phText.getCurrentLine(), 517f, 453f, 865f, 180f)
         }
