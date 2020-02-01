@@ -14,12 +14,15 @@ class GameScreen: Screen() {
     private lateinit var aText: TextIslandTexts
     private lateinit var bText: TextIslandTexts
     private lateinit var cText: TextIslandTexts
+    private lateinit var bigMonitor : BigMonitor
 
 
     private val timer = Timer(10000)
 
     override fun draw(batch: SpriteBatch) {
+
         mainSprite.draw(batch)
+        bigMonitor.draw(batch)
         leftestDevice.draw(batch)
         iceTool.draw(batch)
         incomingText.draw(batch, true)
@@ -123,6 +126,7 @@ class GameScreen: Screen() {
                 setStuff(it[2],250f,120f,1250f,65f)
             }
         }
+        bigMonitor = BigMonitor()
         timer.go()
     }
 }
