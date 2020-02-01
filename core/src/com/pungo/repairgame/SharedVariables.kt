@@ -19,6 +19,7 @@ object SharedVariables{
     const val letterRevealSpeed = 0.2f //letter per render
     const val companyLogoPath = "graphics/pungotitle.png"
     const val mainMenuBackgroundPath = "graphics/menu_background.png"
+    const val titlePath = "graphics/title.png"
     const val gameBackgroundPath = "graphics/game_placeholder.png"
     const val monitorPath = "graphics/space_holder.png"
     const val monitorFramePath = "graphics/monitor_frame.png"
