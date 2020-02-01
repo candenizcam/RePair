@@ -1,4 +1,4 @@
-package com.pungo.repairgame
+package com.pungo.repairgame.gamescreen
 
 enum class DeviceStatus {
     NORMAL,

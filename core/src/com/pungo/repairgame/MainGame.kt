@@ -17,7 +17,7 @@ class MainGame : ApplicationAdapter() {
         SharedVariables.mainMenuScreen.lateInitializer()
         SharedVariables.gameScreen.lateInitializer()
         batch = SpriteBatch()
-        img = Texture("badlogic.jpg")
+
 
         MidiPlayer.open("sound/OST1.mid")
         MidiPlayer.setLooping(true)

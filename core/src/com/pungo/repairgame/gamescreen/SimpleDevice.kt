@@ -1,7 +1,8 @@
-package com.pungo.repairgame
+package com.pungo.repairgame.gamescreen
 
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.pungo.repairgame.SharedVariables
 import com.pungo.repairgame.SharedVariables.loadSprite
 
 class SimpleDevice(private val path: String, private val ratio: Float) {
@@ -15,6 +16,13 @@ class SimpleDevice(private val path: String, private val ratio: Float) {
 
     init{
         loadImage()
+    }
+
+    fun contains(x: Float, y: Float): Boolean {
+        val y_corr = SharedVariables.mainHeight - y
+        val xContains = (x > chosenSprite.x) && (x < (chosenSprite.x + chosenSprite.width))
+        val yContains = (y_corr > chosenSprite.y) && (y_corr < (chosenSprite.y + chosenSprite.height))
+        return xContains && yContains
     }
 
     private fun loadImage(){

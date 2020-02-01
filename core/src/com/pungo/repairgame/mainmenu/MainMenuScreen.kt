@@ -1,29 +1,20 @@
-package com.pungo.repairgame
+package com.pungo.repairgame.mainmenu
 
 import com.badlogic.gdx.Gdx
-import com.badlogic.gdx.graphics.Pixmap
-import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
-import javax.swing.text.html.Option
+import com.pungo.repairgame.Screen
+import com.pungo.repairgame.SharedVariables
 
 class MainMenuScreen: Screen() {
     private lateinit var mainSprite: Sprite
-    private lateinit var bgPixmap: Pixmap
     private lateinit var StartButton : SimpleButton
     private lateinit var ContinueButton : SimpleButton
     private lateinit var OptionsButton : SimpleButton
 
 
-
-    private fun loadImage(){
-        val pixmap = Pixmap(Gdx.files.internal(SharedVariables.mainMenuBackgroundPath))
-        bgPixmap = Pixmap(SharedVariables.mainWidth,SharedVariables.mainHeight,pixmap.format)
-        bgPixmap.filter = Pixmap.Filter.NearestNeighbour
-        bgPixmap.blending = Pixmap.Blending.None
-        bgPixmap.drawPixmap(pixmap, 0,0, pixmap.width,pixmap.height,0,0,bgPixmap.width,bgPixmap.height)
-        pixmap.dispose()
-        mainSprite = Sprite(Texture(bgPixmap))
+    override fun lateInitializer() {
+        mainSprite = SharedVariables.loadSprite(SharedVariables.mainMenuBackgroundPath, SharedVariables.menuBackgroundRatio)
         mainSprite.setCenterX(SharedVariables.mainWidth.toFloat()/2)
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat()/2)
         StartButton = SimpleButton("graphics/placeholder_button", ratio = 0.5f)
@@ -32,11 +23,6 @@ class MainMenuScreen: Screen() {
         ContinueButton.relocateCentre(SharedVariables.mainWidth.toFloat()/2,300f)
         OptionsButton = SimpleButton("graphics/placeholder_button", ratio = 0.5f)
         OptionsButton.relocateCentre(SharedVariables.mainWidth.toFloat()/2,100f)
-    }
-
-
-    override fun lateInitializer() {
-        loadImage()
     }
 
     override fun draw(batch: SpriteBatch) {
@@ -49,13 +35,13 @@ class MainMenuScreen: Screen() {
     override fun firstPress() {
         when {
             StartButton.contains(Gdx.input.x.toFloat(),Gdx.input.y.toFloat()) -> {
-                StartButton.pressed = true
+                StartButton.status = MenuButtonStatus.DOWN
             }
             ContinueButton.contains(Gdx.input.x.toFloat(),Gdx.input.y.toFloat()) -> {
-                ContinueButton.pressed = true
+                ContinueButton.status = MenuButtonStatus.DOWN
             }
             OptionsButton.contains(Gdx.input.x.toFloat(),Gdx.input.y.toFloat()) -> {
-                OptionsButton.pressed = true
+                OptionsButton.status = MenuButtonStatus.DOWN
             }
         }
 
@@ -65,14 +51,14 @@ class MainMenuScreen: Screen() {
     override fun pressing() {
 
         when {
-            StartButton.pressed -> {
-                StartButton.pressed = StartButton.contains(Gdx.input.x.toFloat(),Gdx.input.y.toFloat())
+            StartButton.status == MenuButtonStatus.DOWN -> {
+                if(!StartButton.contains(Gdx.input.x.toFloat(),Gdx.input.y.toFloat())) StartButton.status = MenuButtonStatus.UP
             }
-            ContinueButton.pressed -> {
-                ContinueButton.pressed = ContinueButton.contains(Gdx.input.x.toFloat(),Gdx.input.y.toFloat())
+            ContinueButton.status == MenuButtonStatus.DOWN -> {
+                if(!ContinueButton.contains(Gdx.input.x.toFloat(),Gdx.input.y.toFloat())) ContinueButton.status = MenuButtonStatus.UP
             }
-            OptionsButton.pressed -> {
-                OptionsButton.pressed = OptionsButton.contains(Gdx.input.x.toFloat(),Gdx.input.y.toFloat())
+            OptionsButton.status == MenuButtonStatus.DOWN -> {
+                if(!OptionsButton.contains(Gdx.input.x.toFloat(),Gdx.input.y.toFloat())) OptionsButton.status = MenuButtonStatus.UP
             }
         }
 
@@ -81,18 +67,18 @@ class MainMenuScreen: Screen() {
 
     override fun released() {
         when {
-            StartButton.pressed -> {
-                StartButton.pressed = false
+            StartButton.status == MenuButtonStatus.DOWN -> {
+                StartButton.status = MenuButtonStatus.UP
                 SharedVariables.activeScreen = SharedVariables.gameScreen
                 println("Start go")
 
             }
-            ContinueButton.pressed -> {
-                ContinueButton.pressed = false
+            ContinueButton.status == MenuButtonStatus.DOWN -> {
+                ContinueButton.status = MenuButtonStatus.UP
                 println("Continue go")
             }
-            OptionsButton.pressed -> {
-                OptionsButton.pressed = false
+            OptionsButton.status == MenuButtonStatus.DOWN -> {
+                OptionsButton.status = MenuButtonStatus.UP
                 println("Options go")
             }
         }

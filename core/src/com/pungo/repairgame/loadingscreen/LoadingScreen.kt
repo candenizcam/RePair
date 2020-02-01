@@ -1,30 +1,27 @@
-package com.pungo.repairgame
+package com.pungo.repairgame.loadingscreen
 
-import com.badlogic.gdx.graphics.Pixmap
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.pungo.repairgame.Screen
+import com.pungo.repairgame.SharedVariables
 import com.pungo.repairgame.SharedVariables.loadSprite
+import com.pungo.repairgame.Timer
 
 class LoadingScreen() : Screen() {
     private lateinit var bgSprite: Sprite
-    private lateinit var bgPixmap: Pixmap
     private lateinit var menuSprite: Sprite
     private var menuVisible = false
     lateinit var timer: Timer
 
     override fun lateInitializer() {
-        loadImage()
-        timer = Timer(3000)
-    }
-
-    private fun loadImage() {
         bgSprite = loadSprite(SharedVariables.companyLogoPath, SharedVariables.companyLogoRatio)
         bgSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         bgSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
 
-        menuSprite = loadSprite(SharedVariables.mainMenuBackgroundPath, SharedVariables.gameBackgroundRatio)
+        menuSprite = loadSprite(SharedVariables.mainMenuBackgroundPath, SharedVariables.menuBackgroundRatio)
         menuSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         menuSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
+        timer = Timer(3000)
     }
 
     override fun loopAction() {
