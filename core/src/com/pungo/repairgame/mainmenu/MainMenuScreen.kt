@@ -67,6 +67,8 @@ class MainMenuScreen: Screen() {
             startButton.status == MenuButtonStatus.DOWN -> {
                 startButton.status = MenuButtonStatus.UP
                 SharedVariables.activeScreen = SharedVariables.gameScreen
+                SharedVariables.gameScreen.redButton()
+
             }
             continueButton.status == MenuButtonStatus.DOWN -> {
                 continueButton.status = MenuButtonStatus.UP

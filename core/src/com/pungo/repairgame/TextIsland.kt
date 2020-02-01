@@ -58,6 +58,7 @@ class TextIsland(path: FileHandle, private var currentPid: Int) {
         for (i in 0 until links.size) {
             choices.add(links[i].get("name").asString())
         }
+
         return choices
     }
 

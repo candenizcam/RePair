@@ -1,10 +1,6 @@
 package com.pungo.repairgame.gamescreen
 
 object DevicesData {
-    const val redPath = "graphics/redButton"
-    const val redRatio = 0.25f
-    const val redX = 145f
-    const val redY = 363f
     const val micPath = "graphics/microphone"
     const val micPath = "graphics/devices/microphone"
     const val micRatio = 0.25f
