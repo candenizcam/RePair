@@ -7,10 +7,9 @@ import com.pungo.repairgame.*
 
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite
-    private lateinit var leftestDevice: SimpleDevice
-    private lateinit var micDevice: SimpleDevice
     private var devices = mutableListOf<SimpleDevice>()
-    private lateinit var iceTool: SimpleTool
+    private var tools = mutableListOf<SimpleTool>()
+    //private lateinit var iceTool: SimpleTool
     private lateinit var phText: TextIsland
     private lateinit var incomingText: TextIslandTexts
     private lateinit var aText: TextIslandTexts
@@ -18,8 +17,8 @@ class GameScreen: Screen() {
     private lateinit var cText: TextIslandTexts
     private lateinit var bigMonitor: BigMonitor
 
-    private val travelTimer = Timer(20000)
-    private val timer = Timer(5000)
+    private val travelTimer = Timer(60000)
+    private val timer = Timer(500)
 
     override fun draw(batch: SpriteBatch) {
 
@@ -29,7 +28,9 @@ class GameScreen: Screen() {
         devices.forEach {
             it.draw(batch)
         }
-        iceTool.draw(batch)
+        tools.forEach {
+            it.draw(batch)
+        }
         incomingText.draw(batch, true)
         if (incomingText.revealed && phText.sceneNotOver()) {
             phText.getCurrentChoices().let {
@@ -41,9 +42,13 @@ class GameScreen: Screen() {
     }
 
     override fun firstPress() {
-        if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
-            iceTool.flying = true
+        tools.forEach {
+            if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.chosenSprite)) {
+                it.flying = true
+            }
         }
+
+
 
         when {
             aText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) -> {
@@ -59,23 +64,34 @@ class GameScreen: Screen() {
     }
 
     override fun pressing() {
-        if(iceTool.flying){
-            val flyingX = Gdx.input.x.toFloat()/Gdx.graphics.width*SharedVariables.mainWidth
-            val flyingY = Gdx.input.y.toFloat()/Gdx.graphics.height*SharedVariables.mainHeight
-            iceTool.flyingCentre(flyingX,flyingY)
+        tools.forEach {
+            if(it.flying){
+                val flyingX = Gdx.input.x.toFloat()/Gdx.graphics.width*SharedVariables.mainWidth
+                val flyingY = Gdx.input.y.toFloat()/Gdx.graphics.height*SharedVariables.mainHeight
+                it.flyingCentre(flyingX,flyingY)
+            }
         }
+
+
     }
 
     override fun released() {
-        if (iceTool.flying) {
-            iceTool.flying = false
-            devices.forEach {
-                if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.chosenSprite)) {
-                    it.status = DeviceStatus.NORMAL
+        tools.forEachIndexed {index,it ->
+            if (it.flying) {
+                it.flying = false
+                devices.forEach {it2->
+                    if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it2.chosenSprite)) {
+                        if ((it2.status == DeviceStatus.HOT) && (index==1) ) it2.status = DeviceStatus.NORMAL
+                        else if ((it2.status == DeviceStatus.BROKEN) && (index==2) ) it2.status = DeviceStatus.NORMAL
+                        else if ((it2.status == DeviceStatus.STUCK) && (index==3) ) it2.status = DeviceStatus.NORMAL
+                    }
                 }
-            }
 
+            }
         }
+
+
+
         when {
             (aText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (aText.pressing)) -> {
                 phText.nextPassage(1)
@@ -158,11 +174,14 @@ class GameScreen: Screen() {
             }
         }
 
-        if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
-            iceTool.status = ToolStatus.GLOW
-        } else {
-            iceTool.status = ToolStatus.IDLE
+        tools.forEach {
+            if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.chosenSprite)) {
+                it.status = ToolStatus.GLOW
+            } else {
+                it.status = ToolStatus.IDLE
+            }
         }
+
 
         aText.hovered = aText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())
         bText.hovered = bText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())
@@ -182,8 +201,8 @@ class GameScreen: Screen() {
         mainSprite = SharedVariables.loadSprite(SharedVariables.gameBackgroundPath, SharedVariables.gameBackgroundRatio)
         mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
-        leftestDevice = SimpleDevice("graphics/placeholder_leftest", 0.25f)
-        leftestDevice.relocateCentre(240f, 410f)
+        //leftestDevice = SimpleDevice("graphics/placeholder_leftest", 0.25f)
+        //leftestDevice.relocateCentre(240f, 410f)
         SimpleDevice(DevicesData.micPath, DevicesData.micRatio).also{
             it.relocateCentre(DevicesData.micX,DevicesData.micY)
             devices.add(it)
@@ -200,8 +219,25 @@ class GameScreen: Screen() {
             it.relocateCentre(DevicesData.traX,DevicesData.traY)
             devices.add(it)
         }
-        iceTool = SimpleTool("graphics/placeholder_tool", ratio = 0.25f)
-        iceTool.relocateCentre(200f, 900f)
+        SimpleTool(ToolsData.cirPath, ratio = ToolsData.cirRatio).also{
+            it.relocateCentre(ToolsData.cirX,ToolsData.cirY)
+            tools.add(it)
+        }
+        SimpleTool(ToolsData.icePath, ratio = ToolsData.iceRatio).also{
+            it.relocateCentre(ToolsData.iceX,ToolsData.iceY)
+            tools.add(it)
+        }
+        SimpleTool(ToolsData.tapePath, ratio = ToolsData.tapeRatio).also{
+            it.relocateCentre(ToolsData.tapeX,ToolsData.tapeY)
+            tools.add(it)
+        }
+        SimpleTool(ToolsData.oilPath, ratio = ToolsData.oilRatio).also{
+            it.relocateCentre(ToolsData.oilX,ToolsData.oilY)
+            tools.add(it)
+        }
+
+
+
         phText = TextIsland(Gdx.files.internal("planet_0/story.json"), SharedVariables.planets[0].second)
         incomingText = TextIslandTexts().apply {
             setStuff(phText.getCurrentLine(), 517f, 453f, 865f, 180f)
