@@ -8,25 +8,32 @@ import com.pungo.repairgame.SharedVariables
 
 class MainMenuScreen: Screen() {
     private lateinit var mainSprite: Sprite
+    private lateinit var titleSprite: Sprite
     private lateinit var startButton: SimpleButton
     private lateinit var continueButton: SimpleButton
     private lateinit var optionsButton: SimpleButton
 
 
     override fun lateInitializer() {
-        mainSprite = SharedVariables.loadSprite(SharedVariables.mainMenuBackgroundPath, SharedVariables.menuBackgroundRatio)
-        mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
-        mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
-        startButton = SimpleButton("graphics/menu_buttons/start", ratio = 0.5f)
-        startButton.relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 500f)
-        continueButton = SimpleButton("graphics/menu_buttons/continue", ratio = 0.5f)
+        mainSprite = SharedVariables.loadSprite(SharedVariables.mainMenuBackgroundPath, SharedVariables.menuBackgroundRatio).apply{
+            setCenterX(SharedVariables.mainWidth.toFloat() / 2)
+            setCenterY(SharedVariables.mainHeight.toFloat() / 2)
+        }
+        titleSprite = SharedVariables.loadSprite(SharedVariables.titlePath, 0.25).apply{
+            setCenterX(SharedVariables.mainWidth.toFloat() / 2)
+            setCenterY(SharedVariables.mainHeight.toFloat() / 2)
+        }
+        startButton = SimpleButton("graphics/menu_buttons/start", ratio = 0.2f)
+        startButton.relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 450f)
+        continueButton = SimpleButton("graphics/menu_buttons/continue", ratio = 0.2f)
         continueButton.relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 300f)
-        optionsButton = SimpleButton("graphics/menu_buttons/options", ratio = 0.5f)
-        optionsButton.relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 100f)
+        optionsButton = SimpleButton("graphics/menu_buttons/options", ratio = 0.2f)
+        optionsButton.relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 150f)
     }
 
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
+        titleSprite.draw(batch)
         startButton.draw(batch)
         continueButton.draw(batch)
         optionsButton.draw(batch)

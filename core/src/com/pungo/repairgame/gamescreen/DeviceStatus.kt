@@ -5,4 +5,5 @@ enum class DeviceStatus {
     BROKEN,
     HOT,
     STUCK,
+    DEAD
 }
