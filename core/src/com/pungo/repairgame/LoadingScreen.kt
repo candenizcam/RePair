@@ -1,10 +1,9 @@
 package com.pungo.repairgame
 
-import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.Pixmap
-import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.pungo.repairgame.SharedVariables.loadSprite
 
 class LoadingScreen() : Screen() {
     private lateinit var bgSprite: Sprite
@@ -19,29 +18,14 @@ class LoadingScreen() : Screen() {
     }
 
     private fun loadImage() {
-        var pixmap = Pixmap(Gdx.files.internal(SharedVariables.companyLogoPath))
-        bgPixmap = Pixmap((pixmap.width * SharedVariables.companyLogoRatio).toInt(), (pixmap.height * SharedVariables.companyLogoRatio).toInt(), pixmap.format)
-        bgPixmap.filter = Pixmap.Filter.NearestNeighbour
-        bgPixmap.blending = Pixmap.Blending.None
-        bgPixmap.drawPixmap(pixmap, 0, 0, pixmap.width, pixmap.height, 0, 0, bgPixmap.width, bgPixmap.height)
-        pixmap.dispose()
-        bgSprite = Sprite(Texture(bgPixmap))
+        bgSprite = loadSprite(SharedVariables.companyLogoPath, SharedVariables.companyLogoRatio)
         bgSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         bgSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
 
-
-        pixmap = Pixmap(Gdx.files.internal(SharedVariables.mainMenuBackgroundPath))
-        bgPixmap = Pixmap(SharedVariables.mainWidth, SharedVariables.mainHeight, pixmap.format)
-        bgPixmap.filter = Pixmap.Filter.NearestNeighbour
-        bgPixmap.blending = Pixmap.Blending.None
-        bgPixmap.drawPixmap(pixmap, 0, 0, pixmap.width, pixmap.height, 0, 0, bgPixmap.width, bgPixmap.height)
-        pixmap.dispose()
-        menuSprite = Sprite(Texture(bgPixmap))
+        menuSprite = loadSprite(SharedVariables.mainMenuBackgroundPath, SharedVariables.gameBackgroundRatio)
         menuSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         menuSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
     }
-
-
 
     override fun loopAction() {
         when {

@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite
     private lateinit var leftestDevice: SimpleDevice
+    private val timer = Timer(10000)
 
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
@@ -25,7 +26,9 @@ class GameScreen: Screen() {
     }
 
     override fun loopAction() {
-
+        if(timer.done()){
+            leftestDevice.status = DeviceStatus.HOT
+        }
 
 
     }
@@ -34,10 +37,8 @@ class GameScreen: Screen() {
         loadImage()
         leftestDevice = SimpleDevice("graphics/placeholder_leftest",0.25f)
         leftestDevice.relocateCentre(240f,410f)
+        timer.go()
     }
-
-
-
 
     private fun loadImage(){
         var pixmap = Pixmap(Gdx.files.internal(SharedVariables.gameBackgroundPath))
@@ -49,8 +50,5 @@ class GameScreen: Screen() {
         mainSprite = Sprite(Texture(varPixmap))
         mainSprite.setCenterX(SharedVariables.mainWidth.toFloat()/2)
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat()/2)
-
-
-
     }
 }

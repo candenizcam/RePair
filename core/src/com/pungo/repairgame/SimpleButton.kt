@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Pixmap
 import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.pungo.repairgame.SharedVariables.loadSprite
 
 class SimpleButton(private val path: String, private val ratio: Float) {
     private lateinit var upSprite: Sprite
@@ -16,20 +17,8 @@ class SimpleButton(private val path: String, private val ratio: Float) {
     }
 
     private fun loadImage() {
-        var pixmap = Pixmap(Gdx.files.internal("$path/up.png"))
-        var varPixmap = Pixmap((pixmap.width * ratio).toInt(), (pixmap.height * ratio).toInt(), pixmap.format)
-        varPixmap.filter = Pixmap.Filter.NearestNeighbour
-        varPixmap.blending = Pixmap.Blending.None
-        varPixmap.drawPixmap(pixmap, 0, 0, pixmap.width, pixmap.height, 0, 0, varPixmap.width, varPixmap.height)
-        pixmap.dispose()
-        upSprite = Sprite(Texture(varPixmap))
-        pixmap = Pixmap(Gdx.files.internal("$path/down.png"))
-        varPixmap = Pixmap((pixmap.width * ratio).toInt(), (pixmap.height * ratio).toInt(), pixmap.format)
-        varPixmap.filter = Pixmap.Filter.NearestNeighbour
-        varPixmap.blending = Pixmap.Blending.None
-        varPixmap.drawPixmap(pixmap, 0, 0, pixmap.width, pixmap.height, 0, 0, varPixmap.width, varPixmap.height)
-        pixmap.dispose()
-        downSprite = Sprite(Texture(varPixmap))
+        upSprite = loadSprite("$path/up.png", ratio.toDouble())
+        downSprite = loadSprite("$path/down.png", ratio.toDouble())
     }
 
     fun relocateCentre(x: Float, y: Float) {

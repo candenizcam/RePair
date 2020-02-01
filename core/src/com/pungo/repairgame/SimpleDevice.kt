@@ -1,10 +1,8 @@
 package com.pungo.repairgame
 
-import com.badlogic.gdx.Gdx
-import com.badlogic.gdx.graphics.Pixmap
-import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.pungo.repairgame.SharedVariables.loadSprite
 
 class SimpleDevice(private val path: String, private val ratio: Float) {
     private lateinit var normalSprite: Sprite
@@ -14,26 +12,15 @@ class SimpleDevice(private val path: String, private val ratio: Float) {
     private var centreX = 0f
     private var centreY = 0f
     var status = DeviceStatus.NORMAL
+
     init{
         loadImage()
     }
 
     private fun loadImage(){
-        var pixmap = Pixmap(Gdx.files.internal(path + "/normal.png"))
-        var varPixmap = Pixmap((pixmap.width*ratio).toInt(),(pixmap.height*ratio).toInt(),pixmap.format)
-        varPixmap.filter = Pixmap.Filter.NearestNeighbour
-        varPixmap.blending = Pixmap.Blending.None
-        varPixmap.drawPixmap(pixmap, 0,0, pixmap.width,pixmap.height,0,0,varPixmap.width,varPixmap.height)
-        pixmap.dispose()
-        normalSprite = Sprite(Texture(varPixmap))
-        pixmap = Pixmap(Gdx.files.internal(path + "/broken.png"))
-        varPixmap.drawPixmap(pixmap, 0,0, pixmap.width,pixmap.height,0,0,varPixmap.width,varPixmap.height)
-        pixmap.dispose()
-        brokenSprite = Sprite(Texture(varPixmap))
-        pixmap = Pixmap(Gdx.files.internal(path + "/hot.png"))
-        varPixmap.drawPixmap(pixmap, 0,0, pixmap.width,pixmap.height,0,0,varPixmap.width,varPixmap.height)
-        pixmap.dispose()
-        hotSprite = Sprite(Texture(varPixmap))
+        normalSprite = loadSprite("$path/normal.png", ratio.toDouble())
+        brokenSprite = loadSprite("$path/broken.png", ratio.toDouble())
+        hotSprite = loadSprite("$path/hot.png", ratio.toDouble())
         chosenSprite = normalSprite
     }
 
