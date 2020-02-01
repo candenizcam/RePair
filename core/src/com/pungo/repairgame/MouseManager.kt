@@ -20,5 +20,12 @@ class MouseManager {
                 SharedVariables.activeScreen.released()
             }
         }
+
+        if (Gdx.input.isButtonPressed(Input.Buttons.RIGHT)){
+            println("point ${Gdx.input.x} ${Gdx.input.y}")
+            val betterX = Gdx.input.x.toFloat()/Gdx.graphics.width
+            val betterY = Gdx.input.y.toFloat()/Gdx.graphics.height
+            println("$betterX, $betterY")
+        }
     }
 }

@@ -18,7 +18,7 @@ object SharedVariables{
     const val monitorRatio = 0.25
     const val letterRevealSpeed = 0.2f //letter per render
     const val companyLogoPath = "graphics/pungotitle.png"
-    const val mainMenuBackgroundPath = "graphics/main_menu_placeholder.png"
+    const val mainMenuBackgroundPath = "graphics/menu_background.png"
     const val gameBackgroundPath = "graphics/game_placeholder.png"
     const val monitorPath = "graphics/space_holder.png"
     const val monitorFramePath = "graphics/monitor_frame.png"
@@ -51,8 +51,9 @@ object SharedVariables{
     }
 
     fun contains(x: Float, y: Float, chosenSprite: Sprite): Boolean {
-        val yCorr = mainHeight - y
-        val xContains = (x > chosenSprite.x) && (x < (chosenSprite.x + chosenSprite.width))
+        val yCorr = mainHeight - mainHeight*(y/Gdx.graphics.height)
+        val xCorr = mainWidth*(x/Gdx.graphics.width)
+        val xContains = (xCorr > chosenSprite.x) && (xCorr < (chosenSprite.x + chosenSprite.width))
         val yContains = (yCorr > chosenSprite.y) && (yCorr < (chosenSprite.y + chosenSprite.height))
         return xContains && yContains
     }

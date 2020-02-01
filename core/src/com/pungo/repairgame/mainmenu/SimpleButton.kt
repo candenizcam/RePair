@@ -11,7 +11,6 @@ class SimpleButton(private val path: String, private val ratio: Float) {
     var status = MenuButtonStatus.UP
     private var centreX = 0f
     private var centreY = 0f
-    //var pressed = false
 
     init {
         loadImage()
@@ -26,14 +25,6 @@ class SimpleButton(private val path: String, private val ratio: Float) {
     fun relocateCentre(x: Float, y: Float) {
         centreX = x
         centreY = y
-        /*
-        upSprite.setCenterX(x)
-        upSprite.setCenterY(y)
-        downSprite.setCenterX(x)
-        downSprite.setCenterY(y)
-
-         */
-
     }
 
     fun draw(batch: SpriteBatch) {
@@ -43,14 +34,5 @@ class SimpleButton(private val path: String, private val ratio: Float) {
         }
         activeSprite.setCenter(centreX,centreY)
         activeSprite.draw(batch)
-        /*
-
-        if (pressed) {
-            downSprite.draw(batch)
-        } else {
-            upSprite.draw(batch)
-        }
-
-         */
     }
 }
