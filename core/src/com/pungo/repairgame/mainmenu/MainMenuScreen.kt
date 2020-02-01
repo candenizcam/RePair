@@ -34,6 +34,7 @@ class MainMenuScreen: Screen() {
 
     override fun firstPress() {
         when {
+
             SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), startButton.activeSprite) -> {
                 startButton.status = MenuButtonStatus.DOWN
             }

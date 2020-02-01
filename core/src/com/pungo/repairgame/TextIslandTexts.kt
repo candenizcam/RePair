@@ -27,6 +27,7 @@ class TextIslandTexts {
     var modifiedHeight = 0f
     var revealed = false
     var hovered = false //true when mouse is hovering above
+    var pressing = false
 
     init {
         fontGenerator()
@@ -91,13 +92,22 @@ class TextIslandTexts {
                 modifiedText = it.subList(0, min(allowedLine,it.size-1)).joinToString("\n",prefix = "", postfix = "")
             }
         }
-        text = modifiedText
+        //text = modifiedText
     }
 
     fun contains(x: Float, y: Float): Boolean {
-        val y_corr = SharedVariables.mainHeight - y
-        val xContains = (x > left) && (x < (left + modifiedWidth))
-        val yContains = (y_corr > (top)) && (y_corr < (top + modifiedHeight))
+        var outWidth = 0f
+        var outHeight = 0f
+        GlyphLayout().let{
+            it.setText(font, text,fontColour,width,-1,true)
+            outWidth = it.width
+            outHeight = it.height
+        }
+        val yCorr = SharedVariables.mainHeight - SharedVariables.mainHeight *(y/Gdx.graphics.height)
+        val xCorr = SharedVariables.mainWidth *(x/Gdx.graphics.width)
+
+        val xContains = (xCorr > left) && (xCorr < (left + outWidth))
+        val yContains = (yCorr > (top-outHeight)) && (yCorr < (top+outHeight))
         return xContains && yContains
     }
 
@@ -118,7 +128,7 @@ class TextIslandTexts {
         } else {
             font.color = fontColour
         }
-        font.draw(batch, modifiedText, left, top)
+        font.draw(batch, modifiedText, left, top,0,max(modifiedText.length-1,0), width, -1,true)
     }
 
 }

@@ -39,11 +39,24 @@ class GameScreen: Screen() {
         if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
             iceTool.flying = true
         }
+        when {
+            aText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) -> {
+                aText.pressing = true
+            }
+            bText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) -> {
+                bText.pressing = true
+            }
+            cText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) -> {
+                cText.pressing = true
+            }
+        }
     }
 
     override fun pressing() {
         if(iceTool.flying){
-            iceTool.flyingCentre(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())
+            val flyingX = Gdx.input.x.toFloat()/Gdx.graphics.width*SharedVariables.mainWidth
+            val flyingY = Gdx.input.y.toFloat()/Gdx.graphics.height*SharedVariables.mainHeight
+            iceTool.flyingCentre(flyingX,flyingY)
         }
     }
 
@@ -53,6 +66,37 @@ class GameScreen: Screen() {
             if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), leftestDevice.chosenSprite)) {
                 leftestDevice.status = DeviceStatus.NORMAL
             }
+        }
+        when {
+            (aText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (aText.pressing)) -> {
+                phText.nextPassage(1)
+                updateIslandText()
+            }
+            (bText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (bText.pressing)) -> {
+                phText.nextPassage(2)
+                updateIslandText()
+            }
+            (cText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (cText.pressing)) -> {
+                phText.nextPassage(3)
+                updateIslandText()
+            }
+
+        }
+        aText.pressing = false
+        bText.pressing = false
+        cText.pressing = false
+
+
+
+    }
+
+    fun updateIslandText(){
+        incomingText.setStuff(phText.getCurrentLine())
+        incomingText.letterRevealReset()
+        phText.getCurrentChoices().let{
+            aText.setStuff(it[0])
+            bText.setStuff(it[1])
+            cText.setStuff(it[2])
         }
     }
 
