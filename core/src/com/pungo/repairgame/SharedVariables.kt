@@ -22,6 +22,7 @@ object SharedVariables{
     const val gameBackgroundPath = "graphics/game_placeholder.png"
     const val monitorPath = "graphics/space_holder.png"
     const val monitorFramePath = "graphics/monitor_frame.png"
+
     const val monitorCentreX = 960f
     const val monitorCentreY = 786f
     var planets = MutableList(3) { Pair("x", 0) }

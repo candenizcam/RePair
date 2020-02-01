@@ -8,6 +8,8 @@ import com.pungo.repairgame.*
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite
     private lateinit var leftestDevice: SimpleDevice
+    private lateinit var micDevice: SimpleDevice
+    private var devices = mutableListOf<SimpleDevice>()
     private lateinit var iceTool: SimpleTool
     private lateinit var phText: TextIsland
     private lateinit var incomingText: TextIslandTexts
@@ -16,14 +18,17 @@ class GameScreen: Screen() {
     private lateinit var cText: TextIslandTexts
     private lateinit var bigMonitor: BigMonitor
 
-    private val travelTimer = Timer(200)
+    private val travelTimer = Timer(20000)
     private val timer = Timer(5000)
 
     override fun draw(batch: SpriteBatch) {
 
         mainSprite.draw(batch)
         bigMonitor.draw(batch)
-        leftestDevice.draw(batch)
+        //leftestDevice.draw(batch)
+        devices.forEach {
+            it.draw(batch)
+        }
         iceTool.draw(batch)
         incomingText.draw(batch, true)
         if (incomingText.revealed) {
@@ -64,9 +69,12 @@ class GameScreen: Screen() {
     override fun released() {
         if (iceTool.flying) {
             iceTool.flying = false
-            if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), leftestDevice.chosenSprite)) {
-                leftestDevice.status = DeviceStatus.NORMAL
+            devices.forEach {
+                if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.chosenSprite)) {
+                    it.status = DeviceStatus.NORMAL
+                }
             }
+
         }
         when {
             (aText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (aText.pressing)) -> {
@@ -108,17 +116,16 @@ class GameScreen: Screen() {
 
     private fun zar(): Boolean {
         val rng = (0..10).random()
-        if (rng < 5) return true
+        if (rng < 9) return true
         return false
     }
 
     private fun breakShip() {
         val device = when ((0..3).random()) {
-            0 -> leftestDevice
-            1 -> leftestDevice
-            2 -> leftestDevice
-            3 -> leftestDevice
-            else -> leftestDevice
+            0 -> devices[0]
+            1 -> devices[1]
+            2 -> devices[2]
+            else -> devices[3]
         }
 
         if (device.status == DeviceStatus.NORMAL) {
@@ -172,6 +179,22 @@ class GameScreen: Screen() {
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
         leftestDevice = SimpleDevice("graphics/placeholder_leftest", 0.25f)
         leftestDevice.relocateCentre(240f, 410f)
+        SimpleDevice(DevicesData.micPath, DevicesData.micRatio).also{
+            it.relocateCentre(DevicesData.micX,DevicesData.micY)
+            devices.add(it)
+        }
+        SimpleDevice(DevicesData.spePath, DevicesData.speRatio).also{
+            it.relocateCentre(DevicesData.speX,DevicesData.speY)
+            devices.add(it)
+        }
+        SimpleDevice(DevicesData.disPath, DevicesData.disRatio).also{
+            it.relocateCentre(DevicesData.disX,DevicesData.disY)
+            devices.add(it)
+        }
+        SimpleDevice(DevicesData.traPath, DevicesData.traRatio).also{
+            it.relocateCentre(DevicesData.traX,DevicesData.traY)
+            devices.add(it)
+        }
         iceTool = SimpleTool("graphics/placeholder_tool", ratio = 0.25f)
         iceTool.relocateCentre(200f, 900f)
         phText = TextIsland(Gdx.files.internal("planet_0/story.json"), SharedVariables.planets[0].second)
