@@ -11,12 +11,14 @@ class GameScreen: Screen() {
     private lateinit var leftestDevice: SimpleDevice
     private lateinit var iceTool: SimpleTool
     private lateinit var phText: TextIsland
+    private lateinit var incomingText: IncomingText
     private val timer = Timer(10000)
 
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
         leftestDevice.draw(batch)
         iceTool.draw(batch)
+        incomingText.draw(batch,"Pak men herosneri, nuj verser volmeri\nSerserki na nanki henk a senq\nHay Hay",517f,453f,885f,180f)
     }
 
     override fun firstPress() {
@@ -66,6 +68,7 @@ class GameScreen: Screen() {
         iceTool = SimpleTool("graphics/placeholder_tool", ratio = 0.25f)
         iceTool.relocateCentre(200f,900f)
         phText = TextIsland("planet_0/placeholder_island.txt")
+        incomingText = IncomingText()
         timer.go()
     }
 
