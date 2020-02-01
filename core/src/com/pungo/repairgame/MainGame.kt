@@ -8,7 +8,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch
 
 class MainGame : ApplicationAdapter() {
     private lateinit var batch: SpriteBatch
-    private lateinit var img: Texture
     private var musicPlaying = false
 
 
@@ -46,6 +45,5 @@ class MainGame : ApplicationAdapter() {
 
     override fun dispose() {
         batch.dispose()
-        img.dispose()
     }
 }
