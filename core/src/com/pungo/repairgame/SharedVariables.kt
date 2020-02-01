@@ -10,5 +10,5 @@ object SharedVariables{
     var loadingScreen = LoadingScreen()
     var mainMenuScreen = MainMenuScreen()
     var activeScreen : Screen = loadingScreen
-    var mouse = MouseManager(activeScreen)
+    var mouse = MouseManager()
 }

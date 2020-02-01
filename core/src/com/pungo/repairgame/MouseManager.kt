@@ -2,8 +2,9 @@ package com.pungo.repairgame
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input
+import com.pungo.repairgame.SharedVariables.activeScreen
 
-class MouseManager(var activeScreen: Screen){
+class MouseManager{
     var pressed = false
 
     fun clickListener(){
