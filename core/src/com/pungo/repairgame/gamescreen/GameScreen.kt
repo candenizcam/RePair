@@ -32,7 +32,7 @@ class GameScreen: Screen() {
     }
 
     override fun firstPress() {
-        if (contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
+        if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
             iceTool.flying = true
         }
     }
@@ -44,23 +44,47 @@ class GameScreen: Screen() {
     }
 
     override fun released() {
-        if (iceTool.flying){
+        if (iceTool.flying) {
             iceTool.flying = false
-            if (contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), leftestDevice.chosenSprite)) {
+            if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), leftestDevice.chosenSprite)) {
                 leftestDevice.status = DeviceStatus.NORMAL
             }
 
         }
+    }
 
+    private fun zar(): Boolean {
+        val rng = (0..10).random()
+        if (rng < 5) return true
+        return false
+    }
+
+    private fun breakShip() {
+        val device = when ((0..3).random()) {
+            0 -> leftestDevice
+            1 -> leftestDevice
+            2 -> leftestDevice
+            3 -> leftestDevice
+            else -> leftestDevice
+        }
+
+        if (device.status == DeviceStatus.NORMAL) {
+            device.status = when ((0..1).random()) {
+                0 -> DeviceStatus.HOT
+                else -> DeviceStatus.BROKEN
+            }
+        }
     }
 
     override fun loopAction() {
         if (timer.done()) {
-            leftestDevice.status = DeviceStatus.HOT
+            if (zar()) {
+                breakShip()
+            }
             timer.go()
         }
 
-        if (contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
+        if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
             iceTool.status = ToolStatus.GLOW
         } else {
             iceTool.status = ToolStatus.IDLE
@@ -98,5 +122,4 @@ class GameScreen: Screen() {
         }
         timer.go()
     }
-
 }
