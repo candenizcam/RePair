@@ -17,4 +17,26 @@ object DevicesData {
     const val traRatio = 0.25f
     const val traX = 1712f
     const val traY = 455f
+
+
+    fun getDevices(): List<SimpleDevice>{
+        var theList = mutableListOf<SimpleDevice>()
+        SimpleDevice(micPath, micRatio).also{
+            it.relocateCentre(micX,micY)
+            theList.add(it)
+        }
+        SimpleDevice(spePath, speRatio).also{
+            it.relocateCentre(speX,speY)
+            theList.add(it)
+        }
+        SimpleDevice(disPath, disRatio).also{
+            it.relocateCentre(disX,disY)
+            theList.add(it)
+        }
+        SimpleDevice(traPath,traRatio).also{
+            it.relocateCentre(traX,traY)
+            theList.add(it)
+        }
+        return theList.toList()
+    }
 }
