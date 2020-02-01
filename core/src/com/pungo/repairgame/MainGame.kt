@@ -35,7 +35,8 @@ class MainGame : ApplicationAdapter() {
 
         SharedVariables.mouse.clickListener()
         SharedVariables.activeScreen.loopAction()
-        if (SharedVariables.loadingScreen.loadingDone()) {
+        if (!SharedVariables.loadingScreen.isLoading() && (SharedVariables.activeScreen == SharedVariables.loadingScreen)) {
+            println("kesinlikleçağırılıyor")
             SharedVariables.activeScreen = SharedVariables.mainMenuScreen
         }
         batch.begin()

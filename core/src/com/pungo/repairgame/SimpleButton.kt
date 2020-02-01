@@ -48,9 +48,10 @@ class SimpleButton(private val path: String, private val ratio: Float){
     }
 
     fun contains(x: Float, y: Float): Boolean {
-        val xContains = (x>upSprite.x) and (x< (upSprite.x + upSprite.width))
-        val yContains = (y>upSprite.y) and (y< (upSprite.y + upSprite.height))
-        return xContains and yContains
+        val y_corr = SharedVariables.mainHeight - y
+        val xContains = (x>upSprite.x) && (x< (upSprite.x + upSprite.width))
+        val yContains = (y_corr>upSprite.y) && (y_corr< (upSprite.y + upSprite.height))
+        return xContains && yContains
     }
 
 
