@@ -11,7 +11,7 @@ import kotlin.math.min
 
 class TextIslandTexts {
     private lateinit var font: BitmapFont
-    private var fontColour = Color(1f,0.95f,1f,1f)
+    private var fontColour = Color(1f, 0.95f, 1f, 1f)
     private var fontAddress = "fonts/plasmatic.ttf"
     private var fontSize = 32
     private var singleWidth = 0f
@@ -19,15 +19,16 @@ class TextIslandTexts {
     private var lineMargin = 0f
     private var letterReveal = 0f
     private var text = ""
-    private var top = 0f
-    private var left = 0f
+    var top = 0f
+    var left = 0f
     private var width = 0f
     private var height = 0f
-    private var modifiedWidth = 0f
-    private var modifiedHeight = 0f
+    var modifiedWidth = 0f
+    var modifiedHeight = 0f
     var revealed = false
     var hovered = false //true when mouse is hovering above
-    init{
+
+    init {
         fontGenerator()
     }
 
@@ -60,11 +61,11 @@ class TextIslandTexts {
         var modifiedText = text
 
         if (w>0){
-            var newParagraphs = mutableListOf("")
+            val newParagraphs = mutableListOf("")
             var longestLine = 0
             modifiedText.split("\n").forEach{
                 it.split(" ").forEach{it2->
-                    if ((newParagraphs.last().length + it2.length + 1)*singleWidth<w ){
+                    if ((newParagraphs.last().length + it2.length + 1) * singleWidth < w) {
                         newParagraphs[newParagraphs.lastIndex] += " $it2"
                     } else {
                         newParagraphs.add(it2)
@@ -74,19 +75,21 @@ class TextIslandTexts {
             }
             newParagraphs.forEach {
 
-                longestLine = max(longestLine,it.length+1)
+                longestLine = max(longestLine, it.length + 1)
             }
-            modifiedText = newParagraphs.joinToString("\n",prefix = "", postfix = "")
-            modifiedWidth  = longestLine*singleWidth
+            modifiedText = newParagraphs.joinToString("\n", prefix = "", postfix = "")
+            GlyphLayout().let {
+                it.setText(font, modifiedText)
+                modifiedWidth = it.width
+                modifiedHeight = it.height
+            }
         }
 
         if (h>0){
             val allowedLine  = (h/(singleHeight+lineMargin)).toInt()
             modifiedText.split("\n").let{
                 modifiedText = it.subList(0, min(allowedLine,it.size-1)).joinToString("\n",prefix = "", postfix = "")
-                modifiedHeight = it.size*singleHeight + (it.size-1)*lineMargin
             }
-
         }
         text = modifiedText
     }
@@ -97,7 +100,6 @@ class TextIslandTexts {
         val yContains = (y_corr > (top)) && (y_corr < (top + modifiedHeight))
         return xContains && yContains
     }
-
 
     fun draw(batch: SpriteBatch, slowReveal: Boolean = false){
         var modifiedText = text
@@ -116,10 +118,7 @@ class TextIslandTexts {
         } else {
             font.color = fontColour
         }
-
-        font.draw(batch, modifiedText, left,top)
+        font.draw(batch, modifiedText, left, top)
     }
-
-
 
 }

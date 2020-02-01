@@ -15,6 +15,7 @@ class GameScreen: Screen() {
     private lateinit var bText: TextIslandTexts
     private lateinit var cText: TextIslandTexts
 
+
     private val timer = Timer(10000)
 
     override fun draw(batch: SpriteBatch) {
@@ -49,7 +50,6 @@ class GameScreen: Screen() {
             if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), leftestDevice.chosenSprite)) {
                 leftestDevice.status = DeviceStatus.NORMAL
             }
-
         }
     }
 
@@ -81,6 +81,10 @@ class GameScreen: Screen() {
             if (zar()) {
                 breakShip()
             }
+            println("Mouse : ${Gdx.input.x} ${Gdx.input.y} ")
+            println("Text top left : ${aText.top} ${aText.left} ")
+            println("Text sizes : ${aText.modifiedHeight} ${aText.modifiedWidth} ")
+
             timer.go()
         }
 
@@ -89,7 +93,6 @@ class GameScreen: Screen() {
         } else {
             iceTool.status = ToolStatus.IDLE
         }
-
 
         aText.hovered = aText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())
         bText.hovered = bText.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())

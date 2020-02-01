@@ -44,8 +44,6 @@ class MainMenuScreen: Screen() {
                 optionsButton.status = MenuButtonStatus.DOWN
             }
         }
-
-        println("fp : ${Gdx.input.x} ${Gdx.input.y} ")
     }
 
     override fun pressing() {
@@ -61,8 +59,6 @@ class MainMenuScreen: Screen() {
                 if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), optionsButton.activeSprite)) optionsButton.status = MenuButtonStatus.UP
             }
         }
-
-        println("pr : ${Gdx.input.x} ${Gdx.input.y} ")
     }
 
     override fun released() {
@@ -70,20 +66,15 @@ class MainMenuScreen: Screen() {
             startButton.status == MenuButtonStatus.DOWN -> {
                 startButton.status = MenuButtonStatus.UP
                 SharedVariables.activeScreen = SharedVariables.gameScreen
-                println("Start go")
 
             }
             continueButton.status == MenuButtonStatus.DOWN -> {
                 continueButton.status = MenuButtonStatus.UP
-                println("Continue go")
             }
             optionsButton.status == MenuButtonStatus.DOWN -> {
                 optionsButton.status = MenuButtonStatus.UP
-                println("Options go")
             }
         }
-
-        println("rel : ${Gdx.input.x} ${Gdx.input.y} ")
     }
 
     override fun loopAction() {

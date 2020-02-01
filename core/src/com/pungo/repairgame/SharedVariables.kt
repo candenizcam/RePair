@@ -19,12 +19,14 @@ object SharedVariables{
     const val companyLogoPath = "graphics/pungotitle.png"
     const val mainMenuBackgroundPath = "graphics/main_menu_placeholder.png"
     const val gameBackgroundPath = "graphics/game_placeholder.png"
+    val planets: MutableMap<String, Int> = mutableMapOf()
 
     var loadingScreen = LoadingScreen()
     var mainMenuScreen = MainMenuScreen()
     var gameScreen = GameScreen()
     var activeScreen : Screen = loadingScreen
     var mouse = MouseManager()
+    
 
     fun loadSprite(path: String, ratio: Double): Sprite {
         val pixmap = Pixmap(Gdx.files.internal(path))
