@@ -39,7 +39,6 @@ class GameScreen: Screen() {
         if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), iceTool.chosenSprite)) {
             iceTool.flying = true
         }
-
         redButton()
     }
 
@@ -58,7 +57,7 @@ class GameScreen: Screen() {
         }
     }
 
-    fun redButton() {
+    private fun redButton() {
         travelTimer.go()
         travelTimer.running = true
     }
