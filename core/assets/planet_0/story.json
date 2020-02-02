@@ -23,11 +23,11 @@
       "pid": "1",
       "position": {
         "x": "3851",
-        "y": "761.5"
+        "y": "759.8333333333334"
       }
     },
     {
-      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nYou don't want those in your way, right?\nGet to that Mechanic Planet first they'll help.\nNow you can prepare for take off.\n[[...]]\n[[. . .]]\n[[.  .  .]]",
+      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nGet to that Mechanic Planet first they'll help.\nUntill there this duct type can hold things together\nNow you can prepare for take off.\n[[...]]\n[[. . .]]\n[[.  .  .]]",
       "links": [
         {
           "name": "...",
@@ -183,7 +183,7 @@
       }
     },
     {
-      "text": "Don't get too excited. Here's some Ice-Packs and a Multimeter",
+      "text": "Don't get too excited. Here's some Ice-Packs, some spare circuits and space oil.",
       "name": "Sure, some free stuff to use why not?",
       "pid": "8",
       "position": {
@@ -195,8 +195,8 @@
       ]
     },
     {
-      "text": "Don't get too excited. Here's some Ice-Packs and a Multimeter",
-      "name": "Ohh, thank you it is so nice of you to give away those",
+      "text": "Don't get too excited. Here's some Ice-Packs, some spare circuits and space oil.",
+      "name": "Ohh, thank you it is so nice of you to give away those.",
       "pid": "9",
       "position": {
         "x": "2460",
@@ -207,7 +207,7 @@
       ]
     },
     {
-      "text": "Don't get too excited. Here's some Ice-Packs and a Multimeter",
+      "text": "Don't get too excited. Here's some Ice-Packs, some spare circuits and space oil.",
       "name": "They said you could fix it! What a shame. SHAME!",
       "pid": "10",
       "position": {
@@ -219,7 +219,7 @@
       ]
     },
     {
-      "text": "Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.\n[[Sure, some free stuff to use why not?]]\n[[Ohh, thank you it is so nice of you to give away those]]\n[[They said you could fix it! What a shame. SHAME!]]",
+      "text": "Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.\n[[Sure, some free stuff to use why not?]]\n[[Ohh, thank you it is so nice of you to give away those.]]\n[[They said you could fix it! What a shame. SHAME!]]",
       "links": [
         {
           "name": "Sure, some free stuff to use why not?",
@@ -227,8 +227,8 @@
           "pid": "8"
         },
         {
-          "name": "Ohh, thank you it is so nice of you to give away those",
-          "link": "Ohh, thank you it is so nice of you to give away those",
+          "name": "Ohh, thank you it is so nice of you to give away those.",
+          "link": "Ohh, thank you it is so nice of you to give away those.",
           "pid": "9"
         },
         {
@@ -245,7 +245,7 @@
       }
     },
     {
-      "text": "Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.\n[[Sure, some free stuff to use why not?]]\n[[Ohh, thank you it is so nice of you to give away those]]\n[[They said you could fix it! What a shame. SHAME!]]",
+      "text": "Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.\n[[Sure, some free stuff to use why not?]]\n[[Ohh, thank you it is so nice of you to give away those.]]\n[[They said you could fix it! What a shame. SHAME!]]",
       "links": [
         {
           "name": "Sure, some free stuff to use why not?",
@@ -253,8 +253,8 @@
           "pid": "8"
         },
         {
-          "name": "Ohh, thank you it is so nice of you to give away those",
-          "link": "Ohh, thank you it is so nice of you to give away those",
+          "name": "Ohh, thank you it is so nice of you to give away those.",
+          "link": "Ohh, thank you it is so nice of you to give away those.",
           "pid": "9"
         },
         {
@@ -271,7 +271,7 @@
       }
     },
     {
-      "text": "Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.\n[[Sure, some free stuff to use why not?]]\n[[Ohh, thank you it is so nice of you to give away those]]\n[[They said you could fix it! What a shame. SHAME!]]",
+      "text": "Exterior will be fixed, but that com panel that thing will definitely break again. I can give you some stuff to quick fix it on your way.\n[[Sure, some free stuff to use why not?]]\n[[Ohh, thank you it is so nice of you to give away those.]]\n[[They said you could fix it! What a shame. SHAME!]]",
       "links": [
         {
           "name": "Sure, some free stuff to use why not?",
@@ -279,8 +279,8 @@
           "pid": "8"
         },
         {
-          "name": "Ohh, thank you it is so nice of you to give away those",
-          "link": "Ohh, thank you it is so nice of you to give away those",
+          "name": "Ohh, thank you it is so nice of you to give away those.",
+          "link": "Ohh, thank you it is so nice of you to give away those.",
           "pid": "9"
         },
         {
@@ -427,7 +427,7 @@
       }
     },
     {
-      "text": "Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto Maltoplo-Mekkoro",
+      "text": "Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto cicero sepero oto secpo olo.",
       "name": "Sure, some free stuff is coming this way, why not accept a gift?",
       "pid": "19",
       "position": {
@@ -591,7 +591,7 @@
       "pid": "25",
       "position": {
         "x": "5533",
-        "y": "1235.5"
+        "y": "1233.8333333333333"
       }
     },
     {
@@ -616,12 +616,12 @@
       "name": "Yeah, bees buzzing, you fixing so, I can get back to my baby",
       "pid": "26",
       "position": {
-        "x": "5601",
-        "y": "1513.5"
+        "x": "5542.666666666667",
+        "y": "1445.1666666666667"
       }
     },
     {
-      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nYou don't want those in your way, right?\nGet to that Mechanic Planet first they'll help.\nNow you can prepare for take off.\n[[...]]\n[[. . .]]\n[[.  .  .]]",
+      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nGet to that Mechanic Planet first they'll help.\nUntill there this duct type can hold things together\nNow you can prepare for take off.\n[[...]]\n[[. . .]]\n[[.  .  .]]",
       "links": [
         {
           "name": "...",
@@ -647,7 +647,7 @@
       }
     },
     {
-      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nYou don't want those in your way, right?\nGet to that Mechanic Planet first they'll help.\nNow you can prepare for take off.\n[[...]]\n[[. . .]]\n[[.  .  .]]",
+      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nGet to that Mechanic Planet first they'll help.\nUntill there this duct type can hold things together\nNow you can prepare for take off.\n[[...]]\n[[. . .]]\n[[.  .  .]]",
       "links": [
         {
           "name": "...",
@@ -720,12 +720,12 @@
       "name": "Fix.Fix.Fix. Ship.Ship.Ship. Com Panel. Com Panel. Com Panel.",
       "pid": "30",
       "position": {
-        "x": "5721",
-        "y": "1513.5"
+        "x": "5746",
+        "y": "1480.1666666666667"
       }
     },
     {
-      "text": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Multimeter.",
+      "text": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Ice ... ... circuiiioooilll\n",
       "name": "Thanks, but what about the com panel?",
       "pid": "31",
       "position": {
@@ -737,7 +737,7 @@
       ]
     },
     {
-      "text": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Multimeter.",
+      "text": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Ice ... ... circuiiioooilll\n",
       "name": "Ohh, thank you it is so nice of you to give free samples to customers.",
       "pid": "32",
       "position": {
@@ -749,11 +749,11 @@
       ]
     },
     {
-      "text": "Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto Maltoplo-Mekkoro",
+      "text": "Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto cicero sepero oto secpo olo.",
       "name": "Okey, you are trying to send something to me",
       "pid": "33",
       "position": {
-        "x": "3739.6666666666665",
+        "x": "3738",
         "y": "1745.5"
       },
       "tags": [
@@ -761,7 +761,7 @@
       ]
     },
     {
-      "text": "Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto Maltoplo-Mekkoro",
+      "text": "Konito'foto kobo noko haroboro. Kikito qqirou Bzz-Kakk oto cicero sepero oto secpo olo.",
       "name": "Well what about this com panel. Why don't you fix it.",
       "pid": "34",
       "position": {
@@ -773,7 +773,7 @@
       ]
     },
     {
-      "text": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Multimeter.",
+      "text": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Ice ... ... circuiiioooilll\n",
       "name": "Ice-packs and a multimeter. Every spaceship needs those I guess.",
       "pid": "35",
       "position": {
@@ -1039,7 +1039,7 @@
       "pid": "46",
       "position": {
         "x": "2266.333333333333",
-        "y": "3160.166666666666"
+        "y": "3156.166666666666"
       }
     },
     {
@@ -1064,7 +1064,7 @@
       "name": "Pizza. YES. Nothing can go wrong with pizza in it. Sprinkle some of it on top.",
       "pid": "47",
       "position": {
-        "x": "2416.333333333333",
+        "x": "2424.333333333333",
         "y": "3160.166666666666"
       }
     },
@@ -2462,11 +2462,11 @@
       ]
     },
     {
-      "text": "Stacey called. Told me you were coming. Told me you humiliated yourself again. And yeah, I saw what you brought as a dessert, thinking I would eat that. Especially with you. I wish you never came, I wanted to remember you as you were at least.\n[[I know I made a mess. I couldn't think what you would appreciate? But please I will make do just give me another chance.]]\n[[I screwed up, again and again ... Please don't do this. I want you back.]]\n[[I see now, I never had a real chance of getting you back. I am sorry I bothered you.]]\n",
+      "text": "Stacey called. Told me you were coming. Told me you humiliated yourself again. And yeah, I saw what you brought as a dessert, thinking I would eat that. Especially with you. I wish you never came, I wanted to remember you as you were at least.\n[[I know I made a mess. I couldn't think what you would appreciate. But please I will make do just give me another chance.]]\n[[I screwed up, again and again ... Please don't do this. I want you back.]]\n[[I see now, I never had a real chance of getting you back. I am sorry I bothered you.]]\n",
       "links": [
         {
-          "name": "I know I made a mess. I couldn't think what you would appreciate? But please I will make do just give me another chance.",
-          "link": "I know I made a mess. I couldn't think what you would appreciate? But please I will make do just give me another chance.",
+          "name": "I know I made a mess. I couldn't think what you would appreciate. But please I will make do just give me another chance.",
+          "link": "I know I made a mess. I couldn't think what you would appreciate. But please I will make do just give me another chance.",
           "pid": "137"
         },
         {
@@ -2483,43 +2483,43 @@
       "name": "FinalNoItems",
       "pid": "133",
       "position": {
-        "x": "3522.3333333333335",
-        "y": "5722.666666666666"
+        "x": "3000.666666666667",
+        "y": "5867.666666666666"
       }
     },
     {
-      "text": "What is that in your hand? It seems ... hideous. Whatever ... I heard you have something to talk with me? As Stacey told with a little excitement even.\n[[Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even you?]]\n[[I know I made a mess. I couldn't think what you would appreciate? But please I will make do just give me another chance.]]\n[[I may have screwed the dessert, yes. However, you and I both know that if did my way to Stacey's hearth, rest will come easy for us, right?]]\n",
+      "text": "What are those in your tentacle? They both seem ... hideous. Whatever ... I heard you have something to talk with me? As Stacey told with a little excitement even.\n[[Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even a pretty flower like you?]]\n[[I know I made a mess. I couldn't think what you would appreciate. But please I will make do just give me another chance.]]\n[[I may have screwed the dessert. Yes, I couldn't get a decent flower too. However, you and I both know that if did my way to Stacey's hearth, rest will come easy for us, right?]]\n",
       "links": [
         {
-          "name": "Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even you?",
-          "link": "Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even you?",
+          "name": "Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even a pretty flower like you?",
+          "link": "Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even a pretty flower like you?",
           "pid": "145"
         },
         {
-          "name": "I know I made a mess. I couldn't think what you would appreciate? But please I will make do just give me another chance.",
-          "link": "I know I made a mess. I couldn't think what you would appreciate? But please I will make do just give me another chance.",
+          "name": "I know I made a mess. I couldn't think what you would appreciate. But please I will make do just give me another chance.",
+          "link": "I know I made a mess. I couldn't think what you would appreciate. But please I will make do just give me another chance.",
           "pid": "137"
         },
         {
-          "name": "I may have screwed the dessert, yes. However, you and I both know that if did my way to Stacey's hearth, rest will come easy for us, right?",
-          "link": "I may have screwed the dessert, yes. However, you and I both know that if did my way to Stacey's hearth, rest will come easy for us, right?",
-          "pid": "146"
+          "name": "I may have screwed the dessert. Yes, I couldn't get a decent flower too. However, you and I both know that if did my way to Stacey's hearth, rest will come easy for us, right?",
+          "link": "I may have screwed the dessert. Yes, I couldn't get a decent flower too. However, you and I both know that if did my way to Stacey's hearth, rest will come easy for us, right?",
+          "pid": "197"
         }
       ],
       "name": "FinalYesStaceyNoOthers",
       "pid": "134",
       "position": {
-        "x": "3922",
-        "y": "5729.166666666668"
+        "x": "3460.3333333333335",
+        "y": "5775.833333333334"
       }
     },
     {
-      "text": "Uuuuu I never saw such a thing. It looks and even smells fantastic. Before 'slurp' eating that tough. Let's discuss what you did to Stacey!\n[[Again with Stacey. I am trying to do stuff for you to learn about you, but your friend always gets in between us don't you see?]]\n[[I am happy you enjoyed it. I tried to learn from Stacey what I missed on our last time. No matter what happens I will at least remember this day.]]\n[[What about the things Stacey said about me, ha? I tried to do better without anyone's support. Just for you, only by myself]]",
+      "text": "Uuuuu I never saw such a thing. It looks and even smells fantastic. Before 'slurp' eating that tough. Let's discuss what you did to Stacey!\n[[Again with Stacey. I am trying to do stuff for you to learn about you, but your friend always gets in between us don't you see?]]\n[[I am happy you enjoyed it. I tried to learn from Stacey what I missed on our last time. No matter what happens I will at least remember this day.]]\n[[We had a little fight with Stacey, but I will apoligize with this flower. Or maybe you want it instead?]]",
       "links": [
         {
           "name": "Again with Stacey. I am trying to do stuff for you to learn about you, but your friend always gets in between us don't you see?",
           "link": "Again with Stacey. I am trying to do stuff for you to learn about you, but your friend always gets in between us don't you see?",
-          "pid": "147"
+          "pid": "146"
         },
         {
           "name": "I am happy you enjoyed it. I tried to learn from Stacey what I missed on our last time. No matter what happens I will at least remember this day.",
@@ -2527,20 +2527,20 @@
           "pid": "140"
         },
         {
-          "name": "What about the things Stacey said about me, ha? I tried to do better without anyone's support. Just for you, only by myself",
-          "link": "What about the things Stacey said about me, ha? I tried to do better without anyone's support. Just for you, only by myself",
-          "pid": "148"
+          "name": "We had a little fight with Stacey, but I will apoligize with this flower. Or maybe you want it instead?",
+          "link": "We had a little fight with Stacey, but I will apoligize with this flower. Or maybe you want it instead?",
+          "pid": "196"
         }
       ],
       "name": "FinalNoStaceyYesOthers",
       "pid": "135",
       "position": {
-        "x": "4275.333333333334",
-        "y": "5720.833333333333"
+        "x": "4790.333333333334",
+        "y": "5739.166666666666"
       }
     },
     {
-      "text": "I heard you talked to Stacey. Its voice was almost full of appreciation. You know it is hard coming from Stacey. Ahhhh, what is it in your tentacle? Thank youuuu, come, let's eat it together.\n[[I am happy you enjoyed it. I tried to learn from Stacey what I missed on our last time. No matter what happens I will at least remember this day.]]\n[[I missed sharing desserts with you. And no chocolate this time, see? I remember.]] \n[[Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even you?]]",
+      "text": "I heard you talked to Stacey. Its voice was almost full of appreciation. You know it is hard coming from Stacey. Ahhhh, what is it in your tentacle? Thank youuuu, come, let's eat it together.\n[[I am happy you enjoyed it. I tried to learn from Stacey what I missed on our last time. No matter what happens I will at least remember this day.]]\n[[I missed sharing desserts with you. And no chocolate this time, see? I remember.]] \n[[Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even a pretty flower like you?]]",
       "links": [
         {
           "name": "I am happy you enjoyed it. I tried to learn from Stacey what I missed on our last time. No matter what happens I will at least remember this day.",
@@ -2553,25 +2553,25 @@
           "pid": "141"
         },
         {
-          "name": "Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even you?",
-          "link": "Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even you?",
+          "name": "Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even a pretty flower like you?",
+          "link": "Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even a pretty flower like you?",
           "pid": "145"
         }
       ],
       "name": "FinalBothItems",
       "pid": "136",
       "position": {
-        "x": "4598.666666666667",
-        "y": "5727.500000000001"
+        "x": "5220.333333333334",
+        "y": "5869.166666666668"
       }
     },
     {
       "text": "I gave you lots and lots of second chances. You never changed. I don't believe you will anymore. Please stop doing this. Let's not even see each other for a while.",
-      "name": "I know I made a mess. I couldn't think what you would appreciate? But please I will make do just give me another chance.",
+      "name": "I know I made a mess. I couldn't think what you would appreciate. But please I will make do just give me another chance.",
       "pid": "137",
       "position": {
-        "x": "3404",
-        "y": "6007.666666666667"
+        "x": "2882.333333333333",
+        "y": "6152.666666666667"
       },
       "tags": [
         "Bad"
@@ -2582,8 +2582,8 @@
       "name": "I screwed up, again and again ... Please don't do this. I want you back.",
       "pid": "138",
       "position": {
-        "x": "3575.6666666666665",
-        "y": "5994.333333333333"
+        "x": "3054",
+        "y": "6139.333333333333"
       },
       "tags": [
         "Bad"
@@ -2594,8 +2594,8 @@
       "name": "I see now, I never had a real chance of getting you back. I am sorry I bothered you.",
       "pid": "139",
       "position": {
-        "x": "3769",
-        "y": "5972.666666666666"
+        "x": "3247.333333333333",
+        "y": "6117.666666666666"
       },
       "tags": [
         "Bad"
@@ -2606,8 +2606,8 @@
       "name": "I am happy you enjoyed it. I tried to learn from Stacey what I missed on our last time. No matter what happens I will at least remember this day.",
       "pid": "140",
       "position": {
-        "x": "4687.000000000001",
-        "y": "6034.166666666668"
+        "x": "5022.000000000001",
+        "y": "6165.833333333335"
       },
       "tags": [
         "Good"
@@ -2618,8 +2618,8 @@
       "name": "I missed sharing desserts with you. And no chocolate this time, see? I remember.",
       "pid": "141",
       "position": {
-        "x": "5055.333333333334",
-        "y": "6080.833333333335"
+        "x": "5390.333333333334",
+        "y": "6212.500000000002"
       },
       "tags": [
         "Good"
@@ -2663,23 +2663,11 @@
     },
     {
       "text": "Okey, you are funny, but don't go too far now. I will think about it, maybe over dinner?",
-      "name": "Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even you?",
+      "name": "Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even a pretty flower like you?",
       "pid": "145",
       "position": {
-        "x": "5203.666666666667",
-        "y": "6042.500000000001"
-      },
-      "tags": [
-        "Good"
-      ]
-    },
-    {
-      "text": "Hih gololo ... We can learn to make new and improved desserts together, what do you say?",
-      "name": "I may have screwed the dessert, yes. However, you and I both know that if did my way to Stacey's hearth, rest will come easy for us, right?",
-      "pid": "146",
-      "position": {
-        "x": "3950.333333333333",
-        "y": "5995.833333333334"
+        "x": "5538.666666666667",
+        "y": "6174.166666666668"
       },
       "tags": [
         "Good"
@@ -2688,22 +2676,10 @@
     {
       "text": "How dare you talk about my friend like that? You were always like this, jealousy now really? Disappointing!",
       "name": "Again with Stacey. I am trying to do stuff for you to learn about you, but your friend always gets in between us don't you see?",
-      "pid": "147",
+      "pid": "146",
       "position": {
-        "x": "4215.333333333334",
-        "y": "6074.166666666666"
-      },
-      "tags": [
-        "Bad"
-      ]
-    },
-    {
-      "text": "You should have already known all that. After all these times, you still depending on others, pathetic!",
-      "name": "What about the things Stacey said about me, ha? I tried to do better without anyone's support. Just for you, only by myself",
-      "pid": "148",
-      "position": {
-        "x": "4428.666666666667",
-        "y": "6084.166666666666"
+        "x": "4653.666666666667",
+        "y": "6157.499999999999"
       },
       "tags": [
         "Bad"
@@ -2715,24 +2691,24 @@
         {
           "name": "Wooooow, overwhelming scent indeed. How can I distinguish any one flower's smell from others here?",
           "link": "Wooooow, overwhelming scent indeed. How can I distinguish any one flower's smell from others here?",
-          "pid": "150"
+          "pid": "148"
         },
         {
           "name": "Yeah, dudeeeee. In need of a special flower for my special special someone.",
           "link": "Yeah, dudeeeee. In need of a special flower for my special special someone.",
-          "pid": "151"
+          "pid": "149"
         },
         {
           "name": "Mask? Okayyyy. I can choose simply from colors already.",
           "link": "Mask? Okayyyy. I can choose simply from colors already.",
-          "pid": "152"
+          "pid": "150"
         }
       ],
       "name": "FlowerNormal",
-      "pid": "149",
+      "pid": "147",
       "position": {
-        "x": "4096",
-        "y": "4094"
+        "x": "2312",
+        "y": "4218"
       }
     },
     {
@@ -2741,42 +2717,76 @@
         {
           "name": "Hmm, roses. Simple, effective, I like it.",
           "link": "Hmm, roses. Simple, effective, I like it.",
-          "pid": "153"
+          "pid": "151"
         },
         {
           "name": "Daffodils. If you say they are good, gonna believe you bro.",
           "link": "Daffodils. If you say they are good, gonna believe you bro.",
-          "pid": "154"
+          "pid": "152"
         },
         {
           "name": "I remember something about an allergy to daffodils.",
           "link": "I remember something about an allergy to daffodils.",
-          "pid": "155"
+          "pid": "153"
         }
       ],
       "name": "Wooooow, overwhelming scent indeed. How can I distinguish any one flower's smell from others here?",
+      "pid": "148",
+      "position": {
+        "x": "1466",
+        "y": "4672"
+      }
+    },
+    {
+      "text": "Flame lily bro, it will brighten up your relationship. Or some saffron if you wanna spice things up.\n[[Saffron, two birds with one stone.]]\n[[Flaming lily, sounds dangerous but hot.]]\n[[Oooooor I can get some roses, how about that?]]\n",
+      "links": [
+        {
+          "name": "Saffron, two birds with one stone.",
+          "link": "Saffron, two birds with one stone.",
+          "pid": "162"
+        },
+        {
+          "name": "Flaming lily, sounds dangerous but hot.",
+          "link": "Flaming lily, sounds dangerous but hot.",
+          "pid": "163"
+        },
+        {
+          "name": "Oooooor I can get some roses, how about that?",
+          "link": "Oooooor I can get some roses, how about that?",
+          "pid": "165"
+        }
+      ],
+      "name": "Yeah, dudeeeee. In need of a special flower for my special special someone.",
+      "pid": "149",
+      "position": {
+        "x": "2194",
+        "y": "4662"
+      }
+    },
+    {
+      "text": "I can see all the colors at the same time too duuude. How will you choose from so many?\n[[Lily is a flower. Red is a color there should be a combination of them right?]]\n[[Contrasting colors I need those, please know what contrast means.]]\n[[Well, I had my share of your help. Thank you. May I speak to anyone in charge please?]]",
+      "links": [
+        {
+          "name": "Lily is a flower. Red is a color there should be a combination of them right?",
+          "link": "Lily is a flower. Red is a color there should be a combination of them right?",
+          "pid": "166"
+        },
+        {
+          "name": "Contrasting colors I need those, please know what contrast means.",
+          "link": "Contrasting colors I need those, please know what contrast means.",
+          "pid": "167"
+        },
+        {
+          "name": "Well, I had my share of your help. Thank you. May I speak to anyone in charge please?",
+          "link": "Well, I had my share of your help. Thank you. May I speak to anyone in charge please?",
+          "pid": "168"
+        }
+      ],
+      "name": "Mask? Okayyyy. I can choose simply from colors already.",
       "pid": "150",
       "position": {
-        "x": "3254",
-        "y": "4544"
-      }
-    },
-    {
-      "text": "Double-click this passage to edit it.",
-      "name": "Yeah, dudeeeee. In need of a special flower for my special special someone.",
-      "pid": "151",
-      "position": {
-        "x": "3892",
-        "y": "4544"
-      }
-    },
-    {
-      "text": "Double-click this passage to edit it.",
-      "name": "Mask? Okayyyy. I can choose simply from colors already.",
-      "pid": "152",
-      "position": {
-        "x": "4630",
-        "y": "4516"
+        "x": "2862",
+        "y": "4669"
       }
     },
     {
@@ -2785,73 +2795,975 @@
         {
           "name": "Mmmm. Says there. Oh. Well, do you have any multicolored roses than if not I will gladly accept some other flower.",
           "link": "Mmmm. Says there. Oh. Well, do you have any multicolored roses than if not I will gladly accept some other flower.",
-          "pid": "156"
+          "pid": "154"
         },
         {
           "name": "We are too deep in now. At least give me lots of them.",
           "link": "We are too deep in now. At least give me lots of them.",
-          "pid": "157"
+          "pid": "155"
         },
         {
           "name": "Yeah rock roses, never heard of a better idea. Get me some rock roses.",
           "link": "Yeah rock roses, never heard of a better idea. Get me some rock roses.",
-          "pid": "158"
+          "pid": "156"
         }
       ],
       "name": "Hmm, roses. Simple, effective, I like it.",
+      "pid": "151",
+      "position": {
+        "x": "1157.6666666666665",
+        "y": "4977.333333333333"
+      }
+    },
+    {
+      "text": "Were those the poisonous ones, or was that Devil's Trumpet. Hmm, don't try and eat them, and you will be fine, duh.\n[[Well, what do I know. Get me a fancy bouquet of them.]]\n[[Not gonna eat some flowers and Devil's Trumpet sounds terrific too. Mix them up]]\n[[Great help with the nose. Great knowledge. Go get some daisies come oon. POISON?]]",
+      "links": [
+        {
+          "name": "Well, what do I know. Get me a fancy bouquet of them.",
+          "link": "Well, what do I know. Get me a fancy bouquet of them.",
+          "pid": "157"
+        },
+        {
+          "name": "Not gonna eat some flowers and Devil's Trumpet sounds terrific too. Mix them up",
+          "link": "Not gonna eat some flowers and Devil's Trumpet sounds terrific too. Mix them up",
+          "pid": "160"
+        },
+        {
+          "name": "Great help with the nose. Great knowledge. Go get some daisies come oon. POISON?",
+          "link": "Great help with the nose. Great knowledge. Go get some daisies come oon. POISON?",
+          "pid": "161"
+        }
+      ],
+      "name": "Daffodils. If you say they are good, gonna believe you bro.",
+      "pid": "152",
+      "position": {
+        "x": "1487.3333333333335",
+        "y": "4952.999999999999"
+      }
+    },
+    {
+      "text": "What allergies maan, never heard of someone being allergic to something so beautiful.\n[[Well, what do I know. Get me a fancy bouquet of them.]]\n[[I am quite sure there is a daffodil allergy. Just get some roses instead they are the safer choice.]]\n[[Still not gonna risk it. Get me something cooler, if no one heard of it no one can have an allergy to it right?]]",
+      "links": [
+        {
+          "name": "Well, what do I know. Get me a fancy bouquet of them.",
+          "link": "Well, what do I know. Get me a fancy bouquet of them.",
+          "pid": "157"
+        },
+        {
+          "name": "I am quite sure there is a daffodil allergy. Just get some roses instead they are the safer choice.",
+          "link": "I am quite sure there is a daffodil allergy. Just get some roses instead they are the safer choice.",
+          "pid": "158"
+        },
+        {
+          "name": "Still not gonna risk it. Get me something cooler, if no one heard of it no one can have an allergy to it right?",
+          "link": "Still not gonna risk it. Get me something cooler, if no one heard of it no one can have an allergy to it right?",
+          "pid": "159"
+        }
+      ],
+      "name": "I remember something about an allergy to daffodils.",
       "pid": "153",
       "position": {
-        "x": "2945.6666666666665",
-        "y": "4857.333333333333"
-      }
-    },
-    {
-      "text": "Double-click this passage to edit it.",
-      "name": "Daffodils. If you say they are good, gonna believe you bro.",
-      "pid": "154",
-      "position": {
-        "x": "3264",
-        "y": "4835.666666666667"
-      }
-    },
-    {
-      "text": "Double-click this passage to edit it.",
-      "name": "I remember something about an allergy to daffodils.",
-      "pid": "155",
-      "position": {
-        "x": "3545.6666666666665",
-        "y": "4850.666666666667"
+        "x": "1876",
+        "y": "4975.333333333333"
       }
     },
     {
       "text": "A rose from every color. Here you go. Weird flex, but you go dude.",
       "name": "Mmmm. Says there. Oh. Well, do you have any multicolored roses than if not I will gladly accept some other flower.",
-      "pid": "156",
+      "pid": "154",
       "position": {
-        "x": "2731.6666666666665",
-        "y": "5219.333333333333"
+        "x": "938.6666666666665",
+        "y": "5322.333333333333"
       },
       "tags": [
         "Bad"
       ]
     },
     {
-      "text": "Double-click this passage to edit it.",
+      "text": "Lots and lots and lots of roses. Your love deserves them all.",
       "name": "We are too deep in now. At least give me lots of them.",
+      "pid": "155",
+      "position": {
+        "x": "1098.333333333333",
+        "y": "5315"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Roses made out of rocks. I am not quite sure why we have them in our depot but another happy customer.",
+      "name": "Yeah rock roses, never heard of a better idea. Get me some rock roses.",
+      "pid": "156",
+      "position": {
+        "x": "1256.6666666666665",
+        "y": "5322.999999999999"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "If something happens, no takes backsies, though.",
+      "name": "Well, what do I know. Get me a fancy bouquet of them.",
       "pid": "157",
       "position": {
-        "x": "2969.6666666666665",
-        "y": "5199.333333333333"
+        "x": "1707.666666666667",
+        "y": "5337"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Lots and lots and lots of roses. Your love deserves them all.",
+      "name": "I am quite sure there is a daffodil allergy. Just get some roses instead they are the safer choice.",
+      "pid": "158",
+      "position": {
+        "x": "1857.666666666667",
+        "y": "5333.666666666667"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "A frozen lily for you. It says here it will bloom when it got heated up. Don't overheat it bro they burn too, you know.",
+      "name": "Still not gonna risk it. Get me something cooler, if no one heard of it no one can have an allergy to it right?",
+      "pid": "159",
+      "position": {
+        "x": "2006",
+        "y": "5328.666666666667"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Just in case I will need your signature here. Not taking any responsibilities.",
+      "name": "Not gonna eat some flowers and Devil's Trumpet sounds terrific too. Mix them up",
+      "pid": "160",
+      "position": {
+        "x": "1561",
+        "y": "5337"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "No need to yell bro. Chilllll. I put some extra daisies for your trouble.",
+      "name": "Great help with the nose. Great knowledge. Go get some daisies come oon. POISON?",
+      "pid": "161",
+      "position": {
+        "x": "1389.3333333333335",
+        "y": "5328.666666666665"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Remember to show it up to your loved one before eating it.",
+      "name": "Saffron, two birds with one stone.",
+      "pid": "162",
+      "position": {
+        "x": "2337.333333333334",
+        "y": "4990.333333333334"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Yeah, they are not that dangerous. Relaaax. Don't eat them just in case.\n[[Well, what do I know. Get me a fancy bouquet of them.]]\n[[Great help with the nose. Great knowledge. Go get some daisies come oon. POISON?]]\n[[It better work or you may have to eat some when I got back.]]",
+      "links": [
+        {
+          "name": "Well, what do I know. Get me a fancy bouquet of them.",
+          "link": "Well, what do I know. Get me a fancy bouquet of them.",
+          "pid": "157"
+        },
+        {
+          "name": "Great help with the nose. Great knowledge. Go get some daisies come oon. POISON?",
+          "link": "Great help with the nose. Great knowledge. Go get some daisies come oon. POISON?",
+          "pid": "161"
+        },
+        {
+          "name": "It better work or you may have to eat some when I got back.",
+          "link": "It better work or you may have to eat some when I got back.",
+          "pid": "164"
+        }
+      ],
+      "name": "Flaming lily, sounds dangerous but hot.",
+      "pid": "163",
+      "position": {
+        "x": "2168.999999999999",
+        "y": "5025.333333333334"
       }
     },
     {
-      "text": "Double-click this passage to edit it.",
-      "name": "Yeah rock roses, never heard of a better idea. Get me some rock roses.",
-      "pid": "158",
+      "text": "We don't need that kind of energy here in our beautiful planet bro. Here some roses on the house. Go now. On your way.",
+      "name": "It better work or you may have to eat some when I got back.",
+      "pid": "164",
       "position": {
-        "x": "3179.6666666666665",
-        "y": "5223.333333333333"
+        "x": "2158.9999999999995",
+        "y": "5313.666666666666"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Yeaaaah, roses rockss. How many and what type are the next questions I should ask says here. Sooo ?\n[[Mmmm. Says there. Oh. Well, do you have any multicolored roses than if not I will gladly accept some other flower.]]\n[[We are too deep in now. At least give me lots of them.]]\n[[Yeah rock roses, never heard of a better idea. Get me some rock roses.]]",
+      "links": [
+        {
+          "name": "Mmmm. Says there. Oh. Well, do you have any multicolored roses than if not I will gladly accept some other flower.",
+          "link": "Mmmm. Says there. Oh. Well, do you have any multicolored roses than if not I will gladly accept some other flower.",
+          "pid": "154"
+        },
+        {
+          "name": "We are too deep in now. At least give me lots of them.",
+          "link": "We are too deep in now. At least give me lots of them.",
+          "pid": "155"
+        },
+        {
+          "name": "Yeah rock roses, never heard of a better idea. Get me some rock roses.",
+          "link": "Yeah rock roses, never heard of a better idea. Get me some rock roses.",
+          "pid": "156"
+        }
+      ],
+      "name": "Oooooor I can get some roses, how about that?",
+      "pid": "165",
+      "position": {
+        "x": "2495.666666666666",
+        "y": "4998.666666666666"
       }
+    },
+    {
+      "text": "Yeah, they are not that dangerous. Relaaax. Don't eat them just in case.\n[[Well, what do I know. Get me a fancy bouquet of them.]]\n[[Great help with the nose. Great knowledge. Go get some daisies come oon. POISON?]]\n[[It better work or you may have to eat some when I got back.]]",
+      "links": [
+        {
+          "name": "Well, what do I know. Get me a fancy bouquet of them.",
+          "link": "Well, what do I know. Get me a fancy bouquet of them.",
+          "pid": "157"
+        },
+        {
+          "name": "Great help with the nose. Great knowledge. Go get some daisies come oon. POISON?",
+          "link": "Great help with the nose. Great knowledge. Go get some daisies come oon. POISON?",
+          "pid": "161"
+        },
+        {
+          "name": "It better work or you may have to eat some when I got back.",
+          "link": "It better work or you may have to eat some when I got back.",
+          "pid": "164"
+        }
+      ],
+      "name": "Lily is a flower. Red is a color there should be a combination of them right?",
+      "pid": "166",
+      "position": {
+        "x": "2728.666666666667",
+        "y": "4977.333333333334"
+      }
+    },
+    {
+      "text": "Pansies. They have two colors. AT THE SAME TIME. Not one but two. For the same price too.\n[[Don't you anything more special with TWO colors?]]\n[[I am out of luck, it seems. Yeah, pansies. Put whatever colors you find in a bouquet.]]\n[[Pansy. Get the smallest and the brighest colored one for me. A unique pansy.]]",
+      "links": [
+        {
+          "name": "Don't you anything more special with TWO colors?",
+          "link": "Don't you anything more special with TWO colors?",
+          "pid": "172"
+        },
+        {
+          "name": "I am out of luck, it seems. Yeah, pansies. Put whatever colors you find in a bouquet.",
+          "link": "I am out of luck, it seems. Yeah, pansies. Put whatever colors you find in a bouquet.",
+          "pid": "173"
+        },
+        {
+          "name": "Pansy. Get the smallest and the brighest colored one for me. A unique pansy.",
+          "link": "Pansy. Get the smallest and the brighest colored one for me. A unique pansy.",
+          "pid": "174"
+        }
+      ],
+      "name": "Contrasting colors I need those, please know what contrast means.",
+      "pid": "167",
+      "position": {
+        "x": "2918.666666666667",
+        "y": "4980.666666666667"
+      }
+    },
+    {
+      "text": "You no chill I see. I can recommend some Racy Red Coleus they have red interiors and yellow exterior, blooms and smells fantastic. Or you could go with Blue Torenia, blue color deepening as it goes inside the flower. Or you can stop questioning my knowledge of my pretties, chill and CHOOSE.\n[[O kay. So sorry I questioned your knowledge du...de. That Racy Red thing sounds lovely.]]\n[[Deepinig colors and contrasting red and yellow. Wow. Torenia was it, I will take that.]]\n[[I am sure you read those from somewhere. Go get me some classic daisies and let me go.]]",
+      "links": [
+        {
+          "name": "O kay. So sorry I questioned your knowledge du...de. That Racy Red thing sounds lovely.",
+          "link": "O kay. So sorry I questioned your knowledge du...de. That Racy Red thing sounds lovely.",
+          "pid": "169"
+        },
+        {
+          "name": "Deepinig colors and contrasting red and yellow. Wow. Torenia was it, I will take that.",
+          "link": "Deepinig colors and contrasting red and yellow. Wow. Torenia was it, I will take that.",
+          "pid": "170"
+        },
+        {
+          "name": "I am sure you read those from somewhere. Go get me some classic daisies and let me go.",
+          "link": "I am sure you read those from somewhere. Go get me some classic daisies and let me go.",
+          "pid": "171"
+        }
+      ],
+      "name": "Well, I had my share of your help. Thank you. May I speak to anyone in charge please?",
+      "pid": "168",
+      "position": {
+        "x": "3128.666666666667",
+        "y": "4967.333333333333"
+      }
+    },
+    {
+      "text": "Yeah good choice. Good luck on your endeavors.",
+      "name": "O kay. So sorry I questioned your knowledge du...de. That Racy Red thing sounds lovely.",
+      "pid": "169",
+      "position": {
+        "x": "2982",
+        "y": "5305.666666666666"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Yeah good choice. Good luck on your endeavors.",
+      "name": "Deepinig colors and contrasting red and yellow. Wow. Torenia was it, I will take that.",
+      "pid": "170",
+      "position": {
+        "x": "3162",
+        "y": "5304"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "No need to yell bro. Chilllll. I put some extra daisies for your trouble.",
+      "name": "I am sure you read those from somewhere. Go get me some classic daisies and let me go.",
+      "pid": "171",
+      "position": {
+        "x": "3362",
+        "y": "5290.666666666666"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Racy Red Coleus they have red interiors and yellow exterior, blooms and smells fantastic. Here is a bouquet you should have started asking like this bro, yeah.",
+      "name": "Don't you anything more special with TWO colors?",
+      "pid": "172",
+      "position": {
+        "x": "2407.666666666667",
+        "y": "5306.666666666667"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Here you go. 42 different pansies with all different colors. Go get it now.",
+      "name": "I am out of luck, it seems. Yeah, pansies. Put whatever colors you find in a bouquet.",
+      "pid": "173",
+      "position": {
+        "x": "2553.666666666667",
+        "y": "5310.666666666667"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Smallest transparent pansy I could have found. Its color will always be unique in this way. Duuuudeee I am talking about EVER CHANGIIING.",
+      "name": "Pansy. Get the smallest and the brighest colored one for me. A unique pansy.",
+      "pid": "174",
+      "position": {
+        "x": "2745.333333333334",
+        "y": "5295.666666666667"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "... mask, duuudududude ... ... ... ... amzmmzmt ... ... smell ... ... yowolokkkak ... ... ... deplete ... ... ... ... ... FlowerPots ssshht ... sppppcss ... ... special?\n[[Wooooow, overwhelming scent. How can I distinguish any one flower's smell from others here?]]\n[[Yeah, dudeeeee. In need of a special flower for my special someone.]]\n[[Mask? Okayyyy. Please don't be because of the poisonous ones.]]",
+      "links": [
+        {
+          "name": "Wooooow, overwhelming scent. How can I distinguish any one flower's smell from others here?",
+          "link": "Wooooow, overwhelming scent. How can I distinguish any one flower's smell from others here?",
+          "pid": "176"
+        },
+        {
+          "name": "Yeah, dudeeeee. In need of a special flower for my special someone.",
+          "link": "Yeah, dudeeeee. In need of a special flower for my special someone.",
+          "pid": "177"
+        },
+        {
+          "name": "Mask? Okayyyy. Please don't be because of the poisonous ones.",
+          "link": "Mask? Okayyyy. Please don't be because of the poisonous ones.",
+          "pid": "178"
+        }
+      ],
+      "name": "FlowerSpeaker",
+      "pid": "175",
+      "position": {
+        "x": "4632",
+        "y": "4166"
+      }
+    },
+    {
+      "text": "... warned ... ... ... ... bro ... ... help ... ssrsrrr rossasqqk ... daffodils ...\n[[Hmm, roses. Simple, effective, I like them.]]\n[[Go wild bro. Even I know those flowers. Make it unique.]]\n[[My dear might have an allergy to daffodils.]]",
+      "links": [
+        {
+          "name": "Hmm, roses. Simple, effective, I like them.",
+          "link": "Hmm, roses. Simple, effective, I like them.",
+          "pid": "179"
+        },
+        {
+          "name": "Go wild bro. Even I know those flowers. Make it unique.",
+          "link": "Go wild bro. Even I know those flowers. Make it unique.",
+          "pid": "180"
+        },
+        {
+          "name": "My dear might have an allergy to daffodils.",
+          "link": "My dear might have an allergy to daffodils.",
+          "pid": "181"
+        }
+      ],
+      "name": "Wooooow, overwhelming scent. How can I distinguish any one flower's smell from others here?",
+      "pid": "176",
+      "position": {
+        "x": "4314",
+        "y": "4622.333333333333"
+      }
+    },
+    {
+      "text": "... ... deadly ... poisonous ... alllegyrss ... ... ...\n[[Go wild bro. Even I know those flowers. Make it unique.]]\n[[My dear might have an allergy to daffodils.]]\n[[What is deadly to someone might be my breakfast what do you know?]]",
+      "links": [
+        {
+          "name": "Go wild bro. Even I know those flowers. Make it unique.",
+          "link": "Go wild bro. Even I know those flowers. Make it unique.",
+          "pid": "180"
+        },
+        {
+          "name": "My dear might have an allergy to daffodils.",
+          "link": "My dear might have an allergy to daffodils.",
+          "pid": "181"
+        },
+        {
+          "name": "What is deadly to someone might be my breakfast what do you know?",
+          "link": "What is deadly to someone might be my breakfast what do you know?",
+          "pid": "192"
+        }
+      ],
+      "name": "Yeah, dudeeeee. In need of a special flower for my special someone.",
+      "pid": "177",
+      "position": {
+        "x": "4858.666666666666",
+        "y": "4616"
+      }
+    },
+    {
+      "text": "... daffodils ... yelllow pannsss ... dasss ... ... bbbbrtz ...\n[[My dear might have an allergy to daffodils.]]\n[[Yellow pansies?, sure why not they come in two colors as I know so black and yellow, black and yellow, black and yellow.]]\n[[Yellow pantsies with black daffodils. I can always say the black represents the allergies if I have to.]]",
+      "links": [
+        {
+          "name": "My dear might have an allergy to daffodils.",
+          "link": "My dear might have an allergy to daffodils.",
+          "pid": "181"
+        },
+        {
+          "name": "Yellow pansies?, sure why not they come in two colors as I know so black and yellow, black and yellow, black and yellow.",
+          "link": "Yellow pansies?, sure why not they come in two colors as I know so black and yellow, black and yellow, black and yellow.",
+          "pid": "191"
+        },
+        {
+          "name": "Yellow pantsies with black daffodils. I can always say the black represents the allergies if I have to.",
+          "link": "Yellow pantsies with black daffodils. I can always say the black represents the allergies if I have to.",
+          "pid": "195"
+        }
+      ],
+      "name": "Mask? Okayyyy. Please don't be because of the poisonous ones.",
+      "pid": "178",
+      "position": {
+        "x": "5364.666666666666",
+        "y": "4644.333333333333"
+      }
+    },
+    {
+      "text": "Yeaaaah ... ... rocks ... ... mmmacaanny ... ... tyyychoooon ... bbttqtzz sooo?\n[[Still talking about roses right? Rocks? Tycoon?]]\n[[I am quite sure I want Tycoons]]\n[[Ro ses. Not rocks or anything else.]]",
+      "links": [
+        {
+          "name": "Still talking about roses right? Rocks? Tycoon?",
+          "link": "Still talking about roses right? Rocks? Tycoon?",
+          "pid": "182"
+        },
+        {
+          "name": "I am quite sure I want Tycoons",
+          "link": "I am quite sure I want Tycoons",
+          "pid": "183"
+        },
+        {
+          "name": "Ro ses. Not rocks or anything else.",
+          "link": "Ro ses. Not rocks or anything else.",
+          "pid": "184"
+        }
+      ],
+      "name": "Hmm, roses. Simple, effective, I like them.",
+      "pid": "179",
+      "position": {
+        "x": "3927.3333333333335",
+        "y": "4950"
+      }
+    },
+    {
+      "text": "Racy ... ssppppptz ... Coleus ... ... redinterororo ... yooellwa ... ... fftstttck .. ... Torenia ... ... blue\n[[Now we are talking those sound like flower names. Mix them up.]]\n[[I want Ftktorenia.]]\n[[Racy Spartacus Collesseum our favourite flower.]]",
+      "links": [
+        {
+          "name": "Now we are talking those sound like flower names. Mix them up.",
+          "link": "Now we are talking those sound like flower names. Mix them up.",
+          "pid": "187"
+        },
+        {
+          "name": "I want Ftktorenia.",
+          "link": "I want Ftktorenia.",
+          "pid": "188"
+        },
+        {
+          "name": "Racy Spartacus Collesseum our favourite flower.",
+          "link": "Racy Spartacus Collesseum our favourite flower.",
+          "pid": "189"
+        }
+      ],
+      "name": "Go wild bro. Even I know those flowers. Make it unique.",
+      "pid": "180",
+      "position": {
+        "x": "4624",
+        "y": "4942.333333333333"
+      }
+    },
+    {
+      "text": "... ... poisonous ... ... devil ... ... eat thehhyays ... fine, duh.\n[[Eatable poisonous devils. Not dying today dude, no. Get some daisies]]\n[[Not gonna eat some flowers dude. Get me the little devils.]]\n[[Great help with the nose. Great knowledge. Go get some daffodils.]]",
+      "links": [
+        {
+          "name": "Eatable poisonous devils. Not dying today dude, no. Get some daisies",
+          "link": "Eatable poisonous devils. Not dying today dude, no. Get some daisies",
+          "pid": "190"
+        },
+        {
+          "name": "Not gonna eat some flowers dude. Get me the little devils.",
+          "link": "Not gonna eat some flowers dude. Get me the little devils.",
+          "pid": "185"
+        },
+        {
+          "name": "Great help with the nose. Great knowledge. Go get some daffodils.",
+          "link": "Great help with the nose. Great knowledge. Go get some daffodils.",
+          "pid": "186"
+        }
+      ],
+      "name": "My dear might have an allergy to daffodils.",
+      "pid": "181",
+      "position": {
+        "x": "4209",
+        "y": "4956.666666666666"
+      }
+    },
+    {
+      "text": ".. Rose ... Alien ... Statue ...",
+      "name": "Still talking about roses right? Rocks? Tycoon?",
+      "pid": "182",
+      "position": {
+        "x": "3631.3333333333335",
+        "y": "5284"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "(Three walking roses with top hats walked in to the cargo bay)",
+      "name": "I am quite sure I want Tycoons",
+      "pid": "183",
+      "position": {
+        "x": "3823.3333333333335",
+        "y": "5296"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "... lots ... ... lots ... ... lots ... ... ...",
+      "name": "Ro ses. Not rocks or anything else.",
+      "pid": "184",
+      "position": {
+        "x": "3995.333333333334",
+        "y": "5256"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "... ... devil's trumphet ... ... sick ... ...",
+      "name": "Not gonna eat some flowers dude. Get me the little devils.",
+      "pid": "185",
+      "position": {
+        "x": "4289",
+        "y": "5280.333333333333"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "... CHILL ... ... daffosdillek ... ...",
+      "name": "Great help with the nose. Great knowledge. Go get some daffodils.",
+      "pid": "186",
+      "position": {
+        "x": "4439",
+        "y": "5276.333333333333"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "rtttz ... bluuuuuqk ... coonnnts ...",
+      "name": "Now we are talking those sound like flower names. Mix them up.",
+      "pid": "187",
+      "position": {
+        "x": "4931.333333333333",
+        "y": "5257"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "... ... good goood ... ...",
+      "name": "I want Ftktorenia.",
+      "pid": "188",
+      "position": {
+        "x": "4601",
+        "y": "5240.333333333333"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "... blood ... ... red ...",
+      "name": "Racy Spartacus Collesseum our favourite flower.",
+      "pid": "189",
+      "position": {
+        "x": "4751",
+        "y": "5240.333333333333"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "... lame ... ... duuuuudddddeee ...",
+      "name": "Eatable poisonous devils. Not dying today dude, no. Get some daisies",
+      "pid": "190",
+      "position": {
+        "x": "4127.333333333333",
+        "y": "5283.333333333333"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "black ... ....bllan ... ... yellow ... ... anyello ... ... anyello ...",
+      "name": "Yellow pansies?, sure why not they come in two colors as I know so black and yellow, black and yellow, black and yellow.",
+      "pid": "191",
+      "position": {
+        "x": "5216.333333333332",
+        "y": "4841"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "... yummm yummm ... \n[[Saffron, two birds with one stone.]]\n[[Eatable flower baskets. I heard they are considered romantic these days.]]\n[[An apple three. It will bloom at some point and very usefull even after the flowery part.]]",
+      "links": [
+        {
+          "name": "Saffron, two birds with one stone.",
+          "link": "Saffron, two birds with one stone.",
+          "pid": "162"
+        },
+        {
+          "name": "Eatable flower baskets. I heard they are considered romantic these days.",
+          "link": "Eatable flower baskets. I heard they are considered romantic these days.",
+          "pid": "193"
+        },
+        {
+          "name": "An apple three. It will bloom at some point and very usefull even after the flowery part.",
+          "link": "An apple three. It will bloom at some point and very usefull even after the flowery part.",
+          "pid": "194"
+        }
+      ],
+      "name": "What is deadly to someone might be my breakfast what do you know?",
+      "pid": "192",
+      "position": {
+        "x": "4933.666666666666",
+        "y": "4924.333333333333"
+      }
+    },
+    {
+      "text": "... dessert ... no no ... ... byududdd ...",
+      "name": "Eatable flower baskets. I heard they are considered romantic these days.",
+      "pid": "193",
+      "position": {
+        "x": "5105.333333333333",
+        "y": "5244.333333333333"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "... fittt ... threeeennno ... ... flooooww no ...",
+      "name": "An apple three. It will bloom at some point and very usefull even after the flowery part.",
+      "pid": "194",
+      "position": {
+        "x": "5255.333333333333",
+        "y": "5236.333333333333"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "... ... don't know ... partnrddars ... ... shamee ...",
+      "name": "Yellow pantsies with black daffodils. I can always say the black represents the allergies if I have to.",
+      "pid": "195",
+      "position": {
+        "x": "5482.999999999999",
+        "y": "4864.333333333333"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "You. Apoligizing. From Stacey. Didn't except that. Go apoligize without the flower I will keep it. Untill you come back for me.",
+      "name": "We had a little fight with Stacey, but I will apoligize with this flower. Or maybe you want it instead?",
+      "pid": "196",
+      "position": {
+        "x": "4833.666666666667",
+        "y": "6162.5"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "I cannot believe you tricked Stacey into this. You don't know me. Even after all this time. It seems Stacey does not either. Leave now and tell Stacey to stop calling me.",
+      "name": "I may have screwed the dessert. Yes, I couldn't get a decent flower too. However, you and I both know that if did my way to Stacey's hearth, rest will come easy for us, right?",
+      "pid": "197",
+      "position": {
+        "x": "3486.9999999999995",
+        "y": "6127.500000000001"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "tuQmoH botuQtaHvIS, dudeeee. Hoch amaze He' DeSDu' poH rap tlhuH. 'IH rIn SoH. Qo'noS revan 'un chal. nIvbogh 'un chal. nej SoH vay' le' vay' le'?\n[[Woooow, overwhelming scent. How can I distinguish any one flower's smell from others here?]]\n[[Yeah, dudeeeee. In need of a special tlhIroghnI for my special special vaylevayle.]]\n[[I can do this small words, it uses small words, I need small words.]]",
+      "links": [
+        {
+          "name": "Woooow, overwhelming scent. How can I distinguish any one flower's smell from others here?",
+          "link": "Woooow, overwhelming scent. How can I distinguish any one flower's smell from others here?",
+          "pid": "201"
+        },
+        {
+          "name": "Yeah, dudeeeee. In need of a special tlhIroghnI for my special special vaylevayle.",
+          "link": "Yeah, dudeeeee. In need of a special tlhIroghnI for my special special vaylevayle.",
+          "pid": "199"
+        },
+        {
+          "name": "I can do this small words, it uses small words, I need small words.",
+          "link": "I can do this small words, it uses small words, I need small words.",
+          "pid": "200"
+        }
+      ],
+      "name": "FlowerTranslator",
+      "pid": "198",
+      "position": {
+        "x": "6672",
+        "y": "4178"
+      }
+    },
+    {
+      "text": "DungDaj lily bro, Duj Dung mep'ay' 'oH. pagh chugh safa ron Doch sp lice DaneH'a'.\n[[Hmm, I see roses there. Simple, effective, I like it.]]\n[[Lily, yes I know that word YES. LILY.]]\n[[Spice DaneH'a' last words are always suggestions. I learned that the hard way.]]",
+      "links": [
+        {
+          "name": "Hmm, I see roses there. Simple, effective, I like it.",
+          "link": "Hmm, I see roses there. Simple, effective, I like it.",
+          "pid": "202"
+        },
+        {
+          "name": "Lily, yes I know that word YES. LILY.",
+          "link": "Lily, yes I know that word YES. LILY.",
+          "pid": "205"
+        },
+        {
+          "name": "Spice DaneH'a' last words are always suggestions. I learned that the hard way.",
+          "link": "Spice DaneH'a' last words are always suggestions. I learned that the hard way.",
+          "pid": "206"
+        }
+      ],
+      "name": "Yeah, dudeeeee. In need of a special tlhIroghnI for my special special vaylevayle.",
+      "pid": "199",
+      "position": {
+        "x": "6649",
+        "y": "4528"
+      }
+    },
+    {
+      "text": "Hoch mInmep'e' DeSDu' rap poH je duuude. chay' wutlh SoH vo' vaj law' three?\n[[Daf fo dils. THOSE DAF FO DILLLS. Dalo le fa pagh.]]\n[[Desdu rap. A new kind of music? What about flowers?]]\n[[Love three? If it is what I think it is, I need it!]]\n",
+      "links": [
+        {
+          "name": "Daf fo dils. THOSE DAF FO DILLLS. Dalo le fa pagh.",
+          "link": "Daf fo dils. THOSE DAF FO DILLLS. Dalo le fa pagh.",
+          "pid": "204"
+        },
+        {
+          "name": "Desdu rap. A new kind of music? What about flowers?",
+          "link": "Desdu rap. A new kind of music? What about flowers?",
+          "pid": "207"
+        },
+        {
+          "name": "Love three? If it is what I think it is, I need it!",
+          "link": "Love three? If it is what I think it is, I need it!",
+          "pid": "208"
+        }
+      ],
+      "name": "I can do this small words, it uses small words, I need small words.",
+      "pid": "200",
+      "position": {
+        "x": "7239",
+        "y": "4556"
+      }
+    },
+    {
+      "text": "toH, SoH ghuHmoH jIH. jIH lulIjbe'lu'bogh Hoch largh bro. wutlh SoH QaH jIH. vay' qaH qaStaHvIS yab? chaq 'op dalo le fa pagh 'op rorhe'.\n[[Hmm, I see roses there. Simple, effective, I like it.]]\n[[Daf fo dils. THOSE DAF FO DILLLS. Dalo le fa pagh.]]\n[[Spe cial flo wer SoH mate bro]]",
+      "links": [
+        {
+          "name": "Hmm, I see roses there. Simple, effective, I like it.",
+          "link": "Hmm, I see roses there. Simple, effective, I like it.",
+          "pid": "202"
+        },
+        {
+          "name": "Daf fo dils. THOSE DAF FO DILLLS. Dalo le fa pagh.",
+          "link": "Daf fo dils. THOSE DAF FO DILLLS. Dalo le fa pagh.",
+          "pid": "204"
+        },
+        {
+          "name": "Spe cial flo wer SoH mate bro",
+          "link": "Spe cial flo wer SoH mate bro",
+          "pid": "203"
+        }
+      ],
+      "name": "Woooow, overwhelming scent. How can I distinguish any one flower's smell from others here?",
+      "pid": "201",
+      "position": {
+        "x": "6096.333333333333",
+        "y": "4528.333333333333"
+      }
+    },
+    {
+      "text": "law' 'ej law' 'ej nIvbogh rorhe. qotlh maw''a'.",
+      "name": "Hmm, I see roses there. Simple, effective, I like it.",
+      "pid": "202",
+      "position": {
+        "x": "5826.333333333333",
+        "y": "4836.666666666666"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Soh mate, qatlh vIchel jIHvaD pa' neH? Torenia.",
+      "name": "Spe cial flo wer SoH mate bro",
+      "pid": "203",
+      "position": {
+        "x": "6271.333333333333",
+        "y": "4856.666666666666"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "dalo le fa pagh Suq bIr bro Suq bIr",
+      "name": "Daf fo dils. THOSE DAF FO DILLLS. Dalo le fa pagh.",
+      "pid": "204",
+      "position": {
+        "x": "6046.333333333333",
+        "y": "4841.666666666666"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "taD lily. boom 'oH HeghDI' Suq tuj, 'ej 'oH jatlh naDev 'oH. Qo' meQ chaH nI'be'qu'mo' DaSov bro tuj 'oH.",
+      "name": "Lily, yes I know that word YES. LILY.",
+      "pid": "205",
+      "position": {
+        "x": "6566",
+        "y": "4842"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "saf a'f ron, cha'par cha' pe''eghtaHvIS wa'.",
+      "name": "Spice DaneH'a' last words are always suggestions. I learned that the hard way.",
+      "pid": "206",
+      "position": {
+        "x": "6716",
+        "y": "4834"
+      },
+      "tags": [
+        "Good"
+      ]
+    },
+    {
+      "text": "Ez fer'o ben hel Rap Desduuu. Racy rappo reck p'ar Sho.",
+      "name": "Desdu rap. A new kind of music? What about flowers?",
+      "pid": "207",
+      "position": {
+        "x": "7131",
+        "y": "4842"
+      },
+      "tags": [
+        "Bad"
+      ]
+    },
+    {
+      "text": "Law' three 'epIl naHmey nuj tInqu' ghaj wej qa''a''e' lugh",
+      "name": "Love three? If it is what I think it is, I need it!",
+      "pid": "208",
+      "position": {
+        "x": "7407",
+        "y": "4830"
+      },
+      "tags": [
+        "Bad"
+      ]
     }
   ],
   "name": "Intro",

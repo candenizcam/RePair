@@ -15,7 +15,7 @@ class GameScreen: Screen() {
     private var tools = listOf<SimpleTool>()
     private var items = mutableListOf<String>()
     private var texts = mutableListOf<TextIslandTexts>()
-    private val travelTimer = Timer(20000)
+    private val travelTimer = Timer(2000)
     private val timer = Timer(1000)
     private val countdownTimer = Timer(1000)
     private var sfxBeep = Gdx.audio.newSound(Gdx.files.internal("sound/Beep.mp3"))
@@ -56,8 +56,10 @@ class GameScreen: Screen() {
             redButton.status = ButtonStatus.DOWN
         }
         for (k in 1..3) {
-            texts[k].pressing = texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())
-            sfxChoose.play()
+            if(texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && !travelTimer.running) {
+                texts[k].pressing = true
+                sfxChoose.play()
+            }
         }
     }
 
@@ -116,7 +118,7 @@ class GameScreen: Screen() {
                 breakingList = listOf(0,1,2,3)
             }
             if(redButton.status == ButtonStatus.DOWN) {
-                if(SharedVariables.planetIndex==4){
+                if(SharedVariables.planetIndex==5){
                     SharedVariables.activeScreen = SharedVariables.endingScreen
                 }
                 sfxRed.play()
@@ -250,12 +252,20 @@ class GameScreen: Screen() {
             2 -> {
                 when {
                     devices[1].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(61) //speaker
-                    devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(3)//translator
+                    devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(3) //translator
                     else -> phText.getPlanetPassage(36)
                 }
                 bigMonitor.changeMonitor("graphics/planets/p3.png")
             }
             3 -> {
+                when {
+                    devices[1].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(174) //speaker
+                    devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(196) //translator
+                    else -> phText.getPlanetPassage(147)
+                }
+                bigMonitor.changeMonitor("graphics/planets/p4.png")
+            }
+            4 -> {
                 if (items.isEmpty()) {
                     phText.getPlanetPassage(133)
                 } else if ("stacey" in items && "dessert" !in items) {
