@@ -71,4 +71,9 @@ class TextIsland(path: FileHandle, private var currentPid: Int) {
         }
         return false
     }
+
+    fun getTag(): String{
+        return currentPassage.get("tags")[0].asString()
+    }
+
 }

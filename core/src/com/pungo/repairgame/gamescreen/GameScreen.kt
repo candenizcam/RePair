@@ -252,6 +252,12 @@ class GameScreen: Screen() {
                 bigMonitor.changeMonitor("graphics/planets/p2.png")
             }
             2 -> {
+                if(phText.getTag() == "Good"){
+                    items.add("dessert")
+                }
+                else if(phText.getTag() == "Bad"){
+
+                }
                 when {
                     devices[1].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(61) //speaker
                     devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(3) //translator
@@ -260,6 +266,12 @@ class GameScreen: Screen() {
                 bigMonitor.changeMonitor("graphics/planets/p3.png")
             }
             3 -> {
+                if(phText.getTag() == "Good"){
+                    items.add("stacey")
+                }
+                else if(phText.getTag() == "Bad"){
+
+                }
                 when {
                     devices[1].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(174) //speaker
                     devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(196) //translator
@@ -268,13 +280,27 @@ class GameScreen: Screen() {
                 bigMonitor.changeMonitor("graphics/planets/p4.png")
             }
             4 -> {
+                if(phText.getTag() == "Good"){
+                    items.add("flower")
+                }
+                else if(phText.getTag() == "Bad"){
+
+                }
                 if (items.isEmpty()) {
                     phText.getPlanetPassage(133)
-                } else if ("stacey" in items && "dessert" !in items) {
+                } else if ("stacey" in items && "dessert" !in items && "flower" !in items) {
                     phText.getPlanetPassage(134)
-                } else if ("stacey" !in items && "dessert" in items) {
+                } else if ("stacey" !in items && "dessert" in items && "flower" !in items) {
+                    phText.getPlanetPassage(208)
+                } else if ("stacey" !in items && "dessert" !in items && "flower" in items) {
+                    phText.getPlanetPassage(210)
+                } else if ("stacey" in items && "dessert" in items && "flower" !in items) {
+                    phText.getPlanetPassage(209)
+                } else if ("stacey" in items && "dessert" !in items && "flower" in items) {
+                    phText.getPlanetPassage(207)
+                } else if ("stacey" !in items && "dessert" in items && "flower" in items) {
                     phText.getPlanetPassage(135)
-                } else if ("stacey" in items && "dessert" in items) {
+                } else if ("stacey" in items && "dessert" in items && "flower" in items) {
                     phText.getPlanetPassage(136)
                 }
                 bigMonitor.changeMonitor("graphics/planets/p5.png")
