@@ -100,11 +100,12 @@ class GameScreen: Screen() {
 
         if (!travelTimer.running && !phText.sceneNotOver()) {
             if(redButton.status == ButtonStatus.DOWN) {
-                redButton.status = ButtonStatus.UP
+
                 sfxRed.play()
                 redButton()
             }
         }
+        redButton.status = ButtonStatus.UP
     }
 
     private fun updateIslandText() {
@@ -196,6 +197,7 @@ class GameScreen: Screen() {
                         phText.getPlanetPassage(7)
                     }
                 }
+                bigMonitor.changeMonitor("graphics/planets/p1.png")
             }
             1 -> {
                 if (devices[1].status != DeviceStatus.NORMAL) {
@@ -203,6 +205,7 @@ class GameScreen: Screen() {
                 } else {
                     phText.getPlanetPassage(93)
                 }
+                bigMonitor.changeMonitor("graphics/planets/p2.png")
             }
             2 -> {
                 when {
@@ -210,6 +213,7 @@ class GameScreen: Screen() {
                     devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(3)//translator
                     else -> phText.getPlanetPassage(36)
                 }
+                bigMonitor.changeMonitor("graphics/planets/p3.png")
             }
             3 -> {
                 if (items.isEmpty()) {
@@ -221,6 +225,7 @@ class GameScreen: Screen() {
                 } else if ("stacey" in items && "dessert" in items) {
                     phText.getPlanetPassage(136)
                 }
+                bigMonitor.changeMonitor("graphics/planets/p5.png")
             }
         }
         SharedVariables.planetIndex++
@@ -261,7 +266,9 @@ class GameScreen: Screen() {
                 texts.add(this)
             }
         }
-        bigMonitor = BigMonitor()
+        bigMonitor = BigMonitor().apply{
+            changeMonitor("graphics/planets/p0.png")
+        }
         timer.go()
     }
 }

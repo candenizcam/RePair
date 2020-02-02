@@ -24,7 +24,7 @@ class MainMenuScreen: Screen() {
             setCenterX(SharedVariables.mainWidth.toFloat() / 2)
             setCenterY(SharedVariables.mainHeight.toFloat() / 2)
         }
-        titleSprite = SharedVariables.loadSprite(SharedVariables.titlePath, 0.25).apply{
+        titleSprite = SharedVariables.loadSprite(SharedVariables.titlePath, 0.5).apply{
             setCenterX(SharedVariables.mainWidth.toFloat() / 2)
             setCenterY(SharedVariables.mainHeight.toFloat() / 2)
         }

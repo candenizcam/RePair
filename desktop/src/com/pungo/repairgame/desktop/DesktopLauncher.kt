@@ -19,6 +19,7 @@ object DesktopLauncher {
         config.height = SharedVariables.mainHeight
         //config.fullscreen = true;
         config.forceExit = true
+        config.addIcon("graphics/Icon32.png", com.badlogic.gdx.Files.FileType.Internal)
         try {
             LwjglApplication(MainGame(), config)
         } catch (ex: Exception) {
