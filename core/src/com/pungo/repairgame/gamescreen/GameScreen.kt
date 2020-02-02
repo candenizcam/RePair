@@ -293,11 +293,13 @@ class GameScreen: Screen() {
                     SharedVariables.endingScreen.badEnder()
                 } else if ("stacey" in items && "dessert" !in items && "flower" !in items) {
                     phText.getPlanetPassage(134)
+                    SharedVariables.endingScreen.badEnder()
                 } else if ("stacey" !in items && "dessert" in items && "flower" in items) {
                     phText.getPlanetPassage(135)
+                    SharedVariables.endingScreen.goodEnder()
                 } else if ("stacey" in items && "dessert" in items && "flower" in items) {
                     phText.getPlanetPassage(136)
-                    SharedVariables.endingScreen.badEnder()
+                    SharedVariables.endingScreen.goodEnder()
                 } else if ("stacey" !in items && "dessert" in items && "flower" !in items) {
                     phText.getPlanetPassage(208)
                     SharedVariables.endingScreen.badEnder()
@@ -309,12 +311,6 @@ class GameScreen: Screen() {
                     SharedVariables.endingScreen.goodEnder()
                 } else if ("stacey" in items && "dessert" !in items && "flower" in items) {
                     phText.getPlanetPassage(207)
-                    SharedVariables.endingScreen.goodEnder()
-                } else if ("stacey" !in items && "dessert" in items && "flower" in items) {
-                    phText.getPlanetPassage(135)
-                    SharedVariables.endingScreen.goodEnder()
-                } else if ("stacey" in items && "dessert" in items && "flower" in items) {
-                    phText.getPlanetPassage(136)
                     SharedVariables.endingScreen.goodEnder()
                 }
                 bigMonitor.changeMonitor("graphics/planets/p5.png")
