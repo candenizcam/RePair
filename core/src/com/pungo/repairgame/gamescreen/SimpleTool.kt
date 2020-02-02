@@ -1,5 +1,6 @@
 package com.pungo.repairgame.gamescreen
 
+import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.SharedVariables
@@ -15,6 +16,7 @@ class SimpleTool(private val path: String, private val ratio: Float)  {
     private var flyingCentreY = 0f
     var flying = false
     var status = ToolStatus.IDLE
+    var sfx = Gdx.audio.newSound(Gdx.files.internal("$path/sfx.mp3"))
 
     init{
         loadImage()

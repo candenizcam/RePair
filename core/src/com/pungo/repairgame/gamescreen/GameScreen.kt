@@ -7,15 +7,21 @@ import com.pungo.repairgame.*
 
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite
+    private lateinit var cargo : Sprite
     private lateinit var phText: TextIsland
     private lateinit var bigMonitor: BigMonitor
-    private lateinit var redButton: SimpleDevice
+    private lateinit var redButton: SimpleButton
     private var devices = listOf<SimpleDevice>()
     private var tools = listOf<SimpleTool>()
     private var items = mutableListOf<String>()
     private var texts = mutableListOf<TextIslandTexts>()
-    private val travelTimer = Timer(2000)
-    private val timer = Timer(500)
+    private val travelTimer = Timer(20000)
+    private val timer = Timer(1000)
+    private var sfxBeep = Gdx.audio.newSound(Gdx.files.internal("sound/Beep.mp3"))
+    private var sfxTake = Gdx.audio.newSound(Gdx.files.internal("sound/Take.mp3"))
+    private var sfxFail = Gdx.audio.newSound(Gdx.files.internal("sound/Fail.mp3"))
+    private var sfxChoose = Gdx.audio.newSound(Gdx.files.internal("sound/Choose.mp3"))
+    private var sfxRed = Gdx.audio.newSound(Gdx.files.internal("sound/Red.mp3"))
 
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
@@ -38,11 +44,15 @@ class GameScreen: Screen() {
         tools.forEach {
             if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.chosenSprite)) {
                 it.flying = true
+                sfxTake.play()
             }
         }
-
+        if(SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), redButton.activeSprite)) {
+            redButton.status = ButtonStatus.DOWN
+        }
         for (k in 1..3) {
             texts[k].pressing = texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())
+            sfxChoose.play()
         }
     }
 
@@ -54,6 +64,7 @@ class GameScreen: Screen() {
                 it.flyingCentre(flyingX,flyingY)
             }
         }
+        if(redButton.status == ButtonStatus.DOWN && !SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), redButton.activeSprite)) redButton.status = ButtonStatus.UP
     }
 
     override fun released() {
@@ -62,15 +73,25 @@ class GameScreen: Screen() {
                 it.flying = false
                 devices.forEach { it2 ->
                     if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it2.getSprite())) {
-                        if ((it2.status == DeviceStatus.HOT) && (index == 1)) it2.status = DeviceStatus.NORMAL
-                        else if ((it2.status == DeviceStatus.BROKEN) && (index == 2)) it2.status = DeviceStatus.NORMAL
-                        else if ((it2.status == DeviceStatus.STUCK) && (index == 3)) it2.status = DeviceStatus.NORMAL
+                        if ((it2.status == DeviceStatus.HOT) && (index == 1)) {
+                            it.sfx.play()
+                            it2.status = DeviceStatus.NORMAL
+                        }
+                        else if ((it2.status == DeviceStatus.BROKEN) && (index == 2)){
+                            it.sfx.play()
+                            it2.status = DeviceStatus.NORMAL
+                        }
+                        else if ((it2.status == DeviceStatus.STUCK) && (index == 3)) {
+                            it.sfx.play()
+                            it2.status = DeviceStatus.NORMAL
+                        }
+                        else sfxFail.play()
                     }
                 }
             }
         }
         for (k in 1..3) {
-            if (texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (texts[k].pressing)){
+            if (texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (texts[k].pressing && phText.sceneNotOver())){
                 phText.nextPassage(k)
                 updateIslandText()
             }
@@ -78,7 +99,9 @@ class GameScreen: Screen() {
         }
 
         if (!travelTimer.running && !phText.sceneNotOver()) {
-            if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), redButton.getSprite())) {
+            if(redButton.status == ButtonStatus.DOWN) {
+                redButton.status = ButtonStatus.UP
+                sfxRed.play()
                 redButton()
             }
         }
@@ -128,7 +151,7 @@ class GameScreen: Screen() {
 
     override fun loopAction() {
         if (travelTimer.running) {
-            if (travelTimer.now() < 20000 && timer.done()) {
+            if (timer.done()) {
                 if (zar()) {
                     breakShip()
                 }
@@ -147,6 +170,13 @@ class GameScreen: Screen() {
             }
         }
 
+        if(texts[0].revealed){
+            sfxBeep.stop()
+        }
+        else{
+            sfxBeep.play()
+        }
+
         for (k in 1..3) {
             texts[k].hovered = texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())
         }
@@ -155,39 +185,41 @@ class GameScreen: Screen() {
     private fun changePlanet() {
         when (SharedVariables.planetIndex) {
             0 -> {
-                if (devices[1].status != DeviceStatus.NORMAL) { // speaker
-                    phText.getPlanetPassage(27)
-                } else if (devices[3].status != DeviceStatus.NORMAL) { //translator
-                    phText.getPlanetPassage(16)
-                } else {
-                    phText.getPlanetPassage(7)
+                when {
+                    devices[1].status != DeviceStatus.NORMAL -> { // speaker
+                        phText.getPlanetPassage(25)
+                    }
+                    devices[3].status != DeviceStatus.NORMAL -> { //translator
+                        phText.getPlanetPassage(15)
+                    }
+                    else -> {
+                        phText.getPlanetPassage(7)
+                    }
                 }
             }
             1 -> {
                 if (devices[1].status != DeviceStatus.NORMAL) {
-                    phText.getPlanetPassage(115)
+                    phText.getPlanetPassage(112)
                 } else {
-                    phText.getPlanetPassage(96)
+                    phText.getPlanetPassage(93)
                 }
             }
             2 -> {
-                if (devices[1].status != DeviceStatus.NORMAL) { // speaker
-                    phText.getPlanetPassage(64)
-                } else if (devices[3].status != DeviceStatus.NORMAL) { //translator
-                    phText.getPlanetPassage(3)
-                } else {
-                    phText.getPlanetPassage(39)
+                when {
+                    devices[1].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(61) //speaker
+                    devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(3)//translator
+                    else -> phText.getPlanetPassage(36)
                 }
             }
             3 -> {
                 if (items.isEmpty()) {
-                    phText.getPlanetPassage(136)
+                    phText.getPlanetPassage(133)
                 } else if ("stacey" in items && "dessert" !in items) {
-                    phText.getPlanetPassage(137)
+                    phText.getPlanetPassage(134)
                 } else if ("stacey" !in items && "dessert" in items) {
-                    phText.getPlanetPassage(138)
+                    phText.getPlanetPassage(135)
                 } else if ("stacey" in items && "dessert" in items) {
-                    phText.getPlanetPassage(139)
+                    phText.getPlanetPassage(136)
                 }
             }
         }
@@ -200,7 +232,11 @@ class GameScreen: Screen() {
         mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
 
-        redButton = SimpleDevice(DevicesData.redPath, DevicesData.redRatio)
+        cargo = SharedVariables.loadSprite("graphics/cargo.png", SharedVariables.gameBackgroundRatio)
+        cargo.setCenterX(1672f)
+        cargo.setCenterY(610f)
+
+        redButton = SimpleButton(DevicesData.redPath, DevicesData.redRatio)
         redButton.relocateCentre(DevicesData.redX, DevicesData.redY)
 
         devices = DevicesData.getDevices()
@@ -208,7 +244,7 @@ class GameScreen: Screen() {
 
         phText = TextIsland(Gdx.files.internal("planet_0/story.json"), SharedVariables.planets[0].second)
         TextIslandTexts().also {
-            it.setStuff(phText.getCurrentLine(), 517f, 453f, 865f, 180f)
+            it.setStuff(phText.getCurrentLine(), 532f, 433f, 835f, 140f)
             texts.add(it)
         }
         phText.getCurrentChoices().let{
