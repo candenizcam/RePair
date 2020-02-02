@@ -74,7 +74,11 @@ class GameScreen: Screen() {
                 it.flying = false
                 devices.forEach { it2 ->
                     if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it2.getSprite())) {
-                        if ((it2.status == DeviceStatus.HOT) && (index == 1)) {
+                        if ((it2.status == DeviceStatus.SHORT) && (index == 0)) {
+                            it.sfx.play()
+                            it2.status = DeviceStatus.NORMAL
+                        }
+                        else if ((it2.status == DeviceStatus.HOT) && (index == 1)) {
                             it.sfx.play()
                             it2.status = DeviceStatus.NORMAL
                         }
@@ -155,6 +159,7 @@ class GameScreen: Screen() {
             device.status = when (breakingList.random()) {
                 0 -> DeviceStatus.BROKEN
                 1 -> DeviceStatus.STUCK
+                2 -> DeviceStatus.SHORT
                 else -> DeviceStatus.HOT
             }
         }
