@@ -16,7 +16,7 @@ class GameScreen: Screen() {
     private var tools = listOf<SimpleTool>()
     private var items = mutableListOf<String>()
     private var texts = mutableListOf<TextIslandTexts>()
-    private val travelTimer = Timer(2000)
+    private val travelTimer = Timer(20000)
     private val timer = Timer(1000)
     private val countdownTimer = Timer(1000)
     private var sfxBeep = Gdx.audio.newSound(Gdx.files.internal("sound/Beep.mp3"))
@@ -293,6 +293,10 @@ class GameScreen: Screen() {
                     SharedVariables.endingScreen.badEnder()
                 } else if ("stacey" in items && "dessert" !in items && "flower" !in items) {
                     phText.getPlanetPassage(134)
+                } else if ("stacey" !in items && "dessert" in items && "flower" in items) {
+                    phText.getPlanetPassage(135)
+                } else if ("stacey" in items && "dessert" in items && "flower" in items) {
+                    phText.getPlanetPassage(136)
                     SharedVariables.endingScreen.badEnder()
                 } else if ("stacey" !in items && "dessert" in items && "flower" !in items) {
                     phText.getPlanetPassage(208)
