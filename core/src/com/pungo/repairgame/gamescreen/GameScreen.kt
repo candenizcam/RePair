@@ -17,12 +17,16 @@ class GameScreen: Screen() {
     private var texts = mutableListOf<TextIslandTexts>()
     private val travelTimer = Timer(20000)
     private val timer = Timer(1000)
+    private val countdownTimer = Timer(1000)
     private var sfxBeep = Gdx.audio.newSound(Gdx.files.internal("sound/Beep.mp3"))
     private var sfxTake = Gdx.audio.newSound(Gdx.files.internal("sound/Take.mp3"))
     private var sfxFail = Gdx.audio.newSound(Gdx.files.internal("sound/Fail.mp3"))
     private var sfxChoose = Gdx.audio.newSound(Gdx.files.internal("sound/Choose.mp3"))
     private var sfxRed = Gdx.audio.newSound(Gdx.files.internal("sound/Red.mp3"))
     private var breakingList = listOf(0)
+
+    private var countdownIndex = -1
+    private val countdownList: List<String> = listOf("graphics/three.png", "graphics/two.png", "graphics/one.png", "graphics/go.png")
 
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
@@ -101,13 +105,16 @@ class GameScreen: Screen() {
         }
 
         if (!travelTimer.running && !phText.sceneNotOver()) {
+            if(SharedVariables.planetIndex==1){
+                tools.forEach {
+                    it.status = ToolStatus.IDLE
+                }
+                breakingList = listOf(0,1,2,3)
+            }
             if(redButton.status == ButtonStatus.DOWN) {
-
                 if(SharedVariables.planetIndex==4){
                     SharedVariables.activeScreen = SharedVariables.endingScreen
                 }
-
-
                 sfxRed.play()
                 redButton()
             }
@@ -124,7 +131,6 @@ class GameScreen: Screen() {
                 texts[1].setStuff(it[0])
                 texts[2].setStuff(it[1])
                 texts[3].setStuff(it[2])
-
             }
         } catch (ex: Exception) {
 
@@ -132,8 +138,8 @@ class GameScreen: Screen() {
     }
 
     private fun redButton() {
-        travelTimer.go()
-        travelTimer.running = true
+        countdownTimer.go()
+        countdownTimer.running = true
         texts[0].setStuff("")
     }
 
@@ -161,15 +167,19 @@ class GameScreen: Screen() {
     }
 
     override fun loopAction() {
-        if (travelTimer.running) {
-            if (travelTimer.done()) {
-                travelTimer.running = false
-                changePlanet()
-            } else if ((travelTimer.timeLeft()>1000)&&(timer.done())){
-                if (zar()) {
-                    breakShip()
+        if(countdownTimer.running){
+            if(countdownTimer.done()){
+                if(countdownIndex==3){
+                    travelTimer.go()
+                    travelTimer.running = true
+                    countdownTimer.running = false
+                    // bigMonitor.changeMonitor("graphics/spaceview.png")
                 }
-                timer.go()
+                else{
+                    countdownIndex++
+                    bigMonitor.changeMonitor(countdownList[countdownIndex])
+                    countdownTimer.go()
+                }
             }
         }
 
