@@ -3,8 +3,12 @@ package com.pungo.repairgame.mainmenu
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.pungo.repairgame.ButtonStatus
 import com.pungo.repairgame.Screen
 import com.pungo.repairgame.SharedVariables
+import com.pungo.repairgame.SimpleButton
+import java.util.*
+import kotlin.concurrent.schedule
 
 class MainMenuScreen: Screen() {
     private lateinit var mainSprite: Sprite
@@ -12,6 +16,7 @@ class MainMenuScreen: Screen() {
     private lateinit var startButton: SimpleButton
     private lateinit var continueButton: SimpleButton
     private lateinit var optionsButton: SimpleButton
+    private var sfx = Gdx.audio.newSound(Gdx.files.internal("sound/Blip.mp3"))
 
 
     override fun lateInitializer() {
@@ -41,15 +46,14 @@ class MainMenuScreen: Screen() {
 
     override fun firstPress() {
         when {
-
             SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), startButton.activeSprite) -> {
-                startButton.status = MenuButtonStatus.DOWN
+                startButton.status = ButtonStatus.DOWN
             }
             SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), continueButton.activeSprite) -> {
-                continueButton.status = MenuButtonStatus.DOWN
+                continueButton.status = ButtonStatus.DOWN
             }
             SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), optionsButton.activeSprite) -> {
-                optionsButton.status = MenuButtonStatus.DOWN
+                optionsButton.status = ButtonStatus.DOWN
             }
         }
     }
@@ -57,29 +61,32 @@ class MainMenuScreen: Screen() {
     override fun pressing() {
 
         when {
-            startButton.status == MenuButtonStatus.DOWN -> {
-                if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), startButton.activeSprite)) startButton.status = MenuButtonStatus.UP
+            startButton.status == ButtonStatus.DOWN -> {
+                if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), startButton.activeSprite)) startButton.status = ButtonStatus.UP
             }
-            continueButton.status == MenuButtonStatus.DOWN -> {
-                if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), continueButton.activeSprite)) continueButton.status = MenuButtonStatus.UP
+            continueButton.status == ButtonStatus.DOWN -> {
+                if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), continueButton.activeSprite)) continueButton.status = ButtonStatus.UP
             }
-            optionsButton.status == MenuButtonStatus.DOWN -> {
-                if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), optionsButton.activeSprite)) optionsButton.status = MenuButtonStatus.UP
+            optionsButton.status == ButtonStatus.DOWN -> {
+                if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), optionsButton.activeSprite)) optionsButton.status = ButtonStatus.UP
             }
         }
     }
 
     override fun released() {
         when {
-            startButton.status == MenuButtonStatus.DOWN -> {
-                startButton.status = MenuButtonStatus.UP
-                SharedVariables.activeScreen = SharedVariables.gameScreen
+            startButton.status == ButtonStatus.DOWN -> {
+                startButton.status = ButtonStatus.UP
+                sfx.play()
+                Timer().schedule(370) {
+                    SharedVariables.activeScreen = SharedVariables.gameScreen                }
+
             }
-            continueButton.status == MenuButtonStatus.DOWN -> {
-                continueButton.status = MenuButtonStatus.UP
+            continueButton.status == ButtonStatus.DOWN -> {
+                continueButton.status = ButtonStatus.UP
             }
-            optionsButton.status == MenuButtonStatus.DOWN -> {
-                optionsButton.status = MenuButtonStatus.UP
+            optionsButton.status == ButtonStatus.DOWN -> {
+                optionsButton.status = ButtonStatus.UP
             }
         }
     }
