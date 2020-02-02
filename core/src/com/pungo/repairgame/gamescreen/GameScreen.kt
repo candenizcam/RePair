@@ -188,6 +188,18 @@ class GameScreen: Screen() {
             }
         }
 
+        if (travelTimer.running) {
+            if (travelTimer.done()) {
+                travelTimer.running = false
+                changePlanet()
+            } else if ((travelTimer.timeLeft()>1000)&&(timer.done())){
+                if (zar()) {
+                    breakShip()
+                }
+                timer.go()
+            }
+        }
+
         tools.forEach {
             if(it.status!= ToolStatus.INACTIVE){
                 if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.getSprite())) {
