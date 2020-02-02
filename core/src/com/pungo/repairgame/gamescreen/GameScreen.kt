@@ -101,7 +101,7 @@ class GameScreen: Screen() {
             }
         }
         for (k in 1..3) {
-            if (texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (texts[k].pressing && phText.sceneNotOver())){
+            if (texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && (texts[k].pressing && phText.sceneNotOver()) && texts[0].revealed){
                 phText.nextPassage(k)
                 updateIslandText()
             }
