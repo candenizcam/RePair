@@ -26,7 +26,8 @@ class GameScreen: Screen() {
     private var breakingList = listOf(0)
 
     private var countdownIndex = -1
-    private val countdownList: List<String> = listOf("graphics/three.png", "graphics/two.png", "graphics/one.png", "graphics/go.png")
+    private var countdownIndexLimit = 3
+    private val countdownList: List<String> = listOf("graphics/bigmonitor/three.png", "graphics/bigmonitor/two.png", "graphics/bigmonitor/one.png", "graphics/bigmonitor/go.png","graphics/bigmonitor/show&tell.png")
 
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
@@ -174,7 +175,7 @@ class GameScreen: Screen() {
     override fun loopAction() {
         if(countdownTimer.running){
             if(countdownTimer.done()){
-                if(countdownIndex==3){
+                if(countdownIndex== countdownIndexLimit){
                     travelTimer.go()
                     travelTimer.running = true
                     countdownTimer.running = false
@@ -238,6 +239,7 @@ class GameScreen: Screen() {
                     }
                 }
                 bigMonitor.changeMonitor("graphics/planets/p1.png")
+                countdownIndexLimit = 4
             }
             1 -> {
                 if (devices[1].status != DeviceStatus.NORMAL) {
