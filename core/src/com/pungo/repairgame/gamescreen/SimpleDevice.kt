@@ -57,7 +57,7 @@ class SimpleDevice(private val path: String, private val ratio: Float) {
         when(status){
             DeviceStatus.HOT -> hotSprite.draw(batch)
             DeviceStatus.BROKEN -> brokenSprite.draw(batch)
-            DeviceStatus.STUCK -> brokenSprite.draw(batch)
+            DeviceStatus.STUCK -> stuckSprite.draw(batch)
             else -> {}
         }
     }

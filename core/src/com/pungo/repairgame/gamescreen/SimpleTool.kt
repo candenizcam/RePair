@@ -9,7 +9,7 @@ class SimpleTool(private val path: String, private val ratio: Float)  {
     private lateinit var idleSprite: Sprite
     private lateinit var glowSprite: Sprite
     private lateinit var flyingSprite: Sprite
-    lateinit var chosenSprite: Sprite
+    private lateinit var chosenSprite: Sprite
     private var centreX = 0f
     private var centreY = 0f
     private var flyingCentreX = 0f
@@ -25,6 +25,10 @@ class SimpleTool(private val path: String, private val ratio: Float)  {
     fun relocateCentre(x: Float, y: Float){
         centreX = x
         centreY = y
+    }
+
+    fun getSprite(): Sprite {
+        return idleSprite
     }
 
     fun flyingCentre(x: Float, y:Float){
@@ -45,11 +49,17 @@ class SimpleTool(private val path: String, private val ratio: Float)  {
             else -> idleSprite
         }
         chosenSprite.setCenter(centreX,centreY)
-        chosenSprite.draw(batch)
-        if (flying){
-            flyingSprite.setCenter(flyingCentreX,flyingCentreY)
-            flyingSprite.draw(batch)
+
+        if (ToolStatus.INACTIVE!=status){
+            chosenSprite.draw(batch)
+            if (flying){
+                flyingSprite.setCenter(flyingCentreX,flyingCentreY)
+                flyingSprite.draw(batch)
+            }
+        } else {
+            flying = false
         }
+
 
     }
 }

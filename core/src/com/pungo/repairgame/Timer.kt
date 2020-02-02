@@ -19,4 +19,8 @@ class Timer(private val time: Long) {
     fun now(): Long{
         return System.currentTimeMillis() - startTime
     }
+
+    fun timeLeft():Long{
+        return time - (System.currentTimeMillis() - startTime)
+    }
 }

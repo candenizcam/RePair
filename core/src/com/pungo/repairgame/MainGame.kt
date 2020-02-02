@@ -4,6 +4,7 @@ import com.badlogic.gdx.ApplicationAdapter
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import kotlin.system.exitProcess
 
 class MainGame : ApplicationAdapter() {
     private lateinit var batch: SpriteBatch
@@ -14,6 +15,7 @@ class MainGame : ApplicationAdapter() {
         SharedVariables.loadingScreen.lateInitializer()
         SharedVariables.mainMenuScreen.lateInitializer()
         SharedVariables.gameScreen.lateInitializer()
+        SharedVariables.endingScreen.lateInitializer()
         batch = SpriteBatch()
         MidiPlayer.open("sound/OST1.mid")
         MidiPlayer.setLooping(true)
@@ -37,9 +39,14 @@ class MainGame : ApplicationAdapter() {
         batch.begin()
         SharedVariables.activeScreen.draw(batch)
         batch.end()
+        if (SharedVariables.kill){
+            dispose()
+        }
     }
 
     override fun dispose() {
         batch.dispose()
+
+        exitProcess(0)
     }
 }

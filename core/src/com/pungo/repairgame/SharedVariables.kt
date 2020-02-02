@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.Pixmap
 import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.Sprite
+import com.pungo.repairgame.ending.EndingScreen
 import com.pungo.repairgame.gamescreen.GameScreen
 import com.pungo.repairgame.loadingscreen.LoadingScreen
 import com.pungo.repairgame.mainmenu.MainMenuScreen
@@ -26,6 +27,7 @@ object SharedVariables{
 
     const val monitorCentreX = 960f
     const val monitorCentreY = 786f
+    var kill = false
     var planets = MutableList(3) { Pair("x", 0) }
     var planetIndex: Int = 0
 
@@ -38,6 +40,7 @@ object SharedVariables{
     var loadingScreen = LoadingScreen()
     var mainMenuScreen = MainMenuScreen()
     var gameScreen = GameScreen()
+    var endingScreen = EndingScreen()
     var activeScreen: Screen = loadingScreen
     var mouse = MouseManager()
 

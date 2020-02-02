@@ -65,6 +65,7 @@ class TextIsland(path: FileHandle, private var currentPid: Int) {
     fun sceneNotOver(): Boolean {
         try {
             currentPassage.get("tags")[0]
+
         } catch (ex: Exception) {
             return true
         }

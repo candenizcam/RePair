@@ -22,6 +22,7 @@ class GameScreen: Screen() {
     private var sfxFail = Gdx.audio.newSound(Gdx.files.internal("sound/Fail.mp3"))
     private var sfxChoose = Gdx.audio.newSound(Gdx.files.internal("sound/Choose.mp3"))
     private var sfxRed = Gdx.audio.newSound(Gdx.files.internal("sound/Red.mp3"))
+    private var breakingList = listOf(0)
 
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
@@ -42,7 +43,7 @@ class GameScreen: Screen() {
 
     override fun firstPress() {
         tools.forEach {
-            if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.chosenSprite)) {
+            if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.getSprite())) {
                 it.flying = true
                 sfxTake.play()
             }
@@ -88,6 +89,7 @@ class GameScreen: Screen() {
                         else sfxFail.play()
                     }
                 }
+                it.flyingCentre(-500f,-500f)
             }
         }
         for (k in 1..3) {
@@ -100,6 +102,11 @@ class GameScreen: Screen() {
 
         if (!travelTimer.running && !phText.sceneNotOver()) {
             if(redButton.status == ButtonStatus.DOWN) {
+
+                if(SharedVariables.planetIndex==4){
+                    SharedVariables.activeScreen = SharedVariables.endingScreen
+                }
+
 
                 sfxRed.play()
                 redButton()
@@ -117,6 +124,7 @@ class GameScreen: Screen() {
                 texts[1].setStuff(it[0])
                 texts[2].setStuff(it[1])
                 texts[3].setStuff(it[2])
+
             }
         } catch (ex: Exception) {
 
@@ -126,11 +134,12 @@ class GameScreen: Screen() {
     private fun redButton() {
         travelTimer.go()
         travelTimer.running = true
+        texts[0].setStuff("")
     }
 
     private fun zar(): Boolean {
         val rng = (0..10).random()
-        if (rng < 9) return true
+        if (rng < SharedVariables.planetIndex*2+2) return true
         return false
     }
 
@@ -143,31 +152,34 @@ class GameScreen: Screen() {
         }
 
         if (device.status == DeviceStatus.NORMAL) {
-            device.status = when ((0..1).random()) {
-                0 -> DeviceStatus.HOT
-                else -> DeviceStatus.BROKEN
+            device.status = when (breakingList.random()) {
+                0 -> DeviceStatus.BROKEN
+                1 -> DeviceStatus.STUCK
+                else -> DeviceStatus.HOT
             }
         }
     }
 
     override fun loopAction() {
         if (travelTimer.running) {
-            if (timer.done()) {
+            if (travelTimer.done()) {
+                travelTimer.running = false
+                changePlanet()
+            } else if ((travelTimer.timeLeft()>1000)&&(timer.done())){
                 if (zar()) {
                     breakShip()
                 }
                 timer.go()
-            } else if (travelTimer.done()) {
-                travelTimer.running = false
-                changePlanet()
             }
         }
 
         tools.forEach {
-            if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.chosenSprite)) {
-                it.status = ToolStatus.GLOW
-            } else {
-                it.status = ToolStatus.IDLE
+            if(it.status!= ToolStatus.INACTIVE){
+                if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.getSprite())) {
+                    it.status = ToolStatus.GLOW
+                } else {
+                    it.status = ToolStatus.IDLE
+                }
             }
         }
 
@@ -198,6 +210,10 @@ class GameScreen: Screen() {
                     }
                 }
                 bigMonitor.changeMonitor("graphics/planets/p1.png")
+                tools.forEach {
+                    it.status = ToolStatus.IDLE
+                }
+                breakingList = listOf(0,1,2,3)
             }
             1 -> {
                 if (devices[1].status != DeviceStatus.NORMAL) {

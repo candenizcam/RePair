@@ -1,5 +1,7 @@
 package com.pungo.repairgame.gamescreen
 
+import javax.tools.Tool
+
 object ToolsData {
     const val icePath = "graphics/tools/ice"
     const val iceRatio = 0.25f
@@ -23,18 +25,22 @@ object ToolsData {
         var theList = mutableListOf<SimpleTool>()
         SimpleTool(cirPath, ratio = cirRatio).also{
             it.relocateCentre(cirX,cirY)
+            it.status = ToolStatus.INACTIVE
             theList.add(it)
         }
         SimpleTool(icePath, ratio = iceRatio).also{
             it.relocateCentre(iceX,iceY)
+            it.status = ToolStatus.INACTIVE
             theList.add(it)
         }
         SimpleTool(tapePath, ratio = tapeRatio).also{
             it.relocateCentre(tapeX,tapeY)
+
             theList.add(it)
         }
         SimpleTool(oilPath, ratio = oilRatio).also{
             it.relocateCentre(oilX,oilY)
+            it.status = ToolStatus.INACTIVE
             theList.add(it)
         }
         return theList.toList()
