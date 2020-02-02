@@ -81,28 +81,26 @@ class GameScreen: Screen() {
         tools.forEachIndexed { index, it ->
             if (it.flying) {
                 it.flying = false
-                devices.forEach { it2 ->
-                    if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it2.getSprite())) {
-                        if ((it2.status == DeviceStatus.SHORT) && (index == 0)) {
-                            it.sfx.play()
-                            it2.status = DeviceStatus.NORMAL
+                if (!phText.sceneNotOver()) {
+                    devices.forEach { it2 ->
+                        if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it2.getSprite())) {
+                            if ((it2.status == DeviceStatus.SHORT) && (index == 0)) {
+                                it.sfx.play()
+                                it2.status = DeviceStatus.NORMAL
+                            } else if ((it2.status == DeviceStatus.HOT) && (index == 1)) {
+                                it.sfx.play()
+                                it2.status = DeviceStatus.NORMAL
+                            } else if ((it2.status == DeviceStatus.BROKEN) && (index == 2)) {
+                                it.sfx.play()
+                                it2.status = DeviceStatus.NORMAL
+                            } else if ((it2.status == DeviceStatus.STUCK) && (index == 3)) {
+                                it.sfx.play()
+                                it2.status = DeviceStatus.NORMAL
+                            } else sfxFail.play()
                         }
-                        else if ((it2.status == DeviceStatus.HOT) && (index == 1)) {
-                            it.sfx.play()
-                            it2.status = DeviceStatus.NORMAL
-                        }
-                        else if ((it2.status == DeviceStatus.BROKEN) && (index == 2)){
-                            it.sfx.play()
-                            it2.status = DeviceStatus.NORMAL
-                        }
-                        else if ((it2.status == DeviceStatus.STUCK) && (index == 3)) {
-                            it.sfx.play()
-                            it2.status = DeviceStatus.NORMAL
-                        }
-                        else sfxFail.play()
                     }
+                    it.flyingCentre(-500f, -500f)
                 }
-                it.flyingCentre(-500f,-500f)
             }
         }
         for (k in 1..3) {
@@ -119,6 +117,21 @@ class GameScreen: Screen() {
                     it.status = ToolStatus.IDLE
                 }
                 breakingList = listOf(0,1,2,3)
+            }
+            else if(SharedVariables.planetIndex==2){
+                if(phText.getTag() == "Good"){
+                    items.add("stacey")
+                }
+            }
+            else if(SharedVariables.planetIndex==3){
+                if(phText.getTag() == "Good"){
+                    items.add("dessert")
+                }
+            }
+            else if(SharedVariables.planetIndex==4){
+                if(phText.getTag() == "Good"){
+                    items.add("flower")
+                }
             }
             if(redButton.status == ButtonStatus.DOWN) {
                 if(SharedVariables.planetIndex==5){
@@ -254,12 +267,6 @@ class GameScreen: Screen() {
                 bigMonitor.changeMonitor("graphics/planets/p2.png")
             }
             2 -> {
-                if(phText.getTag() == "Good"){
-                    items.add("dessert")
-                }
-                else if(phText.getTag() == "Bad"){
-
-                }
                 when {
                     devices[1].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(61) //speaker
                     devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(3) //translator
@@ -269,7 +276,7 @@ class GameScreen: Screen() {
             }
             3 -> {
                 if(phText.getTag() == "Good"){
-                    items.add("stacey")
+                    items.add("dessert")
                 }
                 else if(phText.getTag() == "Bad"){
 
@@ -277,7 +284,7 @@ class GameScreen: Screen() {
                 when {
                     devices[1].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(174) //speaker
                     devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(196) //translator
-                    else -> phText.getPlanetPassage(147)
+                    else -> phText.getPlanetPassage(146)
                 }
                 bigMonitor.changeMonitor("graphics/planets/p4.png")
             }
