@@ -178,6 +178,7 @@ class GameScreen: Screen() {
                     travelTimer.go()
                     travelTimer.running = true
                     countdownTimer.running = false
+                    countdownIndex = -1
                     // bigMonitor.changeMonitor("graphics/spaceview.png")
                 }
                 else{
@@ -237,10 +238,6 @@ class GameScreen: Screen() {
                     }
                 }
                 bigMonitor.changeMonitor("graphics/planets/p1.png")
-                tools.forEach {
-                    it.status = ToolStatus.IDLE
-                }
-                breakingList = listOf(0,1,2,3)
             }
             1 -> {
                 if (devices[1].status != DeviceStatus.NORMAL) {
