@@ -11,6 +11,7 @@ class GameScreen: Screen() {
     private lateinit var phText: TextIsland
     private lateinit var bigMonitor: BigMonitor
     private lateinit var redButton: SimpleButton
+    private lateinit var cargoBay: CargoBay
     private var devices = listOf<SimpleDevice>()
     private var tools = listOf<SimpleTool>()
     private var items = mutableListOf<String>()
@@ -39,6 +40,7 @@ class GameScreen: Screen() {
             it.draw(batch)
         }
         redButton.draw(batch)
+        cargoBay.draw(batch, items.toList())
         texts[0].draw(batch, true)
 
         if (texts[0].revealed && phText.sceneNotOver()) {
@@ -288,20 +290,28 @@ class GameScreen: Screen() {
                 }
                 if (items.isEmpty()) {
                     phText.getPlanetPassage(133)
+                    SharedVariables.endingScreen.badEnder()
                 } else if ("stacey" in items && "dessert" !in items && "flower" !in items) {
                     phText.getPlanetPassage(134)
+                    SharedVariables.endingScreen.badEnder()
                 } else if ("stacey" !in items && "dessert" in items && "flower" !in items) {
                     phText.getPlanetPassage(208)
+                    SharedVariables.endingScreen.badEnder()
                 } else if ("stacey" !in items && "dessert" !in items && "flower" in items) {
                     phText.getPlanetPassage(210)
+                    SharedVariables.endingScreen.badEnder()
                 } else if ("stacey" in items && "dessert" in items && "flower" !in items) {
                     phText.getPlanetPassage(209)
+                    SharedVariables.endingScreen.goodEnder()
                 } else if ("stacey" in items && "dessert" !in items && "flower" in items) {
                     phText.getPlanetPassage(207)
+                    SharedVariables.endingScreen.goodEnder()
                 } else if ("stacey" !in items && "dessert" in items && "flower" in items) {
                     phText.getPlanetPassage(135)
+                    SharedVariables.endingScreen.goodEnder()
                 } else if ("stacey" in items && "dessert" in items && "flower" in items) {
                     phText.getPlanetPassage(136)
+                    SharedVariables.endingScreen.goodEnder()
                 }
                 bigMonitor.changeMonitor("graphics/planets/p5.png")
             }
@@ -347,6 +357,8 @@ class GameScreen: Screen() {
         bigMonitor = BigMonitor().apply{
             changeMonitor("graphics/planets/p0.png")
         }
+        cargoBay = CargoBay()
+
         timer.go()
     }
 }
