@@ -14,7 +14,7 @@ object DesktopLauncher {
         val config = LwjglApplicationConfiguration()
 
 
-        config.title = "Repair"
+        config.title = "RePair"
         //config.width = 1920
         //config.height = 1080
         config.width = SharedVariables.mainWidth
