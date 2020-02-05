@@ -16,7 +16,7 @@ class MainGame : ApplicationAdapter() {
 
     override fun create() {
         camera = OrthographicCamera()
-        viewport = FitViewport(SharedVariables.mainWidth.toFloat(), Gdx.graphics.height.toFloat(), camera)
+        viewport = FitViewport(SharedVariables.mainWidth.toFloat(), SharedVariables.mainHeight.toFloat(), camera)
         SharedVariables.loadingScreen.lateInitializer()
         SharedVariables.mainMenuScreen.lateInitializer()
         SharedVariables.gameScreen.lateInitializer()
