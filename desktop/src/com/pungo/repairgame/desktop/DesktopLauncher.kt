@@ -14,7 +14,9 @@ object DesktopLauncher {
         val config = LwjglApplicationConfiguration()
 
 
-        config.title = "yourGame"
+        config.title = "Repair"
+        //config.width = 1920
+        //config.height = 1080
         config.width = SharedVariables.mainWidth
         config.height = SharedVariables.mainHeight
         //config.fullscreen = true;
