@@ -52,7 +52,7 @@ class GameScreen: Screen() {
         tools.forEach {
             if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.getSprite())) {
                 it.flying = true
-                sfxTake.play()
+                sfxTake.play(SharedVariables.sfxVolume)
             }
         }
         if(SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), redButton.activeSprite)) {
@@ -61,7 +61,7 @@ class GameScreen: Screen() {
         for (k in 1..3) {
             if(texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && !travelTimer.running) {
                 texts[k].pressing = true
-                sfxChoose.play()
+                sfxChoose.play(SharedVariables.sfxVolume)
             }
         }
     }
@@ -85,18 +85,18 @@ class GameScreen: Screen() {
                     devices.forEach { it2 ->
                         if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it2.getSprite())) {
                             if ((it2.status == DeviceStatus.SHORT) && (index == 0)) {
-                                it.sfx.play()
+                                it.sfx.play(SharedVariables.sfxVolume)
                                 it2.status = DeviceStatus.NORMAL
                             } else if ((it2.status == DeviceStatus.HOT) && (index == 1)) {
-                                it.sfx.play()
+                                it.sfx.play(SharedVariables.sfxVolume)
                                 it2.status = DeviceStatus.NORMAL
                             } else if ((it2.status == DeviceStatus.BROKEN) && (index == 2)) {
-                                it.sfx.play()
+                                it.sfx.play(SharedVariables.sfxVolume)
                                 it2.status = DeviceStatus.NORMAL
                             } else if ((it2.status == DeviceStatus.STUCK) && (index == 3)) {
-                                it.sfx.play()
+                                it.sfx.play(SharedVariables.sfxVolume)
                                 it2.status = DeviceStatus.NORMAL
-                            } else sfxFail.play()
+                            } else sfxFail.play(SharedVariables.sfxVolume)
                         }
                     }
                     it.flyingCentre(-500f, -500f)
@@ -137,7 +137,7 @@ class GameScreen: Screen() {
                 if(SharedVariables.planetIndex==5){
                     SharedVariables.activeScreen = SharedVariables.endingScreen
                 }
-                sfxRed.play()
+                sfxRed.play(SharedVariables.sfxVolume)
                 redButton()
             }
         }
@@ -233,7 +233,7 @@ class GameScreen: Screen() {
             sfxBeep.stop()
         }
         else{
-            sfxBeep.play()
+            sfxBeep.play(SharedVariables.sfxVolume)
         }
 
         for (k in 1..3) {
