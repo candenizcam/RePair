@@ -93,7 +93,7 @@ class MainMenuScreen: Screen() {
         when {
             startButton.status == ButtonStatus.DOWN -> {
                 startButton.status = ButtonStatus.UP
-                sfx.play()
+                sfx.play(SharedVariables.sfxVolume)
                 Timer().schedule(370) {
                     SharedVariables.activeScreen = SharedVariables.gameScreen                }
 

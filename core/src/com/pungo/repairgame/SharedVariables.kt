@@ -27,6 +27,8 @@ object SharedVariables{
 
     const val monitorCentreX = 960f
     const val monitorCentreY = 786f
+
+    var sfxVolume = 1.0f
     var kill = false
     var planets = MutableList(3) { Pair("x", 0) }
     var planetIndex: Int = 0

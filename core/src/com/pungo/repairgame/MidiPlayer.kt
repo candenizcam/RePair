@@ -45,4 +45,10 @@ object MidiPlayer {
     fun isPlaying(): Boolean {
         return sequencer.isRunning
     }
+
+    fun mute(state: Boolean){
+        for(i in 0 .. sequence.tracks.size){
+            sequencer.setTrackMute(i, state)
+        }
+    }
 }
