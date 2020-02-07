@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.SharedVariables.loadSprite
 
-class SimpleButton(private val path: String, private val ratio: Float) {
+class SetButton(private val path: String, private val ratio: Float) {
     private lateinit var upSprite: Sprite
     private lateinit var downSprite: Sprite
     lateinit var activeSprite: Sprite
@@ -35,4 +35,9 @@ class SimpleButton(private val path: String, private val ratio: Float) {
         activeSprite.setCenter(centreX,centreY)
         activeSprite.draw(batch)
     }
+
+    fun getBoundSprite(): Sprite {
+        return activeSprite
+    }
+
 }
