@@ -63,8 +63,10 @@ class MainMenuScreen: Screen() {
                 muteButton.toggle().also {
                     if (it==0){
                         SharedVariables.sfxVolume = 1.0f
+                        MidiPlayer.mute(false)
                     } else {
                         SharedVariables.sfxVolume = 0.0f
+                        MidiPlayer.mute(true)
                     }
 
                 }
