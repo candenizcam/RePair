@@ -105,7 +105,6 @@ class OptionsScreen: Screen() {
             backButton.status == ButtonStatus.DOWN -> {
                 backButton.status = ButtonStatus.UP
                 SharedVariables.activeScreen = SharedVariables.mainMenuScreen
-
             }
             /*
             startButton.status == ButtonStatus.DOWN -> {
