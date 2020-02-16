@@ -3,10 +3,10 @@ package com.pungo.repairgame.optionsscreen
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
-import com.pungo.repairgame.*
-import java.util.Timer
-import kotlin.concurrent.schedule
-import kotlin.system.exitProcess
+import com.pungo.repairgame.ButtonStatus
+import com.pungo.repairgame.Screen
+import com.pungo.repairgame.SetButton
+import com.pungo.repairgame.SharedVariables
 
 class OptionsScreen: Screen() {
     private lateinit var mainSprite: Sprite

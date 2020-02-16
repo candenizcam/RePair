@@ -8,16 +8,13 @@ import com.pungo.repairgame.AnimationHandler
 import com.pungo.repairgame.Screen
 import com.pungo.repairgame.SharedVariables
 import com.pungo.repairgame.SharedVariables.loadSprite
-import com.pungo.repairgame.Timer
 
-class CreditsScreen() : Screen() {
+class CreditsScreen : Screen() {
     private lateinit var bgSprite: Sprite
-    private lateinit var menuSprite: Sprite
     private var done = true
     private var creditsAnimation = AnimationHandler().also{
         it.relocateCentre(SharedVariables.monitorCentreX,SharedVariables.monitorCentreY)
     }
-
 
     override fun lateInitializer() {
         bgSprite = loadSprite(SharedVariables.creditsPath, SharedVariables.creditsRatio)

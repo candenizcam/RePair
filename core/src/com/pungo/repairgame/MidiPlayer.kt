@@ -17,11 +17,6 @@ object MidiPlayer {
         sequencer.sequence = sequence
     }
 
-    fun isLooping(): Boolean {
-        return sequencer.loopCount != 0
-    }
-
-
     fun setLooping(loop: Boolean) {
         if (!loop) {
             sequencer.loopCount = 0
@@ -34,16 +29,8 @@ object MidiPlayer {
         sequencer.start()
     }
 
-    fun stop() {
-        sequencer.stop()
-    }
-
     fun release() {
         sequencer.close()
-    }
-
-    fun isPlaying(): Boolean {
-        return sequencer.isRunning
     }
 
     fun mute(state: Boolean){
