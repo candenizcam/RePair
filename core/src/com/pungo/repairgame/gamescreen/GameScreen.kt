@@ -23,6 +23,7 @@ class GameScreen: Screen() {
     private var sfxBeep = Gdx.audio.newSound(Gdx.files.internal("sound/Beep.mp3"))
     private var sfxTake = Gdx.audio.newSound(Gdx.files.internal("sound/Take.mp3"))
     private var sfxFail = Gdx.audio.newSound(Gdx.files.internal("sound/Fail.mp3"))
+    private var sfxLaunch = Gdx.audio.newSound(Gdx.files.internal("sound/Launch.mp3"))
     private var sfxChoose = Gdx.audio.newSound(Gdx.files.internal("sound/Choose.mp3"))
     private var sfxRed = Gdx.audio.newSound(Gdx.files.internal("sound/Red.mp3"))
     private var breakingList = listOf(0)
@@ -111,7 +112,9 @@ class GameScreen: Screen() {
                                 it2.breakTimer.running = false
                                 it2.status = DeviceStatus.NORMAL
                             }
-
+                            else{
+                                sfxFail.play(SharedVariables.sfxVolume)
+                            }
                         }
                     }
                     it.flyingCentre(-500f, -500f)
@@ -212,6 +215,7 @@ class GameScreen: Screen() {
             if(countdownTimer.done()){
                 if(countdownIndex==countdownIndexLimit){
                     texts[0].setStuff("")
+                    sfxLaunch.play(SharedVariables.sfxVolume * 2)
                     rocketAnimation.animationGo()
                     rocketAnimCalled = true
 
@@ -270,6 +274,7 @@ class GameScreen: Screen() {
         for (k in 1..3){
             texts[k].hovered=false
         }
+
         for (k in 1..3) {
             if (texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())){
                 texts[k].hovered = true
