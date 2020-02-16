@@ -105,23 +105,13 @@ class GameScreen: Screen() {
                 if (!phText.sceneNotOver()) {
                     devices.forEach { it2 ->
                         if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it2.getSprite())) {
-                            if ((it2.status == DeviceStatus.SHORT) && (index == 0)) {
+                            var fixed = it2.status==it.fixing
+                            if (fixed){
                                 it.sfx.play(SharedVariables.sfxVolume)
                                 it2.breakTimer.running = false
                                 it2.status = DeviceStatus.NORMAL
-                            } else if ((it2.status == DeviceStatus.HOT) && (index == 1)) {
-                                it.sfx.play(SharedVariables.sfxVolume)
-                                it2.breakTimer.running = false
-                                it2.status = DeviceStatus.NORMAL
-                            } else if ((it2.status == DeviceStatus.BROKEN) && (index == 2)) {
-                                it.sfx.play(SharedVariables.sfxVolume)
-                                it2.breakTimer.running = false
-                                it2.status = DeviceStatus.NORMAL
-                            } else if ((it2.status == DeviceStatus.STUCK) && (index == 3)) {
-                                it.sfx.play(SharedVariables.sfxVolume)
-                                it2.breakTimer.running = false
-                                it2.status = DeviceStatus.NORMAL
-                            } else sfxFail.play(SharedVariables.sfxVolume)
+                            }
+
                         }
                     }
                     it.flyingCentre(-500f, -500f)
@@ -137,26 +127,16 @@ class GameScreen: Screen() {
         }
 
         if (!travelTimer.running && !phText.sceneNotOver()) {
-            if(SharedVariables.planetIndex==1){
-                tools.forEach {
-                    it.status = ToolStatus.IDLE
+            when( SharedVariables.planetIndex){
+                1-> {
+                    tools.forEach {
+                        it.status = ToolStatus.IDLE
+                    }
+                    breakingList = listOf(0, 1, 2, 3)
                 }
-                breakingList = listOf(0,1,2,3)
-            }
-            else if(SharedVariables.planetIndex==2){
-                if(phText.getTag() == "Good"){
-                    cargoBay.addToItems("stacey")
-                }
-            }
-            else if(SharedVariables.planetIndex==3){
-                if(phText.getTag() == "Good"){
-                    cargoBay.addToItems("dessert")
-                }
-            }
-            else if(SharedVariables.planetIndex==4){
-                if(phText.getTag() == "Good"){
-                    cargoBay.addToItems("flower")
-                }
+                2->if (phText.getTag()=="Good"){ cargoBay.addToItems("stacey") }
+                3->if (phText.getTag()=="Good"){ cargoBay.addToItems("dessert") }
+                4->if (phText.getTag()=="Good"){ cargoBay.addToItems("flower") }
             }
             if(redButton.status == ButtonStatus.DOWN) {
                 if(SharedVariables.planetIndex==5){
@@ -172,7 +152,6 @@ class GameScreen: Screen() {
     private fun updateIslandText() {
         texts[0].setStuff(phText.getCurrentLine())
         texts[0].letterRevealReset()
-
         try {
             phText.getCurrentChoices().let {
                 texts[1].setStuff(it[0])
@@ -265,7 +244,6 @@ class GameScreen: Screen() {
                 }
             }
         }
-
         if(texts[0].revealed){
             sfxBeep.stop()
         }
@@ -312,9 +290,6 @@ class GameScreen: Screen() {
                 bigMonitor.changeMonitor("graphics/planets/p3.png")
             }
             3 -> {
-                if(phText.getTag() == "Good"){
-                    cargoBay.addToItems("dessert")
-                }
                 when {
                     devices[1].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(174) //speaker
                     devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(196) //translator
@@ -323,9 +298,6 @@ class GameScreen: Screen() {
                 bigMonitor.changeMonitor("graphics/planets/p4.png")
             }
             4 -> {
-                if(phText.getTag() == "Good"){
-                    cargoBay.addToItems("flowers")
-                }
                 cargoBay.endingTree().also{
                     phText.getPlanetPassage(it)
                 }
@@ -342,10 +314,8 @@ class GameScreen: Screen() {
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
         redButton = SetButton(DevicesData.redPath, DevicesData.redRatio)
         redButton.relocateCentre(DevicesData.redX, DevicesData.redY)
-
         devices = DevicesData.getDevices()
         tools = ToolsData.getTools()
-
         phText = TextIsland(Gdx.files.internal("planet_0/story.json"), SharedVariables.planets[0].second)
         TextIslandTexts().also {
             it.setStuff(phText.getCurrentLine(), 532f, 433f, 835f, 140f)
@@ -375,7 +345,6 @@ class GameScreen: Screen() {
         cargoBay = CargoBay()
         rocketAnimation.lateInitializer(0.1f, TextureAtlas(Gdx.files.internal(SharedVariables.rocketAnimationPath)).regions)
         rocketAnimation.animationGo()
-
         timer.go()
     }
 }

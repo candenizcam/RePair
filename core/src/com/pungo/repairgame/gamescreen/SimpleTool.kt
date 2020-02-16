@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.SharedVariables
 
-class SimpleTool(private val path: String, private val ratio: Float)  {
+class SimpleTool(private val path: String, private val ratio: Float, val fixing: DeviceStatus)  {
     private lateinit var idleSprite: Sprite
     private lateinit var glowSprite: Sprite
     private lateinit var flyingSprite: Sprite

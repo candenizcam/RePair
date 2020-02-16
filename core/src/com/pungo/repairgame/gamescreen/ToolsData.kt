@@ -23,22 +23,22 @@ object ToolsData {
     
     fun getTools(): List<SimpleTool> {
         var theList = mutableListOf<SimpleTool>()
-        SimpleTool(cirPath, ratio = cirRatio).also{
+        SimpleTool(cirPath, ratio = cirRatio, fixing = DeviceStatus.SHORT).also{
             it.relocateCentre(cirX,cirY)
             it.status = ToolStatus.INACTIVE
             theList.add(it)
         }
-        SimpleTool(icePath, ratio = iceRatio).also{
+        SimpleTool(icePath, ratio = iceRatio, fixing = DeviceStatus.HOT).also{
             it.relocateCentre(iceX,iceY)
             it.status = ToolStatus.INACTIVE
             theList.add(it)
         }
-        SimpleTool(tapePath, ratio = tapeRatio).also{
+        SimpleTool(tapePath, ratio = tapeRatio, fixing = DeviceStatus.BROKEN).also{
             it.relocateCentre(tapeX,tapeY)
 
             theList.add(it)
         }
-        SimpleTool(oilPath, ratio = oilRatio).also{
+        SimpleTool(oilPath, ratio = oilRatio, fixing = DeviceStatus.STUCK).also{
             it.relocateCentre(oilX,oilY)
             it.status = ToolStatus.INACTIVE
             theList.add(it)
