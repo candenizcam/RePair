@@ -4,19 +4,19 @@ import javax.tools.Tool
 
 object ToolsData {
     const val icePath = "graphics/tools/ice"
-    const val iceRatio = 0.25f
+    const val iceRatio = 1f
     const val iceX = 343f
     const val iceY = 666f
     const val tapePath = "graphics/tools/tape"
-    const val tapeRatio = 0.25f
+    const val tapeRatio = 1f
     const val tapeX = 153f
     const val tapeY = 904f
     const val cirPath = "graphics/tools/circuit"
-    const val cirRatio = 0.25f
+    const val cirRatio = 1f
     const val cirX = 153f
     const val cirY = 666f
     const val oilPath = "graphics/tools/oil"
-    const val oilRatio = 0.25f
+    const val oilRatio = 1f
     const val oilX = 343f
     const val oilY = 904f
     

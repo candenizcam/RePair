@@ -5,13 +5,13 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.SharedVariables
 
 class CargoBay {
-    private var staceySprite = SharedVariables.loadSprite("graphics/cargo/stacey.png",0.25).also{
+    private var staceySprite = SharedVariables.loadSprite("graphics/cargo/stacey.png",1.0).also{
         it.setCenter(1732f,610f)
     }
-    private var sweetSprite =  SharedVariables.loadSprite("graphics/cargo/sweet.png",0.25).also{
+    private var sweetSprite =  SharedVariables.loadSprite("graphics/cargo/sweet.png",1.0).also{
         it.setCenter(1732f,610f)
     }
-    private var flowerSprite =  SharedVariables.loadSprite("graphics/cargo/flower.png",0.25).also{
+    private var flowerSprite =  SharedVariables.loadSprite("graphics/cargo/flower.png",1.0).also{
         it.setCenter(1732f,610f)
     }
     private var bay = SharedVariables.loadSprite("graphics/cargo.png", SharedVariables.gameBackgroundRatio).apply{

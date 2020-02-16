@@ -39,7 +39,7 @@ class SimpleTool(private val path: String, private val ratio: Float, val fixing:
     private fun loadImage(){
         idleSprite = SharedVariables.loadSprite("$path/idle.png", ratio.toDouble())
         glowSprite = SharedVariables.loadSprite("$path/glow.png", ratio.toDouble())
-        flyingSprite = SharedVariables.loadSprite("$path/flying.png", ratio.toDouble())
+        flyingSprite = SharedVariables.loadSprite("$path/idle.png", ratio.toDouble()/2)
         chosenSprite = idleSprite
     }
 
