@@ -28,14 +28,14 @@ class GameScreen: Screen() {
     private var breakingList = listOf(0)
     private var chosenOption = -1
     private var rocketAnimCalled = false
-
+    private var patrolFlag = false
+    private var patrolPlanet = false
     private var countdownIndex = -1
     private var countdownIndexLimit = 2
     private val countdownList: List<String> = listOf("graphics/bigmonitor/three.png", "graphics/bigmonitor/two.png", "graphics/bigmonitor/one.png", "graphics/bigmonitor/go.png","graphics/bigmonitor/show&tell.png")
     private var rocketAnimation = AnimationHandler().also{
         it.relocateCentre(SharedVariables.mainWidth/2f,SharedVariables.mainHeight/2f)
     }
-
 
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
@@ -49,7 +49,7 @@ class GameScreen: Screen() {
         redButton.draw(batch)
         cargoBay.draw(batch, items.toList())
         texts[0].draw(batch, true)
-        if(chosenOption!=-1 && !texts[0].revealed){
+        if(chosenOption!=-1 && !texts[0].revealed && ! patrolPlanet){
             texts[4].draw(batch)
         }
         if (texts[0].revealed && phText.sceneNotOver()) {
@@ -69,7 +69,7 @@ class GameScreen: Screen() {
             redButton.status = ButtonStatus.DOWN
         }
         for (k in 1..3) {
-            if(texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && !travelTimer.running) {
+            if(texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && !travelTimer.running && texts[0].revealed) {
                 if(devices[0].status!=DeviceStatus.NORMAL){
                     texts[k].pressing = true
                     chosenOption = (1..3).random()
@@ -180,14 +180,28 @@ class GameScreen: Screen() {
                 texts[3].setStuff(it[2])
             }
         } catch (ex: Exception) {
-
+                texts[1].setStuff("")
+                texts[2].setStuff("")
+                texts[3].setStuff("")
         }
     }
 
     private fun redButton() {
-        countdownTimer.go()
-        countdownTimer.running = true
-        texts[0].setStuff("")
+        if(patrolFlag){
+            phText.getPlanetPassage(218)
+            updateIslandText()
+            for(device in devices){
+                device.status = DeviceStatus.NORMAL
+            }
+            chosenOption = -1
+            patrolFlag = false
+            return
+        }
+        else {
+            countdownTimer.go()
+            countdownTimer.running = true
+            texts[0].setStuff("")
+        }
     }
 
     private fun zar(): Boolean {
@@ -243,7 +257,9 @@ class GameScreen: Screen() {
 
         if (travelTimer.running) {
             devices.forEach {
-                it.checkTimer()
+               if(it.checkTimer() && !patrolFlag){
+                   patrolFlag = true
+               }
             }
             if (travelTimer.done()) {
                 travelTimer.running = false
@@ -293,7 +309,7 @@ class GameScreen: Screen() {
                     }
                 }
                 bigMonitor.changeMonitor("graphics/planets/p1.png")
-                countdownIndexLimit = 4
+                countdownIndexLimit = 2
             }
             1 -> {
                 if (devices[1].status != DeviceStatus.NORMAL) {

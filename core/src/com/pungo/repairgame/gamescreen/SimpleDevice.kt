@@ -48,13 +48,15 @@ class SimpleDevice(private val path: String, private val ratio: Float) {
         breakTimer.running = true
     }
 
-    fun checkTimer(){
+    fun checkTimer(): Boolean{
         if (breakTimer.running) {
-                if (breakTimer.done()) {
-                    breakTimer.running = false
-                    status = DeviceStatus.DEAD
-                }
+            if (breakTimer.done()) {
+                breakTimer.running = false
+                status = DeviceStatus.DEAD
+                return true
+            }
         }
+        return false
     }
 
     private fun recentreBoys(){
