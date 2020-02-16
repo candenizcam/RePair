@@ -11,13 +11,13 @@ import com.pungo.repairgame.loadingscreen.LoadingScreen
 import com.pungo.repairgame.mainmenu.MainMenuScreen
 
 
-object SharedVariables{
+object  SharedVariables{
     const val mainWidth = 1920
     const val mainHeight = 1080
     const val companyLogoRatio = 0.5 //1 is fullsize, 2 is double size 0.5 is half size... MATH...
     const val menuBackgroundRatio = 0.5
     const val gameBackgroundRatio = 0.25
-    const val monitorRatio = 0.25
+    const val monitorRatio = 1.0
     const val letterRevealSpeed = 0.8f //letter per render
     const val companyLogoPath = "graphics/pungotitle.png"
     const val mainMenuBackgroundPath = "graphics/menu_background.png"

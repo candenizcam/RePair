@@ -106,7 +106,7 @@ class GameScreen: Screen() {
                 if (!phText.sceneNotOver()) {
                     devices.forEach { it2 ->
                         if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it2.getSprite())) {
-                            var fixed = it2.status==it.fixing
+                            val fixed = it2.status==it.fixing
                             if (fixed){
                                 it.sfx.play(SharedVariables.sfxVolume)
                                 it2.breakTimer.running = false
@@ -171,6 +171,7 @@ class GameScreen: Screen() {
     private fun redButton() {
         if(patrolFlag){
             phText.getPlanetPassage(218)
+            bigMonitor.changeMonitor("graphics/planets/ps.png")
             updateIslandText()
             for(device in devices){
                 device.status = DeviceStatus.NORMAL
