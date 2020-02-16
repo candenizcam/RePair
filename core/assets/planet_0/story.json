@@ -3930,13 +3930,16 @@
       ]
     },
     {
-      "text": "Planet Patrol: You cannot leave this planet with your control panel not working correctly. Here, let's replace that for you. Try fixing them before they die next time!",
+      "text": "THIS IS PLANET PATROL.\nYou cannot leave this planet with your control panel not working correctly. Here let's replace that for you. Try fixing them before they die next time!",
       "name": "Planet Patrol",
       "pid": "218",
       "position": {
         "x": "3911.666666666667",
         "y": "971.1666666666667"
-      }
+      },
+      "tags": [
+        "End"
+      ]
     }
   ],
   "name": "Intro",
