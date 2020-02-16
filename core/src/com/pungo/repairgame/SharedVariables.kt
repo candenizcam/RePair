@@ -25,6 +25,7 @@ object SharedVariables{
     const val monitorPath = "graphics/space_holder.png"
     const val monitorFramePath = "graphics/monitor_frame.png"
     const val rocketAnimationPath = "gifs/rocket_animation.atlas"
+    const val fontAddress = "fonts/PTMono-Regular.ttf"
 
     const val monitorCentreX = 960f
     const val monitorCentreY = 786f
@@ -47,14 +48,19 @@ object SharedVariables{
     var activeScreen: Screen = loadingScreen
     var mouse = MouseManager()
 
-    fun loadSprite(path: String, ratio: Double): Sprite {
+
+    fun loadPixmap(path: String, ratio: Double): Pixmap {
         val pixmap = Pixmap(Gdx.files.internal(path))
         val pixmap2 = Pixmap((pixmap.width * ratio).toInt(), (pixmap.height * ratio).toInt(), pixmap.format)
         pixmap2.filter = Pixmap.Filter.NearestNeighbour
         pixmap2.blending = Pixmap.Blending.None
         pixmap2.drawPixmap(pixmap, 0, 0, pixmap.width, pixmap.height, 0, 0, pixmap2.width, pixmap2.height)
         pixmap.dispose()
+        return pixmap2
+    }
 
+    fun loadSprite(path: String, ratio: Double): Sprite {
+        val pixmap2 = loadPixmap(path,ratio)
         return Sprite(Texture(pixmap2)).also { pixmap2.dispose() }
     }
 

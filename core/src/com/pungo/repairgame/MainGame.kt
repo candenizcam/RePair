@@ -4,10 +4,11 @@ import com.badlogic.gdx.ApplicationAdapter
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.OrthographicCamera
+import com.badlogic.gdx.graphics.Pixmap
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
-import com.badlogic.gdx.graphics.g2d.TextureAtlas
 import com.badlogic.gdx.utils.viewport.FitViewport
 import kotlin.system.exitProcess
+
 
 class MainGame : ApplicationAdapter() {
     private lateinit var batch: SpriteBatch
@@ -26,6 +27,11 @@ class MainGame : ApplicationAdapter() {
         batch = SpriteBatch()
         MidiPlayer.open("sound/OST1.mid")
         MidiPlayer.setLooping(true)
+
+        val pm = SharedVariables.loadPixmap("graphics/cursor/cursor.png",0.25)
+        Gdx.graphics.setCursor(Gdx.graphics.newCursor(pm, 0, 0))
+        pm.dispose()
+
         SharedVariables.loadingScreen.timer.go()
     }
 

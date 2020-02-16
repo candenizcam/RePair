@@ -12,7 +12,7 @@ import kotlin.math.min
 class TextIslandTexts {
     private lateinit var font: BitmapFont
     private var fontColour = Color(1f, 0.95f, 1f, 1f)
-    private var fontAddress = "fonts/plasmatic.ttf"
+    private var fontAddress = SharedVariables.fontAddress
     private var fontSize = 26
     private var singleWidth = 0f
     private var singleHeight = 0f
