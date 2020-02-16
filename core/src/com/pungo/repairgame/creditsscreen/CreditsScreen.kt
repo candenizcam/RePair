@@ -40,6 +40,7 @@ class CreditsScreen() : Screen() {
         bgSprite.draw(batch)
         if(creditsAnimation.isDone()){
             SharedVariables.activeScreen = SharedVariables.mainMenuScreen
+            done = true
         }
     }
 
