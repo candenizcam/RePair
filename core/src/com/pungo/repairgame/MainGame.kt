@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.OrthographicCamera
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.badlogic.gdx.graphics.g2d.TextureAtlas
 import com.badlogic.gdx.utils.viewport.FitViewport
 import kotlin.system.exitProcess
 
@@ -13,6 +14,7 @@ class MainGame : ApplicationAdapter() {
     private var musicPlaying = false
     lateinit var camera: OrthographicCamera
     lateinit var viewport: FitViewport
+
 
     override fun create() {
         camera = OrthographicCamera()

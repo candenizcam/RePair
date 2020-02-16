@@ -1,0 +1,284 @@
+rocket_animation.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+f0
+ rotate: false
+ xy: 0, 0
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f1
+ rotate: false
+ xy: 1920, 0
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f2
+ rotate: false
+ xy: 3840, 0
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f3
+ rotate: false
+ xy: 5760, 0
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f4
+ rotate: false
+ xy: 7680, 0
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f5
+ rotate: false
+ xy: 9600, 0
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f6
+ rotate: false
+ xy: 11520, 0
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f7
+ rotate: false
+ xy: 13440, 0
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f8
+ rotate: false
+ xy: 0, 1080
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f9
+ rotate: false
+ xy: 1920, 1080
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f10
+ rotate: false
+ xy: 3840, 1080
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f11
+ rotate: false
+ xy: 5760, 1080
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f12
+ rotate: false
+ xy: 7680, 1080
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f13
+ rotate: false
+ xy: 9600, 1080
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f14
+ rotate: false
+ xy: 11520, 1080
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f15
+ rotate: false
+ xy: 13440, 1080
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f16
+ rotate: false
+ xy: 0, 2160
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f17
+ rotate: false
+ xy: 1920, 2160
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f18
+ rotate: false
+ xy: 3840, 2160
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f19
+ rotate: false
+ xy: 5760, 2160
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f20
+ rotate: false
+ xy: 7680, 2160
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f21
+ rotate: false
+ xy: 9600, 2160
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f22
+ rotate: false
+ xy: 11520, 2160
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f23
+ rotate: false
+ xy: 13440, 2160
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f24
+ rotate: false
+ xy: 0, 3240
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f25
+ rotate: false
+ xy: 1920, 3240
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f26
+ rotate: false
+ xy: 3840, 3240
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f27
+ rotate: false
+ xy: 5760, 3240
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f28
+ rotate: false
+ xy: 7680, 3240
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f29
+ rotate: false
+ xy: 9600, 3240
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f30
+ rotate: false
+ xy: 11520, 3240
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f31
+ rotate: false
+ xy: 13440, 3240
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f32
+ rotate: false
+ xy: 0, 4320
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f33
+ rotate: false
+ xy: 1920, 4320
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f34
+ rotate: false
+ xy: 3840, 4320
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f35
+ rotate: false
+ xy: 5760, 4320
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f36
+ rotate: false
+ xy: 7680, 4320
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f37
+ rotate: false
+ xy: 9600, 4320
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f38
+ rotate: false
+ xy: 11520, 4320
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
+f39
+ rotate: false
+ xy: 13440, 4320
+ size: 1920, 1080
+ orig: 1920, 1080
+ offset: 0, 0
+ index: -1
