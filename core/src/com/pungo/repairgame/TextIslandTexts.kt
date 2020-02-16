@@ -116,7 +116,7 @@ class TextIslandTexts {
         if(slowReveal){
             letterReveal += SharedVariables.letterRevealSpeed
 
-            revealed = (letterReveal.toInt()>(modifiedText.length-1))
+            revealed = (letterReveal.toInt()>=(modifiedText.length-1))
             if (!revealed){
                 modifiedText = modifiedText.slice(0..letterReveal.toInt())
             }
@@ -128,7 +128,7 @@ class TextIslandTexts {
         } else {
             font.color = fontColour
         }
-        font.draw(batch, modifiedText, left, top,0,max(modifiedText.length-1,0), width, -1,true)
+        font.draw(batch, modifiedText, left, top,0,max(modifiedText.length,0), width, -1,true)
     }
 
 }
