@@ -18,11 +18,11 @@ class TextIslandTexts {
     private var singleHeight = 0f
     private var lineMargin = 0f
     private var letterReveal = 0f
-    private var text = ""
+    var text = ""
     var top = 0f
     var left = 0f
-    private var width = 0f
-    private var height = 0f
+    var width = 0f
+    var height = 0f
     var modifiedWidth = 0f
     var modifiedHeight = 0f
     var revealed = false

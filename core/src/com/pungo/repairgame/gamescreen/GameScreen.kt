@@ -16,15 +16,16 @@ class GameScreen: Screen() {
     private var tools = listOf<SimpleTool>()
     private var items = mutableListOf<String>()
     private var texts = mutableListOf<TextIslandTexts>()
-    private val travelTimer = Timer(20000)
-    private val timer = Timer(1000)
-    private val countdownTimer = Timer(1000)
+    private val travelTimer = Timer(20000)                  // travel timer
+    private val timer = Timer(1000)                         // breakdown timer
+    private val countdownTimer = Timer(1000)                // countdown timer
     private var sfxBeep = Gdx.audio.newSound(Gdx.files.internal("sound/Beep.mp3"))
     private var sfxTake = Gdx.audio.newSound(Gdx.files.internal("sound/Take.mp3"))
     private var sfxFail = Gdx.audio.newSound(Gdx.files.internal("sound/Fail.mp3"))
     private var sfxChoose = Gdx.audio.newSound(Gdx.files.internal("sound/Choose.mp3"))
     private var sfxRed = Gdx.audio.newSound(Gdx.files.internal("sound/Red.mp3"))
     private var breakingList = listOf(0)
+    private var chosenOption = -1
 
     private var countdownIndex = -1
     private var countdownIndexLimit = 3
@@ -42,7 +43,9 @@ class GameScreen: Screen() {
         redButton.draw(batch)
         cargoBay.draw(batch, items.toList())
         texts[0].draw(batch, true)
-
+        if(chosenOption!=-1 && !texts[0].revealed){
+            texts[4].draw(batch)
+        }
         if (texts[0].revealed && phText.sceneNotOver()) {
             for (k in 1..3) {texts[k].draw(batch)}
         }
@@ -60,8 +63,19 @@ class GameScreen: Screen() {
         }
         for (k in 1..3) {
             if(texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && !travelTimer.running) {
-                texts[k].pressing = true
-                sfxChoose.play(SharedVariables.sfxVolume)
+                if(devices[0].status!=DeviceStatus.NORMAL){
+                    texts[k].pressing = true
+                    chosenOption = (1..3).random()
+                    texts[4].setStuff(texts[chosenOption].text, texts[chosenOption].left, texts[chosenOption].top, texts[chosenOption].width,texts[chosenOption].height)
+                    sfxChoose.play(SharedVariables.sfxVolume)
+                }
+                else{
+                    texts[k].pressing = true
+                    chosenOption = k
+                    texts[4].setStuff(texts[chosenOption].text, texts[chosenOption].left, texts[chosenOption].top, texts[chosenOption].width,texts[chosenOption].height)
+                    sfxChoose.play(SharedVariables.sfxVolume)
+                }
+
             }
         }
     }
@@ -86,15 +100,19 @@ class GameScreen: Screen() {
                         if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it2.getSprite())) {
                             if ((it2.status == DeviceStatus.SHORT) && (index == 0)) {
                                 it.sfx.play(SharedVariables.sfxVolume)
+                                it2.breakTimer.running = false
                                 it2.status = DeviceStatus.NORMAL
                             } else if ((it2.status == DeviceStatus.HOT) && (index == 1)) {
                                 it.sfx.play(SharedVariables.sfxVolume)
+                                it2.breakTimer.running = false
                                 it2.status = DeviceStatus.NORMAL
                             } else if ((it2.status == DeviceStatus.BROKEN) && (index == 2)) {
                                 it.sfx.play(SharedVariables.sfxVolume)
+                                it2.breakTimer.running = false
                                 it2.status = DeviceStatus.NORMAL
                             } else if ((it2.status == DeviceStatus.STUCK) && (index == 3)) {
                                 it.sfx.play(SharedVariables.sfxVolume)
+                                it2.breakTimer.running = false
                                 it2.status = DeviceStatus.NORMAL
                             } else sfxFail.play(SharedVariables.sfxVolume)
                         }
@@ -180,11 +198,11 @@ class GameScreen: Screen() {
         }
 
         if (device.status == DeviceStatus.NORMAL) {
-            device.status = when (breakingList.random()) {
-                0 -> DeviceStatus.BROKEN
-                1 -> DeviceStatus.STUCK
-                2 -> DeviceStatus.SHORT
-                else -> DeviceStatus.HOT
+            when (breakingList.random()) {
+                0 -> device.breakDevice(DeviceStatus.BROKEN)
+                1 -> device.breakDevice(DeviceStatus.STUCK)
+                2 -> device.breakDevice(DeviceStatus.SHORT)
+                else -> device.breakDevice(DeviceStatus.HOT)
             }
         }
     }
@@ -202,12 +220,16 @@ class GameScreen: Screen() {
                 else{
                     countdownIndex++
                     bigMonitor.changeMonitor(countdownList[countdownIndex])
+                    chosenOption = -1
                     countdownTimer.go()
                 }
             }
         }
 
         if (travelTimer.running) {
+            devices.forEach {
+                it.checkTimer()
+            }
             if (travelTimer.done()) {
                 travelTimer.running = false
                 changePlanet()
@@ -278,9 +300,6 @@ class GameScreen: Screen() {
                 if(phText.getTag() == "Good"){
                     items.add("dessert")
                 }
-                else if(phText.getTag() == "Bad"){
-
-                }
                 when {
                     devices[1].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(174) //speaker
                     devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(196) //translator
@@ -291,9 +310,6 @@ class GameScreen: Screen() {
             4 -> {
                 if(phText.getTag() == "Good"){
                     items.add("flower")
-                }
-                else if(phText.getTag() == "Bad"){
-
                 }
                 if (items.isEmpty()) {
                     phText.getPlanetPassage(133)
@@ -360,6 +376,10 @@ class GameScreen: Screen() {
                 setStuff(it[2],250f,120f,1250f,65f)
                 texts.add(this)
             }
+        }
+        TextIslandTexts().also {
+            it.setStuff("", 250f, 0f, 1250f,65f)
+            texts.add(it)
         }
         bigMonitor = BigMonitor().apply{
             changeMonitor("graphics/planets/p0.png")
