@@ -104,10 +104,7 @@ class OptionsScreen: Screen() {
         when {
             backButton.status == ButtonStatus.DOWN -> {
                 backButton.status = ButtonStatus.UP
-                sfx.play(SharedVariables.sfxVolume)
-                Timer().schedule(370) {
-                    SharedVariables.activeScreen = SharedVariables.mainMenuScreen
-                }
+                SharedVariables.activeScreen = SharedVariables.mainMenuScreen
             }
             /*
             startButton.status == ButtonStatus.DOWN -> {
