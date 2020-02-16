@@ -1,6 +1,5 @@
 package com.pungo.repairgame
 
-import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Animation
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.g2d.TextureAtlas
@@ -43,7 +42,7 @@ class AnimationHandler(){
         if (!hideWhenDone || !animationDone){
             batch.draw(animation.getKeyFrame(animTimer.now()/1000f, animationLooping), centreX-width/2, centreY-height/2)
         }
-        animationDone = animTimer.now()/1000f>animation.animationDuration
+        animationDone = animTimer.now()/1000f > animation.animationDuration
     }
 
 }

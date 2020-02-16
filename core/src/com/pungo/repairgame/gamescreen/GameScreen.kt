@@ -27,9 +27,10 @@ class GameScreen: Screen() {
     private var sfxRed = Gdx.audio.newSound(Gdx.files.internal("sound/Red.mp3"))
     private var breakingList = listOf(0)
     private var chosenOption = -1
+    private var rocketAnimCalled = false
 
     private var countdownIndex = -1
-    private var countdownIndexLimit = 3
+    private var countdownIndexLimit = 2
     private val countdownList: List<String> = listOf("graphics/bigmonitor/three.png", "graphics/bigmonitor/two.png", "graphics/bigmonitor/one.png", "graphics/bigmonitor/go.png","graphics/bigmonitor/show&tell.png")
     private var rocketAnimation = AnimationHandler().also{
         it.relocateCentre(SharedVariables.mainWidth/2f,SharedVariables.mainHeight/2f)
@@ -39,7 +40,6 @@ class GameScreen: Screen() {
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
         bigMonitor.draw(batch)
-        rocketAnimation.draw(batch)
         devices.forEach {
             it.draw(batch)
         }
@@ -187,7 +187,6 @@ class GameScreen: Screen() {
     private fun redButton() {
         countdownTimer.go()
         countdownTimer.running = true
-        rocketAnimation.animationGo()
         texts[0].setStuff("")
     }
 
@@ -218,9 +217,11 @@ class GameScreen: Screen() {
     override fun loopAction() {
         if(countdownTimer.running){
             if(countdownTimer.done()){
-                if(countdownIndex== countdownIndexLimit){
-                    travelTimer.go()
-                    travelTimer.running = true
+                if(countdownIndex==countdownIndexLimit){
+                    texts[0].setStuff("")
+                    rocketAnimation.animationGo()
+                    rocketAnimCalled = true
+
                     countdownTimer.running = false
                     countdownIndex = -1
                     // bigMonitor.changeMonitor("graphics/spaceview.png")
@@ -232,6 +233,12 @@ class GameScreen: Screen() {
                     countdownTimer.go()
                 }
             }
+        }
+        if(rocketAnimation.isDone() && rocketAnimCalled){
+            bigMonitor.changeMonitor(countdownList[4])
+            rocketAnimCalled = false
+            travelTimer.go()
+            travelTimer.running = true
         }
 
         if (travelTimer.running) {

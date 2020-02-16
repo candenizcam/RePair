@@ -22,8 +22,8 @@
       "name": "Passport Guy",
       "pid": "1",
       "position": {
-        "x": "3851",
-        "y": "759.8333333333334"
+        "x": "3812.6666666666665",
+        "y": "257.3333333333333"
       }
     },
     {
@@ -48,8 +48,8 @@
       "name": "Gotta buy those flowers and cakes to get back my partner!",
       "pid": "2",
       "position": {
-        "x": "3718",
-        "y": "965.8333333333334"
+        "x": "3679.6666666666665",
+        "y": "463.33333333333326"
       }
     },
     {
@@ -75,7 +75,7 @@
       "pid": "3",
       "position": {
         "x": "6377",
-        "y": "2727.166666666667"
+        "y": "2727"
       }
     },
     {
@@ -101,7 +101,7 @@
       "pid": "4",
       "position": {
         "x": "6213",
-        "y": "3269.500000000001"
+        "y": "3269"
       }
     },
     {
@@ -127,7 +127,7 @@
       "pid": "5",
       "position": {
         "x": "6657",
-        "y": "3295.5"
+        "y": "3295"
       }
     },
     {
@@ -152,8 +152,8 @@
       "name": "Gololo gololo Frougo frogo toads and stuff",
       "pid": "6",
       "position": {
-        "x": "6950.666666666666",
-        "y": "3315.5"
+        "x": "6950",
+        "y": "3315"
       }
     },
     {
@@ -179,40 +179,40 @@
       "pid": "7",
       "position": {
         "x": "2480",
-        "y": "1350.1666666666667"
+        "y": "1350"
       }
     },
     {
-      "text": "Don't get too excited. Here's some Ice-Packs, some spare circuits and space oil.",
+      "text": "Don't get too excited. Here's a fire-extinguisher, some spare circuits and space oil.",
       "name": "Sure, some free stuff to use why not?",
       "pid": "8",
       "position": {
         "x": "2310",
-        "y": "1892.5"
+        "y": "1892"
       },
       "tags": [
         "End"
       ]
     },
     {
-      "text": "Don't get too excited. Here's some Ice-Packs, some spare circuits and space oil.",
+      "text": "Don't get too excited. Here's a fire-extinguisher, some spare circuits and space oil.",
       "name": "Ohh, thank you it is so nice of you to give away those.",
       "pid": "9",
       "position": {
         "x": "2460",
-        "y": "1890.1666666666665"
+        "y": "1890"
       },
       "tags": [
         "End"
       ]
     },
     {
-      "text": "Don't get too excited. Here's some Ice-Packs, some spare circuits and space oil.",
+      "text": "Don't get too excited. Here's a fire-extinguisher, some spare circuits and space oil.",
       "name": "They said you could fix it! What a shame. SHAME!",
       "pid": "10",
       "position": {
         "x": "2610",
-        "y": "1893.5"
+        "y": "1893"
       },
       "tags": [
         "End"
@@ -241,7 +241,7 @@
       "pid": "11",
       "position": {
         "x": "2230",
-        "y": "1632.5"
+        "y": "1632"
       }
     },
     {
@@ -267,7 +267,7 @@
       "pid": "12",
       "position": {
         "x": "2467",
-        "y": "1625.1666666666667"
+        "y": "1625"
       }
     },
     {
@@ -293,7 +293,7 @@
       "pid": "13",
       "position": {
         "x": "2710",
-        "y": "1637.5"
+        "y": "1637"
       }
     },
     {
@@ -318,8 +318,8 @@
       "name": "Seems like starting with gs works, Gilifotso",
       "pid": "14",
       "position": {
-        "x": "6402.333333333333",
-        "y": "3301.833333333334"
+        "x": "6402",
+        "y": "3301"
       }
     },
     {
@@ -345,7 +345,7 @@
       "pid": "15",
       "position": {
         "x": "3912",
-        "y": "1327.5"
+        "y": "1327"
       }
     },
     {
@@ -371,7 +371,7 @@
       "pid": "16",
       "position": {
         "x": "3778",
-        "y": "1550.8333333333333"
+        "y": "1550"
       }
     },
     {
@@ -397,7 +397,7 @@
       "pid": "17",
       "position": {
         "x": "3928",
-        "y": "1553.5"
+        "y": "1553"
       }
     },
     {
@@ -422,8 +422,8 @@
       "name": "Yeah not understanding you, just quickly fix stuff!",
       "pid": "18",
       "position": {
-        "x": "4078",
-        "y": "1552.5"
+        "x": "4076.3333333333335",
+        "y": "1552"
       }
     },
     {
@@ -431,8 +431,8 @@
       "name": "Sure, some free stuff is coming this way, why not accept a gift?",
       "pid": "19",
       "position": {
-        "x": "3926.333333333333",
-        "y": "1732.8333333333333"
+        "x": "3926",
+        "y": "1732"
       },
       "tags": [
         "End"
@@ -460,8 +460,8 @@
       "name": "Sure, dear alien friend just like you said chocolate it is.",
       "pid": "20",
       "position": {
-        "x": "6040.333333333333",
-        "y": "2972.833333333334"
+        "x": "6040",
+        "y": "2972"
       }
     },
     {
@@ -487,7 +487,7 @@
       "pid": "21",
       "position": {
         "x": "6342",
-        "y": "2979.166666666667"
+        "y": "2979"
       }
     },
     {
@@ -512,8 +512,8 @@
       "name": "Wow wow wow stop right there, no you cannot put gilugona fokronago nuts in a cake.",
       "pid": "22",
       "position": {
-        "x": "6705.333333333334",
-        "y": "2981.166666666666"
+        "x": "6705",
+        "y": "2981"
       }
     },
     {
@@ -538,8 +538,8 @@
       "name": "Yelling stuff does not make me understand more what is Danologoto?",
       "pid": "23",
       "position": {
-        "x": "6019.333333333333",
-        "y": "3488.833333333333"
+        "x": "5855",
+        "y": "3328"
       }
     },
     {
@@ -564,8 +564,8 @@
       "name": "YELLING STUFF TO EACH OTHER SEEMS LIKE A GOOD WAY TO COMMUNICATE I CHOOSE THE FIRST THING, HAORAGO",
       "pid": "24",
       "position": {
-        "x": "6037.999999999999",
-        "y": "3319.166666666666"
+        "x": "6037",
+        "y": "3319"
       }
     },
     {
@@ -591,11 +591,11 @@
       "pid": "25",
       "position": {
         "x": "5533",
-        "y": "1233.8333333333333"
+        "y": "1233"
       }
     },
     {
-      "text": "Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...\n[[Thanks, but what about the com panel?]]\n[[Ohh, thank you it is so nice of you to give free samples to customers.]]\n[[Ice-packs and a multimeter. Every spaceship needs those I guess.]]",
+      "text": "Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...\n[[Thanks, but what about the com panel?]]\n[[Ohh, thank you it is so nice of you to give free samples to customers.]]\n[[Fire-extinguisher and a multimeter. Every spaceship needs those I guess.]]",
       "links": [
         {
           "name": "Thanks, but what about the com panel?",
@@ -608,16 +608,16 @@
           "pid": "32"
         },
         {
-          "name": "Ice-packs and a multimeter. Every spaceship needs those I guess.",
-          "link": "Ice-packs and a multimeter. Every spaceship needs those I guess.",
+          "name": "Fire-extinguisher and a multimeter. Every spaceship needs those I guess.",
+          "link": "Fire-extinguisher and a multimeter. Every spaceship needs those I guess.",
           "pid": "35"
         }
       ],
       "name": "Yeah, bees buzzing, you fixing so, I can get back to my baby",
       "pid": "26",
       "position": {
-        "x": "5542.666666666667",
-        "y": "1445.1666666666667"
+        "x": "5542",
+        "y": "1445"
       }
     },
     {
@@ -642,8 +642,8 @@
       "name": "Just got off of a relationship, I am gonna win it back!",
       "pid": "27",
       "position": {
-        "x": "3918",
-        "y": "923.1666666666666"
+        "x": "3879.6666666666665",
+        "y": "421.33333333333326"
       }
     },
     {
@@ -668,12 +668,12 @@
       "name": "Well . . . Mmm . . .  Just touristic visits . . . ",
       "pid": "28",
       "position": {
-        "x": "4105.333333333333",
-        "y": "923.1666666666667"
+        "x": "4066.666666666667",
+        "y": "421.33333333333326"
       }
     },
     {
-      "text": "Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...\n[[Thanks, but what about the com panel?]]\n[[Ohh, thank you it is so nice of you to give free samples to customers.]]\n[[Ice-packs and a multimeter. Every spaceship needs those I guess.]]",
+      "text": "Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...\n[[Thanks, but what about the com panel?]]\n[[Ohh, thank you it is so nice of you to give free samples to customers.]]\n[[Fire-extinguisher and a multimeter. Every spaceship needs those I guess.]]",
       "links": [
         {
           "name": "Thanks, but what about the com panel?",
@@ -686,20 +686,20 @@
           "pid": "32"
         },
         {
-          "name": "Ice-packs and a multimeter. Every spaceship needs those I guess.",
-          "link": "Ice-packs and a multimeter. Every spaceship needs those I guess.",
+          "name": "Fire-extinguisher and a multimeter. Every spaceship needs those I guess.",
+          "link": "Fire-extinguisher and a multimeter. Every spaceship needs those I guess.",
           "pid": "35"
         }
       ],
       "name": "YES YES FIX. FIX THE SHIP. And the relationship.",
       "pid": "29",
       "position": {
-        "x": "5344.333333333333",
-        "y": "1458.5"
+        "x": "5344",
+        "y": "1456.3333333333333"
       }
     },
     {
-      "text": "Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...\n[[Thanks, but what about the com panel?]]\n[[Ohh, thank you it is so nice of you to give free samples to customers.]]\n[[Ice-packs and a multimeter. Every spaceship needs those I guess.]]",
+      "text": "Ex...or wzzzz xxx ... ... com ... ... btttz ... again. Gvvtzz ... ... some stuff qucckkzt ... tttzt ... ... ...\n[[Thanks, but what about the com panel?]]\n[[Ohh, thank you it is so nice of you to give free samples to customers.]]\n[[Fire-extinguisher and a multimeter. Every spaceship needs those I guess.]]",
       "links": [
         {
           "name": "Thanks, but what about the com panel?",
@@ -712,8 +712,8 @@
           "pid": "32"
         },
         {
-          "name": "Ice-packs and a multimeter. Every spaceship needs those I guess.",
-          "link": "Ice-packs and a multimeter. Every spaceship needs those I guess.",
+          "name": "Fire-extinguisher and a multimeter. Every spaceship needs those I guess.",
+          "link": "Fire-extinguisher and a multimeter. Every spaceship needs those I guess.",
           "pid": "35"
         }
       ],
@@ -721,28 +721,28 @@
       "pid": "30",
       "position": {
         "x": "5746",
-        "y": "1480.1666666666667"
+        "y": "1480"
       }
     },
     {
-      "text": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Ice ... ... circuiiioooilll\n",
+      "text": "Try ... ... ... ... fixxxtz wrrtz ... ... ... fire ... ... circuiiioooilll\n",
       "name": "Thanks, but what about the com panel?",
       "pid": "31",
       "position": {
-        "x": "5414.666666666666",
-        "y": "1768.8333333333335"
+        "x": "5414",
+        "y": "1768"
       },
       "tags": [
         "End"
       ]
     },
     {
-      "text": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Ice ... ... circuiiioooilll\n",
+      "text": "Try ... ... ... ... fixxxtz wrrtz ... ... ... fire ... ... circuiiioooilll\n",
       "name": "Ohh, thank you it is so nice of you to give free samples to customers.",
       "pid": "32",
       "position": {
         "x": "5583",
-        "y": "1753.8333333333335"
+        "y": "1753"
       },
       "tags": [
         "End"
@@ -754,7 +754,7 @@
       "pid": "33",
       "position": {
         "x": "3738",
-        "y": "1745.5"
+        "y": "1745"
       },
       "tags": [
         "End"
@@ -766,19 +766,19 @@
       "pid": "34",
       "position": {
         "x": "4170",
-        "y": "1730.5"
+        "y": "1730"
       },
       "tags": [
         "End"
       ]
     },
     {
-      "text": "Try ... ... ... ... fixxxtz wrrtz ... ... ... Ice ... ... circuiiioooilll\n",
-      "name": "Ice-packs and a multimeter. Every spaceship needs those I guess.",
+      "text": "Try ... ... ... ... fixxxtz wrrtz ... ... ... fire ... ... circuiiioooilll\n",
+      "name": "Fire-extinguisher and a multimeter. Every spaceship needs those I guess.",
       "pid": "35",
       "position": {
-        "x": "5754.666666666666",
-        "y": "1767.1666666666667"
+        "x": "5754",
+        "y": "1767"
       },
       "tags": [
         "End"
@@ -806,8 +806,8 @@
       "name": "DessertNormal",
       "pid": "36",
       "position": {
-        "x": "1904.666666666666",
-        "y": "2784.5"
+        "x": "1904",
+        "y": "2784"
       }
     },
     {
@@ -832,8 +832,8 @@
       "name": "It seems three means infinite here. I want cookies. More than an infinite number of them if you please.",
       "pid": "37",
       "position": {
-        "x": "1421.333333333333",
-        "y": "3008.5"
+        "x": "1421",
+        "y": "3008"
       }
     },
     {
@@ -858,8 +858,8 @@
       "name": "As the ancestors said: Yo VIP let's kick it, ice ice cream!!",
       "pid": "38",
       "position": {
-        "x": "2266.333333333333",
-        "y": "3010.166666666666"
+        "x": "2266",
+        "y": "3010"
       }
     },
     {
@@ -884,8 +884,8 @@
       "name": "I love your confidence. I hope your cakes are as sweet as you. ",
       "pid": "39",
       "position": {
-        "x": "1862.9999999999998",
-        "y": "3025.166666666666"
+        "x": "1862",
+        "y": "3025"
       }
     },
     {
@@ -893,8 +893,8 @@
       "name": "If you think that's a burn, please burn the cookies too.",
       "pid": "40",
       "position": {
-        "x": "1271.333333333333",
-        "y": "3160.166666666666"
+        "x": "1271",
+        "y": "3160"
       },
       "tags": [
         "Bad"
@@ -922,8 +922,8 @@
       "name": "Minty cookies actually that does not sound bad.",
       "pid": "41",
       "position": {
-        "x": "1421.333333333333",
-        "y": "3160.166666666666"
+        "x": "1421",
+        "y": "3160"
       }
     },
     {
@@ -931,8 +931,8 @@
       "name": "Stick with chocolate, you cannot botch that.",
       "pid": "42",
       "position": {
-        "x": "1571.333333333333",
-        "y": "3150.5"
+        "x": "1571",
+        "y": "3150"
       },
       "tags": [
         "Bad"
@@ -960,8 +960,8 @@
       "name": "More of a traditionalist than you think a Vanilla Cake please.",
       "pid": "43",
       "position": {
-        "x": "1707.9999999999998",
-        "y": "3163.5"
+        "x": "1707",
+        "y": "3163"
       }
     },
     {
@@ -987,7 +987,7 @@
       "pid": "44",
       "position": {
         "x": "1998",
-        "y": "3161.833333333333"
+        "y": "3161"
       }
     },
     {
@@ -1012,8 +1012,8 @@
       "name": "Garlic ... As an ice cream flavor. Please don't. Vanilla is progressive enough.",
       "pid": "45",
       "position": {
-        "x": "2129.666666666666",
-        "y": "3178.5"
+        "x": "2129",
+        "y": "3178"
       }
     },
     {
@@ -1038,8 +1038,8 @@
       "name": "Bone marrow and bourbon what what now. Blew my mind. I wanna try it so bad.",
       "pid": "46",
       "position": {
-        "x": "2266.333333333333",
-        "y": "3156.166666666666"
+        "x": "2266",
+        "y": "3156"
       }
     },
     {
@@ -1064,8 +1064,8 @@
       "name": "Pizza. YES. Nothing can go wrong with pizza in it. Sprinkle some of it on top.",
       "pid": "47",
       "position": {
-        "x": "2424.333333333333",
-        "y": "3160.166666666666"
+        "x": "2424",
+        "y": "3160"
       }
     },
     {
@@ -1073,8 +1073,8 @@
       "name": "Two spoons. It will be more romantic to share it.",
       "pid": "48",
       "position": {
-        "x": "1659.666666666666",
-        "y": "3822.166666666666"
+        "x": "1659",
+        "y": "3822"
       },
       "tags": [
         "Bad"
@@ -1085,8 +1085,8 @@
       "name": "Actually, a fancy napkin makes a great contrast with this simple gift, I am taking it.",
       "pid": "49",
       "position": {
-        "x": "1785.333333333333",
-        "y": "3846.833333333332"
+        "x": "1785",
+        "y": "3846"
       },
       "tags": [
         "Good"
@@ -1097,8 +1097,8 @@
       "name": "A napkin, what for? Licking the tentacles is the best part.",
       "pid": "50",
       "position": {
-        "x": "1898.333333333333",
-        "y": "3841.833333333332"
+        "x": "1898",
+        "y": "3841"
       },
       "tags": [
         "Bad"
@@ -1126,8 +1126,8 @@
       "name": "If you say it is your specialty, cool mint definitely sounds ... interesting.",
       "pid": "51",
       "position": {
-        "x": "1849.6666666666665",
-        "y": "3166.833333333333"
+        "x": "1849",
+        "y": "3166"
       }
     },
     {
@@ -1135,8 +1135,8 @@
       "name": "A spiral. Our favourite shape. I want it on.",
       "pid": "52",
       "position": {
-        "x": "1178.6666666666663",
-        "y": "3769.166666666666"
+        "x": "1178",
+        "y": "3769"
       },
       "tags": [
         "Good"
@@ -1147,8 +1147,8 @@
       "name": "Make it plain and simple. Mint is enough of a surprise.",
       "pid": "53",
       "position": {
-        "x": "1420.6666666666663",
-        "y": "3757.166666666666"
+        "x": "1420",
+        "y": "3757"
       },
       "tags": [
         "Bad"
@@ -1159,8 +1159,8 @@
       "name": "Do not draw the shape. Make it the shape. Make the dessert as a Spiral.",
       "pid": "54",
       "position": {
-        "x": "1542.6666666666663",
-        "y": "3797.166666666666"
+        "x": "1542",
+        "y": "3797"
       },
       "tags": [
         "Good"
@@ -1171,8 +1171,8 @@
       "name": "Nope. I love that about my partner. It feels insecure about this. Can you make it tentacley instead.",
       "pid": "55",
       "position": {
-        "x": "2029.6666666666665",
-        "y": "3837.833333333333"
+        "x": "2029",
+        "y": "3837"
       },
       "tags": [
         "Good"
@@ -1183,8 +1183,8 @@
       "name": "No, need to overdo it. Let's not go overboard.",
       "pid": "56",
       "position": {
-        "x": "2191.6666666666665",
-        "y": "3840.833333333333"
+        "x": "2191",
+        "y": "3840"
       },
       "tags": [
         "Good"
@@ -1195,8 +1195,8 @@
       "name": "Why not? A more velvety red velvet.",
       "pid": "57",
       "position": {
-        "x": "2384.333333333333",
-        "y": "3838.166666666666"
+        "x": "2384",
+        "y": "3838"
       },
       "tags": [
         "Bad"
@@ -1208,7 +1208,7 @@
       "pid": "58",
       "position": {
         "x": "2561",
-        "y": "3829.833333333333"
+        "y": "3829"
       },
       "tags": [
         "Good"
@@ -1219,8 +1219,8 @@
       "name": "Red, of course. Everyone knows red is the color of love. It is also the color of our love.",
       "pid": "59",
       "position": {
-        "x": "2691.333333333333",
-        "y": "3833.166666666666"
+        "x": "2691",
+        "y": "3833"
       },
       "tags": [
         "Bad"
@@ -1232,7 +1232,7 @@
       "pid": "60",
       "position": {
         "x": "2853",
-        "y": "3828.166666666666"
+        "y": "3828"
       },
       "tags": [
         "Good"
@@ -1261,7 +1261,7 @@
       "pid": "61",
       "position": {
         "x": "4116",
-        "y": "2787.333333333334"
+        "y": "2787"
       }
     },
     {
@@ -1287,7 +1287,7 @@
       "pid": "62",
       "position": {
         "x": "4057",
-        "y": "2997.333333333333"
+        "y": "2997"
       }
     },
     {
@@ -1313,7 +1313,7 @@
       "pid": "63",
       "position": {
         "x": "3577",
-        "y": "2972.333333333334"
+        "y": "2972"
       }
     },
     {
@@ -1338,7 +1338,7 @@
       "name": "Bourbon, no, no leave it at least PG-13, please. Just pour some whilst I am not looking.",
       "pid": "64",
       "position": {
-        "x": "3698.666666666667",
+        "x": "3698",
         "y": "3229"
       }
     },
@@ -1373,8 +1373,8 @@
       "name": "Since we are going at it this way, make it smokey as well.",
       "pid": "66",
       "position": {
-        "x": "3789.333333333334",
-        "y": "3717.666666666668"
+        "x": "3789",
+        "y": "3717"
       },
       "tags": [
         "Good"
@@ -1402,8 +1402,8 @@
       "name": "Bone marrow?? Okey, okey, never loose trust. You must know your stuff. You do right? Please know your stuff.",
       "pid": "67",
       "position": {
-        "x": "3090.3333333333335",
-        "y": "3205.666666666666"
+        "x": "3090",
+        "y": "3205"
       }
     },
     {
@@ -1412,7 +1412,7 @@
       "pid": "68",
       "position": {
         "x": "3020",
-        "y": "3835.333333333334"
+        "y": "3835"
       },
       "tags": [
         "Good"
@@ -1435,8 +1435,8 @@
       "name": "I heard of some chocolate pizzaz, it may be more in the theme.",
       "pid": "70",
       "position": {
-        "x": "3308.3333333333335",
-        "y": "3817.666666666666"
+        "x": "3308",
+        "y": "3817"
       },
       "tags": [
         "Bad"
@@ -1460,7 +1460,7 @@
       "pid": "72",
       "position": {
         "x": "3622",
-        "y": "3722.333333333333"
+        "y": "3722"
       },
       "tags": [
         "Bad"
@@ -1472,7 +1472,7 @@
       "pid": "73",
       "position": {
         "x": "3937",
-        "y": "3780.666666666667"
+        "y": "3780"
       },
       "tags": [
         "Good"
@@ -1483,7 +1483,7 @@
       "name": "Not too much ... Just a smidge of it.",
       "pid": "74",
       "position": {
-        "x": "4133.666666666667",
+        "x": "4133",
         "y": "3731"
       },
       "tags": [
@@ -1512,8 +1512,8 @@
       "name": "Salted Caramel Space Chicken Wings. Sounds like a sweet, right? Have to be good.",
       "pid": "75",
       "position": {
-        "x": "4717.000000000001",
-        "y": "2987.333333333334"
+        "x": "4717",
+        "y": "2987"
       }
     },
     {
@@ -1533,8 +1533,8 @@
       "name": "Okey, relax. Make some cake then. A red velvet maybe?",
       "pid": "76",
       "position": {
-        "x": "4017.333333333332",
-        "y": "3295.333333333332"
+        "x": "4017",
+        "y": "3295"
       }
     },
     {
@@ -1559,7 +1559,7 @@
       "name": "It might not be the dessert for your talents, but customer is always right as they say. You can make the greatest candy cane in the whole universe, I believe in you.",
       "pid": "77",
       "position": {
-        "x": "4278.666666666666",
+        "x": "4278",
         "y": "3279"
       }
     },
@@ -1569,7 +1569,7 @@
       "pid": "78",
       "position": {
         "x": "4277",
-        "y": "3722.666666666666"
+        "y": "3722"
       },
       "tags": [
         "Bad"
@@ -1580,8 +1580,8 @@
       "name": "I don't think flour is used in those. Meh, what do I know put some in.",
       "pid": "79",
       "position": {
-        "x": "4418.666666666666",
-        "y": "3737.666666666666"
+        "x": "4418",
+        "y": "3737"
       },
       "tags": [
         "Good"
@@ -1621,7 +1621,7 @@
       "name": "Yeah, they are enormous, I know. That's the gist of it bigger the better.",
       "pid": "81",
       "position": {
-        "x": "4602.000000000001",
+        "x": "4602",
         "y": "3269"
       }
     },
@@ -1647,8 +1647,8 @@
       "name": "Perfectly balanced, as all things should be. Salty, spicy, sweet.",
       "pid": "82",
       "position": {
-        "x": "4930.333333333334",
-        "y": "3300.666666666667"
+        "x": "4930",
+        "y": "3300"
       }
     },
     {
@@ -1673,8 +1673,8 @@
       "name": "Take one wing chop it up. Don't spice it that much. Don't put too much salt or sweet. Not that hard.",
       "pid": "83",
       "position": {
-        "x": "5225.333333333335",
-        "y": "3252.333333333334"
+        "x": "5225",
+        "y": "3252"
       }
     },
     {
@@ -1682,8 +1682,8 @@
       "name": "I need all tastes. ALL OF THEM. As much as our love from each flavor.",
       "pid": "84",
       "position": {
-        "x": "4926.333333333333",
-        "y": "3791.333333333334"
+        "x": "4926",
+        "y": "3791"
       },
       "tags": [
         "Bad"
@@ -1694,7 +1694,7 @@
       "name": "No! Try not! Do or do not, there is no try.",
       "pid": "85",
       "position": {
-        "x": "5119.666666666667",
+        "x": "5119",
         "y": "3783"
       },
       "tags": [
@@ -1706,8 +1706,8 @@
       "name": "Size matters not. Judge me by my size, do you?",
       "pid": "86",
       "position": {
-        "x": "4710.000000000001",
-        "y": "3719.333333333334"
+        "x": "4710",
+        "y": "3719"
       },
       "tags": [
         "Bad"
@@ -1718,8 +1718,8 @@
       "name": "Small size. Not to much of anything. How hard can it be?",
       "pid": "87",
       "position": {
-        "x": "5279.666666666668",
-        "y": "3779.666666666667"
+        "x": "5279",
+        "y": "3779"
       },
       "tags": [
         "Bad"
@@ -1730,7 +1730,7 @@
       "name": "Work the taste out yourself. Okaay, do it already.",
       "pid": "88",
       "position": {
-        "x": "5478.000000000002",
+        "x": "5478",
         "y": "3773"
       },
       "tags": [
@@ -1742,8 +1742,8 @@
       "name": "Ga ro ho sa he be re gu lu gu lu gololo s w e e t t h i n g s.",
       "pid": "89",
       "position": {
-        "x": "5865.333333333333",
-        "y": "3678.5"
+        "x": "5865",
+        "y": "3678"
       },
       "tags": [
         "Good"
@@ -1754,8 +1754,8 @@
       "name": "I want my gilifotso with some bologo, spirosgo and hula hoops.",
       "pid": "90",
       "position": {
-        "x": "6696.333333333334",
-        "y": "3685.166666666668"
+        "x": "6696",
+        "y": "3685"
       },
       "tags": [
         "Good"
@@ -1766,8 +1766,8 @@
       "name": "Bologo os Bakaro os Spono. Eacho so goodo goodo.",
       "pid": "91",
       "position": {
-        "x": "6241.333333333333",
-        "y": "3753.166666666668"
+        "x": "6241",
+        "y": "3753"
       },
       "tags": [
         "Good"
@@ -1778,8 +1778,8 @@
       "name": "Tra tra trasfilag lag lag beautiful, sweet bakaro.",
       "pid": "92",
       "position": {
-        "x": "6510.333333333333",
-        "y": "3686.166666666668"
+        "x": "6510",
+        "y": "3686"
       },
       "tags": [
         "Bad"
@@ -1807,8 +1807,8 @@
       "name": "StaceyNormal",
       "pid": "93",
       "position": {
-        "x": "3255.3333333333335",
-        "y": "1931.666666666667"
+        "x": "3255",
+        "y": "1931"
       }
     },
     {
@@ -1834,7 +1834,7 @@
       "pid": "94",
       "position": {
         "x": "2912",
-        "y": "2126.666666666667"
+        "y": "2126"
       }
     },
     {
@@ -1859,8 +1859,8 @@
       "name": "You know you are wrong. I can do better. I will do better. I will prove myself.",
       "pid": "95",
       "position": {
-        "x": "3260.3333333333335",
-        "y": "2138.3333333333335"
+        "x": "3260",
+        "y": "2138"
       }
     },
     {
@@ -1885,7 +1885,7 @@
       "name": "Wouldn't be here if I didn't need you. I need some information. I will take back our relationship.",
       "pid": "96",
       "position": {
-        "x": "3515.333333333333",
+        "x": "3515",
         "y": "2135"
       }
     },
@@ -1894,8 +1894,8 @@
       "name": "Duhhh. You of course.",
       "pid": "97",
       "position": {
-        "x": "2838.666666666667",
-        "y": "2358.333333333333"
+        "x": "2838",
+        "y": "2358"
       },
       "tags": [
         "Bad"
@@ -1924,7 +1924,7 @@
       "pid": "98",
       "position": {
         "x": "2647",
-        "y": "2350.0000000000005"
+        "y": "2350"
       }
     },
     {
@@ -1949,8 +1949,8 @@
       "name": "I never saw MY BABY eating any chocolate around me. Maybe that's whyyy...",
       "pid": "99",
       "position": {
-        "x": "3035.3333333333335",
-        "y": "2413.3333333333335"
+        "x": "3035",
+        "y": "2413"
       }
     },
     {
@@ -1958,8 +1958,8 @@
       "name": "I never saw MY BABY eating any daffodil around me. Maybe that's whyyy...",
       "pid": "100",
       "position": {
-        "x": "3240.3333333333335",
-        "y": "2355.0000000000005"
+        "x": "3240",
+        "y": "2355"
       },
       "tags": [
         "Bad"
@@ -1970,8 +1970,8 @@
       "name": "Why am I even asking you? You don't even know what my dearest is allergic to.",
       "pid": "101",
       "position": {
-        "x": "3458.666666666667",
-        "y": "2341.6666666666665"
+        "x": "3458",
+        "y": "2341"
       },
       "tags": [
         "Bad"
@@ -2008,8 +2008,8 @@
       "name": "You know we'd be happy together. Please don't take it away from us.",
       "pid": "103",
       "position": {
-        "x": "3825.333333333333",
-        "y": "2356.6666666666665"
+        "x": "3825",
+        "y": "2356"
       },
       "tags": [
         "Good"
@@ -2020,8 +2020,8 @@
       "name": "The contrast between the aluminum and caramel was really really good.",
       "pid": "104",
       "position": {
-        "x": "3608.666666666667",
-        "y": "2624.9999999999995"
+        "x": "3608",
+        "y": "2624"
       },
       "tags": [
         "Good"
@@ -2032,8 +2032,8 @@
       "name": "Look, we both are making mistakes. Everyone does. We can help each other.",
       "pid": "105",
       "position": {
-        "x": "3758.666666666667",
-        "y": "2626.666666666666"
+        "x": "3758",
+        "y": "2626"
       },
       "tags": [
         "Good"
@@ -2044,7 +2044,7 @@
       "name": "Yeahh, making people laugh while being romantic. My forte!",
       "pid": "106",
       "position": {
-        "x": "2268.6666666666665",
+        "x": "2268",
         "y": "2595"
       },
       "tags": [
@@ -2056,8 +2056,8 @@
       "name": "Gololo gololo, cute laugh you got there. That strange laugh might be the thing that got you your best friend status with my precious.",
       "pid": "107",
       "position": {
-        "x": "2648.6666666666665",
-        "y": "2593.333333333334"
+        "x": "2648",
+        "y": "2593"
       },
       "tags": [
         "Good"
@@ -2068,8 +2068,8 @@
       "name": "I was making us laugh, my love, making us passionate that contrast made us, US.",
       "pid": "108",
       "position": {
-        "x": "2468.6666666666665",
-        "y": "2590.000000000001"
+        "x": "2468",
+        "y": "2590"
       },
       "tags": [
         "Good"
@@ -2080,8 +2080,8 @@
       "name": "Yeah, we enjoyed those weird popcorns after you. TOGETHER.",
       "pid": "109",
       "position": {
-        "x": "3428.666666666667",
-        "y": "2625.0000000000005"
+        "x": "3428",
+        "y": "2625"
       },
       "tags": [
         "Bad"
@@ -2092,8 +2092,8 @@
       "name": "Why is a giant stuffed bear is better, but a massive bar of chocolate isn't. I never understood. Duly noted, though.",
       "pid": "110",
       "position": {
-        "x": "3143.666666666667",
-        "y": "2616.666666666667"
+        "x": "3143",
+        "y": "2616"
       },
       "tags": [
         "Good"
@@ -2105,7 +2105,7 @@
       "pid": "111",
       "position": {
         "x": "2972",
-        "y": "2600.0000000000005"
+        "y": "2600"
       },
       "tags": [
         "Bad"
@@ -2133,8 +2133,8 @@
       "name": "StaceySpeaker",
       "pid": "112",
       "position": {
-        "x": "4588.000000000001",
-        "y": "1826.8333333333335"
+        "x": "4588",
+        "y": "1826"
       }
     },
     {
@@ -2159,8 +2159,8 @@
       "name": "Hello to you too, Dear Stacey. Actually, I came for the situation. You know the break up.",
       "pid": "113",
       "position": {
-        "x": "4331.333333333334",
-        "y": "2066.8333333333335"
+        "x": "4331",
+        "y": "2066"
       }
     },
     {
@@ -2185,8 +2185,8 @@
       "name": "You know you are wrong. We belong together. I will prove myself.",
       "pid": "114",
       "position": {
-        "x": "4679.666666666668",
-        "y": "2091.8333333333335"
+        "x": "4679",
+        "y": "2091"
       }
     },
     {
@@ -2211,8 +2211,8 @@
       "name": "Undeserving ex meaing you I suppose. I just need some information. I will take back our relationship.",
       "pid": "115",
       "position": {
-        "x": "5306.333333333335",
-        "y": "2111.8333333333335"
+        "x": "5306",
+        "y": "2111"
       }
     },
     {
@@ -2220,8 +2220,8 @@
       "name": "I am allergic to you. We all know that, but I need useful information, Stacey.",
       "pid": "116",
       "position": {
-        "x": "4054.666666666667",
-        "y": "2360.166666666667"
+        "x": "4054",
+        "y": "2360"
       },
       "tags": [
         "Bad"
@@ -2232,8 +2232,8 @@
       "name": "Duhhh. Allergic to you of course.",
       "pid": "117",
       "position": {
-        "x": "4258.000000000001",
-        "y": "2343.5000000000005"
+        "x": "4258",
+        "y": "2343"
       },
       "tags": [
         "Bad"
@@ -2262,7 +2262,7 @@
       "pid": "118",
       "position": {
         "x": "4438",
-        "y": "2343.5000000000005"
+        "y": "2343"
       }
     },
     {
@@ -2271,7 +2271,7 @@
       "pid": "119",
       "position": {
         "x": "4313",
-        "y": "2611.8333333333335"
+        "y": "2611"
       },
       "tags": [
         "Good"
@@ -2282,8 +2282,8 @@
       "name": "Chocolota is gross. What? You are gross.",
       "pid": "120",
       "position": {
-        "x": "4504.666666666667",
-        "y": "2611.833333333334"
+        "x": "4504",
+        "y": "2611"
       },
       "tags": [
         "Bad"
@@ -2294,8 +2294,8 @@
       "name": "I can make this work. I will. I am trying to improve. Please, help me.",
       "pid": "121",
       "position": {
-        "x": "4684.666666666667",
-        "y": "2623.5"
+        "x": "4684",
+        "y": "2623"
       },
       "tags": [
         "Good"
@@ -2306,8 +2306,8 @@
       "name": "Don't be lame. Remember simple moment. Yeah, got you definitely.",
       "pid": "122",
       "position": {
-        "x": "4938.000000000002",
-        "y": "2313.5"
+        "x": "4938",
+        "y": "2313"
       },
       "tags": [
         "Good"
@@ -2318,8 +2318,8 @@
       "name": "Stop, Stacey. Enough with the witty comments.",
       "pid": "123",
       "position": {
-        "x": "5104.666666666668",
-        "y": "2323.5"
+        "x": "5104",
+        "y": "2323"
       },
       "tags": [
         "Bad"
@@ -2330,8 +2330,8 @@
       "name": "Finally, we are on the same page. We will see you, together.",
       "pid": "124",
       "position": {
-        "x": "4871.333333333335",
-        "y": "2603.5"
+        "x": "4871",
+        "y": "2603"
       },
       "tags": [
         "Good"
@@ -2342,8 +2342,8 @@
       "name": "Ahh... A weak moment of mine, it passed. Any more clues before I leave forever?",
       "pid": "125",
       "position": {
-        "x": "5021.333333333335",
-        "y": "2603.5"
+        "x": "5021",
+        "y": "2603"
       },
       "tags": [
         "Bad"
@@ -2354,8 +2354,8 @@
       "name": "I hope I can make it Stacey. Thank you for your help.",
       "pid": "126",
       "position": {
-        "x": "5169.666666666668",
-        "y": "2603.5"
+        "x": "5169",
+        "y": "2603"
       },
       "tags": [
         "Good"
@@ -2383,8 +2383,8 @@
       "name": "It was at the simple moments. It still should be. Simple, but special.",
       "pid": "127",
       "position": {
-        "x": "4751.333333333335",
-        "y": "2305.166666666667"
+        "x": "4751",
+        "y": "2305"
       }
     },
     {
@@ -2392,8 +2392,8 @@
       "name": "Don't be so sure. What makes you thing you will be in this lame state of mind.",
       "pid": "128",
       "position": {
-        "x": "5679.666666666669",
-        "y": "2353.5"
+        "x": "5679",
+        "y": "2353"
       },
       "tags": [
         "Bad"
@@ -2421,8 +2421,8 @@
       "name": "Weren't you two together went to that old fashioned romance movie. After that I wouldn't be so sure.",
       "pid": "129",
       "position": {
-        "x": "5426.333333333335",
-        "y": "2373.5"
+        "x": "5426",
+        "y": "2373"
       }
     },
     {
@@ -2430,8 +2430,8 @@
       "name": "The contrast between the aluminum and caramel was really really good at least.",
       "pid": "130",
       "position": {
-        "x": "5468.000000000002",
-        "y": "2591.8333333333335"
+        "x": "5468",
+        "y": "2591"
       },
       "tags": [
         "Bad"
@@ -2442,8 +2442,8 @@
       "name": "Yeahh, we enjoyed those weird popcorns after you. TOGETHER. It will be like that FOREVER.",
       "pid": "131",
       "position": {
-        "x": "5308.000000000002",
-        "y": "2605.1666666666665"
+        "x": "5308",
+        "y": "2605"
       },
       "tags": [
         "Bad"
@@ -2454,8 +2454,8 @@
       "name": "Gotta hand it to you on those. We loved them. Weird as they might be. We will some more from you. I hope.",
       "pid": "132",
       "position": {
-        "x": "5613.000000000002",
-        "y": "2595.1666666666665"
+        "x": "5613",
+        "y": "2595"
       },
       "tags": [
         "Good"
@@ -2483,8 +2483,8 @@
       "name": "FinalNoItems",
       "pid": "133",
       "position": {
-        "x": "3082.3333333333335",
-        "y": "5720.999999999999"
+        "x": "3082",
+        "y": "5720"
       }
     },
     {
@@ -2510,7 +2510,7 @@
       "pid": "134",
       "position": {
         "x": "3332",
-        "y": "5724.166666666667"
+        "y": "5724"
       }
     },
     {
@@ -2535,8 +2535,8 @@
       "name": "FinalNoStaceyYesOthers",
       "pid": "135",
       "position": {
-        "x": "4895.333333333334",
-        "y": "5677.499999999999"
+        "x": "4895",
+        "y": "5677"
       }
     },
     {
@@ -2561,8 +2561,8 @@
       "name": "FinalBothItems",
       "pid": "136",
       "position": {
-        "x": "5147.000000000001",
-        "y": "5705.833333333335"
+        "x": "5147",
+        "y": "5705"
       }
     },
     {
@@ -2570,8 +2570,8 @@
       "name": "I know I made a mess. I couldn't think what you would appreciate. But please I will make do just give me another chance.",
       "pid": "137",
       "position": {
-        "x": "3083.9999999999995",
-        "y": "6142.666666666667"
+        "x": "3083",
+        "y": "6142"
       },
       "tags": [
         "Bad"
@@ -2582,8 +2582,8 @@
       "name": "I screwed up, again and again ... Please don't do this. I want you back.",
       "pid": "138",
       "position": {
-        "x": "3290.6666666666665",
-        "y": "6164.333333333333"
+        "x": "3290",
+        "y": "6164"
       },
       "tags": [
         "Bad"
@@ -2594,8 +2594,8 @@
       "name": "I see now, I never had a real chance of getting you back. I am sorry I bothered you.",
       "pid": "139",
       "position": {
-        "x": "3453.9999999999995",
-        "y": "6144.333333333333"
+        "x": "3453",
+        "y": "6144"
       },
       "tags": [
         "Bad"
@@ -2606,8 +2606,8 @@
       "name": "I am happy you enjoyed the dessert. I tried to learn from Stacey what I missed on our last time. No matter what happens I will at least remember this day.",
       "pid": "140",
       "position": {
-        "x": "5013.666666666668",
-        "y": "6160.833333333335"
+        "x": "5013",
+        "y": "6160"
       },
       "tags": [
         "Good"
@@ -2618,8 +2618,8 @@
       "name": "I missed sharing desserts with you. And no chocolate this time, see? I remember.",
       "pid": "141",
       "position": {
-        "x": "4515.333333333333",
-        "y": "6139.166666666669"
+        "x": "4515",
+        "y": "6139"
       },
       "tags": [
         "Good"
@@ -2630,8 +2630,8 @@
       "name": "...",
       "pid": "142",
       "position": {
-        "x": "3704.666666666667",
-        "y": "1142.5"
+        "x": "3665.6666666666665",
+        "y": "640.3333333333333"
       },
       "tags": [
         "End"
@@ -2642,8 +2642,8 @@
       "name": ". . .",
       "pid": "143",
       "position": {
-        "x": "3938",
-        "y": "1142.5"
+        "x": "3899.6666666666665",
+        "y": "640.3333333333333"
       },
       "tags": [
         "End"
@@ -2654,8 +2654,8 @@
       "name": ".  .  .",
       "pid": "144",
       "position": {
-        "x": "4141.333333333333",
-        "y": "1150.8333333333335"
+        "x": "4102.666666666667",
+        "y": "648.3333333333333"
       },
       "tags": [
         "End"
@@ -2666,15 +2666,15 @@
       "name": "Again with Stacey. I am trying to do stuff for you to learn about you, but your friend always gets in between us don't you see?",
       "pid": "145",
       "position": {
-        "x": "4653.666666666667",
-        "y": "6157.499999999999"
+        "x": "4653",
+        "y": "6157"
       },
       "tags": [
         "Bad"
       ]
     },
     {
-      "text": "Put on a mask, duuuude. Don't breathe all the amazing smells at the same tiiiime. You will deplete the beautifulness. Welcome to FlowerPots. Lots of pots of flowers I have. Are you looking for something special for someone special?\n[[Wooooow, overwhelming scent indeed. How can I distinguish any one flower's smell from others here?]]\n[[Yeah, dudeeeee. In need of a special flower for my special special someone.]]\n[[Mask? Okayyyy. I can choose simply from colors already.]]",
+      "text": "Put on a mask, duuuude. Don't breathe all the amazing smells at the same tiiiime. You will deplete the beautifulness. Welcome to FlowerPots. Lots of pots of flowers I have. Are you looking for something special for someone special?\n[[Wooooow, overwhelming scent indeed. How can I distinguish any one flower's smell from others here?]]\n[[Yeah, dudeeeee. In need of a special flower for my special special someone.]]\n[[Mask? Okayyyy. I can choose simply from colors I guess.]]",
       "links": [
         {
           "name": "Wooooow, overwhelming scent indeed. How can I distinguish any one flower's smell from others here?",
@@ -2687,8 +2687,8 @@
           "pid": "148"
         },
         {
-          "name": "Mask? Okayyyy. I can choose simply from colors already.",
-          "link": "Mask? Okayyyy. I can choose simply from colors already.",
+          "name": "Mask? Okayyyy. I can choose simply from colors I guess.",
+          "link": "Mask? Okayyyy. I can choose simply from colors I guess.",
           "pid": "149"
         }
       ],
@@ -2770,7 +2770,7 @@
           "pid": "167"
         }
       ],
-      "name": "Mask? Okayyyy. I can choose simply from colors already.",
+      "name": "Mask? Okayyyy. I can choose simply from colors I guess.",
       "pid": "149",
       "position": {
         "x": "2862",
@@ -2799,8 +2799,8 @@
       "name": "Hmm, roses. Simple, effective, I like it.",
       "pid": "150",
       "position": {
-        "x": "1157.6666666666665",
-        "y": "4977.333333333333"
+        "x": "1157",
+        "y": "4977"
       }
     },
     {
@@ -2825,8 +2825,8 @@
       "name": "Daffodils. If you say they are good, gonna believe you bro.",
       "pid": "151",
       "position": {
-        "x": "1487.3333333333335",
-        "y": "4952.999999999999"
+        "x": "1487",
+        "y": "4952"
       }
     },
     {
@@ -2852,7 +2852,7 @@
       "pid": "152",
       "position": {
         "x": "1876",
-        "y": "4975.333333333333"
+        "y": "4975"
       }
     },
     {
@@ -2860,8 +2860,8 @@
       "name": "Mmmm. Says there. Oh. Well, do you have any multicolored roses than if not I will gladly accept some other flower.",
       "pid": "153",
       "position": {
-        "x": "938.6666666666665",
-        "y": "5322.333333333333"
+        "x": "938",
+        "y": "5322"
       },
       "tags": [
         "Bad"
@@ -2872,7 +2872,7 @@
       "name": "We are too deep in now. At least give me lots of them.",
       "pid": "154",
       "position": {
-        "x": "1098.333333333333",
+        "x": "1098",
         "y": "5315"
       },
       "tags": [
@@ -2884,8 +2884,8 @@
       "name": "Yeah rock roses, never heard of a better idea. Get me some rock roses.",
       "pid": "155",
       "position": {
-        "x": "1256.6666666666665",
-        "y": "5322.999999999999"
+        "x": "1256",
+        "y": "5322"
       },
       "tags": [
         "Good"
@@ -2896,7 +2896,7 @@
       "name": "Well, what do I know. Get me a fancy bouquet of them.",
       "pid": "156",
       "position": {
-        "x": "1707.666666666667",
+        "x": "1707",
         "y": "5337"
       },
       "tags": [
@@ -2908,8 +2908,8 @@
       "name": "I am quite sure there is a daffodil allergy. Just get some roses instead they are the safer choice.",
       "pid": "157",
       "position": {
-        "x": "1857.666666666667",
-        "y": "5333.666666666667"
+        "x": "1857",
+        "y": "5333"
       },
       "tags": [
         "Bad"
@@ -2921,7 +2921,7 @@
       "pid": "158",
       "position": {
         "x": "2006",
-        "y": "5328.666666666667"
+        "y": "5328"
       },
       "tags": [
         "Good"
@@ -2944,8 +2944,8 @@
       "name": "Great help with the nose. Great knowledge. Go get some daisies come oon. POISON?",
       "pid": "160",
       "position": {
-        "x": "1389.3333333333335",
-        "y": "5328.666666666665"
+        "x": "1389",
+        "y": "5328"
       },
       "tags": [
         "Bad"
@@ -2956,8 +2956,8 @@
       "name": "Saffron, two birds with one stone.",
       "pid": "161",
       "position": {
-        "x": "2337.333333333334",
-        "y": "4990.333333333334"
+        "x": "2337",
+        "y": "4990"
       },
       "tags": [
         "Good"
@@ -2985,8 +2985,8 @@
       "name": "Flaming lily, sounds dangerous but hot.",
       "pid": "162",
       "position": {
-        "x": "2168.999999999999",
-        "y": "5025.333333333334"
+        "x": "2168",
+        "y": "5025"
       }
     },
     {
@@ -2994,8 +2994,8 @@
       "name": "It better work or you may have to eat some when I got back.",
       "pid": "163",
       "position": {
-        "x": "2158.9999999999995",
-        "y": "5313.666666666666"
+        "x": "2158",
+        "y": "5313"
       },
       "tags": [
         "Bad"
@@ -3023,8 +3023,8 @@
       "name": "Oooooor I can get some roses, how about that?",
       "pid": "164",
       "position": {
-        "x": "2495.666666666666",
-        "y": "4998.666666666666"
+        "x": "2495",
+        "y": "4998"
       }
     },
     {
@@ -3049,8 +3049,8 @@
       "name": "Lily is a flower. Red is a color there should be a combination of them right?",
       "pid": "165",
       "position": {
-        "x": "2728.666666666667",
-        "y": "4977.333333333334"
+        "x": "2728",
+        "y": "4977"
       }
     },
     {
@@ -3075,8 +3075,8 @@
       "name": "Contrasting colors I need those, please know what contrast means.",
       "pid": "166",
       "position": {
-        "x": "2918.666666666667",
-        "y": "4980.666666666667"
+        "x": "2918",
+        "y": "4980"
       }
     },
     {
@@ -3101,8 +3101,8 @@
       "name": "Well, I had my share of your help. Thank you. May I speak to anyone in charge please?",
       "pid": "167",
       "position": {
-        "x": "3128.666666666667",
-        "y": "4967.333333333333"
+        "x": "3128",
+        "y": "4967"
       }
     },
     {
@@ -3111,7 +3111,7 @@
       "pid": "168",
       "position": {
         "x": "2982",
-        "y": "5305.666666666666"
+        "y": "5305"
       },
       "tags": [
         "Good"
@@ -3135,7 +3135,7 @@
       "pid": "170",
       "position": {
         "x": "3362",
-        "y": "5290.666666666666"
+        "y": "5290"
       },
       "tags": [
         "Bad"
@@ -3146,8 +3146,8 @@
       "name": "Don't you anything more special with TWO colors?",
       "pid": "171",
       "position": {
-        "x": "2407.666666666667",
-        "y": "5306.666666666667"
+        "x": "2407",
+        "y": "5306"
       },
       "tags": [
         "Good"
@@ -3158,8 +3158,8 @@
       "name": "I am out of luck, it seems. Yeah, pansies. Put whatever colors you find in a bouquet.",
       "pid": "172",
       "position": {
-        "x": "2553.666666666667",
-        "y": "5310.666666666667"
+        "x": "2553",
+        "y": "5310"
       },
       "tags": [
         "Bad"
@@ -3170,8 +3170,8 @@
       "name": "Pansy. Get the smallest and the brighest colored one for me. A unique pansy.",
       "pid": "173",
       "position": {
-        "x": "2745.333333333334",
-        "y": "5295.666666666667"
+        "x": "2745",
+        "y": "5295"
       },
       "tags": [
         "Good"
@@ -3226,7 +3226,7 @@
       "pid": "175",
       "position": {
         "x": "4314",
-        "y": "4622.333333333333"
+        "y": "4622"
       }
     },
     {
@@ -3251,7 +3251,7 @@
       "name": "Yeah, dudeeeee. In need of a special flower for my special someone.",
       "pid": "176",
       "position": {
-        "x": "4858.666666666666",
+        "x": "4858",
         "y": "4616"
       }
     },
@@ -3277,8 +3277,8 @@
       "name": "Mask? Okayyyy. Please don't be because of the poisonous ones.",
       "pid": "177",
       "position": {
-        "x": "5364.666666666666",
-        "y": "4644.333333333333"
+        "x": "5364",
+        "y": "4644"
       }
     },
     {
@@ -3303,7 +3303,7 @@
       "name": "Hmm, roses. Simple, effective, I like them.",
       "pid": "178",
       "position": {
-        "x": "3927.3333333333335",
+        "x": "3927",
         "y": "4950"
       }
     },
@@ -3330,7 +3330,7 @@
       "pid": "179",
       "position": {
         "x": "4624",
-        "y": "4942.333333333333"
+        "y": "4942"
       }
     },
     {
@@ -3356,7 +3356,7 @@
       "pid": "180",
       "position": {
         "x": "4209",
-        "y": "4956.666666666666"
+        "y": "4956"
       }
     },
     {
@@ -3364,7 +3364,7 @@
       "name": "Still talking about roses right? Rocks? Tycoon?",
       "pid": "181",
       "position": {
-        "x": "3631.3333333333335",
+        "x": "3631",
         "y": "5284"
       },
       "tags": [
@@ -3376,7 +3376,7 @@
       "name": "I am quite sure I want Tycoons",
       "pid": "182",
       "position": {
-        "x": "3823.3333333333335",
+        "x": "3823",
         "y": "5296"
       },
       "tags": [
@@ -3388,7 +3388,7 @@
       "name": "Ro ses. Not rocks or anything else.",
       "pid": "183",
       "position": {
-        "x": "3995.333333333334",
+        "x": "3995",
         "y": "5256"
       },
       "tags": [
@@ -3401,7 +3401,7 @@
       "pid": "184",
       "position": {
         "x": "4289",
-        "y": "5280.333333333333"
+        "y": "5280"
       },
       "tags": [
         "Good"
@@ -3413,7 +3413,7 @@
       "pid": "185",
       "position": {
         "x": "4439",
-        "y": "5276.333333333333"
+        "y": "5276"
       },
       "tags": [
         "Bad"
@@ -3424,7 +3424,7 @@
       "name": "Now we are talking those sound like flower names. Mix them up.",
       "pid": "186",
       "position": {
-        "x": "4931.333333333333",
+        "x": "4931",
         "y": "5257"
       },
       "tags": [
@@ -3437,7 +3437,7 @@
       "pid": "187",
       "position": {
         "x": "4601",
-        "y": "5240.333333333333"
+        "y": "5240"
       },
       "tags": [
         "Good"
@@ -3449,7 +3449,7 @@
       "pid": "188",
       "position": {
         "x": "4751",
-        "y": "5240.333333333333"
+        "y": "5240"
       },
       "tags": [
         "Good"
@@ -3460,8 +3460,8 @@
       "name": "Eatable poisonous devils. Not dying today dude, no. Get some daisies",
       "pid": "189",
       "position": {
-        "x": "4127.333333333333",
-        "y": "5283.333333333333"
+        "x": "4127",
+        "y": "5283"
       },
       "tags": [
         "Bad"
@@ -3472,7 +3472,7 @@
       "name": "Yellow pansies?, sure why not they come in two colors as I know so black and yellow, black and yellow, black and yellow.",
       "pid": "190",
       "position": {
-        "x": "5216.333333333332",
+        "x": "5216",
         "y": "4841"
       },
       "tags": [
@@ -3501,8 +3501,8 @@
       "name": "What is deadly to someone might be my breakfast what do you know?",
       "pid": "191",
       "position": {
-        "x": "4933.666666666666",
-        "y": "4924.333333333333"
+        "x": "4909",
+        "y": "4892"
       }
     },
     {
@@ -3510,8 +3510,8 @@
       "name": "Eatable flower baskets. I heard they are considered romantic these days.",
       "pid": "192",
       "position": {
-        "x": "5105.333333333333",
-        "y": "5244.333333333333"
+        "x": "5105",
+        "y": "5244"
       },
       "tags": [
         "Bad"
@@ -3522,8 +3522,8 @@
       "name": "An apple three. It will bloom at some point and very usefull even after the flowery part.",
       "pid": "193",
       "position": {
-        "x": "5255.333333333333",
-        "y": "5236.333333333333"
+        "x": "5255",
+        "y": "5236"
       },
       "tags": [
         "Bad"
@@ -3534,8 +3534,8 @@
       "name": "Yellow pantsies with black daffodils. I can always say the black represents the allergies if I have to.",
       "pid": "194",
       "position": {
-        "x": "5482.999999999999",
-        "y": "4864.333333333333"
+        "x": "5482",
+        "y": "4864"
       },
       "tags": [
         "Good"
@@ -3546,15 +3546,15 @@
       "name": "We had a little fight with Stacey, but I will apoligize with this flower. Or maybe you want it instead?",
       "pid": "195",
       "position": {
-        "x": "4833.666666666667",
-        "y": "6162.5"
+        "x": "4833",
+        "y": "6162"
       },
       "tags": [
         "Good"
       ]
     },
     {
-      "text": "tuQmoH botuQtaHvIS, dudeeee. Hoch amaze He' DeSDu' poH rap tlhuH. 'IH rIn SoH. Qo'noS revan 'un chal. nIvbogh 'un chal. nej SoH vay' le' vay' le'?\n[[Woooow, overwhelming scent. How can I distinguish any one flower's smell from others here?]]\n[[Yeah, dudeeeee. In need of a special tlhIroghnI for my special special vaylevayle.]]\n[[I can do this small words, it uses small words, I need small words.]]",
+      "text": "tuQmoH botuQtaHvIS, dudeeee. Hoch amaze He' DeSDu' poH rap tlhuH. 'IH rIn SoH. Qo'noS revan 'un chal. nIvbogh 'un chal. nej SoH vay' le' vay' le'?\n[[Woooow, overwhelming scent. How can I distinguish any one flower's smell from others here?]]\n[[Yeah, dudeeeee. In need of a special tlhIroghnI for my special special vaylevayle.]]\n[[I can do this. Small words, it uses small words, I need small words.]]",
       "links": [
         {
           "name": "Woooow, overwhelming scent. How can I distinguish any one flower's smell from others here?",
@@ -3567,8 +3567,8 @@
           "pid": "197"
         },
         {
-          "name": "I can do this small words, it uses small words, I need small words.",
-          "link": "I can do this small words, it uses small words, I need small words.",
+          "name": "I can do this. Small words, it uses small words, I need small words.",
+          "link": "I can do this. Small words, it uses small words, I need small words.",
           "pid": "198"
         }
       ],
@@ -3624,11 +3624,11 @@
           "pid": "206"
         }
       ],
-      "name": "I can do this small words, it uses small words, I need small words.",
+      "name": "I can do this. Small words, it uses small words, I need small words.",
       "pid": "198",
       "position": {
-        "x": "7159",
-        "y": "4572"
+        "x": "7183",
+        "y": "4576"
       }
     },
     {
@@ -3653,8 +3653,8 @@
       "name": "Woooow, overwhelming scent. How can I distinguish any one flower's smell from others here?",
       "pid": "199",
       "position": {
-        "x": "6016.333333333333",
-        "y": "4544.333333333333"
+        "x": "6016",
+        "y": "4544"
       }
     },
     {
@@ -3662,8 +3662,8 @@
       "name": "Hmm, I see roses there. Simple, effective, I like it.",
       "pid": "200",
       "position": {
-        "x": "5746.333333333333",
-        "y": "4852.666666666666"
+        "x": "5746",
+        "y": "4852"
       },
       "tags": [
         "Bad"
@@ -3674,8 +3674,8 @@
       "name": "Spe cial flo wer SoH mate bro",
       "pid": "201",
       "position": {
-        "x": "6191.333333333333",
-        "y": "4872.666666666666"
+        "x": "6191",
+        "y": "4872"
       },
       "tags": [
         "Good"
@@ -3686,8 +3686,8 @@
       "name": "Daf fo dils. THOSE DAF FO DILLLS. Dalo le fa pagh.",
       "pid": "202",
       "position": {
-        "x": "5966.333333333333",
-        "y": "4857.666666666666"
+        "x": "5966",
+        "y": "4889"
       },
       "tags": [
         "Bad"
@@ -3763,8 +3763,8 @@
       "name": "FinalNoDessertYesOthers",
       "pid": "207",
       "position": {
-        "x": "3588.333333333333",
-        "y": "5681.500000000001"
+        "x": "3588",
+        "y": "5681"
       }
     },
     {
@@ -3789,8 +3789,8 @@
       "name": "FinalYesDessertNoOthers",
       "pid": "208",
       "position": {
-        "x": "4592.333333333336",
-        "y": "5688.666666666668"
+        "x": "4592",
+        "y": "5688"
       }
     },
     {
@@ -3815,7 +3815,7 @@
       "name": "FinalNoFlowerYesOthers",
       "pid": "209",
       "position": {
-        "x": "4277.333333333334",
+        "x": "4277",
         "y": "5707"
       }
     },
@@ -3841,8 +3841,8 @@
       "name": "FinalYesFlowersNoOthers",
       "pid": "210",
       "position": {
-        "x": "3918.9999999999995",
-        "y": "5692.666666666666"
+        "x": "3918",
+        "y": "5692"
       }
     },
     {
@@ -3850,8 +3850,8 @@
       "name": "I may have screwed the dessert. But, this extra ordianary flower is for you. You and I both know that if I can win my way to Stacey's hearth, rest will come easy for us, right?",
       "pid": "211",
       "position": {
-        "x": "3845.6666666666674",
-        "y": "6134.833333333334"
+        "x": "3845",
+        "y": "6134"
       },
       "tags": [
         "Good"
@@ -3862,8 +3862,8 @@
       "name": "I may have screwed the dessert. Yes, I couldn't get a decent flower too. However, you and I both know that if I can win my way to Stacey's hearth, rest will come easy for us, right?",
       "pid": "212",
       "position": {
-        "x": "3681.9999999999995",
-        "y": "6129.166666666668"
+        "x": "3681",
+        "y": "6129"
       },
       "tags": [
         "Bad"
@@ -3874,8 +3874,8 @@
       "name": "I missed sharing desserts with you. And no chocolate this time, see? I remember. I can make everything perfect.",
       "pid": "213",
       "position": {
-        "x": "5210.333333333334",
-        "y": "6155.833333333335"
+        "x": "5210",
+        "y": "6155"
       },
       "tags": [
         "Good"
@@ -3886,8 +3886,8 @@
       "name": "I know I made a mess about Stacey. I couldn't think it would have reacted this way. But please I will make do, just give me another chance.",
       "pid": "214",
       "position": {
-        "x": "4359.000000000003",
-        "y": "6143.666666666668"
+        "x": "4359",
+        "y": "6143"
       },
       "tags": [
         "Bad"
@@ -3899,7 +3899,7 @@
       "pid": "215",
       "position": {
         "x": "4204",
-        "y": "6133.666666666666"
+        "y": "6133"
       },
       "tags": [
         "Good"
@@ -3910,8 +3910,8 @@
       "name": "Finally earned Stacey's trust, ha. I guess I can achieve anything now. Maybe even a pretty flower's trust, like yours?",
       "pid": "216",
       "position": {
-        "x": "5373.666666666667",
-        "y": "6166.500000000001"
+        "x": "5373",
+        "y": "6166"
       },
       "tags": [
         "Good"
@@ -3922,12 +3922,21 @@
       "name": "I thought you liked new things. This is a new smell isn't. Like the new relationship we are gonna start.",
       "pid": "217",
       "position": {
-        "x": "4064.0000000000014",
-        "y": "6130.333333333334"
+        "x": "4064",
+        "y": "6130"
       },
       "tags": [
         "Bad"
       ]
+    },
+    {
+      "text": "Planet Patrol: You cannot leave this planet with your control panel not working correctly. Here, let's replace that for you. Try fixing them before they die next time!",
+      "name": "Planet Patrol",
+      "pid": "218",
+      "position": {
+        "x": "3911.666666666667",
+        "y": "971.1666666666667"
+      }
     }
   ],
   "name": "Intro",
