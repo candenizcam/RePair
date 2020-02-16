@@ -37,6 +37,9 @@ class LoadingScreen() : Screen() {
                 menuVisible = true
                 bgSprite.setAlpha(3f - timer.now().toFloat() / 1000)
             }
+            else -> {
+                SharedVariables.activeScreen = SharedVariables.mainMenuScreen
+            }
         }
     }
 

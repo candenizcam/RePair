@@ -23,6 +23,7 @@ class MainGame : ApplicationAdapter() {
         SharedVariables.mainMenuScreen.lateInitializer()
         SharedVariables.gameScreen.lateInitializer()
         SharedVariables.endingScreen.lateInitializer()
+        SharedVariables.creditsScreen.lateInitializer()
         batch = SpriteBatch()
         MidiPlayer.open("sound/OST1.mid")
         MidiPlayer.setLooping(true)
@@ -53,9 +54,6 @@ class MainGame : ApplicationAdapter() {
 
         SharedVariables.mouse.clickListener()
         SharedVariables.activeScreen.loopAction()
-        if (!SharedVariables.loadingScreen.isLoading() && (SharedVariables.activeScreen == SharedVariables.loadingScreen)) {
-            SharedVariables.activeScreen = SharedVariables.mainMenuScreen
-        }
         batch.begin()
         SharedVariables.activeScreen.draw(batch)
         batch.end()
