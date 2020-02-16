@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.SharedVariables
 
-class SimpleTool(private val path: String, private val ratio: Float)  {
+class SimpleTool(private val path: String, private val ratio: Float, val fixing: DeviceStatus)  {
     private lateinit var idleSprite: Sprite
     private lateinit var glowSprite: Sprite
     private lateinit var flyingSprite: Sprite
@@ -39,7 +39,7 @@ class SimpleTool(private val path: String, private val ratio: Float)  {
     private fun loadImage(){
         idleSprite = SharedVariables.loadSprite("$path/idle.png", ratio.toDouble())
         glowSprite = SharedVariables.loadSprite("$path/glow.png", ratio.toDouble())
-        flyingSprite = SharedVariables.loadSprite("$path/flying.png", ratio.toDouble())
+        flyingSprite = SharedVariables.loadSprite("$path/idle.png", ratio.toDouble()/2)
         chosenSprite = idleSprite
     }
 

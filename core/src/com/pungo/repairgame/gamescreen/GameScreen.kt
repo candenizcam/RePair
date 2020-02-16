@@ -8,14 +8,14 @@ import com.pungo.repairgame.*
 
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite
-    private lateinit var cargo : Sprite
+
     private lateinit var phText: TextIsland
     private lateinit var bigMonitor: BigMonitor
     private lateinit var redButton: SetButton
     private lateinit var cargoBay: CargoBay
     private var devices = listOf<SimpleDevice>()
     private var tools = listOf<SimpleTool>()
-    private var items = mutableListOf<String>()
+
     private var texts = mutableListOf<TextIslandTexts>()
     private val travelTimer = Timer(20000)                  // travel timer
     private val timer = Timer(1000)                         // breakdown timer
@@ -47,7 +47,7 @@ class GameScreen: Screen() {
             it.draw(batch)
         }
         redButton.draw(batch)
-        cargoBay.draw(batch, items.toList())
+        cargoBay.draw(batch)
         texts[0].draw(batch, true)
         if(chosenOption!=-1 && !texts[0].revealed && ! patrolPlanet){
             texts[4].draw(batch)
@@ -105,23 +105,13 @@ class GameScreen: Screen() {
                 if (!phText.sceneNotOver()) {
                     devices.forEach { it2 ->
                         if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it2.getSprite())) {
-                            if ((it2.status == DeviceStatus.SHORT) && (index == 0)) {
+                            var fixed = it2.status==it.fixing
+                            if (fixed){
                                 it.sfx.play(SharedVariables.sfxVolume)
                                 it2.breakTimer.running = false
                                 it2.status = DeviceStatus.NORMAL
-                            } else if ((it2.status == DeviceStatus.HOT) && (index == 1)) {
-                                it.sfx.play(SharedVariables.sfxVolume)
-                                it2.breakTimer.running = false
-                                it2.status = DeviceStatus.NORMAL
-                            } else if ((it2.status == DeviceStatus.BROKEN) && (index == 2)) {
-                                it.sfx.play(SharedVariables.sfxVolume)
-                                it2.breakTimer.running = false
-                                it2.status = DeviceStatus.NORMAL
-                            } else if ((it2.status == DeviceStatus.STUCK) && (index == 3)) {
-                                it.sfx.play(SharedVariables.sfxVolume)
-                                it2.breakTimer.running = false
-                                it2.status = DeviceStatus.NORMAL
-                            } else sfxFail.play(SharedVariables.sfxVolume)
+                            }
+
                         }
                     }
                     it.flyingCentre(-500f, -500f)
@@ -137,26 +127,16 @@ class GameScreen: Screen() {
         }
 
         if (!travelTimer.running && !phText.sceneNotOver()) {
-            if(SharedVariables.planetIndex==1){
-                tools.forEach {
-                    it.status = ToolStatus.IDLE
+            when( SharedVariables.planetIndex){
+                1-> {
+                    tools.forEach {
+                        it.status = ToolStatus.IDLE
+                    }
+                    breakingList = listOf(0, 1, 2, 3)
                 }
-                breakingList = listOf(0,1,2,3)
-            }
-            else if(SharedVariables.planetIndex==2){
-                if(phText.getTag() == "Good"){
-                    items.add("stacey")
-                }
-            }
-            else if(SharedVariables.planetIndex==3){
-                if(phText.getTag() == "Good"){
-                    items.add("dessert")
-                }
-            }
-            else if(SharedVariables.planetIndex==4){
-                if(phText.getTag() == "Good"){
-                    items.add("flower")
-                }
+                2->if (phText.getTag()=="Good"){ cargoBay.addToItems("stacey") }
+                3->if (phText.getTag()=="Good"){ cargoBay.addToItems("dessert") }
+                4->if (phText.getTag()=="Good"){ cargoBay.addToItems("flower") }
             }
             if(redButton.status == ButtonStatus.DOWN) {
                 if(SharedVariables.planetIndex==5){
@@ -172,7 +152,6 @@ class GameScreen: Screen() {
     private fun updateIslandText() {
         texts[0].setStuff(phText.getCurrentLine())
         texts[0].letterRevealReset()
-
         try {
             phText.getCurrentChoices().let {
                 texts[1].setStuff(it[0])
@@ -281,7 +260,6 @@ class GameScreen: Screen() {
                 }
             }
         }
-
         if(texts[0].revealed){
             sfxBeep.stop()
         }
@@ -328,9 +306,6 @@ class GameScreen: Screen() {
                 bigMonitor.changeMonitor("graphics/planets/p3.png")
             }
             3 -> {
-                if(phText.getTag() == "Good"){
-                    items.add("dessert")
-                }
                 when {
                     devices[1].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(174) //speaker
                     devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(196) //translator
@@ -339,33 +314,8 @@ class GameScreen: Screen() {
                 bigMonitor.changeMonitor("graphics/planets/p4.png")
             }
             4 -> {
-                if(phText.getTag() == "Good"){
-                    items.add("flower")
-                }
-                if (items.isEmpty()) {
-                    phText.getPlanetPassage(133)
-                    SharedVariables.endingScreen.badEnder()
-                } else if ("stacey" in items && "dessert" !in items && "flower" !in items) {
-                    phText.getPlanetPassage(134)
-                    SharedVariables.endingScreen.badEnder()
-                } else if ("stacey" !in items && "dessert" in items && "flower" in items) {
-                    phText.getPlanetPassage(135)
-                    SharedVariables.endingScreen.goodEnder()
-                } else if ("stacey" in items && "dessert" in items && "flower" in items) {
-                    phText.getPlanetPassage(136)
-                    SharedVariables.endingScreen.goodEnder()
-                } else if ("stacey" !in items && "dessert" in items && "flower" !in items) {
-                    phText.getPlanetPassage(208)
-                    SharedVariables.endingScreen.badEnder()
-                } else if ("stacey" !in items && "dessert" !in items && "flower" in items) {
-                    phText.getPlanetPassage(210)
-                    SharedVariables.endingScreen.badEnder()
-                } else if ("stacey" in items && "dessert" in items && "flower" !in items) {
-                    phText.getPlanetPassage(209)
-                    SharedVariables.endingScreen.goodEnder()
-                } else if ("stacey" in items && "dessert" !in items && "flower" in items) {
-                    phText.getPlanetPassage(207)
-                    SharedVariables.endingScreen.goodEnder()
+                cargoBay.endingTree().also{
+                    phText.getPlanetPassage(it)
                 }
                 bigMonitor.changeMonitor("graphics/planets/p5.png")
             }
@@ -378,17 +328,10 @@ class GameScreen: Screen() {
         mainSprite = SharedVariables.loadSprite(SharedVariables.gameBackgroundPath, SharedVariables.gameBackgroundRatio)
         mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
-
-        cargo = SharedVariables.loadSprite("graphics/cargo.png", SharedVariables.gameBackgroundRatio)
-        cargo.setCenterX(1672f)
-        cargo.setCenterY(610f)
-
         redButton = SetButton(DevicesData.redPath, DevicesData.redRatio)
         redButton.relocateCentre(DevicesData.redX, DevicesData.redY)
-
         devices = DevicesData.getDevices()
         tools = ToolsData.getTools()
-
         phText = TextIsland(Gdx.files.internal("planet_0/story.json"), SharedVariables.planets[0].second)
         TextIslandTexts().also {
             it.setStuff(phText.getCurrentLine(), 532f, 433f, 835f, 140f)
@@ -418,7 +361,6 @@ class GameScreen: Screen() {
         cargoBay = CargoBay()
         rocketAnimation.lateInitializer(0.1f, TextureAtlas(Gdx.files.internal(SharedVariables.rocketAnimationPath)).regions)
         rocketAnimation.animationGo()
-
         timer.go()
     }
 }
