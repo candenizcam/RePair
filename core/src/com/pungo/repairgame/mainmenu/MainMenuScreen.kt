@@ -7,6 +7,7 @@ import com.pungo.repairgame.*
 import java.util.*
 import java.util.Timer
 import kotlin.concurrent.schedule
+import kotlin.system.exitProcess
 
 class MainMenuScreen: Screen() {
     private lateinit var mainSprite: Sprite
@@ -102,7 +103,9 @@ class MainMenuScreen: Screen() {
             }
             continueButton.status == ButtonStatus.DOWN -> {
                 continueButton.status = ButtonStatus.UP
-
+                MidiPlayer.release()
+                Gdx.app.exit()
+                exitProcess(0)
             }
             optionsButton.status == ButtonStatus.DOWN -> {
                 optionsButton.status = ButtonStatus.UP
