@@ -102,9 +102,11 @@ class MainMenuScreen: Screen() {
             }
             continueButton.status == ButtonStatus.DOWN -> {
                 continueButton.status = ButtonStatus.UP
+
             }
             optionsButton.status == ButtonStatus.DOWN -> {
                 optionsButton.status = ButtonStatus.UP
+                SharedVariables.activeScreen = SharedVariables.creditsScreen
             }
         }
     }

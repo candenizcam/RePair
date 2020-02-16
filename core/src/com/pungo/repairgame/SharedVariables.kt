@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.Pixmap
 import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.Sprite
+import com.pungo.repairgame.creditsscreen.CreditsScreen
 import com.pungo.repairgame.ending.EndingScreen
 import com.pungo.repairgame.gamescreen.GameScreen
 import com.pungo.repairgame.loadingscreen.LoadingScreen
@@ -24,6 +25,9 @@ object SharedVariables{
     const val gameBackgroundPath = "graphics/game_placeholder.png"
     const val monitorPath = "graphics/space_holder.png"
     const val monitorFramePath = "graphics/monitor_frame.png"
+    const val creditsPath = "graphics/credits/background.png"
+    const val creditsAnimPath = "gifs/credits_animation.atlas"
+    const val creditsRatio = 1.0
     const val rocketAnimationPath = "gifs/rocket_animation.atlas"
     const val fontAddress = "fonts/PTMono-Regular.ttf"
 
@@ -45,6 +49,7 @@ object SharedVariables{
     var mainMenuScreen = MainMenuScreen()
     var gameScreen = GameScreen()
     var endingScreen = EndingScreen()
+    var creditsScreen = CreditsScreen()
     var activeScreen: Screen = loadingScreen
     var mouse = MouseManager()
 
