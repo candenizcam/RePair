@@ -38,6 +38,7 @@ class GameScreen: Screen() {
         it.relocateCentre(SharedVariables.mainWidth/2f,SharedVariables.mainHeight/2f)
     }
 
+    //region overrides
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
         bigMonitor.draw(batch)
@@ -152,6 +153,121 @@ class GameScreen: Screen() {
         redButton.status = ButtonStatus.UP
     }
 
+    override fun loopAction() {
+        if(countdownTimer.running){
+            if(countdownTimer.done()){
+                if(countdownIndex==countdownIndexLimit){
+                    texts[0].setStuff("")
+                    sfxLaunch.play(SharedVariables.sfxVolume * 2)
+                    rocketAnimation.animationGo()
+                    rocketAnimCalled = true
+
+                    countdownTimer.running = false
+                    countdownIndex = -1
+                    // bigMonitor.changeMonitor("graphics/spaceview.png")
+                }
+                else{
+                    countdownIndex++
+                    bigMonitor.changeMonitor(countdownList[countdownIndex])
+                    chosenOption = -1
+                    countdownTimer.go()
+                }
+            }
+        }
+        if(rocketAnimation.isDone() && rocketAnimCalled){
+            bigMonitor.changeMonitor(countdownList[4])
+            rocketAnimCalled = false
+            travelTimer.go()
+            travelTimer.running = true
+        }
+
+        if (travelTimer.running) {
+            devices.forEach {
+                if(it.checkTimer() && !patrolFlag){
+                    patrolFlag = true
+                }
+            }
+            if (travelTimer.done()) {
+                travelTimer.running = false
+                changePlanet()
+            } else if ((travelTimer.timeLeft()>1000)&&(timer.done())){
+                if (diceThrowingFunctionThatThrowsBetweenZeroAndTenInsteadOfItBeingAVariable()) {
+                    breakShip()
+                }
+                timer.go()
+            }
+        }
+
+        tools.forEach {
+            if(it.status!= ToolStatus.INACTIVE){
+                if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.getSprite())) {
+                    it.status = ToolStatus.GLOW
+                } else {
+                    it.status = ToolStatus.IDLE
+                }
+            }
+        }
+        if(texts[0].revealed){
+            sfxBeep.stop()
+        }
+        else{
+            sfxBeep.play(SharedVariables.sfxVolume)
+        }
+
+        for (k in 1..3){
+            texts[k].hovered=false
+        }
+
+        for (k in 1..3) {
+            if (texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())){
+                texts[k].hovered = true
+                break
+            }
+        }
+    }
+
+    override fun lateInitializer() {
+        mainSprite = SharedVariables.loadSprite(SharedVariables.gameBackgroundPath, SharedVariables.gameBackgroundRatio)
+        mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
+        mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
+        redButton = SetButton(DevicesData.redPath, DevicesData.redRatio)
+        redButton.relocateCentre(DevicesData.redX, DevicesData.redY)
+        devices = DevicesData.getDevices()
+        tools = ToolsData.getTools()
+        phText = TextIsland(Gdx.files.internal("planet_0/story.json"), SharedVariables.planets[0].second)
+        TextIslandTexts().also {
+            it.setStuff(phText.getCurrentLine(), 532f, 433f, 835f, 140f)
+            texts.add(it)
+        }
+        phText.getCurrentChoices().let{
+            TextIslandTexts().apply {
+                setStuff(it[0],250f,250f,1250f,65f)
+                texts.add(this)
+            }
+            TextIslandTexts().apply {
+                setStuff(it[1],250f,185f,1250f,65f)
+                texts.add(this)
+            }
+            TextIslandTexts().apply {
+                setStuff(it[2],250f,120f,1250f,65f)
+                texts.add(this)
+            }
+        }
+        TextIslandTexts().also {
+            it.setStuff("", 250f, 0f, 1250f,65f)
+            texts.add(it)
+        }
+        bigMonitor = BigMonitor().apply{
+            changeMonitor("graphics/planets/p0.png")
+        }
+        cargoBay = CargoBay()
+        rocketAnimation.lateInitializer(0.1f, TextureAtlas(Gdx.files.internal(SharedVariables.rocketAnimationPath)).regions)
+        rocketAnimation.animationGo()
+        timer.go()
+    }
+
+    //endregion
+
     private fun updateIslandText() {
         texts[0].setStuff(phText.getCurrentLine())
         texts[0].letterRevealReset()
@@ -210,79 +326,6 @@ class GameScreen: Screen() {
         }
     }
 
-    override fun loopAction() {
-        if(countdownTimer.running){
-            if(countdownTimer.done()){
-                if(countdownIndex==countdownIndexLimit){
-                    texts[0].setStuff("")
-                    sfxLaunch.play(SharedVariables.sfxVolume * 2)
-                    rocketAnimation.animationGo()
-                    rocketAnimCalled = true
-
-                    countdownTimer.running = false
-                    countdownIndex = -1
-                    // bigMonitor.changeMonitor("graphics/spaceview.png")
-                }
-                else{
-                    countdownIndex++
-                    bigMonitor.changeMonitor(countdownList[countdownIndex])
-                    chosenOption = -1
-                    countdownTimer.go()
-                }
-            }
-        }
-        if(rocketAnimation.isDone() && rocketAnimCalled){
-            bigMonitor.changeMonitor(countdownList[4])
-            rocketAnimCalled = false
-            travelTimer.go()
-            travelTimer.running = true
-        }
-
-        if (travelTimer.running) {
-            devices.forEach {
-               if(it.checkTimer() && !patrolFlag){
-                   patrolFlag = true
-               }
-            }
-            if (travelTimer.done()) {
-                travelTimer.running = false
-                changePlanet()
-            } else if ((travelTimer.timeLeft()>1000)&&(timer.done())){
-                if (diceThrowingFunctionThatThrowsBetweenZeroAndTenInsteadOfItBeingAVariable()) {
-                    breakShip()
-                }
-                timer.go()
-            }
-        }
-
-        tools.forEach {
-            if(it.status!= ToolStatus.INACTIVE){
-                if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.getSprite())) {
-                    it.status = ToolStatus.GLOW
-                } else {
-                    it.status = ToolStatus.IDLE
-                }
-            }
-        }
-        if(texts[0].revealed){
-            sfxBeep.stop()
-        }
-        else{
-            sfxBeep.play(SharedVariables.sfxVolume)
-        }
-
-        for (k in 1..3){
-            texts[k].hovered=false
-        }
-
-        for (k in 1..3) {
-            if (texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())){
-                texts[k].hovered = true
-                break
-            }
-        }
-    }
-
     private fun changePlanet() {
         when (SharedVariables.planetIndex) {
             0 -> {
@@ -335,43 +378,4 @@ class GameScreen: Screen() {
         updateIslandText()
     }
 
-    override fun lateInitializer() {
-        mainSprite = SharedVariables.loadSprite(SharedVariables.gameBackgroundPath, SharedVariables.gameBackgroundRatio)
-        mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
-        mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
-        redButton = SetButton(DevicesData.redPath, DevicesData.redRatio)
-        redButton.relocateCentre(DevicesData.redX, DevicesData.redY)
-        devices = DevicesData.getDevices()
-        tools = ToolsData.getTools()
-        phText = TextIsland(Gdx.files.internal("planet_0/story.json"), SharedVariables.planets[0].second)
-        TextIslandTexts().also {
-            it.setStuff(phText.getCurrentLine(), 532f, 433f, 835f, 140f)
-            texts.add(it)
-        }
-        phText.getCurrentChoices().let{
-            TextIslandTexts().apply {
-                setStuff(it[0],250f,250f,1250f,65f)
-                texts.add(this)
-            }
-            TextIslandTexts().apply {
-                setStuff(it[1],250f,185f,1250f,65f)
-                texts.add(this)
-            }
-            TextIslandTexts().apply {
-                setStuff(it[2],250f,120f,1250f,65f)
-                texts.add(this)
-            }
-        }
-        TextIslandTexts().also {
-            it.setStuff("", 250f, 0f, 1250f,65f)
-            texts.add(it)
-        }
-        bigMonitor = BigMonitor().apply{
-            changeMonitor("graphics/planets/p0.png")
-        }
-        cargoBay = CargoBay()
-        rocketAnimation.lateInitializer(0.1f, TextureAtlas(Gdx.files.internal(SharedVariables.rocketAnimationPath)).regions)
-        rocketAnimation.animationGo()
-        timer.go()
-    }
 }

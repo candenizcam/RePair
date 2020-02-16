@@ -115,8 +115,4 @@ class MainMenuScreen: Screen() {
     override fun loopAction() {
 
     }
-
-
-
-
 }
