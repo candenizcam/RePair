@@ -5,8 +5,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.SharedVariables
 
 class BigMonitor {
-    var monitorSprite : Sprite
-    var monitorSideSprite : Sprite
+    private var monitorSprite : Sprite
+    private var monitorSideSprite : Sprite
 
     init{
         monitorSprite = SharedVariables.loadSprite(SharedVariables.monitorPath, SharedVariables.monitorRatio)

@@ -1,6 +1,5 @@
 package com.pungo.repairgame.gamescreen
 
-import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.SharedVariables
 

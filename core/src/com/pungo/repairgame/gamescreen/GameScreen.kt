@@ -100,7 +100,7 @@ class GameScreen: Screen() {
     }
 
     override fun released() {
-        tools.forEachIndexed { index, it ->
+        tools.forEachIndexed { _, it ->
             if (it.flying) {
                 it.flying = false
                 if (!phText.sceneNotOver()) {
@@ -241,9 +241,9 @@ class GameScreen: Screen() {
 
         if (travelTimer.running) {
             devices.forEach {
-               if(it.checkTimer() && !patrolFlag){
-                   patrolFlag = true
-               }
+                if(it.checkTimer() && !patrolFlag){
+                    patrolFlag = true
+                }
             }
             if (travelTimer.done()) {
                 travelTimer.running = false

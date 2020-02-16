@@ -6,12 +6,15 @@ import com.pungo.repairgame.Screen
 import com.pungo.repairgame.SharedVariables
 import com.pungo.repairgame.SharedVariables.loadSprite
 import com.pungo.repairgame.Timer
+import java.lang.Long.max
 
-class LoadingScreen() : Screen() {
+class LoadingScreen: Screen() {
     private lateinit var bgSprite: Sprite
     private lateinit var menuSprite: Sprite
     private var menuVisible = false
     lateinit var timer: Timer
+    private var loaded = false
+    private var loading_time = 0L
 
     override fun lateInitializer() {
         bgSprite = loadSprite(SharedVariables.companyLogoPath, SharedVariables.companyLogoRatio)
@@ -31,11 +34,23 @@ class LoadingScreen() : Screen() {
                 bgSprite.setAlpha(timer.now().toFloat() / 1000)
             }
             timer.now() < 2000 -> {
+
+                if (!loaded){
+                    loading_time = timer.now()
+                    SharedVariables.mainMenuScreen.lateInitializer()
+                    SharedVariables.gameScreen.lateInitializer()
+                    SharedVariables.endingScreen.lateInitializer()
+                    SharedVariables.creditsScreen.lateInitializer()
+                    SharedVariables.optionsScreen.lateInitializer()
+                    loading_time = timer.now()-loading_time
+                    loaded = true
+                }
                 bgSprite.setAlpha(1f)
+                loading_time = max(loading_time,1000L)
             }
-            timer.now() < 3000 -> {
+            timer.now() < (2000+loading_time) -> {
                 menuVisible = true
-                bgSprite.setAlpha(3f - timer.now().toFloat() / 1000)
+                bgSprite.setAlpha(2f + loading_time/1000f - timer.now().toFloat() / 1000)
             }
             else -> {
                 SharedVariables.activeScreen = SharedVariables.mainMenuScreen

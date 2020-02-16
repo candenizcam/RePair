@@ -9,6 +9,7 @@ import com.pungo.repairgame.ending.EndingScreen
 import com.pungo.repairgame.gamescreen.GameScreen
 import com.pungo.repairgame.loadingscreen.LoadingScreen
 import com.pungo.repairgame.mainmenu.MainMenuScreen
+import com.pungo.repairgame.optionsscreen.OptionsScreen
 
 
 object  SharedVariables{
@@ -30,10 +31,8 @@ object  SharedVariables{
     const val creditsRatio = 1.0
     const val rocketAnimationPath = "gifs/rocket_animation.atlas"
     const val fontAddress = "fonts/PTMono-Regular.ttf"
-
     const val monitorCentreX = 960f
     const val monitorCentreY = 786f
-
     var sfxVolume = 1.0f
     var kill = false
     var planets = MutableList(3) { Pair("x", 0) }
@@ -50,6 +49,7 @@ object  SharedVariables{
     var gameScreen = GameScreen()
     var endingScreen = EndingScreen()
     var creditsScreen = CreditsScreen()
+    var optionsScreen = OptionsScreen()
     var activeScreen: Screen = loadingScreen
     var mouse = MouseManager()
 

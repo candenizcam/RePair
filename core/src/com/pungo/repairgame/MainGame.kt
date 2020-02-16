@@ -12,18 +12,15 @@ import kotlin.system.exitProcess
 class MainGame : ApplicationAdapter() {
     private lateinit var batch: SpriteBatch
     private var musicPlaying = false
-    lateinit var camera: OrthographicCamera
-    lateinit var viewport: FitViewport
+    private lateinit var camera: OrthographicCamera
+    private lateinit var viewport: FitViewport
 
 
     override fun create() {
         camera = OrthographicCamera()
         viewport = FitViewport(SharedVariables.mainWidth.toFloat(), SharedVariables.mainHeight.toFloat(), camera)
         SharedVariables.loadingScreen.lateInitializer()
-        SharedVariables.mainMenuScreen.lateInitializer()
-        SharedVariables.gameScreen.lateInitializer()
-        SharedVariables.endingScreen.lateInitializer()
-        SharedVariables.creditsScreen.lateInitializer()
+
         batch = SpriteBatch()
         MidiPlayer.open("sound/OST1.mid")
         MidiPlayer.setLooping(true)

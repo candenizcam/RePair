@@ -22,7 +22,7 @@ class EndingScreen: Screen() {
     }
 
     override fun released() {
-        SharedVariables.kill = true
+        SharedVariables.activeScreen = SharedVariables.creditsScreen
     }
 
     override fun loopAction() {
