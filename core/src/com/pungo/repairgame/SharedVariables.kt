@@ -31,10 +31,8 @@ object SharedVariables{
     const val creditsRatio = 1.0
     const val rocketAnimationPath = "gifs/rocket_animation.atlas"
     const val fontAddress = "fonts/PTMono-Regular.ttf"
-
     const val monitorCentreX = 960f
     const val monitorCentreY = 786f
-
     var sfxVolume = 1.0f
     var kill = false
     var planets = MutableList(3) { Pair("x", 0) }

@@ -20,11 +20,7 @@ class MainGame : ApplicationAdapter() {
         camera = OrthographicCamera()
         viewport = FitViewport(SharedVariables.mainWidth.toFloat(), SharedVariables.mainHeight.toFloat(), camera)
         SharedVariables.loadingScreen.lateInitializer()
-        SharedVariables.mainMenuScreen.lateInitializer()
-        SharedVariables.gameScreen.lateInitializer()
-        SharedVariables.endingScreen.lateInitializer()
-        SharedVariables.creditsScreen.lateInitializer()
-        SharedVariables.optionsScreen.lateInitializer()
+
         batch = SpriteBatch()
         MidiPlayer.open("sound/OST1.mid")
         MidiPlayer.setLooping(true)
