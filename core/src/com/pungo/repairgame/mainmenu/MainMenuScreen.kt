@@ -70,8 +70,6 @@ class MainMenuScreen: Screen() {
                     }
 
                 }
-
-
             }
         }
     }
