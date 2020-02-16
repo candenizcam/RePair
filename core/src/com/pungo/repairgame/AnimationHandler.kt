@@ -5,8 +5,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.g2d.TextureAtlas
 import com.badlogic.gdx.utils.Array
 
-class AnimationHandler(){
-    var animationLooping = false
+class AnimationHandler{
+    private var animationLooping = false
     private lateinit var animation : Animation<TextureAtlas.AtlasRegion>
     private var animTimer = Timer(0)
     private var animationDone = true

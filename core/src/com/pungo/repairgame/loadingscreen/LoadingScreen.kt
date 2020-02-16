@@ -7,7 +7,7 @@ import com.pungo.repairgame.SharedVariables
 import com.pungo.repairgame.SharedVariables.loadSprite
 import com.pungo.repairgame.Timer
 
-class LoadingScreen() : Screen() {
+class LoadingScreen: Screen() {
     private lateinit var bgSprite: Sprite
     private lateinit var menuSprite: Sprite
     private var menuVisible = false

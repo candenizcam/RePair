@@ -23,8 +23,8 @@ class TextIslandTexts {
     var left = 0f
     var width = 0f
     var height = 0f
-    var modifiedWidth = 0f
-    var modifiedHeight = 0f
+    private var modifiedWidth = 0f
+    private var modifiedHeight = 0f
     var revealed = false
     var hovered = false //true when mouse is hovering above
     var pressing = false
@@ -96,8 +96,8 @@ class TextIslandTexts {
     }
 
     fun contains(x: Float, y: Float): Boolean {
-        var outWidth = 0f
-        var outHeight = 0f
+        var outWidth: Float
+        var outHeight: Float
         GlyphLayout().let{
             it.setText(font, text,fontColour,width,-1,true)
             outWidth = it.width

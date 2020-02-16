@@ -100,13 +100,13 @@ class GameScreen: Screen() {
     }
 
     override fun released() {
-        tools.forEachIndexed { index, it ->
+        tools.forEachIndexed { _, it ->
             if (it.flying) {
                 it.flying = false
                 if (!phText.sceneNotOver()) {
                     devices.forEach { it2 ->
                         if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it2.getSprite())) {
-                            var fixed = it2.status==it.fixing
+                            val fixed = it2.status==it.fixing
                             if (fixed){
                                 it.sfx.play(SharedVariables.sfxVolume)
                                 it2.breakTimer.running = false

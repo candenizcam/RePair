@@ -4,7 +4,6 @@ import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.*
-import java.util.*
 import java.util.Timer
 import kotlin.concurrent.schedule
 import kotlin.system.exitProcess
@@ -109,7 +108,6 @@ class MainMenuScreen: Screen() {
             }
             optionsButton.status == ButtonStatus.DOWN -> {
                 optionsButton.status = ButtonStatus.UP
-                SharedVariables.activeScreen = SharedVariables.creditsScreen
             }
         }
     }
