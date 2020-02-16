@@ -8,14 +8,14 @@ import com.pungo.repairgame.*
 
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite
-    private lateinit var cargo : Sprite
+
     private lateinit var phText: TextIsland
     private lateinit var bigMonitor: BigMonitor
     private lateinit var redButton: SetButton
     private lateinit var cargoBay: CargoBay
     private var devices = listOf<SimpleDevice>()
     private var tools = listOf<SimpleTool>()
-    private var items = mutableListOf<String>()
+
     private var texts = mutableListOf<TextIslandTexts>()
     private val travelTimer = Timer(20000)                  // travel timer
     private val timer = Timer(1000)                         // breakdown timer
@@ -47,7 +47,7 @@ class GameScreen: Screen() {
             it.draw(batch)
         }
         redButton.draw(batch)
-        cargoBay.draw(batch, items.toList())
+        cargoBay.draw(batch)
         texts[0].draw(batch, true)
         if(chosenOption!=-1 && !texts[0].revealed){
             texts[4].draw(batch)
@@ -145,17 +145,17 @@ class GameScreen: Screen() {
             }
             else if(SharedVariables.planetIndex==2){
                 if(phText.getTag() == "Good"){
-                    items.add("stacey")
+                    cargoBay.addToItems("stacey")
                 }
             }
             else if(SharedVariables.planetIndex==3){
                 if(phText.getTag() == "Good"){
-                    items.add("dessert")
+                    cargoBay.addToItems("dessert")
                 }
             }
             else if(SharedVariables.planetIndex==4){
                 if(phText.getTag() == "Good"){
-                    items.add("flower")
+                    cargoBay.addToItems("flower")
                 }
             }
             if(redButton.status == ButtonStatus.DOWN) {
@@ -313,7 +313,7 @@ class GameScreen: Screen() {
             }
             3 -> {
                 if(phText.getTag() == "Good"){
-                    items.add("dessert")
+                    cargoBay.addToItems("dessert")
                 }
                 when {
                     devices[1].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(174) //speaker
@@ -324,32 +324,10 @@ class GameScreen: Screen() {
             }
             4 -> {
                 if(phText.getTag() == "Good"){
-                    items.add("flower")
+                    cargoBay.addToItems("flowers")
                 }
-                if (items.isEmpty()) {
-                    phText.getPlanetPassage(133)
-                    SharedVariables.endingScreen.badEnder()
-                } else if ("stacey" in items && "dessert" !in items && "flower" !in items) {
-                    phText.getPlanetPassage(134)
-                    SharedVariables.endingScreen.badEnder()
-                } else if ("stacey" !in items && "dessert" in items && "flower" in items) {
-                    phText.getPlanetPassage(135)
-                    SharedVariables.endingScreen.goodEnder()
-                } else if ("stacey" in items && "dessert" in items && "flower" in items) {
-                    phText.getPlanetPassage(136)
-                    SharedVariables.endingScreen.goodEnder()
-                } else if ("stacey" !in items && "dessert" in items && "flower" !in items) {
-                    phText.getPlanetPassage(208)
-                    SharedVariables.endingScreen.badEnder()
-                } else if ("stacey" !in items && "dessert" !in items && "flower" in items) {
-                    phText.getPlanetPassage(210)
-                    SharedVariables.endingScreen.badEnder()
-                } else if ("stacey" in items && "dessert" in items && "flower" !in items) {
-                    phText.getPlanetPassage(209)
-                    SharedVariables.endingScreen.goodEnder()
-                } else if ("stacey" in items && "dessert" !in items && "flower" in items) {
-                    phText.getPlanetPassage(207)
-                    SharedVariables.endingScreen.goodEnder()
+                cargoBay.endingTree().also{
+                    phText.getPlanetPassage(it)
                 }
                 bigMonitor.changeMonitor("graphics/planets/p5.png")
             }
@@ -362,11 +340,6 @@ class GameScreen: Screen() {
         mainSprite = SharedVariables.loadSprite(SharedVariables.gameBackgroundPath, SharedVariables.gameBackgroundRatio)
         mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
-
-        cargo = SharedVariables.loadSprite("graphics/cargo.png", SharedVariables.gameBackgroundRatio)
-        cargo.setCenterX(1672f)
-        cargo.setCenterY(610f)
-
         redButton = SetButton(DevicesData.redPath, DevicesData.redRatio)
         redButton.relocateCentre(DevicesData.redX, DevicesData.redY)
 
