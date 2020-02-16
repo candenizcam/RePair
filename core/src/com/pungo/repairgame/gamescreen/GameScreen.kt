@@ -169,7 +169,7 @@ class GameScreen: Screen() {
         texts[0].setStuff("")
     }
 
-    private fun zar(): Boolean {
+    private fun diceThrowingFunctionThatThrowsBetweenZeroAndTenInsteadOfItBeingAVariable(): Boolean {
         val rng = (0..10).random()
         if (rng < SharedVariables.planetIndex*2+2) return true
         return false
@@ -228,7 +228,7 @@ class GameScreen: Screen() {
                 travelTimer.running = false
                 changePlanet()
             } else if ((travelTimer.timeLeft()>1000)&&(timer.done())){
-                if (zar()) {
+                if (diceThrowingFunctionThatThrowsBetweenZeroAndTenInsteadOfItBeingAVariable()) {
                     breakShip()
                 }
                 timer.go()
@@ -251,8 +251,14 @@ class GameScreen: Screen() {
             sfxBeep.play(SharedVariables.sfxVolume)
         }
 
+        for (k in 1..3){
+            texts[k].hovered=false
+        }
         for (k in 1..3) {
-            texts[k].hovered = texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())
+            if (texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat())){
+                texts[k].hovered = true
+                break
+            }
         }
     }
 
