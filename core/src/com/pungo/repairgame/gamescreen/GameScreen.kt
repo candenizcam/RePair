@@ -3,6 +3,7 @@ package com.pungo.repairgame.gamescreen
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.badlogic.gdx.graphics.g2d.TextureAtlas
 import com.pungo.repairgame.*
 
 class GameScreen: Screen() {
@@ -30,10 +31,15 @@ class GameScreen: Screen() {
     private var countdownIndex = -1
     private var countdownIndexLimit = 3
     private val countdownList: List<String> = listOf("graphics/bigmonitor/three.png", "graphics/bigmonitor/two.png", "graphics/bigmonitor/one.png", "graphics/bigmonitor/go.png","graphics/bigmonitor/show&tell.png")
+    private var rocketAnimation = AnimationHandler().also{
+        it.relocateCentre(SharedVariables.mainWidth/2f,SharedVariables.mainHeight/2f)
+    }
+
 
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
         bigMonitor.draw(batch)
+        rocketAnimation.draw(batch)
         devices.forEach {
             it.draw(batch)
         }
@@ -49,6 +55,7 @@ class GameScreen: Screen() {
         if (texts[0].revealed && phText.sceneNotOver()) {
             for (k in 1..3) {texts[k].draw(batch)}
         }
+        rocketAnimation.draw(batch)
     }
 
     override fun firstPress() {
@@ -180,6 +187,7 @@ class GameScreen: Screen() {
     private fun redButton() {
         countdownTimer.go()
         countdownTimer.running = true
+        rocketAnimation.animationGo()
         texts[0].setStuff("")
     }
 
@@ -385,6 +393,8 @@ class GameScreen: Screen() {
             changeMonitor("graphics/planets/p0.png")
         }
         cargoBay = CargoBay()
+        rocketAnimation.lateInitializer(0.1f, TextureAtlas(Gdx.files.internal(SharedVariables.rocketAnimationPath)).regions)
+        rocketAnimation.animationGo()
 
         timer.go()
     }
