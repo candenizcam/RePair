@@ -1,0 +1,103 @@
+speaker.png
+size: 1750, 255
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+broken
+  rotate: false
+  xy: 0, 0
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: -1
+hot
+  rotate: false
+  xy: 350, 0
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: 1
+hot
+  rotate: false
+  xy: 700, 0
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: 2
+hot
+  rotate: false
+  xy: 1050, 0
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: 3
+hot
+  rotate: false
+  xy: 1400, 0
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: 4
+izel
+  rotate: false
+  xy: 0, 85
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: 1
+izel
+  rotate: false
+  xy: 350, 85
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: 2
+izel
+  rotate: false
+  xy: 700, 85
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: 3
+izel
+  rotate: false
+  xy: 1050, 85
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: 4
+working
+  rotate: false
+  xy: 1400, 85
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: -1
+stuck
+  rotate: false
+  xy: 0, 170
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: 1
+stuck
+  rotate: false
+  xy: 350, 170
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: 2
+stuck
+  rotate: false
+  xy: 700, 170
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: 3
+stuck
+  rotate: false
+  xy: 1050, 170
+  size: 350, 85
+  orig: 350, 85
+  offset: 0, 0
+  index: 4

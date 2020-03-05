@@ -29,7 +29,7 @@ object DevicesData {
             it.relocateCentre(micX,micY)
             theList.add(it)
         }
-        SimpleDevice(spePath, speRatio).also{
+        SimpleDevice(spePath, speRatio, true).also{
             it.relocateCentre(speX,speY)
             theList.add(it)
         }

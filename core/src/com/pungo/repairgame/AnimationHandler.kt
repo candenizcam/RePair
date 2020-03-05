@@ -38,11 +38,16 @@ class AnimationHandler{
         return animationDone
     }
 
-    fun draw(batch: SpriteBatch){
-        if (!hideWhenDone || !animationDone){
+    fun draw(batch: SpriteBatch, looping: Boolean=false){
+        if (looping){
             batch.draw(animation.getKeyFrame(animTimer.now()/1000f, animationLooping), centreX-width/2, centreY-height/2)
+        } else {
+            if (!hideWhenDone || !animationDone){
+                batch.draw(animation.getKeyFrame(animTimer.now()/1000f, animationLooping), centreX-width/2, centreY-height/2)
+            }
+            animationDone = animTimer.now()/1000f > animation.animationDuration
         }
-        animationDone = animTimer.now()/1000f > animation.animationDuration
+
     }
 
 }

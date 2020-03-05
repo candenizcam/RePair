@@ -2,40 +2,22 @@ package com.pungo.repairgame.gamescreen
 
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
-import com.pungo.repairgame.SharedVariables.loadSprite
 import com.pungo.repairgame.Timer
 
-class SimpleDevice(private val path: String, private val ratio: Float) {
-    private lateinit var normalSprite: Sprite
-    private lateinit var deadSprite: Sprite
-    private lateinit var brokenSprite: Sprite
-    private lateinit var hotSprite: Sprite
-    private lateinit var stuckSprite: Sprite
-    private lateinit var izelSprite: Sprite
-    private lateinit var chosenSprite: Sprite
+open class SimpleDevice(path: String,ratio: Float, gen2Graphics: Boolean = false) {
     private var centreX = 0f
     private var centreY = 0f
+    private var graphics : DeviceGraphics = if (gen2Graphics){
+        Gen2Graphics(path,ratio)
+    } else {
+        Gen1Graphics(path,ratio)
+    }
     var status = DeviceStatus.NORMAL
     val breakTimer = Timer(5000)
 
-    init{
-        loadImage()
-    }
-
     fun getSprite(): Sprite {
-        return normalSprite
+        return graphics.getNormalSprite()
     }
-
-    private fun loadImage(){
-        normalSprite = loadSprite("$path/normal.png", ratio.toDouble())
-        deadSprite = loadSprite("$path/dead.png", ratio.toDouble())
-        brokenSprite = loadSprite("$path/broken.png", ratio.toDouble())
-        hotSprite = loadSprite("$path/hot.png", ratio.toDouble())
-        stuckSprite = loadSprite("$path/stuck.png", ratio.toDouble())
-        izelSprite = loadSprite("$path/izel.png", ratio.toDouble())
-        chosenSprite = normalSprite
-    }
-
 
     fun relocateCentre(x: Float, y: Float){
         centreX = x
@@ -59,27 +41,17 @@ class SimpleDevice(private val path: String, private val ratio: Float) {
         return false
     }
 
-    private fun recentreBoys(){
-        normalSprite.setCenter(centreX,centreY)
-        hotSprite.setCenter(centreX,centreY)
-        brokenSprite.setCenter(centreX,centreY)
-        stuckSprite.setCenter(centreX,centreY)
-        izelSprite.setCenter(centreX,centreY)
-        deadSprite.setCenter(centreX,centreY)
-    }
-
     fun draw(batch: SpriteBatch){
-        recentreBoys()
-
+        graphics.recentre(centreX,centreY)
         when(status){
-            DeviceStatus.DEAD -> deadSprite.draw(batch)
-            else -> normalSprite.draw(batch)
+            DeviceStatus.DEAD -> graphics.drawDead(batch)
+            else -> graphics.drawNormal(batch)
         }
         when(status){
-            DeviceStatus.HOT -> hotSprite.draw(batch)
-            DeviceStatus.BROKEN -> brokenSprite.draw(batch)
-            DeviceStatus.STUCK -> stuckSprite.draw(batch)
-            DeviceStatus.SHORT -> izelSprite.draw(batch)
+            DeviceStatus.HOT -> graphics.drawHot(batch)
+            DeviceStatus.BROKEN -> graphics.drawBroken(batch)
+            DeviceStatus.STUCK -> graphics.drawStuck(batch)
+            DeviceStatus.SHORT -> graphics.drawShort(batch)
             else -> {}
         }
     }
