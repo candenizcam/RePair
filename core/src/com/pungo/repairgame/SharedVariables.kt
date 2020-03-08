@@ -15,7 +15,7 @@ import com.pungo.repairgame.optionsscreen.OptionsScreen
 object  SharedVariables{
     const val mainWidth = 1920
     const val mainHeight = 1080
-    const val companyLogoRatio = 0.5 //1 is fullsize, 2 is double size 0.5 is half size... MATH...
+    const val companyLogoRatio = 1.0 //1 is fullsize, 2 is double size 0.5 is half size... MATH...
     const val menuBackgroundRatio = 0.5
     const val gameBackgroundRatio = 0.25
     const val monitorRatio = 1.0
