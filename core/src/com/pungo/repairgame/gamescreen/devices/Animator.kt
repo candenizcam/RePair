@@ -38,11 +38,14 @@ class Animator(private val images: List<Sprite>, private var looping: Boolean){
     }
 
     fun draw(batch: SpriteBatch,increment: Float=0f){
-        if (looping){
-            loopDraw(batch,increment)
-        } else {
-            singleDraw(batch,increment)
+        if (images.isNotEmpty()){
+            if (looping){
+                loopDraw(batch,increment)
+            } else {
+                singleDraw(batch,increment)
+            }
         }
+
     }
 
     fun getSprite(): Sprite {

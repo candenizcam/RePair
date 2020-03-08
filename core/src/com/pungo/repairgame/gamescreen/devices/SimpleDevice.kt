@@ -60,5 +60,6 @@ open class SimpleDevice(path: String,ratio: Float, gen2Graphics: Boolean = false
             DeviceStatus.SHORT -> graphics.drawShort(batch)
             else -> {}
         }
+        graphics.drawOver(batch)
     }
 }

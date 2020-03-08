@@ -1,23 +1,34 @@
 package com.pungo.repairgame.gamescreen
 
+import com.badlogic.gdx.Gdx
+import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.badlogic.gdx.graphics.g2d.TextureAtlas
 import com.pungo.repairgame.SharedVariables
 
 class CargoBay {
-    private var staceySprite = SharedVariables.loadSprite("graphics/cargo/stacey.png",1.0).also{
-        it.setCenter(1732f,610f)
-    }
-    private var sweetSprite =  SharedVariables.loadSprite("graphics/cargo/sweet.png",1.0).also{
-        it.setCenter(1732f,610f)
-    }
-    private var flowerSprite =  SharedVariables.loadSprite("graphics/cargo/flower.png",1.0).also{
-        it.setCenter(1732f,610f)
-    }
-    private var bay = SharedVariables.loadSprite("graphics/cargo.png", SharedVariables.gameBackgroundRatio).apply{
-        setCenterX(1672f)
-        setCenterY(610f)
-    }
+    private var baySprite : Sprite
+    private var staceySprite: Sprite
+    private var sweetSprite: Sprite
+    private var flowerSprite: Sprite
     private var items = mutableListOf<String>()
+    init {
+        var atlas = TextureAtlas(Gdx.files.internal("graphics/cargo/cargo.atlas"))
+        staceySprite = atlas.createSprite("stacey").also{
+            it.setCenter(1672f,610f)
+        }
+        sweetSprite = atlas.createSprite("sweet").also{
+            it.setCenter(1672f,610f)
+        }
+        flowerSprite = atlas.createSprite("flower").also{
+            it.setCenter(1672f,610f)
+        }
+        baySprite = atlas.createSprite("normal").also{
+            it.setCenter(1672f,610f)
+        }
+
+    }
+
 
 
     fun addToItems(s: String){
@@ -59,7 +70,7 @@ class CargoBay {
 
 
     fun draw(batch: SpriteBatch){
-        bay.draw(batch)
+        baySprite.draw(batch)
         val displayList = items.toList()
         if ("stacey" in displayList) staceySprite.draw(batch)
         if ("dessert" in displayList) sweetSprite.draw(batch)

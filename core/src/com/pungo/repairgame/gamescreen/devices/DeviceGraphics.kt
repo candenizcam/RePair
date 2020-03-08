@@ -35,4 +35,6 @@ open class DeviceGraphics() {
     open fun drawStuck(batch: SpriteBatch){}
 
     open fun drawShort(batch: SpriteBatch){}
+
+    open fun drawOver(batch: SpriteBatch){}
 }

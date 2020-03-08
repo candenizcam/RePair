@@ -13,6 +13,7 @@ class Gen2Graphics(path: String, ratio: Float) : DeviceGraphics() {
     private var brokenAnimation: Animator
     private var normalAnimation: Animator
     private var deadAnimation: Animator
+    private var overAnimation: Animator
 
     init {
         var atlas = TextureAtlas(Gdx.files.internal("$path/device.atlas"))
@@ -24,6 +25,7 @@ class Gen2Graphics(path: String, ratio: Float) : DeviceGraphics() {
         var w = atlas.createSprite("working")
         w.color = Color.DARK_GRAY
         deadAnimation = Animator(listOf(w),false)
+        overAnimation = Animator(atlas.createSprites("overframe").toList(),false)
     }
 
     override fun getNormalSprite(): Sprite {
@@ -37,6 +39,7 @@ class Gen2Graphics(path: String, ratio: Float) : DeviceGraphics() {
         izelAnimation.reset()
         brokenAnimation.reset()
         deadAnimation.reset()
+        overAnimation.reset()
     }
 
     override fun recentre(centreX: Float, centreY: Float){
@@ -46,6 +49,7 @@ class Gen2Graphics(path: String, ratio: Float) : DeviceGraphics() {
         izelAnimation.recentre(centreX,centreY)
         brokenAnimation.recentre(centreX,centreY)
         deadAnimation.recentre(centreX,centreY)
+        overAnimation.recentre(centreX,centreY)
     }
 
 
@@ -71,5 +75,9 @@ class Gen2Graphics(path: String, ratio: Float) : DeviceGraphics() {
 
     override fun drawDead(batch: SpriteBatch){
         deadAnimation.draw(batch,0f)
+    }
+
+    override fun drawOver(batch: SpriteBatch){
+        overAnimation.draw(batch,increment = 0f)
     }
 }

@@ -17,7 +17,7 @@ broken
   orig: 904, 200
   offset: 0, 0
   index: -1
-frame
+overframe
   rotate: false
   xy: 0, 400
   size: 904, 200
