@@ -5,6 +5,8 @@ import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.g2d.TextureAtlas
 import com.pungo.repairgame.*
+import com.pungo.repairgame.gamescreen.devices.DevicesData
+import com.pungo.repairgame.gamescreen.devices.SimpleDevice
 
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite

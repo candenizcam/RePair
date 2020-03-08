@@ -1,8 +1,9 @@
-package com.pungo.repairgame.gamescreen
+package com.pungo.repairgame.gamescreen.devices
 
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.SharedVariables
+import com.pungo.repairgame.gamescreen.devices.DeviceGraphics
 
 class Gen1Graphics(path: String, ratio: Float) : DeviceGraphics() {
     private var normalSprite: Sprite = SharedVariables.loadSprite("$path/normal.png", ratio.toDouble())

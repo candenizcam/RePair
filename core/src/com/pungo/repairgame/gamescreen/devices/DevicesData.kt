@@ -1,4 +1,4 @@
-package com.pungo.repairgame.gamescreen
+package com.pungo.repairgame.gamescreen.devices
 
 object DevicesData {
     const val redPath = "graphics/devices/redbutton"
@@ -25,20 +25,20 @@ object DevicesData {
 
     fun getDevices(): List<SimpleDevice>{
         val theList = mutableListOf<SimpleDevice>()
-        SimpleDevice(micPath, micRatio).also{
-            it.relocateCentre(micX,micY)
+        SimpleDevice(micPath, micRatio,true).also{
+            it.relocateCentre(micX, micY)
             theList.add(it)
         }
         SimpleDevice(spePath, speRatio, true).also{
-            it.relocateCentre(speX,speY)
+            it.relocateCentre(speX, speY)
             theList.add(it)
         }
-        SimpleDevice(disPath, disRatio).also{
-            it.relocateCentre(disX,disY)
+        SimpleDevice(disPath, disRatio,true).also{
+            it.relocateCentre(disX, disY)
             theList.add(it)
         }
-        SimpleDevice(traPath,traRatio).also{
-            it.relocateCentre(traX,traY)
+        SimpleDevice(traPath, traRatio, gen2Graphics = true).also{
+            it.relocateCentre(traX, traY)
             theList.add(it)
         }
         return theList.toList()

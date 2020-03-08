@@ -1,4 +1,4 @@
-package com.pungo.repairgame.gamescreen
+package com.pungo.repairgame.gamescreen.devices
 
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
@@ -16,6 +16,10 @@ open class DeviceGraphics() {
      */
     open fun getNormalSprite(): Sprite {
         return Sprite()
+    }
+
+    open fun reset(){
+
     }
 
     open fun recentre(centreX: Float,centreY: Float){}
