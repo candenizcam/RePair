@@ -41,6 +41,4 @@ class EndingScreen: Screen() {
         naySprite = SharedVariables.loadSprite("graphics/bad_end.png",0.5)
         activeSprite = yaySprite
     }
-
-
 }

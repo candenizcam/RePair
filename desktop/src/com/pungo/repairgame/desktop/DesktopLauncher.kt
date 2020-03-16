@@ -6,7 +6,8 @@ import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration
 import com.pungo.repairgame.MainGame
 import com.pungo.repairgame.MidiPlayer
 import com.pungo.repairgame.SharedVariables
-import kotlin.system.exitProcess
+import org.lwjgl.Sys
+
 
 object DesktopLauncher {
     @JvmStatic
@@ -22,12 +23,14 @@ object DesktopLauncher {
         //config.fullscreen = true;
         config.forceExit = true
         config.addIcon("graphics/Icon32.png", com.badlogic.gdx.Files.FileType.Internal)
-        try {
-            LwjglApplication(MainGame(), config)
-        } catch (ex: Exception) {
+
+        Thread.setDefaultUncaughtExceptionHandler { _, ex ->
+            System.err.println("Critical Failure: " + ex.localizedMessage)
+            Sys.alert("Critical Failure", ex.localizedMessage)
             MidiPlayer.release()
             Gdx.app.exit()
-            exitProcess(0)
         }
+
+        LwjglApplication(MainGame(), config)
     }
 }
