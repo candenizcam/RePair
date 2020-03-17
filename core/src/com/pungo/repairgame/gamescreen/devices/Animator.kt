@@ -33,7 +33,7 @@ class Animator(private val images: List<Sprite>, private var looping: Boolean){
             counter += increment
         } else {
             ended = true
-            images[-1].draw(batch)
+            images.last().draw(batch)
         }
     }
 
