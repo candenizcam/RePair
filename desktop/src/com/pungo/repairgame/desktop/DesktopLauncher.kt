@@ -4,7 +4,7 @@ import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration
 import com.pungo.repairgame.MainGame
-import com.pungo.repairgame.MidiPlayer
+import com.pungo.repairgame.MusicPlayer
 import com.pungo.repairgame.SharedVariables
 import org.lwjgl.Sys
 
@@ -27,7 +27,7 @@ object DesktopLauncher {
         Thread.setDefaultUncaughtExceptionHandler { _, ex ->
             System.err.println("Critical Failure: " + ex.localizedMessage)
             Sys.alert("Critical Failure", ex.localizedMessage)
-            MidiPlayer.release()
+            MusicPlayer.release()
             Gdx.app.exit()
         }
 

@@ -2,6 +2,7 @@ package com.pungo.repairgame.loadingscreen
 
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.pungo.repairgame.MusicPlayer
 import com.pungo.repairgame.Screen
 import com.pungo.repairgame.SharedVariables
 import com.pungo.repairgame.SharedVariables.loadSprite
@@ -54,6 +55,9 @@ class LoadingScreen: Screen() {
             }
             else -> {
                 SharedVariables.activeScreen = SharedVariables.mainMenuScreen
+                MusicPlayer.open("sound/OST1.wav")
+                MusicPlayer.setLooping(true)
+                MusicPlayer.play()
             }
         }
     }

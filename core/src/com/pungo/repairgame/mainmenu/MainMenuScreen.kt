@@ -65,10 +65,10 @@ class MainMenuScreen: Screen() {
                 muteButton.toggle().also {
                     if (it==0){
                         SharedVariables.sfxVolume = 1.0f
-                        MidiPlayer.mute(false)
+                        MusicPlayer.changeVolume(1.0f)
                     } else {
                         SharedVariables.sfxVolume = 0.0f
-                        MidiPlayer.mute(true)
+                        MusicPlayer.changeVolume(0.0f)
                     }
 
                 }
@@ -102,7 +102,7 @@ class MainMenuScreen: Screen() {
             }
             exitButton.status == ButtonStatus.DOWN -> {
                 exitButton.status = ButtonStatus.UP
-                MidiPlayer.release()
+                MusicPlayer.release()
                 Gdx.app.exit()
                 exitProcess(0)
             }

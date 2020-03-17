@@ -15,15 +15,12 @@ class MainGame : ApplicationAdapter() {
     private lateinit var camera: OrthographicCamera
     private lateinit var viewport: FitViewport
 
-
     override fun create() {
         camera = OrthographicCamera()
         viewport = FitViewport(SharedVariables.mainWidth.toFloat(), SharedVariables.mainHeight.toFloat(), camera)
         SharedVariables.loadingScreen.lateInitializer()
 
         batch = SpriteBatch()
-        MidiPlayer.open("sound/OST1.mid")
-        MidiPlayer.setLooping(true)
 
         val pm = SharedVariables.loadPixmap("graphics/cursor/cursor.png",0.25)
         Gdx.graphics.setCursor(Gdx.graphics.newCursor(pm, 0, 0))
@@ -42,10 +39,8 @@ class MainGame : ApplicationAdapter() {
         Gdx.gl.glClearColor(0f, 0f, 0.05f, 1f)
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
 
-
-
         if (!musicPlaying && !SharedVariables.loadingScreen.isLoading()) {
-            MidiPlayer.play()
+            //MidiPlayer.play()
             musicPlaying = true
         }
 
