@@ -39,6 +39,7 @@ class MainMenuScreen: Screen() {
         }
         continueButton = SetButton("graphics/menu_buttons/continue", ratio = 0.2f).apply{
             relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 600f)
+            visible = false
         }
         muteButton = ToggleButton("graphics/menu_buttons/mute",ratio=0.25f).apply{
             relocateCentre(1820f, 980f)
@@ -68,7 +69,7 @@ class MainMenuScreen: Screen() {
             }
             SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), continueButton.getBoundSprite()) -> {
                 continueButton.status = ButtonStatus.DOWN
-                continueButton.visible = false
+
             }
             SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), muteButton.getBoundSprite() ) -> {
                 muteButton.toggle().also {
