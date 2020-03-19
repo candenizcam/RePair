@@ -9,8 +9,10 @@ class SetButton(private val path: String, private val ratio: Float) {
     private lateinit var downSprite: Sprite
     lateinit var activeSprite: Sprite
     var status = ButtonStatus.UP
+    var visible = true
     private var centreX = 0f
     private var centreY = 0f
+
 
     init {
         loadImage()
@@ -28,12 +30,15 @@ class SetButton(private val path: String, private val ratio: Float) {
     }
 
     fun draw(batch: SpriteBatch) {
-        activeSprite = when(status){
-            ButtonStatus.UP -> upSprite
-            ButtonStatus.DOWN -> downSprite
+        if (visible){
+            activeSprite = when(status){
+                ButtonStatus.UP -> upSprite
+                ButtonStatus.DOWN -> downSprite
+            }
+            activeSprite.setCenter(centreX,centreY)
+            activeSprite.draw(batch)
         }
-        activeSprite.setCenter(centreX,centreY)
-        activeSprite.draw(batch)
+
     }
 
     fun getBoundSprite(): Sprite {

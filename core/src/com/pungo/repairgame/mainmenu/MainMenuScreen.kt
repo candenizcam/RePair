@@ -14,6 +14,7 @@ class MainMenuScreen: Screen() {
     private lateinit var startButton: SetButton
     private lateinit var exitButton: SetButton
     private lateinit var optionsButton: SetButton
+    private lateinit var continueButton: SetButton
     private lateinit var muteButton: ToggleButton
     private var sfx = Gdx.audio.newSound(Gdx.files.internal("sound/Blip.mp3"))
 
@@ -27,14 +28,17 @@ class MainMenuScreen: Screen() {
             setCenterX(SharedVariables.mainWidth.toFloat() / 2)
             setCenterY(SharedVariables.mainHeight.toFloat() / 2)
         }
-        startButton = SetButton("graphics/menu_buttons/start", ratio = 1f)
-        startButton.relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 450f)
-
+        startButton = SetButton("graphics/menu_buttons/start", ratio = 1f).apply{
+            relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 450f)
+        }
         optionsButton = SetButton("graphics/menu_buttons/options", ratio = 1f).apply{
             relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 300f)
         }
         exitButton = SetButton("graphics/menu_buttons/exit", ratio = 1f).apply{
             relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 150f)
+        }
+        continueButton = SetButton("graphics/menu_buttons/continue", ratio = 0.2f).apply{
+            relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 600f)
         }
         muteButton = ToggleButton("graphics/menu_buttons/mute",ratio=0.25f).apply{
             relocateCentre(1820f, 980f)
@@ -47,6 +51,7 @@ class MainMenuScreen: Screen() {
         startButton.draw(batch)
         exitButton.draw(batch)
         optionsButton.draw(batch)
+        continueButton.draw(batch)
         muteButton.draw(batch)
     }
 
@@ -60,6 +65,10 @@ class MainMenuScreen: Screen() {
             }
             SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), optionsButton.getBoundSprite()) -> {
                 optionsButton.status = ButtonStatus.DOWN
+            }
+            SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), continueButton.getBoundSprite()) -> {
+                continueButton.status = ButtonStatus.DOWN
+                continueButton.visible = false
             }
             SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), muteButton.getBoundSprite() ) -> {
                 muteButton.toggle().also {
@@ -88,6 +97,9 @@ class MainMenuScreen: Screen() {
             optionsButton.status == ButtonStatus.DOWN -> {
                 if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), optionsButton.activeSprite)) optionsButton.status = ButtonStatus.UP
             }
+            continueButton.status == ButtonStatus.DOWN -> {
+                if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), continueButton.activeSprite)) continueButton.status = ButtonStatus.UP
+            }
         }
     }
 
@@ -102,14 +114,23 @@ class MainMenuScreen: Screen() {
             }
             exitButton.status == ButtonStatus.DOWN -> {
                 exitButton.status = ButtonStatus.UP
-                MusicPlayer.release()
-                Gdx.app.exit()
-                exitProcess(0)
+                if (exitButton.visible) {
+                    MusicPlayer.release()
+                    Gdx.app.exit()
+                    exitProcess(0)
+                }
             }
             optionsButton.status == ButtonStatus.DOWN -> {
                 optionsButton.status = ButtonStatus.UP
-                SharedVariables.activeScreen = SharedVariables.optionsScreen
-                //SharedVariables.activeScreen = SharedVariables.creditsScreen
+                if (optionsButton.visible) {
+                    SharedVariables.activeScreen = SharedVariables.optionsScreen
+                }
+            }
+            continueButton.status == ButtonStatus.DOWN -> {
+                continueButton.status = ButtonStatus.UP
+                if (continueButton.visible){
+                    //continue function goes here
+                }
             }
         }
     }
