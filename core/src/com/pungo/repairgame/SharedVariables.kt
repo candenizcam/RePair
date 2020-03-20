@@ -51,8 +51,12 @@ object  SharedVariables{
     var creditsScreen = CreditsScreen()
     var optionsScreen = OptionsScreen()
     var activeScreen: Screen = loadingScreen
-    var mouse = MouseManager()
+    var mouse = InputManager()
 
+    fun resetGame(){
+        planetIndex = 0
+        gameScreen.reset()
+    }
 
     fun loadPixmap(path: String, ratio: Double): Pixmap {
         val pixmap = Pixmap(Gdx.files.internal(path))

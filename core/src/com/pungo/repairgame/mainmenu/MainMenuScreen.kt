@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.*
+import com.pungo.repairgame.SharedVariables.gameScreen
 import java.util.Timer
 import kotlin.concurrent.schedule
 import kotlin.system.exitProcess
@@ -109,9 +110,12 @@ class MainMenuScreen: Screen() {
             startButton.status == ButtonStatus.DOWN -> {
                 startButton.status = ButtonStatus.UP
                 sfx.play(SharedVariables.sfxVolume)
-                Timer().schedule(370) {
-                    SharedVariables.activeScreen = SharedVariables.gameScreen                }
 
+                SharedVariables.resetGame()
+                Timer().schedule(370) {
+                    continueButton.visible = true
+                    SharedVariables.activeScreen = gameScreen
+                }
             }
             exitButton.status == ButtonStatus.DOWN -> {
                 exitButton.status = ButtonStatus.UP
@@ -130,7 +134,8 @@ class MainMenuScreen: Screen() {
             continueButton.status == ButtonStatus.DOWN -> {
                 continueButton.status = ButtonStatus.UP
                 if (continueButton.visible){
-                    //continue function goes here
+                    gameScreen.resumeTimers()
+                    SharedVariables.activeScreen = gameScreen
                 }
             }
         }

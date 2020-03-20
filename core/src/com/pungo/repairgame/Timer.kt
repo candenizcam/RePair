@@ -1,11 +1,13 @@
 package com.pungo.repairgame
 
-class Timer(private val time: Long) {
+class Timer(private var time: Long) {
     private var startTime = 0L
     var running = false
+    private var pauseTime =0L
 
     fun go(){
         startTime = System.currentTimeMillis()
+        running = true
     }
 
     fun done(): Boolean{
@@ -22,5 +24,13 @@ class Timer(private val time: Long) {
 
     fun timeLeft():Long{
         return time - (System.currentTimeMillis() - startTime)
+    }
+
+    fun pause(){
+        pauseTime = now()
+    }
+
+    fun resume(){
+        startTime = System.currentTimeMillis() - pauseTime
     }
 }

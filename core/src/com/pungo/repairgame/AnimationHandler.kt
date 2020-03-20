@@ -50,4 +50,12 @@ class AnimationHandler{
 
     }
 
+    fun pause(){
+        animTimer.pause()
+    }
+
+    fun resume(){
+        animTimer.resume()
+    }
+
 }

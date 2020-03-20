@@ -29,7 +29,6 @@ open class SimpleDevice(path: String,ratio: Float, gen2Graphics: Boolean = false
     fun breakDevice(s: DeviceStatus){
         status = s
         breakTimer.go()
-        breakTimer.running = true
     }
 
     fun checkTimer(): Boolean{

@@ -40,6 +40,32 @@ class GameScreen: Screen() {
         it.relocateCentre(SharedVariables.mainWidth/2f,SharedVariables.mainHeight/2f)
     }
 
+    fun reset(){
+        chosenOption = -1
+        rocketAnimCalled = false
+        patrolFlag = false
+        patrolPlanet = false
+        countdownIndex = -1
+        devices.forEach { it.status = DeviceStatus.NORMAL }
+        tools = ToolsData.getTools()
+        phText.getPlanetPassage(1)
+        updateIslandText()
+    }
+
+    fun pauseTimers(){
+        travelTimer.pause()
+        countdownTimer.pause()
+        timer.pause()
+        rocketAnimation.pause()
+    }
+
+    fun resumeTimers(){
+        travelTimer.resume()
+        countdownTimer.resume()
+        timer.resume()
+        rocketAnimation.resume()
+    }
+
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
         bigMonitor.draw(batch)
@@ -184,7 +210,6 @@ class GameScreen: Screen() {
         }
         else {
             countdownTimer.go()
-            countdownTimer.running = true
             texts[0].setStuff("")
         }
     }
@@ -238,7 +263,6 @@ class GameScreen: Screen() {
             bigMonitor.changeMonitor(countdownList[4])
             rocketAnimCalled = false
             travelTimer.go()
-            travelTimer.running = true
         }
 
         if (travelTimer.running) {
