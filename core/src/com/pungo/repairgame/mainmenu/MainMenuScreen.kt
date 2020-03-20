@@ -38,7 +38,7 @@ class MainMenuScreen: Screen() {
         exitButton = SetButton("graphics/menu_buttons/exit", ratio = 1f).apply{
             relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 150f)
         }
-        continueButton = SetButton("graphics/menu_buttons/continue", ratio = 0.2f).apply{
+        continueButton = SetButton("graphics/menu_buttons/continue", ratio = 1f).apply{
             relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 600f)
             visible = false
         }
