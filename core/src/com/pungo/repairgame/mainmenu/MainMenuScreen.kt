@@ -3,12 +3,14 @@ package com.pungo.repairgame.mainmenu
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
-import com.pungo.repairgame.*
+import com.pungo.repairgame.MusicPlayer
+import com.pungo.repairgame.Screen
+import com.pungo.repairgame.SharedVariables
 import com.pungo.repairgame.SharedVariables.gameScreen
 import com.pungo.repairgame.ui.ButtonStatus
 import com.pungo.repairgame.ui.SetButton
 import com.pungo.repairgame.ui.ToggleButton
-import java.util.Timer
+import java.util.*
 import kotlin.concurrent.schedule
 import kotlin.system.exitProcess
 
@@ -18,7 +20,7 @@ class MainMenuScreen: Screen() {
     private lateinit var startButton: SetButton
     private lateinit var exitButton: SetButton
     private lateinit var optionsButton: SetButton
-    private lateinit var continueButton: SetButton
+    lateinit var continueButton: SetButton
     private lateinit var muteButton: ToggleButton
     private var sfx = Gdx.audio.newSound(Gdx.files.internal("sound/Blip.mp3"))
 
