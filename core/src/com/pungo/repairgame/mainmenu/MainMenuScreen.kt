@@ -42,7 +42,7 @@ class MainMenuScreen: Screen() {
             relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 600f)
             visible = false
         }
-        muteButton = ToggleButton("graphics/menu_buttons/mute",ratio=0.25f).apply{
+        muteButton = ToggleButton("graphics/menu_buttons/mute", ratio = 0.25f).apply{
             relocateCentre(1820f, 980f)
         }
     }

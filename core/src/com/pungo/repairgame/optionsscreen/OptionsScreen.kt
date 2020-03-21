@@ -3,9 +3,9 @@ package com.pungo.repairgame.optionsscreen
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
-import com.pungo.repairgame.ButtonStatus
+import com.pungo.repairgame.mainmenu.ButtonStatus
 import com.pungo.repairgame.Screen
-import com.pungo.repairgame.SetButton
+import com.pungo.repairgame.mainmenu.SetButton
 import com.pungo.repairgame.SharedVariables
 
 class OptionsScreen: Screen() {
