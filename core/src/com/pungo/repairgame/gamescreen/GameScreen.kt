@@ -175,7 +175,7 @@ class GameScreen: Screen() {
                 3->if (phText.getTag()=="Good"){ cargoBay.addToItems("dessert") }
                 4->if (phText.getTag()=="Good"){ cargoBay.addToItems("flower") }
             }
-            if(redButton.status == ButtonStatus.DOWN) {
+            if(redButton.status == ButtonStatus.DOWN && !countdownTimer.running && !rocketAnimCalled) {
                 if(SharedVariables.planetIndex==5){
                     SharedVariables.activeScreen = SharedVariables.endingScreen
                 }

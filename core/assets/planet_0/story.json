@@ -22,34 +22,34 @@
       "name": "Passport Guy",
       "pid": "1",
       "position": {
-        "x": "3812.6666666666665",
-        "y": "257.3333333333333"
+        "x": "3812",
+        "y": "257"
       }
     },
     {
-      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nGet to that Mechanic Planet first they'll help.\nUntill there this duct type can hold things together\nNow you can prepare for take off.\n[[...]]\n[[. . .]]\n[[.  .  .]]",
+      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nGet to that Mechanic Planet first they'll help.\nUntill there this duct type can hold things together\nNow you can prepare for take off.\n[[Ummmm . . .]]\n[[Welllll . . .]]\n[[About thaaat . . .]]",
       "links": [
         {
-          "name": "...",
-          "link": "...",
+          "name": "Ummmm . . .",
+          "link": "Ummmm . . .",
           "pid": "142"
         },
         {
-          "name": ". . .",
-          "link": ". . .",
+          "name": "Welllll . . .",
+          "link": "Welllll . . .",
           "pid": "143"
         },
         {
-          "name": ".  .  .",
-          "link": ".  .  .",
+          "name": "About thaaat . . .",
+          "link": "About thaaat . . .",
           "pid": "144"
         }
       ],
       "name": "Gotta buy those flowers and cakes to get back my partner!",
       "pid": "2",
       "position": {
-        "x": "3679.6666666666665",
-        "y": "463.33333333333326"
+        "x": "3679",
+        "y": "463"
       }
     },
     {
@@ -183,7 +183,7 @@
       }
     },
     {
-      "text": "Don't get too excited. Here's a fire-extinguisher, some spare circuits and space oil.",
+      "text": "Don't get too excited. Here's a fire-extinguisher, some spare circuits and space oil. You can go on your way now!",
       "name": "Sure, some free stuff to use why not?",
       "pid": "8",
       "position": {
@@ -195,7 +195,7 @@
       ]
     },
     {
-      "text": "Don't get too excited. Here's a fire-extinguisher, some spare circuits and space oil.",
+      "text": "Don't get too excited. Here's a fire-extinguisher, some spare circuits and space oil. You can go on your way now!",
       "name": "Ohh, thank you it is so nice of you to give away those.",
       "pid": "9",
       "position": {
@@ -207,7 +207,7 @@
       ]
     },
     {
-      "text": "Don't get too excited. Here's a fire-extinguisher, some spare circuits and space oil.",
+      "text": "Don't get too excited. Here's a fire-extinguisher, some spare circuits and space oil. You can go on your way now!",
       "name": "They said you could fix it! What a shame. SHAME!",
       "pid": "10",
       "position": {
@@ -422,7 +422,7 @@
       "name": "Yeah not understanding you, just quickly fix stuff!",
       "pid": "18",
       "position": {
-        "x": "4076.3333333333335",
+        "x": "4076",
         "y": "1552"
       }
     },
@@ -621,55 +621,55 @@
       }
     },
     {
-      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nGet to that Mechanic Planet first they'll help.\nUntill there this duct type can hold things together\nNow you can prepare for take off.\n[[...]]\n[[. . .]]\n[[.  .  .]]",
+      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nGet to that Mechanic Planet first they'll help.\nUntill there this duct type can hold things together\nNow you can prepare for take off.\n[[Ummmm . . .]]\n[[Welllll . . .]]\n[[About thaaat . . .]]",
       "links": [
         {
-          "name": "...",
-          "link": "...",
+          "name": "Ummmm . . .",
+          "link": "Ummmm . . .",
           "pid": "142"
         },
         {
-          "name": ". . .",
-          "link": ". . .",
+          "name": "Welllll . . .",
+          "link": "Welllll . . .",
           "pid": "143"
         },
         {
-          "name": ".  .  .",
-          "link": ".  .  .",
+          "name": "About thaaat . . .",
+          "link": "About thaaat . . .",
           "pid": "144"
         }
       ],
       "name": "Just got off of a relationship, I am gonna win it back!",
       "pid": "27",
       "position": {
-        "x": "3879.6666666666665",
-        "y": "421.33333333333326"
+        "x": "3879",
+        "y": "421"
       }
     },
     {
-      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nGet to that Mechanic Planet first they'll help.\nUntill there this duct type can hold things together\nNow you can prepare for take off.\n[[...]]\n[[. . .]]\n[[.  .  .]]",
+      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nGet to that Mechanic Planet first they'll help.\nUntill there this duct type can hold things together\nNow you can prepare for take off.\n[[Ummmm . . .]]\n[[Welllll . . .]]\n[[About thaaat . . .]]",
       "links": [
         {
-          "name": "...",
-          "link": "...",
+          "name": "Ummmm . . .",
+          "link": "Ummmm . . .",
           "pid": "142"
         },
         {
-          "name": ". . .",
-          "link": ". . .",
+          "name": "Welllll . . .",
+          "link": "Welllll . . .",
           "pid": "143"
         },
         {
-          "name": ".  .  .",
-          "link": ".  .  .",
+          "name": "About thaaat . . .",
+          "link": "About thaaat . . .",
           "pid": "144"
         }
       ],
       "name": "Well . . . Mmm . . .  Just touristic visits . . . ",
       "pid": "28",
       "position": {
-        "x": "4066.666666666667",
-        "y": "421.33333333333326"
+        "x": "4066",
+        "y": "421"
       }
     },
     {
@@ -695,7 +695,7 @@
       "pid": "29",
       "position": {
         "x": "5344",
-        "y": "1456.3333333333333"
+        "y": "1456"
       }
     },
     {
@@ -2626,36 +2626,36 @@
       ]
     },
     {
-      "text": "Just press that pink button.",
-      "name": "...",
+      "text": "Just press that pink button over to your left whenever you are ready to launch the ship.",
+      "name": "Ummmm . . .",
       "pid": "142",
       "position": {
-        "x": "3665.6666666666665",
-        "y": "640.3333333333333"
+        "x": "3683.3333333333335",
+        "y": "633.3333333333334"
       },
       "tags": [
         "End"
       ]
     },
     {
-      "text": "Just press that pink button.",
-      "name": ". . .",
+      "text": "Just press that pink button over to your left whenever you are ready to launch the ship.",
+      "name": "Welllll . . .",
       "pid": "143",
       "position": {
-        "x": "3899.6666666666665",
-        "y": "640.3333333333333"
+        "x": "3899",
+        "y": "640"
       },
       "tags": [
         "End"
       ]
     },
     {
-      "text": "Just press that pink button.",
-      "name": ".  .  .",
+      "text": "Just press that pink button over to your left whenever you are ready to launch the ship.",
+      "name": "About thaaat . . .",
       "pid": "144",
       "position": {
-        "x": "4102.666666666667",
-        "y": "648.3333333333333"
+        "x": "4102",
+        "y": "648"
       },
       "tags": [
         "End"
@@ -3930,12 +3930,12 @@
       ]
     },
     {
-      "text": "THIS IS PLANET PATROL.\nYou cannot leave this planet with your control panel not working correctly. Here let's replace that for you. Try fixing them before they die next time!",
+      "text": "THIS IS PLANET PATROL.\nYou cannot leave this planet with your control panel not working correctly. Here let's replace that for you. Try fixing them before they die next time! Off you go now!",
       "name": "Planet Patrol",
       "pid": "218",
       "position": {
-        "x": "3911.666666666667",
-        "y": "971.1666666666667"
+        "x": "3911",
+        "y": "971"
       },
       "tags": [
         "End"
