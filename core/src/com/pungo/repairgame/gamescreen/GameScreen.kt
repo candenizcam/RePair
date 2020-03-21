@@ -59,6 +59,7 @@ class GameScreen: Screen() {
         countdownTimer.pause()
         timer.pause()
         rocketAnimation.pause()
+        devices.forEach { it.breakTimer.pause() }
     }
 
     fun resumeTimers(){
@@ -66,6 +67,7 @@ class GameScreen: Screen() {
         countdownTimer.resume()
         timer.resume()
         rocketAnimation.resume()
+        devices.forEach { it.breakTimer.resume() }
     }
 
     override fun draw(batch: SpriteBatch) {
