@@ -18,6 +18,7 @@ class OptionsScreen: Screen() {
     private lateinit var bgSprite: Sprite
     private lateinit var musicSprite: Sprite
     private lateinit var soundSprite: Sprite
+    private lateinit var redlineSprite: Sprite
     private var sfx = Gdx.audio.newSound(Gdx.files.internal("sound/Blip.mp3"))
 
 
@@ -44,6 +45,9 @@ class OptionsScreen: Screen() {
         soundSprite = SharedVariables.loadSprite("graphics/options_buttons/images/sound.png", 1.0).apply{
             setCenter(SharedVariables.mainWidth*0.4f,SharedVariables.mainHeight*0.5125f)
         }
+        redlineSprite = SharedVariables.loadSprite("graphics/options_buttons/images/redline.png", 1.0).apply{
+            setCenter(SharedVariables.mainWidth*0.4f,SharedVariables.mainHeight*0.5125f)
+        }
 
     }
 
@@ -56,6 +60,16 @@ class OptionsScreen: Screen() {
         soundSprite.draw(batch)
         musicSlider.draw(batch)
         soundsSlider.draw(batch)
+        if (musicSlider.sliderValue==0f){
+            redlineSprite.setCenter(SharedVariables.mainWidth*0.4f,SharedVariables.mainHeight*0.6375f)
+            redlineSprite.draw(batch)
+        }
+        if (soundsSlider.sliderValue==0f){
+            redlineSprite.setCenter(SharedVariables.mainWidth*0.4f,SharedVariables.mainHeight*0.5125f)
+            redlineSprite.draw(batch)
+        }
+
+
         //startButton.draw(batch)
         //continueButton.draw(batch)
         //optionsButton.draw(batch)
