@@ -3,10 +3,12 @@ package com.pungo.repairgame.optionsscreen
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
-import com.pungo.repairgame.mainmenu.ButtonStatus
+import com.pungo.repairgame.MusicPlayer
+import com.pungo.repairgame.ui.ButtonStatus
 import com.pungo.repairgame.Screen
-import com.pungo.repairgame.mainmenu.SetButton
+import com.pungo.repairgame.ui.SetButton
 import com.pungo.repairgame.SharedVariables
+import com.pungo.repairgame.ui.Slider
 
 class OptionsScreen: Screen() {
     private lateinit var mainSprite: Sprite
@@ -14,6 +16,8 @@ class OptionsScreen: Screen() {
     private lateinit var backButton: SetButton
     //private lateinit var optionsButton: SetButton
     //private lateinit var muteButton: ToggleButton
+    private lateinit var musicSlider: Slider
+    private lateinit var soundsSlider: Slider
     private var sfx = Gdx.audio.newSound(Gdx.files.internal("sound/Blip.mp3"))
 
 
@@ -24,6 +28,12 @@ class OptionsScreen: Screen() {
         }
         backButton = SetButton("graphics/options_buttons/back", ratio = 1f).apply{
             relocateCentre(SharedVariables.mainWidth*0.2f,SharedVariables.mainHeight*0.1f)
+        }
+        musicSlider = Slider("graphics/options_buttons/music_slider",1f).apply{
+            relocateCentre(SharedVariables.mainWidth*0.5f,SharedVariables.mainHeight*0.65f)
+        }
+        soundsSlider = Slider("graphics/options_buttons/sounds_slider",1f).apply{
+            relocateCentre(SharedVariables.mainWidth*0.5f,SharedVariables.mainHeight*0.5f)
         }
 
         //startButton = SetButton("graphics/menu_buttons/start", ratio = 0.2f)
@@ -41,6 +51,8 @@ class OptionsScreen: Screen() {
     override fun draw(batch: SpriteBatch) {
         mainSprite.draw(batch)
         backButton.draw(batch)
+        musicSlider.draw(batch)
+        soundsSlider.draw(batch)
         //startButton.draw(batch)
         //continueButton.draw(batch)
         //optionsButton.draw(batch)
@@ -48,6 +60,9 @@ class OptionsScreen: Screen() {
     }
 
     override fun firstPress() {
+        musicSlider.firstPressed()
+        soundsSlider.firstPressed()
+
         when {
             SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), backButton.getBoundSprite()) -> {
                 backButton.status = ButtonStatus.DOWN
@@ -80,6 +95,8 @@ class OptionsScreen: Screen() {
     }
 
     override fun pressing() {
+        musicSlider.pressing()
+        soundsSlider.pressing()
 
         when {
             backButton.status == ButtonStatus.DOWN -> {
@@ -101,6 +118,8 @@ class OptionsScreen: Screen() {
     }
 
     override fun released() {
+        musicSlider.released()
+        soundsSlider.released()
         when {
             backButton.status == ButtonStatus.DOWN -> {
                 backButton.status = ButtonStatus.UP
@@ -130,6 +149,8 @@ class OptionsScreen: Screen() {
     }
 
     override fun loopAction() {
+        SharedVariables.sfxVolume = soundsSlider.sliderValue
+        MusicPlayer.changeVolume(musicSlider.sliderValue)
 
     }
 

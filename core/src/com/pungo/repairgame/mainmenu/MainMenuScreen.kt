@@ -5,6 +5,9 @@ import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.*
 import com.pungo.repairgame.SharedVariables.gameScreen
+import com.pungo.repairgame.ui.ButtonStatus
+import com.pungo.repairgame.ui.SetButton
+import com.pungo.repairgame.ui.ToggleButton
 import java.util.Timer
 import kotlin.concurrent.schedule
 import kotlin.system.exitProcess

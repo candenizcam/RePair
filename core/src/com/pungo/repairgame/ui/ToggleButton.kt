@@ -1,4 +1,4 @@
-package com.pungo.repairgame.mainmenu
+package com.pungo.repairgame.ui
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite

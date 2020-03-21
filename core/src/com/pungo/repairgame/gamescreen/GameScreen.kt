@@ -7,8 +7,8 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas
 import com.pungo.repairgame.*
 import com.pungo.repairgame.gamescreen.devices.DevicesData
 import com.pungo.repairgame.gamescreen.devices.SimpleDevice
-import com.pungo.repairgame.mainmenu.ButtonStatus
-import com.pungo.repairgame.mainmenu.SetButton
+import com.pungo.repairgame.ui.ButtonStatus
+import com.pungo.repairgame.ui.SetButton
 
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite

@@ -1,8 +1,9 @@
-package com.pungo.repairgame.mainmenu
+package com.pungo.repairgame.ui
 
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.SharedVariables.loadSprite
+import com.pungo.repairgame.ui.ButtonStatus
 
 class SetButton(private val path: String, private val ratio: Float) {
     private lateinit var upSprite: Sprite

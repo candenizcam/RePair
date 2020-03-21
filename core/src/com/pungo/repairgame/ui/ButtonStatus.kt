@@ -1,4 +1,4 @@
-package com.pungo.repairgame.mainmenu
+package com.pungo.repairgame.ui
 
 enum class ButtonStatus {
     UP,
