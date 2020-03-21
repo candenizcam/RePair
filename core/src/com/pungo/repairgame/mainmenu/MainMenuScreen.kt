@@ -132,6 +132,7 @@ class MainMenuScreen: Screen() {
                 optionsButton.status = ButtonStatus.UP
                 if (optionsButton.visible) {
                     SharedVariables.activeScreen = SharedVariables.optionsScreen
+                    //SharedVariables.activeScreen = SharedVariables.creditsScreen
                 }
             }
             continueButton.status == ButtonStatus.DOWN -> {

@@ -1,45 +1,48 @@
 package com.pungo.repairgame.creditsscreen
 
-import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
-import com.badlogic.gdx.graphics.g2d.TextureAtlas
-import com.pungo.repairgame.AnimationHandler
 import com.pungo.repairgame.Screen
 import com.pungo.repairgame.SharedVariables
 import com.pungo.repairgame.SharedVariables.loadSprite
 
 class CreditsScreen : Screen() {
     private lateinit var bgSprite: Sprite
-    private var done = true
-    private var creditsAnimation = AnimationHandler().also{
-        it.relocateCentre(SharedVariables.monitorCentreX,SharedVariables.monitorCentreY)
-    }
+    private lateinit var creditsSprites: List<Sprite>
+    private var indexer = 0.0
+
+
 
     override fun lateInitializer() {
-        bgSprite = loadSprite(SharedVariables.creditsPath, SharedVariables.creditsRatio)
+        bgSprite = loadSprite("${SharedVariables.creditsPath}/background.png", SharedVariables.creditsRatio)
         bgSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         bgSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
-        creditsAnimation.lateInitializer(0.1f, TextureAtlas(Gdx.files.internal(SharedVariables.creditsAnimPath)).regions)
+        var cs = mutableListOf<Sprite>()
+        for (i in 1..6){
+            cs.add(loadSprite("${SharedVariables.creditsPath}/${i}.png", SharedVariables.creditsRatio).apply {
+                setCenter(SharedVariables.monitorCentreX,SharedVariables.monitorCentreY)
+            }
+
+            )
+        }
+        creditsSprites = cs.toList()
     }
 
-    override fun loopAction() {
-        if (done){
-            creditsAnimation.animationGo()
-            done = false
-        }
-    }
 
     override fun draw(batch: SpriteBatch) {
-        if (!done) {
-            creditsAnimation.draw(batch)
-        }
-        bgSprite.draw(batch)
-        if(creditsAnimation.isDone()){
-            done = true
+        if (indexer>6.0){
+            indexer = 0.0
             SharedVariables.mainMenuScreen.continueButton.visible = false
             SharedVariables.activeScreen = SharedVariables.mainMenuScreen
+        } else{
+            indexer += 0.0075
+            if(indexer%1.0<0.1){
+                // blank
+            } else{
+                creditsSprites[indexer.toInt()].draw(batch)
+            }
         }
+        bgSprite.draw(batch)
     }
 
     override fun firstPress() {
@@ -49,5 +52,9 @@ class CreditsScreen : Screen() {
     }
 
     override fun released() {
+    }
+
+    override fun loopAction() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

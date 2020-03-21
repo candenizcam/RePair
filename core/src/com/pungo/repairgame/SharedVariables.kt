@@ -26,7 +26,7 @@ object  SharedVariables{
     const val gameBackgroundPath = "graphics/game_placeholder.png"
     const val monitorPath = "graphics/space_holder.png"
     const val monitorFramePath = "graphics/monitor_frame.png"
-    const val creditsPath = "graphics/credits/background.png"
+    const val creditsPath = "graphics/credits"
     const val creditsAnimPath = "gifs/credits_animation.atlas"
     const val creditsRatio = 1.0
     const val rocketAnimationPath = "gifs/rocket_animation.atlas"
