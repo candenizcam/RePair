@@ -12,12 +12,12 @@ import com.pungo.repairgame.ui.Slider
 
 class OptionsScreen: Screen() {
     private lateinit var mainSprite: Sprite
-    //private lateinit var startButton: SetButton
     private lateinit var backButton: SetButton
-    //private lateinit var optionsButton: SetButton
-    //private lateinit var muteButton: ToggleButton
     private lateinit var musicSlider: Slider
     private lateinit var soundsSlider: Slider
+    private lateinit var bgSprite: Sprite
+    private lateinit var musicSprite: Sprite
+    private lateinit var soundSprite: Sprite
     private var sfx = Gdx.audio.newSound(Gdx.files.internal("sound/Blip.mp3"))
 
 
@@ -30,27 +30,30 @@ class OptionsScreen: Screen() {
             relocateCentre(SharedVariables.mainWidth*0.2f,SharedVariables.mainHeight*0.1f)
         }
         musicSlider = Slider("graphics/options_buttons/music_slider",1f).apply{
-            relocateCentre(SharedVariables.mainWidth*0.5f,SharedVariables.mainHeight*0.65f)
+            relocateCentre(SharedVariables.mainWidth*0.525f,SharedVariables.mainHeight*0.6375f)
         }
         soundsSlider = Slider("graphics/options_buttons/sounds_slider",1f).apply{
-            relocateCentre(SharedVariables.mainWidth*0.5f,SharedVariables.mainHeight*0.5f)
+            relocateCentre(SharedVariables.mainWidth*0.525f,SharedVariables.mainHeight*0.5125f)
+        }
+        bgSprite = SharedVariables.loadSprite("graphics/options_buttons/images/bg.png", 1.0).apply{
+            setCenter(SharedVariables.mainWidth*0.5f,SharedVariables.mainHeight*0.575f)
+        }
+        musicSprite = SharedVariables.loadSprite("graphics/options_buttons/images/music.png", 1.0).apply{
+            setCenter(SharedVariables.mainWidth*0.4f,SharedVariables.mainHeight*0.6375f)
+        }
+        soundSprite = SharedVariables.loadSprite("graphics/options_buttons/images/sound.png", 1.0).apply{
+            setCenter(SharedVariables.mainWidth*0.4f,SharedVariables.mainHeight*0.5125f)
         }
 
-        //startButton = SetButton("graphics/menu_buttons/start", ratio = 0.2f)
-        //startButton.relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 450f)
-        //continueButton = SetButton("graphics/menu_buttons/continue", ratio = 0.2f)
-        //continueButton.relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 300f)
-        //optionsButton = SetButton("graphics/menu_buttons/options", ratio = 0.2f).apply{
-        //    relocateCentre(SharedVariables.mainWidth.toFloat() / 2, 150f)
-        //}
-        //muteButton = ToggleButton("graphics/menu_buttons/mute",ratio=0.25f).apply{
-        //    relocateCentre(1820f, 980f)
-        //}
     }
 
     override fun draw(batch: SpriteBatch) {
+
         mainSprite.draw(batch)
         backButton.draw(batch)
+        bgSprite.draw(batch)
+        musicSprite.draw(batch)
+        soundSprite.draw(batch)
         musicSlider.draw(batch)
         soundsSlider.draw(batch)
         //startButton.draw(batch)

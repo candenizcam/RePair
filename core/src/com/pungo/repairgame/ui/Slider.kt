@@ -32,7 +32,7 @@ class Slider(private val path: String, private val ratio: Float) {
         if (visible){
             railSprite.setCenter(centreX,centreY)
             railSprite.draw(batch)
-            val ballPosition = centreX-(0.5f-sliderValue)*(railSprite.width-ballSprite.width)
+            val ballPosition = centreX-(0.5f-sliderValue)*(railSprite.width-ballSprite.width*0.5f)
             ballSprite.setCenter(ballPosition,centreY)
             ballSprite.draw(batch)
         }
@@ -47,7 +47,7 @@ class Slider(private val path: String, private val ratio: Float) {
 
     fun pressing(){
         if (moving){
-            val ballTarget = max(0.0,min(1.0,(Gdx.input.x-centreX)/(railSprite.width-ballSprite.width)+0.5))
+            val ballTarget = max(0.0,min(1.0,(Gdx.input.x-centreX)/(railSprite.width-ballSprite.width*0.5f)+0.5))
             sliderValue = ballTarget.toFloat()
         }
     }
