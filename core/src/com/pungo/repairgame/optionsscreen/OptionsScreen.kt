@@ -68,12 +68,6 @@ class OptionsScreen: Screen() {
             redlineSprite.setCenter(SharedVariables.mainWidth*0.4f,SharedVariables.mainHeight*0.5125f)
             redlineSprite.draw(batch)
         }
-
-
-        //startButton.draw(batch)
-        //continueButton.draw(batch)
-        //optionsButton.draw(batch)
-        //muteButton.draw(batch)
     }
 
     override fun firstPress() {
@@ -84,30 +78,6 @@ class OptionsScreen: Screen() {
             SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), backButton.getBoundSprite()) -> {
                 backButton.status = ButtonStatus.DOWN
             }
-            /*
-            SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), startButton.getBoundSprite()) -> {
-                startButton.status = ButtonStatus.DOWN
-            }
-            SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), continueButton.getBoundSprite()) -> {
-                continueButton.status = ButtonStatus.DOWN
-            }
-            SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), optionsButton.getBoundSprite()) -> {
-                optionsButton.status = ButtonStatus.DOWN
-            }
-            SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), muteButton.getBoundSprite() ) -> {
-                muteButton.toggle().also {
-                    if (it==0){
-                        SharedVariables.sfxVolume = 1.0f
-                        MidiPlayer.mute(false)
-                    } else {
-                        SharedVariables.sfxVolume = 0.0f
-                        MidiPlayer.mute(true)
-                    }
-
-                }
-            }
-
-             */
         }
     }
 
@@ -119,18 +89,6 @@ class OptionsScreen: Screen() {
             backButton.status == ButtonStatus.DOWN -> {
                 if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), backButton.activeSprite)) backButton.status = ButtonStatus.UP
             }
-            /*
-            startButton.status == ButtonStatus.DOWN -> {
-                if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), startButton.activeSprite)) startButton.status = ButtonStatus.UP
-            }
-            continueButton.status == ButtonStatus.DOWN -> {
-                if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), continueButton.activeSprite)) continueButton.status = ButtonStatus.UP
-            }
-            optionsButton.status == ButtonStatus.DOWN -> {
-                if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), optionsButton.activeSprite)) optionsButton.status = ButtonStatus.UP
-            }
-
-             */
         }
     }
 
@@ -142,26 +100,7 @@ class OptionsScreen: Screen() {
                 backButton.status = ButtonStatus.UP
                 SharedVariables.activeScreen = SharedVariables.mainMenuScreen
             }
-            /*
-            startButton.status == ButtonStatus.DOWN -> {
-                startButton.status = ButtonStatus.UP
-                sfx.play(SharedVariables.sfxVolume)
-                Timer().schedule(370) {
-                    SharedVariables.activeScreen = SharedVariables.gameScreen                }
 
-            }
-            continueButton.status == ButtonStatus.DOWN -> {
-                continueButton.status = ButtonStatus.UP
-                MidiPlayer.release()
-                Gdx.app.exit()
-                exitProcess(0)
-            }
-            optionsButton.status == ButtonStatus.DOWN -> {
-                optionsButton.status = ButtonStatus.UP
-                SharedVariables.activeScreen = SharedVariables.creditsScreen
-            }
-
-             */
         }
     }
 
