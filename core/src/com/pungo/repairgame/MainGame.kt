@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.OrthographicCamera
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.utils.viewport.FitViewport
-import kotlin.system.exitProcess
 
 
 class MainGame : ApplicationAdapter() {
@@ -56,7 +55,6 @@ class MainGame : ApplicationAdapter() {
 
     override fun dispose() {
         batch.dispose()
-
-        exitProcess(0)
+        Gdx.app.exit();
     }
 }

@@ -12,7 +12,6 @@ import com.pungo.repairgame.ui.SetButton
 import com.pungo.repairgame.ui.ToggleButton
 import java.util.*
 import kotlin.concurrent.schedule
-import kotlin.system.exitProcess
 
 class MainMenuScreen: Screen() {
     private lateinit var mainSprite: Sprite
@@ -127,7 +126,6 @@ class MainMenuScreen: Screen() {
                 if (exitButton.visible) {
                     MusicPlayer.release()
                     Gdx.app.exit()
-                    exitProcess(0)
                 }
             }
             optionsButton.status == ButtonStatus.DOWN -> {

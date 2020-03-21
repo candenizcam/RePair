@@ -50,6 +50,8 @@ class GameScreen: Screen() {
         countdownIndex = -1
         devices.forEach { it.status = DeviceStatus.NORMAL }
         tools = ToolsData.getTools()
+        bigMonitor.changeMonitor("graphics/planets/p0.png")
+        breakingList = listOf(0)
         phText.getPlanetPassage(1)
         updateIslandText()
     }
