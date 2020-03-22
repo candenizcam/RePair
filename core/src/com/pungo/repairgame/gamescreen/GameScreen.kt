@@ -15,7 +15,7 @@ class GameScreen: Screen() {
 
     private lateinit var phText: TextIsland
     private lateinit var bigMonitor: BigMonitor
-    private lateinit var redButton: SetButton
+    private lateinit var redButton: RedButton
     private lateinit var cargoBay: CargoBay
     private var devices = listOf<SimpleDevice>()
     private var tools = listOf<SimpleTool>()
@@ -382,7 +382,7 @@ class GameScreen: Screen() {
         mainSprite = SharedVariables.loadSprite(SharedVariables.gameBackgroundPath, SharedVariables.gameBackgroundRatio)
         mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
-        redButton = SetButton(DevicesData.redPath, DevicesData.redRatio)
+        redButton = RedButton(DevicesData.redPath, DevicesData.redRatio)
         redButton.relocateCentre(DevicesData.redX, DevicesData.redY)
         devices = DevicesData.getDevices()
         tools = ToolsData.getTools()
