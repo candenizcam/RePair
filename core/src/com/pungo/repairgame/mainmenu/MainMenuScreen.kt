@@ -12,8 +12,6 @@ import com.pungo.repairgame.SharedVariables.gameScreen
 import com.pungo.repairgame.ui.ButtonStatus
 import com.pungo.repairgame.ui.SetButton
 import com.pungo.repairgame.ui.ToggleButton
-import java.util.*
-import kotlin.concurrent.schedule
 
 class MainMenuScreen: Screen() {
     private lateinit var mainSprite: Sprite
@@ -161,11 +159,9 @@ class MainMenuScreen: Screen() {
 
     override fun loopAction() {
         if(rocketAnimation.isDone() && rocketAnimCalled){
-            Timer().schedule(370) {
-                continueButton.visible = true
-                rocketAnimCalled = false
-                SharedVariables.activeScreen = gameScreen
-            }
+            continueButton.visible = true
+            rocketAnimCalled = false
+            SharedVariables.activeScreen = gameScreen
         }
     }
 }
