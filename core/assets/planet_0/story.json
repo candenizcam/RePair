@@ -183,7 +183,7 @@
       }
     },
     {
-      "text": "Don't get too excited. Here's a fire-extinguisher, some spare circuits and space oil. You can go on your way now!",
+      "text": "Don't get too excited. I am just sending a fire-extinguisher, some spare circuits and space oil to your ship. You can go on your way now!",
       "name": "Sure, some free stuff to use why not?",
       "pid": "8",
       "position": {
@@ -195,7 +195,7 @@
       ]
     },
     {
-      "text": "Don't get too excited. Here's a fire-extinguisher, some spare circuits and space oil. You can go on your way now!",
+      "text": "Don't get too excited. I am just sending a fire-extinguisher, some spare circuits and space oil to your ship. You can go on your way now!",
       "name": "Ohh, thank you it is so nice of you to give away those.",
       "pid": "9",
       "position": {
@@ -207,11 +207,11 @@
       ]
     },
     {
-      "text": "Don't get too excited. Here's a fire-extinguisher, some spare circuits and space oil. You can go on your way now!",
+      "text": "Don't get too excited. I am just sending a fire-extinguisher, some spare circuits and space oil to your ship. You can go on your way now!",
       "name": "They said you could fix it! What a shame. SHAME!",
       "pid": "10",
       "position": {
-        "x": "2610",
+        "x": "2606",
         "y": "1893"
       },
       "tags": [
@@ -486,8 +486,8 @@
       "name": "What was that glogilog means mmm red fruit right?",
       "pid": "21",
       "position": {
-        "x": "6342",
-        "y": "2979"
+        "x": "6334",
+        "y": "3019"
       }
     },
     {
@@ -885,7 +885,7 @@
       "pid": "39",
       "position": {
         "x": "1862",
-        "y": "3025"
+        "y": "3029"
       }
     },
     {
@@ -922,8 +922,8 @@
       "name": "Minty cookies actually that does not sound bad.",
       "pid": "41",
       "position": {
-        "x": "1421",
-        "y": "3160"
+        "x": "1449",
+        "y": "3148"
       }
     },
     {
@@ -1126,12 +1126,12 @@
       "name": "If you say it is your specialty, cool mint definitely sounds ... interesting.",
       "pid": "51",
       "position": {
-        "x": "1849",
+        "x": "1845",
         "y": "3166"
       }
     },
     {
-      "text": "A spiral, exciting choice. It actually turned out good, too.",
+      "text": "A spiral, exciting choice. It actually turned out good, too. Sending it off to your ship now. Be careful don't shake it too much.",
       "name": "A spiral. Our favourite shape. I want it on.",
       "pid": "52",
       "position": {
@@ -1143,19 +1143,19 @@
       ]
     },
     {
-      "text": "I hoped you might get exciting but no plain cookies sure. ",
+      "text": "I hoped you might get exciting but no, plain cookies, sure. ",
       "name": "Make it plain and simple. Mint is enough of a surprise.",
       "pid": "53",
       "position": {
-        "x": "1420",
-        "y": "3757"
+        "x": "1356",
+        "y": "3797"
       },
       "tags": [
         "Bad"
       ]
     },
     {
-      "text": "Uuuh a visionary. I must say was not expecting this. I might even put it on my menu.",
+      "text": "Uuuh a visionary. I must say was not expecting this. I might even put it on my menu. They will be put on send off to your cargo in a minute.",
       "name": "Do not draw the shape. Make it the shape. Make the dessert as a Spiral.",
       "pid": "54",
       "position": {
@@ -1195,8 +1195,8 @@
       "name": "Why not? A more velvety red velvet.",
       "pid": "57",
       "position": {
-        "x": "2384",
-        "y": "3838"
+        "x": "2372",
+        "y": "3822"
       },
       "tags": [
         "Bad"
@@ -1338,8 +1338,8 @@
       "name": "Bourbon, no, no leave it at least PG-13, please. Just pour some whilst I am not looking.",
       "pid": "64",
       "position": {
-        "x": "3698",
-        "y": "3229"
+        "x": "3718",
+        "y": "3253"
       }
     },
     {
@@ -1364,8 +1364,8 @@
       "name": "Pizza. Pizza. YES. Nothing can go wrong with pizza in it. Sprinkle some of it on top.",
       "pid": "65",
       "position": {
-        "x": "3362",
-        "y": "3194"
+        "x": "3394",
+        "y": "3270"
       }
     },
     {
@@ -1373,8 +1373,8 @@
       "name": "Since we are going at it this way, make it smokey as well.",
       "pid": "66",
       "position": {
-        "x": "3789",
-        "y": "3717"
+        "x": "3709",
+        "y": "3845"
       },
       "tags": [
         "Good"
@@ -1402,8 +1402,8 @@
       "name": "Bone marrow?? Okey, okey, never loose trust. You must know your stuff. You do right? Please know your stuff.",
       "pid": "67",
       "position": {
-        "x": "3090",
-        "y": "3205"
+        "x": "3114",
+        "y": "3253"
       }
     },
     {
@@ -1459,8 +1459,8 @@
       "name": "Mind, afraid, emotions it should represent our love: Heart Shaped Pizza-Ice-Creams",
       "pid": "72",
       "position": {
-        "x": "3622",
-        "y": "3722"
+        "x": "3566",
+        "y": "3846"
       },
       "tags": [
         "Bad"
@@ -1471,8 +1471,8 @@
       "name": "You know what? Make it an old fashioned.",
       "pid": "73",
       "position": {
-        "x": "3937",
-        "y": "3780"
+        "x": "3889",
+        "y": "3852"
       },
       "tags": [
         "Good"
@@ -1517,13 +1517,8 @@
       }
     },
     {
-      "text": "Velvet ... ... vvv ... tttvvv ... velvet ... ... ... didn't ... ... ssuuhhh ... ... missed ... ... wnnnt disappointed. ... ... ... skin feel llkkkk tttrrrzzz ... velvets ... ...\n[[No, need to overdo it. Let's not go overboard.]]\n[[Why not? A more velvety red velvet.]]",
+      "text": "Velvet ... ... vvv ... tttvvv ... velvet ... ... ... didn't ... ... ssuuhhh ... ... missed ... ... wnnnt disappointed. ... ... ... skin feel llkkkk tttrrrzzz ... velvets ... ...\n[[No, need to overdo it. Let's not go overboard.]]\n[[Why not? A more velvety red velvet.]]\n[[Adding in some skin? A bit brutal but if it makes your shouting stop, go ahead!]]",
       "links": [
-        {
-          "name": "Nope. I love that about my partner. It feels insecure about this. Can you make it tentacley instead.",
-          "link": "Nope. I love that about my partner. It feels insecure about this. Can you make it tentacley instead.",
-          "pid": "55"
-        },
         {
           "name": "No, need to overdo it. Let's not go overboard.",
           "link": "No, need to overdo it. Let's not go overboard.",
@@ -1533,13 +1528,18 @@
           "name": "Why not? A more velvety red velvet.",
           "link": "Why not? A more velvety red velvet.",
           "pid": "57"
+        },
+        {
+          "name": "Adding in some skin? A bit brutal but if it makes your shouting stop, go ahead!",
+          "link": "Adding in some skin? A bit brutal but if it makes your shouting stop, go ahead!",
+          "pid": "219"
         }
       ],
       "name": "Okey, relax. Make some cake then. A red velvet maybe?",
       "pid": "76",
       "position": {
-        "x": "4017",
-        "y": "3295"
+        "x": "4037",
+        "y": "3335"
       }
     },
     {
@@ -2575,7 +2575,7 @@
       "name": "I know I made a mess. I couldn't think what you would appreciate. But please I will make do just give me another chance.",
       "pid": "137",
       "position": {
-        "x": "3083",
+        "x": "3081",
         "y": "6142"
       },
       "tags": [
@@ -2631,19 +2631,19 @@
       ]
     },
     {
-      "text": "Just press that pink button over to your left whenever you are ready to launch the ship.",
+      "text": "Just press that big glowing pink button over to your left whenever you are ready to travel to another planet.",
       "name": "Ummmm . . .",
       "pid": "142",
       "position": {
-        "x": "3683.3333333333335",
-        "y": "633.3333333333334"
+        "x": "3683",
+        "y": "633"
       },
       "tags": [
         "End"
       ]
     },
     {
-      "text": "Just press that pink button over to your left whenever you are ready to launch the ship.",
+      "text": "Just press that big glowing pink button over to your left whenever you are ready to travel to another planet.",
       "name": "Welllll . . .",
       "pid": "143",
       "position": {
@@ -2655,7 +2655,7 @@
       ]
     },
     {
-      "text": "Just press that pink button over to your left whenever you are ready to launch the ship.",
+      "text": "Just press that big glowing pink button over to your left whenever you are ready to travel to another planet.",
       "name": "About thaaat . . .",
       "pid": "144",
       "position": {
@@ -2990,8 +2990,8 @@
       "name": "Flaming lily, sounds dangerous but hot.",
       "pid": "162",
       "position": {
-        "x": "2168",
-        "y": "5025"
+        "x": "2176",
+        "y": "5085"
       }
     },
     {
@@ -3028,8 +3028,8 @@
       "name": "Oooooor I can get some roses, how about that?",
       "pid": "164",
       "position": {
-        "x": "2495",
-        "y": "4998"
+        "x": "2527",
+        "y": "4946"
       }
     },
     {
@@ -3768,8 +3768,8 @@
       "name": "FinalNoDessertYesOthers",
       "pid": "207",
       "position": {
-        "x": "3588",
-        "y": "5681"
+        "x": "3606",
+        "y": "5724"
       }
     },
     {
@@ -3935,7 +3935,7 @@
       ]
     },
     {
-      "text": "THIS IS PLANET PATROL.\nYou cannot leave this planet with your control panel not working correctly. Here let's replace that for you. Try fixing them before they die next time! Off you go now!",
+      "text": "THIS IS PLANET PATROL.\nYou cannot leave this planet with your control panel not working correctly. Here let's replace that for you. Try fixing them before they die next time! Off you go!",
       "name": "Planet Patrol",
       "pid": "218",
       "position": {
@@ -3944,6 +3944,18 @@
       },
       "tags": [
         "End"
+      ]
+    },
+    {
+      "text": ". . . add . . . in? . . . diffeasrrr . . . sendinnnn . . .",
+      "name": "Adding in some skin? A bit brutal but if it makes your shouting stop, go ahead!",
+      "pid": "219",
+      "position": {
+        "x": "4025",
+        "y": "3825"
+      },
+      "tags": [
+        "Good"
       ]
     }
   ],

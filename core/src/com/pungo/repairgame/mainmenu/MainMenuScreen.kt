@@ -78,14 +78,9 @@ class MainMenuScreen: Screen() {
             }
             SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), muteButton.getBoundSprite() ) -> {
                 muteButton.toggle().also {
-                    if (it==0){
-                        SharedVariables.sfxVolume = 1.0f
-                        MusicPlayer.changeVolume(1.0f)
-                    } else {
-                        SharedVariables.sfxVolume = 0.0f
-                        MusicPlayer.changeVolume(0.0f)
-                    }
-
+                    SharedVariables.musicMuted = it != 0
+                    SharedVariables.sfxMuted = it != 0
+                    MusicPlayer.changeVolume(SharedVariables.bgmVolume)
                 }
             }
         }
