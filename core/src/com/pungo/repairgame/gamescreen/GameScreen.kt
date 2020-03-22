@@ -15,7 +15,7 @@ class GameScreen: Screen() {
 
     private lateinit var phText: TextIsland
     private lateinit var bigMonitor: BigMonitor
-    private lateinit var redButton: SetButton
+    private lateinit var redButton: RedButton
     private lateinit var cargoBay: CargoBay
     private var devices = listOf<SimpleDevice>()
     private var tools = listOf<SimpleTool>()
@@ -201,9 +201,9 @@ class GameScreen: Screen() {
                 texts[3].setStuff(it[2])
             }
         } catch (ex: Exception) {
-                texts[1].setStuff("")
-                texts[2].setStuff("")
-                texts[3].setStuff("")
+            texts[1].setStuff("")
+            texts[2].setStuff("")
+            texts[3].setStuff("")
         }
     }
 
@@ -256,8 +256,8 @@ class GameScreen: Screen() {
                 if(countdownIndex==countdownIndexLimit){
                     texts[0].setStuff("")
                     sfxLaunch.play(SharedVariables.sfxVolume * 2)
-                    rocketAnimation.animationGo()
                     rocketAnimCalled = true
+                    rocketAnimation.animationGo()
 
                     countdownTimer.running = false
                     countdownIndex = -1
@@ -382,7 +382,7 @@ class GameScreen: Screen() {
         mainSprite = SharedVariables.loadSprite(SharedVariables.gameBackgroundPath, SharedVariables.gameBackgroundRatio)
         mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
-        redButton = SetButton(DevicesData.redPath, DevicesData.redRatio)
+        redButton = RedButton(DevicesData.redPath, DevicesData.redRatio)
         redButton.relocateCentre(DevicesData.redX, DevicesData.redY)
         devices = DevicesData.getDevices()
         tools = ToolsData.getTools()
@@ -414,7 +414,6 @@ class GameScreen: Screen() {
         }
         cargoBay = CargoBay()
         rocketAnimation.lateInitializer(0.1f, TextureAtlas(Gdx.files.internal(SharedVariables.rocketAnimationPath)).regions)
-        rocketAnimation.animationGo()
         timer.go()
     }
 }
