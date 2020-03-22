@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.*
+import com.pungo.repairgame.gamescreen.devices.BigMonitorStatus
 import com.pungo.repairgame.gamescreen.devices.DevicesData
 import com.pungo.repairgame.gamescreen.devices.SimpleDevice
 import com.pungo.repairgame.ui.ButtonStatus
@@ -21,7 +22,7 @@ class GameScreen: Screen() {
     private var texts = mutableListOf<TextIslandTexts>()
     private val travelTimer = Timer(20000)                  // travel timer
     private val timer = Timer(1000)                         // breakdown timer
-    private val countdownTimer = Timer(1000)                // countdown timer
+    private val countdownTimer = Timer(100)                // countdown timer
     private var sfxBeep = Gdx.audio.newSound(Gdx.files.internal("sound/Beep.mp3"))
     private var sfxTake = Gdx.audio.newSound(Gdx.files.internal("sound/Take.mp3"))
     private var sfxFail = Gdx.audio.newSound(Gdx.files.internal("sound/Fail.mp3"))
@@ -33,7 +34,7 @@ class GameScreen: Screen() {
     private var patrolPlanet = false
     private var countdownIndex = -1
     private var countdownIndexLimit = 3
-    private val countdownList: List<String> = listOf("graphics/bigmonitor/three.png", "graphics/bigmonitor/two.png", "graphics/bigmonitor/one.png", "graphics/bigmonitor/go.png","graphics/bigmonitor/show&tell.png")
+
 
 
     fun reset(){
@@ -44,7 +45,8 @@ class GameScreen: Screen() {
         cargoBay.reset()
         devices.forEach { it.status = DeviceStatus.NORMAL }
         tools = ToolsData.getTools()
-        bigMonitor.changeMonitor("graphics/planets/p0.png")
+        bigMonitor.status = BigMonitorStatus.P0
+        //bigMonitor.changeMonitor("graphics/planets/p0.png")
         breakingList = listOf(0)
         phText.getPlanetPassage(1)
         updateIslandText()
@@ -220,7 +222,8 @@ class GameScreen: Screen() {
         redButton.glowing = false
         if(patrolFlag){
             phText.getPlanetPassage(218)
-            bigMonitor.changeMonitor("graphics/planets/ps.png")
+            bigMonitor.status = BigMonitorStatus.Ps
+            //bigMonitor.changeMonitor("graphics/planets/ps.png")
             updateIslandText()
             for(device in devices){
                 device.breakTimer.running = false
@@ -231,7 +234,8 @@ class GameScreen: Screen() {
             return
         }
         else {
-            countdownTimer.go()
+            //countdownTimer.go()
+            bigMonitor.activateCountdown()
             texts[0].setStuff("")
         }
     }
@@ -261,6 +265,7 @@ class GameScreen: Screen() {
     }
 
     override fun loopAction() {
+        /*
         if(countdownTimer.running){
             if(countdownTimer.done()){
                 if(countdownIndex==countdownIndexLimit){
@@ -282,6 +287,18 @@ class GameScreen: Screen() {
                     countdownTimer.go()
                 }
             }
+        }
+         */
+        when (bigMonitor.loopAction()){
+            1-> {
+                travelTimer.go()
+                for(device in devices){
+                    device.breakTimer.resume()
+                }
+                chosenOption = -1
+                texts[0].setStuff("")
+            }
+
         }
 
         if (travelTimer.running) {
@@ -346,7 +363,8 @@ class GameScreen: Screen() {
                         phText.getPlanetPassage(7)
                     }
                 }
-                bigMonitor.changeMonitor("graphics/planets/p1.png")
+                //bigMonitor.changeMonitor("graphics/planets/p1.png")
+                bigMonitor.status = BigMonitorStatus.P1
                 countdownIndexLimit = 2
             }
             1 -> {
@@ -355,7 +373,8 @@ class GameScreen: Screen() {
                 } else {
                     phText.getPlanetPassage(93)
                 }
-                bigMonitor.changeMonitor("graphics/planets/p2.png")
+                //bigMonitor.changeMonitor("graphics/planets/p2.png")
+                bigMonitor.status = BigMonitorStatus.P2
             }
             2 -> {
                 when {
@@ -363,7 +382,8 @@ class GameScreen: Screen() {
                     devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(3) //translator
                     else -> phText.getPlanetPassage(36)
                 }
-                bigMonitor.changeMonitor("graphics/planets/p3.png")
+                //bigMonitor.changeMonitor("graphics/planets/p3.png")
+                bigMonitor.status = BigMonitorStatus.P3
             }
             3 -> {
                 when {
@@ -371,13 +391,15 @@ class GameScreen: Screen() {
                     devices[3].status != DeviceStatus.NORMAL -> phText.getPlanetPassage(196) //translator
                     else -> phText.getPlanetPassage(146)
                 }
-                bigMonitor.changeMonitor("graphics/planets/p4.png")
+                //bigMonitor.changeMonitor("graphics/planets/p4.png")
+                bigMonitor.status = BigMonitorStatus.P4
             }
             4 -> {
                 cargoBay.endingTree().also{
                     phText.getPlanetPassage(it)
                 }
-                bigMonitor.changeMonitor("graphics/planets/p5.png")
+                //bigMonitor.changeMonitor("graphics/planets/p5.png")
+                bigMonitor.status = BigMonitorStatus.P5
             }
         }
         SharedVariables.planetIndex++
@@ -385,6 +407,10 @@ class GameScreen: Screen() {
     }
 
     override fun lateInitializer() {
+        bigMonitor = BigMonitor().apply{
+            //changeMonitor("graphics/planets/p0.png")
+            status = BigMonitorStatus.P0
+        }
         mainSprite = SharedVariables.loadSprite(SharedVariables.gameBackgroundPath, SharedVariables.gameBackgroundRatio)
         mainSprite.setCenterX(SharedVariables.mainWidth.toFloat() / 2)
         mainSprite.setCenterY(SharedVariables.mainHeight.toFloat() / 2)
@@ -415,9 +441,7 @@ class GameScreen: Screen() {
             it.setStuff("", 250f, 0f, 1250f,65f)
             texts.add(it)
         }
-        bigMonitor = BigMonitor().apply{
-            changeMonitor("graphics/planets/p0.png")
-        }
+
         cargoBay = CargoBay()
         timer.go()
     }
