@@ -8,7 +8,6 @@ import com.pungo.repairgame.*
 import com.pungo.repairgame.gamescreen.devices.DevicesData
 import com.pungo.repairgame.gamescreen.devices.SimpleDevice
 import com.pungo.repairgame.ui.ButtonStatus
-import com.pungo.repairgame.ui.SetButton
 
 class GameScreen: Screen() {
     private lateinit var mainSprite: Sprite
@@ -118,7 +117,6 @@ class GameScreen: Screen() {
                     texts[4].setStuff(texts[chosenOption].text, texts[chosenOption].left, texts[chosenOption].top, texts[chosenOption].width,texts[chosenOption].height)
                     sfxChoose.play(SharedVariables.sfxVolume)
                 }
-
             }
         }
     }
@@ -162,6 +160,10 @@ class GameScreen: Screen() {
                 updateIslandText()
             }
             texts[k].pressing = false
+        }
+
+        if(!phText.sceneNotOver() && !countdownTimer.running && !travelTimer.running && !rocketAnimCalled){
+            redButton.glowing = true
         }
 
         if (!travelTimer.running && !phText.sceneNotOver()) {
@@ -208,6 +210,7 @@ class GameScreen: Screen() {
     }
 
     private fun redButton() {
+        redButton.glowing = false
         if(patrolFlag){
             phText.getPlanetPassage(218)
             bigMonitor.changeMonitor("graphics/planets/ps.png")
@@ -271,6 +274,7 @@ class GameScreen: Screen() {
                 }
             }
         }
+
         if(rocketAnimation.isDone() && rocketAnimCalled){
             bigMonitor.changeMonitor(countdownList[4])
             rocketAnimCalled = false
