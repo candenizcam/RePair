@@ -208,6 +208,7 @@ class GameScreen: Screen() {
             bigMonitor.changeMonitor("graphics/planets/ps.png")
             updateIslandText()
             for(device in devices){
+                device.breakTimer.running = false
                 device.status = DeviceStatus.NORMAL
             }
             chosenOption = -1
@@ -269,6 +270,9 @@ class GameScreen: Screen() {
             bigMonitor.changeMonitor(countdownList[4])
             rocketAnimCalled = false
             travelTimer.go()
+            for(device in devices){
+                device.breakTimer.resume()
+            }
         }
 
         if (travelTimer.running) {
@@ -279,6 +283,7 @@ class GameScreen: Screen() {
             }
             if (travelTimer.done()) {
                 travelTimer.running = false
+                devices.forEach { it.breakTimer.pause() }
                 changePlanet()
             } else if ((travelTimer.timeLeft()>1000)&&(timer.done())){
                 if (diceThrowingFunctionThatThrowsBetweenZeroAndTenInsteadOfItBeingAVariable()) {
