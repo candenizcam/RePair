@@ -256,8 +256,8 @@ class GameScreen: Screen() {
                 if(countdownIndex==countdownIndexLimit){
                     texts[0].setStuff("")
                     sfxLaunch.play(SharedVariables.sfxVolume * 2)
-                    rocketAnimation.animationGo()
                     rocketAnimCalled = true
+                    rocketAnimation.animationGo()
 
                     countdownTimer.running = false
                     countdownIndex = -1
@@ -414,7 +414,6 @@ class GameScreen: Screen() {
         }
         cargoBay = CargoBay()
         rocketAnimation.lateInitializer(0.1f, TextureAtlas(Gdx.files.internal(SharedVariables.rocketAnimationPath)).regions)
-        rocketAnimation.animationGo()
         timer.go()
     }
 }
