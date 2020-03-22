@@ -177,6 +177,10 @@ class GameScreen: Screen() {
             }
             if(redButton.status == ButtonStatus.DOWN && !countdownTimer.running && !rocketAnimCalled) {
                 if(SharedVariables.planetIndex==5){
+                    when(phText.getTag()){
+                        "Good" -> SharedVariables.endingScreen.goodEnder()
+                        "Bad" -> SharedVariables.endingScreen.badEnder()
+                    }
                     SharedVariables.activeScreen = SharedVariables.endingScreen
                 }
                 sfxRed.play(SharedVariables.sfxVolume)
