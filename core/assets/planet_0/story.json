@@ -27,7 +27,7 @@
       }
     },
     {
-      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nGet to that Mechanic Planet first they'll help.\nUntill there this duct type can hold things together\nNow you can prepare for take off.\n[[Ummmm . . .]]\n[[Welllll . . .]]\n[[About thaaat . . .]]",
+      "text": "I see but get your ship checked first it seems a bit . . . broken. Get to that Mechanic Planet they'll help. Untill there this duct tape can hold things together. Before you leave, a mandotory question: You do know how to operate your ship, right? \n[[Ummmm . . .]]\n[[Welllll . . .]]\n[[About thaaat . . .]]",
       "links": [
         {
           "name": "Ummmm . . .",
@@ -621,7 +621,7 @@
       }
     },
     {
-      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nGet to that Mechanic Planet first they'll help.\nUntill there this duct type can hold things together\nNow you can prepare for take off.\n[[Ummmm . . .]]\n[[Welllll . . .]]\n[[About thaaat . . .]]",
+      "text": "I see but get your ship checked first it seems a bit . . . broken. Get to that Mechanic Planet they'll help. Untill there this duct tape can hold things together. Before you leave, a mandotory question: You do know how to operate your ship, right? \n[[Ummmm . . .]]\n[[Welllll . . .]]\n[[About thaaat . . .]]",
       "links": [
         {
           "name": "Ummmm . . .",
@@ -647,7 +647,7 @@
       }
     },
     {
-      "text": "I understand but you might wanna get your ship checked it seems a bit . . . broken.\nGet to that Mechanic Planet first they'll help.\nUntill there this duct type can hold things together\nNow you can prepare for take off.\n[[Ummmm . . .]]\n[[Welllll . . .]]\n[[About thaaat . . .]]",
+      "text": "I see but get your ship checked first it seems a bit . . . broken. Get to that Mechanic Planet they'll help. Untill there this duct tape can hold things together. Before you leave, a mandotory question: You do know how to operate your ship, right? \n[[Ummmm . . .]]\n[[Welllll . . .]]\n[[About thaaat . . .]]",
       "links": [
         {
           "name": "Ummmm . . .",
@@ -2631,7 +2631,7 @@
       ]
     },
     {
-      "text": "Just press that big glowing pink button over to your left whenever you are ready to travel to another planet.",
+      "text": "Just press that big glowing pink button over to your left whenever you are ready to travel to another planet and don't let anything stay broken for too long on your way!",
       "name": "Ummmm . . .",
       "pid": "142",
       "position": {
@@ -2643,7 +2643,7 @@
       ]
     },
     {
-      "text": "Just press that big glowing pink button over to your left whenever you are ready to travel to another planet.",
+      "text": "Just press that big glowing pink button over to your left whenever you are ready to travel to another planet and don't let anything stay broken for too long on your way!",
       "name": "Welllll . . .",
       "pid": "143",
       "position": {
@@ -2655,7 +2655,7 @@
       ]
     },
     {
-      "text": "Just press that big glowing pink button over to your left whenever you are ready to travel to another planet.",
+      "text": "Just press that big glowing pink button over to your left whenever you are ready to travel to another planet and don't let anything stay broken for too long on your way!",
       "name": "About thaaat . . .",
       "pid": "144",
       "position": {
