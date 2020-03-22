@@ -32,7 +32,7 @@ class GameScreen: Screen() {
     private var patrolFlag = false
     private var patrolPlanet = false
     private var countdownIndex = -1
-    private var countdownIndexLimit = 2
+    private var countdownIndexLimit = 3
     private val countdownList: List<String> = listOf("graphics/bigmonitor/three.png", "graphics/bigmonitor/two.png", "graphics/bigmonitor/one.png", "graphics/bigmonitor/go.png","graphics/bigmonitor/show&tell.png")
 
 
