@@ -3,7 +3,6 @@ package com.pungo.repairgame.gamescreen
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
-import com.badlogic.gdx.graphics.g2d.TextureAtlas
 import com.pungo.repairgame.*
 import com.pungo.repairgame.gamescreen.devices.DevicesData
 import com.pungo.repairgame.gamescreen.devices.SimpleDevice
@@ -26,24 +25,19 @@ class GameScreen: Screen() {
     private var sfxBeep = Gdx.audio.newSound(Gdx.files.internal("sound/Beep.mp3"))
     private var sfxTake = Gdx.audio.newSound(Gdx.files.internal("sound/Take.mp3"))
     private var sfxFail = Gdx.audio.newSound(Gdx.files.internal("sound/Fail.mp3"))
-    private var sfxLaunch = Gdx.audio.newSound(Gdx.files.internal("sound/Launch.mp3"))
     private var sfxChoose = Gdx.audio.newSound(Gdx.files.internal("sound/Choose.mp3"))
     private var sfxRed = Gdx.audio.newSound(Gdx.files.internal("sound/Red.mp3"))
     private var breakingList = listOf(0)
     private var chosenOption = -1
-    private var rocketAnimCalled = false
     private var patrolFlag = false
     private var patrolPlanet = false
     private var countdownIndex = -1
     private var countdownIndexLimit = 2
     private val countdownList: List<String> = listOf("graphics/bigmonitor/three.png", "graphics/bigmonitor/two.png", "graphics/bigmonitor/one.png", "graphics/bigmonitor/go.png","graphics/bigmonitor/show&tell.png")
-    private var rocketAnimation = AnimationHandler().also{
-        it.relocateCentre(SharedVariables.mainWidth/2f,SharedVariables.mainHeight/2f)
-    }
+
 
     fun reset(){
         chosenOption = -1
-        rocketAnimCalled = false
         patrolFlag = false
         patrolPlanet = false
         countdownIndex = -1
@@ -60,11 +54,9 @@ class GameScreen: Screen() {
         sfxBeep.stop()
         sfxTake.stop()
         sfxFail.stop()
-        sfxLaunch.stop()
         travelTimer.pause()
         countdownTimer.pause()
         timer.pause()
-        rocketAnimation.pause()
         devices.forEach { it.breakTimer.pause() }
 
     }
@@ -73,7 +65,6 @@ class GameScreen: Screen() {
         travelTimer.resume()
         countdownTimer.resume()
         timer.resume()
-        rocketAnimation.resume()
         devices.forEach { it.breakTimer.resume() }
     }
 
@@ -95,7 +86,6 @@ class GameScreen: Screen() {
         if (texts[0].revealed && phText.sceneNotOver()) {
             for (k in 1..3) {texts[k].draw(batch)}
         }
-        rocketAnimation.draw(batch)
     }
 
     override fun firstPress() {
@@ -177,7 +167,7 @@ class GameScreen: Screen() {
             texts[k].pressing = false
         }
 
-        if(!phText.sceneNotOver() && !countdownTimer.running && !travelTimer.running && !rocketAnimCalled){
+        if(!phText.sceneNotOver() && !countdownTimer.running && !travelTimer.running){
             redButton.glowing = true
         }
 
@@ -193,7 +183,7 @@ class GameScreen: Screen() {
                 3->if (phText.getTag()=="Good"){ cargoBay.addToItems("dessert") }
                 4->if (phText.getTag()=="Good"){ cargoBay.addToItems("flower") }
             }
-            if(redButton.status == ButtonStatus.DOWN && !countdownTimer.running && !rocketAnimCalled) {
+            if(redButton.status == ButtonStatus.DOWN && !countdownTimer.running) {
                 if(SharedVariables.planetIndex==5){
                     when(phText.getTag()){
                         "Good" -> SharedVariables.endingScreen.goodEnder()
@@ -275,12 +265,12 @@ class GameScreen: Screen() {
             if(countdownTimer.done()){
                 if(countdownIndex==countdownIndexLimit){
                     texts[0].setStuff("")
-                    if(!SharedVariables.sfxMuted){
-                        sfxLaunch.play(SharedVariables.sfxVolume * 2)
-                    }
-                    rocketAnimCalled = true
-                    rocketAnimation.animationGo()
 
+                    bigMonitor.changeMonitor(countdownList[4])
+                    travelTimer.go()
+                    for(device in devices){
+                        device.breakTimer.resume()
+                    }
                     countdownTimer.running = false
                     countdownIndex = -1
                     // bigMonitor.changeMonitor("graphics/spaceview.png")
@@ -291,15 +281,6 @@ class GameScreen: Screen() {
                     chosenOption = -1
                     countdownTimer.go()
                 }
-            }
-        }
-
-        if(rocketAnimation.isDone() && rocketAnimCalled){
-            bigMonitor.changeMonitor(countdownList[4])
-            rocketAnimCalled = false
-            travelTimer.go()
-            for(device in devices){
-                device.breakTimer.resume()
             }
         }
 
@@ -438,7 +419,6 @@ class GameScreen: Screen() {
             changeMonitor("graphics/planets/p0.png")
         }
         cargoBay = CargoBay()
-        rocketAnimation.lateInitializer(0.1f, TextureAtlas(Gdx.files.internal(SharedVariables.rocketAnimationPath)).regions)
         timer.go()
     }
 }

@@ -3,6 +3,8 @@ package com.pungo.repairgame.mainmenu
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.badlogic.gdx.graphics.g2d.TextureAtlas
+import com.pungo.repairgame.AnimationHandler
 import com.pungo.repairgame.MusicPlayer
 import com.pungo.repairgame.Screen
 import com.pungo.repairgame.SharedVariables
@@ -22,7 +24,11 @@ class MainMenuScreen: Screen() {
     lateinit var continueButton: SetButton
     private lateinit var muteButton: ToggleButton
     private var sfx = Gdx.audio.newSound(Gdx.files.internal("sound/Blip.mp3"))
-
+    private var sfxLaunch = Gdx.audio.newSound(Gdx.files.internal("sound/Launch.mp3"))
+    private var rocketAnimation = AnimationHandler().also{
+        it.relocateCentre(SharedVariables.mainWidth/2f,SharedVariables.mainHeight/2f)
+    }
+    private var rocketAnimCalled = false
 
     override fun lateInitializer() {
         mainSprite = SharedVariables.loadSprite(SharedVariables.mainMenuBackgroundPath, SharedVariables.menuBackgroundRatio).apply{
@@ -49,9 +55,11 @@ class MainMenuScreen: Screen() {
         muteButton = ToggleButton("graphics/menu_buttons/mute", ratio = 0.25f).apply{
             relocateCentre(1820f, 980f)
         }
+        rocketAnimation.lateInitializer(0.1f, TextureAtlas(Gdx.files.internal(SharedVariables.rocketAnimationPath)).regions)
     }
 
     override fun draw(batch: SpriteBatch) {
+        rocketAnimation.draw(batch)
         mainSprite.draw(batch)
         titleSprite.draw(batch)
         startButton.draw(batch)
@@ -111,12 +119,12 @@ class MainMenuScreen: Screen() {
                 if(!SharedVariables.sfxMuted){
                     sfx.play(SharedVariables.sfxVolume)
                 }
-
-                SharedVariables.resetGame()
-                Timer().schedule(370) {
-                    continueButton.visible = true
-                    SharedVariables.activeScreen = gameScreen
+                if(!SharedVariables.sfxMuted){
+                    sfxLaunch.play(SharedVariables.sfxVolume * 2)
                 }
+                SharedVariables.resetGame()
+                rocketAnimCalled = true
+                rocketAnimation.animationGo()
             }
             exitButton.status == ButtonStatus.DOWN -> {
                 exitButton.status = ButtonStatus.UP
@@ -152,6 +160,12 @@ class MainMenuScreen: Screen() {
     }
 
     override fun loopAction() {
-
+        if(rocketAnimation.isDone() && rocketAnimCalled){
+            Timer().schedule(370) {
+                continueButton.visible = true
+                rocketAnimCalled = false
+                SharedVariables.activeScreen = gameScreen
+            }
+        }
     }
 }
