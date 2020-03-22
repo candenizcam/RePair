@@ -48,6 +48,7 @@ class GameScreen: Screen() {
         patrolFlag = false
         patrolPlanet = false
         countdownIndex = -1
+        cargoBay.reset()
         devices.forEach { it.status = DeviceStatus.NORMAL }
         tools = ToolsData.getTools()
         bigMonitor.changeMonitor("graphics/planets/p0.png")
@@ -177,6 +178,10 @@ class GameScreen: Screen() {
             }
             if(redButton.status == ButtonStatus.DOWN && !countdownTimer.running && !rocketAnimCalled) {
                 if(SharedVariables.planetIndex==5){
+                    when(phText.getTag()){
+                        "Good" -> SharedVariables.endingScreen.goodEnder()
+                        "Bad" -> SharedVariables.endingScreen.badEnder()
+                    }
                     SharedVariables.activeScreen = SharedVariables.endingScreen
                 }
                 sfxRed.play(SharedVariables.sfxVolume)
@@ -208,6 +213,7 @@ class GameScreen: Screen() {
             bigMonitor.changeMonitor("graphics/planets/ps.png")
             updateIslandText()
             for(device in devices){
+                device.breakTimer.running = false
                 device.status = DeviceStatus.NORMAL
             }
             chosenOption = -1
@@ -269,6 +275,9 @@ class GameScreen: Screen() {
             bigMonitor.changeMonitor(countdownList[4])
             rocketAnimCalled = false
             travelTimer.go()
+            for(device in devices){
+                device.breakTimer.resume()
+            }
         }
 
         if (travelTimer.running) {
@@ -279,6 +288,7 @@ class GameScreen: Screen() {
             }
             if (travelTimer.done()) {
                 travelTimer.running = false
+                devices.forEach { it.breakTimer.pause() }
                 changePlanet()
             } else if ((travelTimer.timeLeft()>1000)&&(timer.done())){
                 if (diceThrowingFunctionThatThrowsBetweenZeroAndTenInsteadOfItBeingAVariable()) {
