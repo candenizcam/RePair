@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="RePair.desktop:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7f75ef19-cddc-41bf-9a72-08397da900ef" name="Default Changelist" comment="bugfix">
+      <change afterPath="$PROJECT_DIR$/core/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/RePair_desktop_jar/RePair.desktop.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/test.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/pungo/repairgame/gamescreen/GameScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/pungo/repairgame/gamescreen/GameScreen.kt" afterDir="false" />
+    </list>
+    <list id="46aba05d-788c-49a2-922b-157cbabd5951" name="Revert &quot;Dialogue was NOT fixed :/&quot;" comment="Revert &quot;Dialogue was NOT fixed :/&quot;&#10;&#10;This reverts commit 7347dec1" />
+    <list id="81fa7fda-6882-4427-9364-86aea9e964d7" name="Revert &quot;Pause screen implemented.&quot;" comment="Revert &quot;Pause screen implemented.&quot;&#10;&#10;This reverts commit aba128da" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/desktop">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RePair" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RePair" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RePair" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/chestarian/RePair" />
+      </set>
+    </option>
+  </component>
+  <component name="KonanWorkspace">
+    <executables />
+  </component>
+  <component name="ProjectId" id="1XAPf2xMWusE5HRAd8L6Ncm4BeD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/core/src/META-INF" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.space" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.pungo.repairgame" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.RePair:desktop [dist]">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.pungo.repairgame.desktop.DesktopLauncher" />
+      <module name="RePair.desktop.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RePair [dist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dist" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RePair [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RePair:desktop [dist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/desktop" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dist" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RePair:desktop [jar]" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/desktop" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="JarApplication" nameIsGenerated="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/desktop/build/libs/desktop-1.0.jar" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\mifu3\Desktop\PunGo\RePair" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/RePair_desktop_main_jar/RePair.desktop.main.jar" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.DesktopLauncher" />
+      <item itemvalue="Gradle.RePair:desktop [jar]" />
+      <item itemvalue="Gradle.RePair:desktop [dist]" />
+      <item itemvalue="Gradle.RePair [run]" />
+      <item itemvalue="Gradle.RePair [dist]" />
+      <item itemvalue="JAR Application.Unnamed" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.RePair:desktop [dist]" />
+        <item itemvalue="Gradle.RePair [dist]" />
+        <item itemvalue="Gradle.RePair [run]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f75ef19-cddc-41bf-9a72-08397da900ef" name="Default Changelist" comment="" />
+      <created>1580486026018</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580486026018</updated>
+      <workItem from="1580486027738" duration="44656000" />
+      <workItem from="1580561235064" duration="45382000" />
+      <workItem from="1581841715671" duration="35156000" />
+      <workItem from="1582116812234" duration="1522000" />
+      <workItem from="1582120135131" duration="5881000" />
+      <workItem from="1582313451760" duration="1202000" />
+      <workItem from="1582451301498" duration="5246000" />
+      <workItem from="1582529303401" duration="1794000" />
+      <workItem from="1582700706034" duration="599000" />
+      <workItem from="1583432253097" duration="970000" />
+      <workItem from="1583484978185" duration="1305000" />
+      <workItem from="1583742402994" duration="4775000" />
+      <workItem from="1584101741647" duration="3796000" />
+      <workItem from="1584265664715" duration="373000" />
+      <workItem from="1584292672687" duration="702000" />
+      <workItem from="1584351789952" duration="4654000" />
+      <workItem from="1584435486498" duration="2649000" />
+      <workItem from="1584442567934" duration="5694000" />
+      <workItem from="1584529437063" duration="1574000" />
+      <workItem from="1584698805632" duration="16052000" />
+      <workItem from="1584742955258" duration="2706000" />
+      <workItem from="1584789491501" duration="614000" />
+      <workItem from="1584815856326" duration="18016000" />
+    </task>
+    <task id="LOCAL-00001" summary="Midi player implemented">
+      <created>1580496614287</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580496614287</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Screen abstract class implemented">
+      <created>1580499984459</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580499984459</updated>
+    </task>
+    <task id="LOCAL-00003" summary="MouseManager, Coordinates data class added">
+      <created>1580503790420</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580503790420</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Code refactoring">
+      <created>1580511445061</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580511445061</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ClickListener implemented">
+      <created>1580515112190</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1580515112190</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactoring">
+      <created>1580517223197</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1580517223197</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Code refactoring">
+      <created>1580520130544</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1580520130544</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Made a separate Timer class">
+      <created>1580523377803</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1580523377803</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactoring">
+      <created>1580526345284</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580526345284</updated>
+    </task>
+    <task id="LOCAL-00010" summary="TextIsland implemented">
+      <created>1580554241824</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1580554241824</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactoring">
+      <created>1580557904644</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1580557904644</updated>
+    </task>
+    <task id="LOCAL-00012" summary="little bugs">
+      <created>1580561959119</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1580561959119</updated>
+    </task>
+    <task id="LOCAL-00013" summary="bigger bugs">
+      <created>1580567175998</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1580567175998</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Planet hopping on">
+      <created>1580571698571</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1580571698572</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Planet hopping on">
+      <created>1580572701866</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1580572701866</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Dialogue fixed">
+      <created>1580578993789</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1580578993789</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Dialogue was NOT fixed :/">
+      <created>1580586419249</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1580586419249</updated>
+    </task>
+    <task id="LOCAL-00018" summary="some shit happened">
+      <created>1580587716342</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1580587716342</updated>
+    </task>
+    <task id="LOCAL-00019" summary="shit resolved">
+      <created>1580590091441</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1580590091441</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Some graphics, sound effects added. Dialogue fixed for real.">
+      <created>1580605525575</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1580605525575</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Countdown after red button">
+      <created>1580615844758</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1580615844758</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Missing charaters in texts fixed">
+      <created>1581842992187</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1581842992187</updated>
+    </task>
+    <task id="LOCAL-00023" summary="5 second rule implemented, microphone breakdown implemented.">
+      <created>1581855741009</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1581855741009</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Rocket Animation added after countdown">
+      <created>1581858487282</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1581858487282</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Planet Patrol added.">
+      <created>1581867926676</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1581867926676</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Planet Patrol added.">
+      <created>1581867974636</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1581867974636</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Launch sound added?">
+      <created>1581875006869</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1581875006869</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Minor Refactoring">
+      <created>1581876515587</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1581876515587</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Minor Refactoring">
+      <created>1581877202027</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1581877202027</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Minor Refactoring">
+      <created>1581878284915</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1581878284915</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Exception messages added">
+      <created>1584358933397</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1584358933397</updated>
+    </task>
+    <task id="LOCAL-00032" summary="MidiPlayer changed to MusicPlayer, bgm volume change implemented.">
+      <created>1584448250763</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1584448250764</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Pause screen implemented.">
+      <created>1584713721134</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1584713721134</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Continue button fixed">
+      <created>1584714160905</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1584714160905</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Latest builds added">
+      <created>1584715677051</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1584715677051</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Fixed device timers">
+      <created>1584737284781</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1584737284781</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Fixed device timers">
+      <created>1584743008778</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1584743008778</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Fixed device timers">
+      <created>1584744891352</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1584744891352</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Continue button now disappears after finishing the game">
+      <created>1584820403297</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1584820403297</updated>
+    </task>
+    <task id="LOCAL-00040" summary="New game bugs fixed">
+      <created>1584827979413</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1584827979413</updated>
+    </task>
+    <task id="LOCAL-00041" summary="bugfix">
+      <created>1584828780399</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1584828780399</updated>
+    </task>
+    <task id="LOCAL-00042" summary="bugfix">
+      <created>1584829459220</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1584829459220</updated>
+    </task>
+    <task id="LOCAL-00043" summary="bugfix">
+      <created>1584875270273</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1584875270273</updated>
+    </task>
+    <task id="LOCAL-00044" summary="bugfix">
+      <created>1584877530503</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1584877530503</updated>
+    </task>
+    <task id="LOCAL-00045" summary="ending bug fixed">
+      <created>1584878429942</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1584878429942</updated>
+    </task>
+    <task id="LOCAL-00046" summary="CargoBay reset added">
+      <created>1584879843991</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1584879843991</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="thats better" />
+    <MESSAGE value="Toolbox appearance before buying them fixed.&#10;Flight countdown now appears on every planet." />
+    <MESSAGE value="Flower planet added." />
+    <MESSAGE value="Endings implemented." />
+    <MESSAGE value="Story complete." />
+    <MESSAGE value="i must be insane" />
+    <MESSAGE value="aspect ratio problem fixed" />
+    <MESSAGE value="Music mute function added, sfx volume can be changed via SharedVariables.sfxVolume" />
+    <MESSAGE value="Missing charaters in texts fixed" />
+    <MESSAGE value="5 second rule implemented, microphone breakdown implemented." />
+    <MESSAGE value="Rocket Animation added after countdown" />
+    <MESSAGE value="Planet Patrol added." />
+    <MESSAGE value="Launch sound added?" />
+    <MESSAGE value="Minor Refactoring" />
+    <MESSAGE value="Exception messages added" />
+    <MESSAGE value="MidiPlayer changed to MusicPlayer, bgm volume change implemented." />
+    <MESSAGE value="Pause screen implemented." />
+    <MESSAGE value="Continue button fixed" />
+    <MESSAGE value="Latest builds added" />
+    <MESSAGE value="Fixed device timers" />
+    <MESSAGE value="Continue button now disappears after finishing the game" />
+    <MESSAGE value="New game bugs fixed" />
+    <MESSAGE value="bugfix" />
+    <MESSAGE value="ending bug fixed" />
+    <MESSAGE value="CargoBay reset added" />
+    <option name="LAST_COMMIT_MESSAGE" value="CargoBay reset added" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Project_Structure" timestamp="1584357822959">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1584357822959" />
+    <state x="496" y="39" key="#RePair:desktop_[dist]" timestamp="1584874691055">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="496" y="39" key="#RePair:desktop_[dist]/0.0.1536.824@0.0.1536.824" timestamp="1584874691055" />
+    <state x="496" y="40" key="#RePair:desktop_[jar]" timestamp="1580611138968">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="496" y="40" key="#RePair:desktop_[jar]/0.0.1536.824@0.0.1536.824" timestamp="1580611138968" />
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584881374517">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1584881374517" />
+    <state x="528" y="216" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584875023195">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="528" y="216" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1584875023195" />
+    <state x="498" y="197" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584872918292">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="197" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1584872918292" />
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584789215316">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1584789215316" />
+    <state x="391" y="339" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1580561984032">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="391" y="339" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1580561984032" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584447651306">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584447651306" />
+    <state x="548" y="66" width="452" height="692" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1582128518462">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="66" width="452" height="692" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1582128518462" />
+    <state x="388" y="0" key="CommitChangelistDialog2" timestamp="1584880991019">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="388" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584880991019" />
+    <state width="964" height="466" key="DebuggerActiveHint" timestamp="1584703256536">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="964" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1584703256536" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1584817789568">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1584817789568" />
+    <state x="548" y="168" key="FileChooserDialogImpl" timestamp="1584872971890">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584872971890" />
+    <state width="746" height="193" key="GridCell.Tab.0.bottom" timestamp="1584883592604">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="193" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584883592604" />
+    <state width="746" height="193" key="GridCell.Tab.0.center" timestamp="1584883592604">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="193" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584883592604" />
+    <state width="746" height="193" key="GridCell.Tab.0.left" timestamp="1584883592604">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="193" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584883592604" />
+    <state width="746" height="193" key="GridCell.Tab.0.right" timestamp="1584883592604">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="193" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584883592604" />
+    <state width="1493" height="108" key="GridCell.Tab.1.bottom" timestamp="1584713615784">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="108" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584713615784" />
+    <state width="1493" height="108" key="GridCell.Tab.1.center" timestamp="1584713615784">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="108" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584713615784" />
+    <state width="1493" height="108" key="GridCell.Tab.1.left" timestamp="1584713615784">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="108" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584713615784" />
+    <state width="1493" height="108" key="GridCell.Tab.1.right" timestamp="1584713615784">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="108" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584713615784" />
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1584722625091">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1584722625091" />
+    <state x="96" y="53" width="1377" height="682" key="MergeDialog" timestamp="1581878318109">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="96" y="53" width="1377" height="682" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1581878318109" />
+    <state x="481" y="129" key="MultipleFileMergeDialog" timestamp="1584743837171">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="481" y="129" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1584743837171" />
+    <state x="517" y="124" key="RollbackChangesDialog" timestamp="1584875301388">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="517" y="124" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584875301388" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1584881303408">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584881303408" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1584880996240">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584880996240" />
+    <state x="486" y="146" key="VcsDiffUtil.ChangesDialog" timestamp="1584744780187">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="486" y="146" key="VcsDiffUtil.ChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584744780187" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1584744463320">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584744463320" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1584744463321">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1584744463321" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1581849425777">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1581849425777" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1584817609819">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584817609819" />
+    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584744524668">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1584744524668" />
+    <state x="330" y="149" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1580570333050">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="330" y="149" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1580570333050" />
+    <state x="510" y="205" key="git4idea.merge.GitPullDialog" timestamp="1584882758786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="510" y="205" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1584882758786" />
+    <state x="574" y="277" key="git4idea.rebase.GitRebaseDialog" timestamp="1584744404981">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="277" key="git4idea.rebase.GitRebaseDialog/0.0.1536.824@0.0.1536.824" timestamp="1584744404981" />
+    <state x="209" y="138" key="new project wizard" timestamp="1582116543803">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="138" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1582116543803" />
+    <state x="510" y="56" key="refactoring.ChangeSignatureDialog" timestamp="1580556148265">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="510" y="56" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1580556148265" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1580495096773">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1580495096773" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1581867510840">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1581867510840" />
+  </component>
+  <component name="simpleUML.UMLToolWindowPlugin">
+    <General>
+      <option name="birdViewUpdateDelay" value="2000" />
+      <option name="defaultFileLocation" value="file://$PROJECT_DIR$/.." />
+    </General>
+    <Classdiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="defaultFieldsExpanded" value="false" />
+      <option name="defaultContructorsExpanded" value="false" />
+      <option name="defaultMethodsExpanded" value="false" />
+      <option name="showParameters" value="true" />
+      <option name="showTooltip" value="true" />
+      <option name="showReturnValues" value="true" />
+      <option name="longModifier" value="true" />
+      <option name="implementsBehaviour" value="1" />
+      <option name="extendsBehaviour" value="1" />
+      <option name="compartmentBehaviour" value="1" />
+      <option name="interfaceBackgroundColor" value="-6494306" />
+      <option name="abstractClassBackgroundColor" value="-1580132" />
+      <option name="classBackgroundColor" value="-6508057" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="quickSourceLinkColor" value="-16776961" />
+      <option name="quickDiagramLinkColor" value="-8454144" />
+      <option name="drawDecorations" value="false" />
+      <option name="hideFieldList" value="" />
+      <option name="showFieldList" value="" />
+      <option name="hideConstructorList" value="" />
+      <option name="showConstructorList" value="" />
+      <option name="hideMethodList" value="" />
+      <option name="showMethodList" value="" />
+      <option name="minimumFigureSize" value="0,0" />
+    </Classdiagram>
+    <Dependencydiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="0" />
+    </Dependencydiagram>
+    <Packagediagram>
+      <option name="diagramTitleFont" value="SansSerif,0,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="packageBackgroundColor" value="-4144960" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="2" />
+    </Packagediagram>
+  </component>
+</project>
