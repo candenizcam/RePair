@@ -47,7 +47,8 @@ class Slider(private val path: String, private val ratio: Float) {
 
     fun pressing(){
         if (moving){
-            val ballTarget = max(0.0,min(1.0,(Gdx.input.x-centreX)/(railSprite.width-ballSprite.width*0.5f)+0.5))
+            val xCorr = SharedVariables.mainWidth *(Gdx.input.x.toFloat()/Gdx.graphics.width)
+            val ballTarget = max(0.0,min(1.0,(xCorr-centreX)/(railSprite.width-ballSprite.width*0.5f)+0.5))
             sliderValue = ballTarget.toFloat()
         }
     }
