@@ -24,9 +24,8 @@ open class DeviceGraphics() {
 
     open fun recentre(centreX: Float,centreY: Float){}
 
-    open fun drawDead(batch: SpriteBatch){}
 
-    open fun drawNormal(batch: SpriteBatch){}
+    open fun drawNormal(batch: SpriteBatch, dead: Boolean=false){}
 
     open fun drawHot(batch: SpriteBatch){}
 
@@ -36,5 +35,5 @@ open class DeviceGraphics() {
 
     open fun drawShort(batch: SpriteBatch){}
 
-    open fun drawOver(batch: SpriteBatch){}
+    open fun drawOver(batch: SpriteBatch, dead: Boolean=false){}
 }

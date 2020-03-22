@@ -6,16 +6,16 @@ import com.pungo.repairgame.Timer
 import com.pungo.repairgame.gamescreen.DeviceStatus
 
 open class SimpleDevice(path: String,ratio: Float, gen2Graphics: Boolean = false) {
-    private var centreX = 0f
-    private var centreY = 0f
-    private var graphics : DeviceGraphics = if (gen2Graphics){
+    internal var centreX = 0f
+    internal var centreY = 0f
+    internal var graphics : DeviceGraphics = if (gen2Graphics){
         Gen2Graphics(path, ratio)
     } else {
         Gen1Graphics(path, ratio)
     }
     var status = DeviceStatus.NORMAL
     val breakTimer = Timer(5000)
-    private var oldStatus = status
+    internal var oldStatus = status
 
     fun getSprite(): Sprite {
         return graphics.getNormalSprite()
@@ -42,16 +42,13 @@ open class SimpleDevice(path: String,ratio: Float, gen2Graphics: Boolean = false
         return false
     }
 
-    fun draw(batch: SpriteBatch){
+    internal open fun draw(batch: SpriteBatch){
         graphics.recentre(centreX,centreY)
         if (status != oldStatus){
             graphics.reset()
             oldStatus = status
         }
-        when(status){
-            DeviceStatus.DEAD -> graphics.drawDead(batch)
-            else -> graphics.drawNormal(batch)
-        }
+        graphics.drawNormal(batch,status==DeviceStatus.DEAD)
         when(status){
             DeviceStatus.HOT -> graphics.drawHot(batch)
             DeviceStatus.BROKEN -> graphics.drawBroken(batch)
@@ -59,6 +56,6 @@ open class SimpleDevice(path: String,ratio: Float, gen2Graphics: Boolean = false
             DeviceStatus.SHORT -> graphics.drawShort(batch)
             else -> {}
         }
-        graphics.drawOver(batch)
+        graphics.drawOver(batch,status==DeviceStatus.DEAD)
     }
 }

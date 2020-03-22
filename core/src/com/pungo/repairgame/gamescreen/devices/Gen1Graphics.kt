@@ -26,12 +26,12 @@ class Gen1Graphics(path: String, ratio: Float) : DeviceGraphics() {
         deadSprite.setCenter(centreX,centreY)
     }
 
-    override fun drawDead(batch: SpriteBatch){
-        deadSprite.draw(batch)
-    }
-
-    override fun drawNormal(batch: SpriteBatch){
-        normalSprite.draw(batch)
+    override fun drawNormal(batch: SpriteBatch,dead: Boolean){
+        if (dead){
+            deadSprite.draw(batch)
+        } else {
+            normalSprite.draw(batch)
+        }
     }
 
     override fun drawHot(batch: SpriteBatch){

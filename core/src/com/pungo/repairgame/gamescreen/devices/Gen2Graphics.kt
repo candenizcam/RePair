@@ -14,6 +14,7 @@ class Gen2Graphics(path: String, ratio: Float) : DeviceGraphics() {
     private var normalAnimation: Animator
     private var deadAnimation: Animator
     private var overAnimation: Animator
+    private var overDeadAnimation: Animator
 
     init {
         var atlas = TextureAtlas(Gdx.files.internal("$path/device.atlas"))
@@ -26,6 +27,14 @@ class Gen2Graphics(path: String, ratio: Float) : DeviceGraphics() {
         w.color = Color.DARK_GRAY
         deadAnimation = Animator(listOf(w),false)
         overAnimation = Animator(atlas.createSprites("overframe").toList(),false)
+        var w2 = atlas.createSprite("overframe")
+        if (w2!=null){
+            w2.color = Color.DARK_GRAY
+            overDeadAnimation = Animator(listOf(w2),false)
+        } else {
+            overDeadAnimation = Animator(listOf(),false)
+        }
+
     }
 
     override fun getNormalSprite(): Sprite {
@@ -40,6 +49,7 @@ class Gen2Graphics(path: String, ratio: Float) : DeviceGraphics() {
         brokenAnimation.reset()
         deadAnimation.reset()
         overAnimation.reset()
+        overDeadAnimation.reset()
     }
 
     override fun recentre(centreX: Float, centreY: Float){
@@ -50,6 +60,7 @@ class Gen2Graphics(path: String, ratio: Float) : DeviceGraphics() {
         brokenAnimation.recentre(centreX,centreY)
         deadAnimation.recentre(centreX,centreY)
         overAnimation.recentre(centreX,centreY)
+        overDeadAnimation.recentre(centreX,centreY)
     }
 
 
@@ -65,19 +76,25 @@ class Gen2Graphics(path: String, ratio: Float) : DeviceGraphics() {
         izelAnimation.draw(batch,0.5f)
     }
 
-    override fun drawNormal(batch: SpriteBatch){
-        normalAnimation.draw(batch,0f)
+    override fun drawNormal(batch: SpriteBatch, dead: Boolean){
+        if (dead){
+            deadAnimation.draw(batch,0f)
+        } else {
+            normalAnimation.draw(batch,0f)
+        }
+
     }
 
     override fun drawBroken(batch: SpriteBatch){
         brokenAnimation.draw(batch,0f)
     }
 
-    override fun drawDead(batch: SpriteBatch){
-        deadAnimation.draw(batch,0f)
-    }
+    override fun drawOver(batch: SpriteBatch, dead: Boolean){
+        if (dead){
+            overDeadAnimation.draw(batch,increment = 0f)
+        } else {
+            overAnimation.draw(batch,increment = 0f)
+        }
 
-    override fun drawOver(batch: SpriteBatch){
-        overAnimation.draw(batch,increment = 0f)
     }
 }
