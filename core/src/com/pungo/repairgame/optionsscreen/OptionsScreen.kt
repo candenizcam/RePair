@@ -19,6 +19,7 @@ class OptionsScreen: Screen() {
     private lateinit var musicSprite: Sprite
     private lateinit var soundSprite: Sprite
     private lateinit var redlineSprite: Sprite
+    private var sfx = Gdx.audio.newSound(Gdx.files.internal("sound/Blip.mp3"))
 
     override fun lateInitializer() {
         mainSprite = SharedVariables.loadSprite(SharedVariables.mainMenuBackgroundPath, SharedVariables.menuBackgroundRatio).apply{
@@ -96,6 +97,9 @@ class OptionsScreen: Screen() {
 
         when (backButton.status) {
             ButtonStatus.DOWN -> {
+                if(!SharedVariables.sfxMuted){
+                    sfx.play(SharedVariables.sfxVolume)
+                }
                 backButton.status = ButtonStatus.UP
                 SharedVariables.activeScreen = SharedVariables.mainMenuScreen
             }

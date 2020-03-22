@@ -108,7 +108,9 @@ class MainMenuScreen: Screen() {
         when {
             startButton.status == ButtonStatus.DOWN -> {
                 startButton.status = ButtonStatus.UP
-                sfx.play(SharedVariables.sfxVolume)
+                if(!SharedVariables.sfxMuted){
+                    sfx.play(SharedVariables.sfxVolume)
+                }
 
                 SharedVariables.resetGame()
                 Timer().schedule(370) {
@@ -118,12 +120,18 @@ class MainMenuScreen: Screen() {
             }
             exitButton.status == ButtonStatus.DOWN -> {
                 exitButton.status = ButtonStatus.UP
+                if(!SharedVariables.sfxMuted){
+                    sfx.play(SharedVariables.sfxVolume)
+                }
                 if (exitButton.visible) {
                     MusicPlayer.release()
                     Gdx.app.exit()
                 }
             }
             optionsButton.status == ButtonStatus.DOWN -> {
+                if(!SharedVariables.sfxMuted){
+                    sfx.play(SharedVariables.sfxVolume)
+                }
                 optionsButton.status = ButtonStatus.UP
                 if (optionsButton.visible) {
                     SharedVariables.activeScreen = SharedVariables.optionsScreen
@@ -131,6 +139,9 @@ class MainMenuScreen: Screen() {
                 }
             }
             continueButton.status == ButtonStatus.DOWN -> {
+                if(!SharedVariables.sfxMuted){
+                    sfx.play(SharedVariables.sfxVolume)
+                }
                 continueButton.status = ButtonStatus.UP
                 if (continueButton.visible){
                     gameScreen.resumeTimers()

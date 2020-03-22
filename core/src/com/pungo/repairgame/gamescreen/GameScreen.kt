@@ -57,11 +57,16 @@ class GameScreen: Screen() {
     }
 
     fun pauseTimers(){
+        sfxBeep.stop()
+        sfxTake.stop()
+        sfxFail.stop()
+        sfxLaunch.stop()
         travelTimer.pause()
         countdownTimer.pause()
         timer.pause()
         rocketAnimation.pause()
         devices.forEach { it.breakTimer.pause() }
+
     }
 
     fun resumeTimers(){
@@ -97,7 +102,9 @@ class GameScreen: Screen() {
         tools.forEach {
             if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it.getSprite())) {
                 it.flying = true
-                sfxTake.play(SharedVariables.sfxVolume)
+                if(!SharedVariables.sfxMuted){
+                    sfxTake.play(SharedVariables.sfxVolume)
+                }
             }
         }
         if(SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), redButton.activeSprite)) {
@@ -109,13 +116,17 @@ class GameScreen: Screen() {
                     texts[k].pressing = true
                     chosenOption = (1..3).random()
                     texts[4].setStuff(texts[chosenOption].text, texts[chosenOption].left, texts[chosenOption].top, texts[chosenOption].width,texts[chosenOption].height)
-                    sfxChoose.play(SharedVariables.sfxVolume)
+                    if(!SharedVariables.sfxMuted){
+                        sfxChoose.play(SharedVariables.sfxVolume)
+                    }
                 }
                 else{
                     texts[k].pressing = true
                     chosenOption = k
                     texts[4].setStuff(texts[chosenOption].text, texts[chosenOption].left, texts[chosenOption].top, texts[chosenOption].width,texts[chosenOption].height)
-                    sfxChoose.play(SharedVariables.sfxVolume)
+                    if(!SharedVariables.sfxMuted){
+                        sfxChoose.play(SharedVariables.sfxVolume)
+                    }
                 }
             }
         }
@@ -141,12 +152,16 @@ class GameScreen: Screen() {
                         if (SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), it2.getSprite())) {
                             val fixed = it2.status==it.fixing
                             if (fixed){
-                                it.sfx.play(SharedVariables.sfxVolume)
+                                if(!SharedVariables.sfxMuted) {
+                                    it.sfx.play(SharedVariables.sfxVolume)
+                                }
                                 it2.breakTimer.running = false
                                 it2.status = DeviceStatus.NORMAL
                             }
                             else{
-                                sfxFail.play(SharedVariables.sfxVolume)
+                                if(!SharedVariables.sfxMuted){
+                                    sfxFail.play(SharedVariables.sfxVolume)
+                                }
                             }
                         }
                     }
@@ -186,7 +201,9 @@ class GameScreen: Screen() {
                     }
                     SharedVariables.activeScreen = SharedVariables.endingScreen
                 }
-                sfxRed.play(SharedVariables.sfxVolume)
+                if(!SharedVariables.sfxMuted){
+                    sfxRed.play(SharedVariables.sfxVolume)
+                }
                 redButton()
             }
         }
@@ -258,7 +275,9 @@ class GameScreen: Screen() {
             if(countdownTimer.done()){
                 if(countdownIndex==countdownIndexLimit){
                     texts[0].setStuff("")
-                    sfxLaunch.play(SharedVariables.sfxVolume * 2)
+                    if(!SharedVariables.sfxMuted){
+                        sfxLaunch.play(SharedVariables.sfxVolume * 2)
+                    }
                     rocketAnimCalled = true
                     rocketAnimation.animationGo()
 
@@ -315,7 +334,9 @@ class GameScreen: Screen() {
             sfxBeep.stop()
         }
         else{
-            sfxBeep.play(SharedVariables.sfxVolume)
+            if(!SharedVariables.sfxMuted){
+                sfxBeep.play(SharedVariables.sfxVolume)
+            }
         }
 
         for (k in 1..3){
