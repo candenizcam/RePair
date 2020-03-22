@@ -69,7 +69,7 @@ class Gen2Graphics(path: String, ratio: Float) : DeviceGraphics() {
     }
 
     override fun drawStuck(batch: SpriteBatch){
-        stuckAnimation.draw(batch,0.01f)
+        stuckAnimation.draw(batch,0.1f)
     }
 
     override fun drawShort(batch: SpriteBatch){
