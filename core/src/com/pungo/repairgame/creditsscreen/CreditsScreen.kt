@@ -55,6 +55,5 @@ class CreditsScreen : Screen() {
     }
 
     override fun loopAction() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }
