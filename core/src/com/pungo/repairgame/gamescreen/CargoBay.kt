@@ -29,7 +29,9 @@ class CargoBay {
 
     }
 
-
+    fun reset(){
+        items = mutableListOf<String>()
+    }
 
     fun addToItems(s: String){
         items.add(s)

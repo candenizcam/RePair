@@ -48,6 +48,7 @@ class GameScreen: Screen() {
         patrolFlag = false
         patrolPlanet = false
         countdownIndex = -1
+        cargoBay.reset()
         devices.forEach { it.status = DeviceStatus.NORMAL }
         tools = ToolsData.getTools()
         bigMonitor.changeMonitor("graphics/planets/p0.png")
