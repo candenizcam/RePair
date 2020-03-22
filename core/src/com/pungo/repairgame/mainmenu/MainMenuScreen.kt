@@ -59,7 +59,6 @@ class MainMenuScreen: Screen() {
     }
 
     override fun draw(batch: SpriteBatch) {
-        rocketAnimation.draw(batch)
         mainSprite.draw(batch)
         titleSprite.draw(batch)
         startButton.draw(batch)
@@ -67,6 +66,7 @@ class MainMenuScreen: Screen() {
         optionsButton.draw(batch)
         continueButton.draw(batch)
         muteButton.draw(batch)
+        rocketAnimation.draw(batch)
     }
 
     override fun firstPress() {
