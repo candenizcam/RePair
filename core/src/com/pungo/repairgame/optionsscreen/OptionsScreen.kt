@@ -4,10 +4,10 @@ import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.MusicPlayer
-import com.pungo.repairgame.ui.ButtonStatus
 import com.pungo.repairgame.Screen
-import com.pungo.repairgame.ui.SetButton
 import com.pungo.repairgame.SharedVariables
+import com.pungo.repairgame.ui.ButtonStatus
+import com.pungo.repairgame.ui.SetButton
 import com.pungo.repairgame.ui.Slider
 
 class OptionsScreen: Screen() {
@@ -19,8 +19,6 @@ class OptionsScreen: Screen() {
     private lateinit var musicSprite: Sprite
     private lateinit var soundSprite: Sprite
     private lateinit var redlineSprite: Sprite
-    private var sfx = Gdx.audio.newSound(Gdx.files.internal("sound/Blip.mp3"))
-
 
     override fun lateInitializer() {
         mainSprite = SharedVariables.loadSprite(SharedVariables.mainMenuBackgroundPath, SharedVariables.menuBackgroundRatio).apply{
@@ -85,8 +83,8 @@ class OptionsScreen: Screen() {
         musicSlider.pressing()
         soundsSlider.pressing()
 
-        when {
-            backButton.status == ButtonStatus.DOWN -> {
+        when (backButton.status) {
+            ButtonStatus.DOWN -> {
                 if (!SharedVariables.contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), backButton.activeSprite)) backButton.status = ButtonStatus.UP
             }
         }
@@ -95,22 +93,18 @@ class OptionsScreen: Screen() {
     override fun released() {
         musicSlider.released()
         soundsSlider.released()
-        when {
-            backButton.status == ButtonStatus.DOWN -> {
+
+        when (backButton.status) {
+            ButtonStatus.DOWN -> {
                 backButton.status = ButtonStatus.UP
                 SharedVariables.activeScreen = SharedVariables.mainMenuScreen
             }
-
         }
     }
 
     override fun loopAction() {
         SharedVariables.sfxVolume = soundsSlider.sliderValue
-        MusicPlayer.changeVolume(musicSlider.sliderValue)
-
+        SharedVariables.bgmVolume = musicSlider.sliderValue
+        MusicPlayer.changeVolume(SharedVariables.bgmVolume)
     }
-
-
-
-
 }

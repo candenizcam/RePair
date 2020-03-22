@@ -1,7 +1,6 @@
 package com.pungo.repairgame.ui
 
 import com.badlogic.gdx.Gdx
-import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.pungo.repairgame.SharedVariables
@@ -9,19 +8,13 @@ import java.lang.Double.max
 import java.lang.Double.min
 
 class Slider(private val path: String, private val ratio: Float) {
-    private val railSprite: Sprite
-    private val ballSprite: Sprite
+    private val railSprite: Sprite = SharedVariables.loadSprite("$path/rail.png", ratio.toDouble())
+    private val ballSprite: Sprite = SharedVariables.loadSprite("$path/ball.png", ratio.toDouble())
     private var centreX = 0f
     private var centreY = 0f
     var sliderValue = 1f //between 0 and 1
-    private var sliderRecord = 0f //between 0 and 1
-    var visible = true
+    private var visible = true
     private var moving = false
-
-    init{
-        railSprite = SharedVariables.loadSprite("$path/rail.png", ratio.toDouble())
-        ballSprite = SharedVariables.loadSprite("$path/ball.png", ratio.toDouble())
-    }
 
     fun relocateCentre(x: Float, y: Float) {
         centreX = x
@@ -36,7 +29,6 @@ class Slider(private val path: String, private val ratio: Float) {
             ballSprite.setCenter(ballPosition,centreY)
             ballSprite.draw(batch)
         }
-
     }
 
     fun firstPressed(){
@@ -56,6 +48,4 @@ class Slider(private val path: String, private val ratio: Float) {
     fun released(){
         moving=false
     }
-
-
 }

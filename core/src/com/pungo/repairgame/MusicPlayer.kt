@@ -34,7 +34,13 @@ object MusicPlayer {
     }
 
     fun changeVolume(vol: Float){
-        volume = vol
-        bgm.volume = vol
+        if(!SharedVariables.musicMuted){
+            volume = vol
+            bgm.volume = vol
+        }
+        else{
+            volume = 0.0f
+            bgm.volume = 0.0f
+        }
     }
 }
