@@ -41,7 +41,7 @@ class BigMonitor {
         }
         countdownSprites = m
         var m2 = mutableListOf<Sprite>()
-        for (i in 12 downTo 1){
+        for (i in 1..13){
             m2.add(sv.loadSprite("graphics/bigmonitor/anim/$i.png", sv.monitorRatio).apply{
                 setCenter(sv.monitorCentreX,sv.monitorCentreY)
             })
