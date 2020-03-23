@@ -103,23 +103,8 @@ class GameScreen: Screen() {
             redButton.status = ButtonStatus.DOWN
         }
         for (k in 1..3) {
-            if(texts[k].contains(Gdx.input.x.toFloat(), Gdx.input.y.toFloat()) && !travelTimer.running && texts[0].revealed) {
-                if(devices[0].status!=DeviceStatus.NORMAL){
-                    texts[k].pressing = true
-                    chosenOption = (1..3).random()
-                    texts[4].setStuff(texts[chosenOption].text, texts[chosenOption].left, texts[chosenOption].top, texts[chosenOption].width,texts[chosenOption].height)
-                    if(!SharedVariables.sfxMuted){
-                        sfxChoose.play(SharedVariables.sfxVolume)
-                    }
-                }
-                else{
-                    texts[k].pressing = true
-                    chosenOption = k
-                    texts[4].setStuff(texts[chosenOption].text, texts[chosenOption].left, texts[chosenOption].top, texts[chosenOption].width,texts[chosenOption].height)
-                    if(!SharedVariables.sfxMuted){
-                        sfxChoose.play(SharedVariables.sfxVolume)
-                    }
-                }
+            if(texts[k].hovered) {
+                texts[k].pressing = true
             }
         }
     }
@@ -161,8 +146,19 @@ class GameScreen: Screen() {
                 }
             }
         }
+
         for (k in 1..3) {
             if (texts[k].hovered && (texts[k].pressing && phText.sceneNotOver()) && texts[0].revealed){
+                if(devices[0].status!=DeviceStatus.NORMAL){
+                    chosenOption = (1..3).random()
+                }
+                else{
+                    chosenOption = k
+                }
+                texts[4].setStuff(texts[chosenOption].text, texts[chosenOption].left, texts[chosenOption].top, texts[chosenOption].width,texts[chosenOption].height)
+                if(!SharedVariables.sfxMuted){
+                    sfxChoose.play(SharedVariables.sfxVolume)
+                }
                 phText.nextPassage(k)
                 updateIslandText()
             }
@@ -185,7 +181,7 @@ class GameScreen: Screen() {
                 3->if (phText.getTag()=="Good"){ cargoBay.addToItems("dessert") }
                 4->if (phText.getTag()=="Good"){ cargoBay.addToItems("flower") }
             }
-            if(redButton.status == ButtonStatus.DOWN && !countdownTimer.running) {
+            if(redButton.status == ButtonStatus.DOWN && !countdownTimer.running && redButton.glowing) {
                 if(SharedVariables.planetIndex==5){
                     when(phText.getTag()){
                         "Good" -> SharedVariables.endingScreen.goodEnder()
