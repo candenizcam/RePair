@@ -112,7 +112,7 @@ class MainMenuScreen: Screen() {
 
     override fun released() {
         when {
-            startButton.status == ButtonStatus.DOWN -> {
+            startButton.status == ButtonStatus.DOWN && !rocketAnimCalled -> {
                 startButton.status = ButtonStatus.UP
                 if(!SharedVariables.sfxMuted){
                     sfx.play(SharedVariables.sfxVolume)
@@ -121,6 +121,7 @@ class MainMenuScreen: Screen() {
                     sfxLaunch.play(SharedVariables.sfxVolume * 2)
                 }
                 SharedVariables.resetGame()
+
                 rocketAnimCalled = true
                 rocketAnimation.animationGo()
             }

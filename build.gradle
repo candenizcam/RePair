@@ -15,6 +15,10 @@ buildscript {
     }
 }
 
+plugins {
+    id "de.inetsoftware.appbundler" version "4.8.7"
+}
+
 allprojects {
 
     version = '1.0'
